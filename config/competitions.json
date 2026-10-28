@@ -1,0 +1,363 @@
+{
+ "version": "v4",
+ "note": "API Sports league ids verified by probe (25 Sep 2026) and by the API's own names on download (19 and 27 Oct 2026). Season 2026 = 2026-27 (calendar-year leagues: Norway, Sweden = 2026 season).",
+ "english": [
+  {
+   "name": "Premier League",
+   "league_id": 39,
+   "is_cup": false,
+   "validated": true
+  },
+  {
+   "name": "Championship",
+   "league_id": 40,
+   "is_cup": false,
+   "validated": true
+  },
+  {
+   "name": "League One",
+   "league_id": 41,
+   "is_cup": false,
+   "validated": true
+  },
+  {
+   "name": "League Two",
+   "league_id": 42,
+   "is_cup": false,
+   "validated": true
+  },
+  {
+   "name": "National League",
+   "league_id": 43,
+   "is_cup": false,
+   "validated": true
+  },
+  {
+   "name": "National League North",
+   "league_id": 50,
+   "is_cup": false,
+   "validated": true
+  },
+  {
+   "name": "National League South",
+   "league_id": 51,
+   "is_cup": false,
+   "validated": true
+  },
+  {
+   "name": "Northern Premier League",
+   "league_id": 59,
+   "is_cup": false,
+   "validated": true
+  },
+  {
+   "name": "Isthmian Premier",
+   "league_id": 58,
+   "is_cup": false,
+   "validated": true
+  },
+  {
+   "name": "Southern Premier Central",
+   "league_id": 931,
+   "is_cup": false,
+   "validated": true
+  },
+  {
+   "name": "Southern Premier South",
+   "league_id": 60,
+   "is_cup": false,
+   "validated": true
+  },
+  {
+   "name": "EFL Cup",
+   "league_id": 48,
+   "is_cup": true,
+   "validated": true
+  },
+  {
+   "name": "FA Cup",
+   "league_id": 45,
+   "is_cup": true,
+   "validated": true
+  },
+  {
+   "name": "EFL Trophy",
+   "league_id": 46,
+   "is_cup": true,
+   "validated": true
+  },
+  {
+   "name": "FA Trophy",
+   "league_id": 47,
+   "is_cup": true,
+   "validated": true
+  }
+ ],
+ "european": [
+  {
+   "name": "Scottish Premiership",
+   "league_id": 179,
+   "is_cup": false,
+   "validated": true,
+   "coverage": "results and statistics"
+  },
+  {
+   "name": "Scottish Championship",
+   "league_id": 180,
+   "is_cup": false,
+   "validated": true,
+   "coverage": "results and statistics"
+  },
+  {
+   "name": "Scottish League One",
+   "league_id": 183,
+   "is_cup": false,
+   "validated": true,
+   "coverage": "results and statistics"
+  },
+  {
+   "name": "Scottish League Two",
+   "league_id": 184,
+   "is_cup": false,
+   "validated": true,
+   "coverage": "results and statistics"
+  },
+  {
+   "name": "Scottish Cup",
+   "league_id": 181,
+   "is_cup": true,
+   "validated": true,
+   "coverage": "results and statistics"
+  },
+  {
+   "name": "Scottish League Cup",
+   "league_id": 185,
+   "is_cup": true,
+   "validated": true,
+   "coverage": "results and statistics"
+  },
+  {
+   "name": "Scottish Challenge Cup",
+   "league_id": 182,
+   "is_cup": true,
+   "validated": true,
+   "coverage": "results and statistics"
+  },
+  {
+   "name": "Champions League",
+   "league_id": 2,
+   "is_cup": true,
+   "validated": true,
+   "coverage": "results and statistics"
+  },
+  {
+   "name": "Europa League",
+   "league_id": 3,
+   "is_cup": true,
+   "validated": true,
+   "coverage": "results and statistics"
+  },
+  {
+   "name": "Conference League",
+   "league_id": 848,
+   "is_cup": true,
+   "validated": true,
+   "coverage": "results and statistics"
+  },
+  {
+   "name": "Bundesliga",
+   "league_id": 78,
+   "is_cup": false,
+   "validated": true,
+   "coverage": "results and statistics"
+  },
+  {
+   "name": "DFB Pokal",
+   "league_id": 81,
+   "is_cup": true,
+   "validated": true,
+   "coverage": "results and statistics"
+  },
+  {
+   "name": "Serie A",
+   "league_id": 135,
+   "is_cup": false,
+   "validated": false,
+   "coverage": "results only (no match statistics); outside the validation set"
+  },
+  {
+   "name": "La Liga",
+   "league_id": 140,
+   "is_cup": false,
+   "validated": true,
+   "coverage": "results and statistics"
+  },
+  {
+   "name": "Copa del Rey",
+   "league_id": 143,
+   "is_cup": true,
+   "validated": true,
+   "coverage": "results and statistics"
+  },
+  {
+   "name": "Ligue 1",
+   "league_id": 61,
+   "is_cup": false,
+   "validated": true,
+   "coverage": "results and statistics"
+  },
+  {
+   "name": "Eredivisie",
+   "league_id": 88,
+   "is_cup": false,
+   "validated": true,
+   "coverage": "results and statistics"
+  },
+  {
+   "name": "Primeira Liga",
+   "league_id": 94,
+   "is_cup": false,
+   "validated": true,
+   "coverage": "results and statistics"
+  },
+  {
+   "name": "Belgian Pro League",
+   "league_id": 144,
+   "is_cup": false,
+   "validated": false,
+   "coverage": "results only (no match statistics); outside the validation set"
+  },
+  {
+   "name": "Austrian Bundesliga",
+   "league_id": 218,
+   "is_cup": false,
+   "validated": false,
+   "coverage": "results only (no match statistics); outside the validation set"
+  },
+  {
+   "name": "Danish Superliga",
+   "league_id": 119,
+   "is_cup": false,
+   "validated": false,
+   "coverage": "results only (no match statistics); outside the validation set"
+  },
+  {
+   "name": "Eliteserien",
+   "league_id": 103,
+   "is_cup": false,
+   "validated": false,
+   "coverage": "results only (no match statistics); outside the validation set"
+  },
+  {
+   "name": "Allsvenskan",
+   "league_id": 113,
+   "is_cup": false,
+   "validated": false,
+   "coverage": "results only (no match statistics); outside the validation set"
+  },
+  {
+   "name": "Ekstraklasa",
+   "league_id": 106,
+   "is_cup": false,
+   "validated": false,
+   "coverage": "results only (no match statistics); outside the validation set"
+  },
+  {
+   "name": "Czech Liga",
+   "league_id": 345,
+   "is_cup": false,
+   "validated": false,
+   "coverage": "results only (no match statistics); outside the validation set"
+  },
+  {
+   "name": "Croatian HNL",
+   "league_id": 210,
+   "is_cup": false,
+   "validated": false,
+   "coverage": "results only (no match statistics); outside the validation set"
+  },
+  {
+   "name": "Ukrainian Premier",
+   "league_id": 333,
+   "is_cup": false,
+   "validated": false,
+   "coverage": "results only (no match statistics); outside the validation set"
+  },
+  {
+   "name": "Greek Super League",
+   "league_id": 197,
+   "is_cup": false,
+   "validated": false,
+   "coverage": "results only (no match statistics); outside the validation set"
+  },
+  {
+   "name": "Super Lig",
+   "league_id": 203,
+   "is_cup": false,
+   "validated": true,
+   "coverage": "results and statistics"
+  }
+ ],
+ "form_only_not_reported": [
+  {
+   "name": "Swiss Super League",
+   "league_id": 207
+  },
+  {
+   "name": "Serbian Super Liga",
+   "league_id": 286
+  },
+  {
+   "name": "Cypriot Division 1",
+   "league_id": 318
+  },
+  {
+   "name": "Israeli Premier",
+   "league_id": 383
+  },
+  {
+   "name": "Slovak Super Liga",
+   "league_id": 332
+  },
+  {
+   "name": "Hungarian NB I",
+   "league_id": 271
+  },
+  {
+   "name": "Romanian Liga I",
+   "league_id": 283
+  },
+  {
+   "name": "Bulgarian First League",
+   "league_id": 172
+  },
+  {
+   "name": "Slovenian PrvaLiga",
+   "league_id": 373
+  },
+  {
+   "name": "Kazakh Premier",
+   "league_id": 389
+  },
+  {
+   "name": "Azerbaijan Premyer",
+   "league_id": 419
+  },
+  {
+   "name": "League of Ireland",
+   "league_id": 357
+  },
+  {
+   "name": "Icelandic Urvalsdeild",
+   "league_id": 164
+  },
+  {
+   "name": "Veikkausliiga",
+   "league_id": 244
+  }
+ ],
+ "not_covered": [
+  "Northern Premier Division One East/Midlands/West, Isthmian Division One North/South Central/South East, Southern Division One Central/South: no 2026-27 season in API Sports",
+  "England V2: not an API Sports competition"
+ ]
+}

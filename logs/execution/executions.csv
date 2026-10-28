@@ -1,0 +1,4 @@
+run_id,mode,status,start,finish,message
+review_20261028_1539,review,ok,2026-10-28 15:39:58,2026-10-28 15:39:59,483 results added
+range_20261028_1540,range,error,2026-10-28 15:40:06,2026-10-28 15:40:06,'Ukrainian Premier' is not in list
+range_20261028_1600,range,ok,2026-10-28 16:00:02,2026-10-28 16:03:12,"{""english"": ""13 analysed, 6 selected, 0 flagged"", ""european"": ""58 analysed, 12 selected, 24 flagged""}"
