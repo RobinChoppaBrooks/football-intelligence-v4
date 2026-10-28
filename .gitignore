@@ -1,0 +1,6 @@
+apisports_key.txt
+football.db
+football_slim.db
+__pycache__/
+*.log
+over25_analysis_*

@@ -1,0 +1,97 @@
+{
+  "version": "v4",
+  "locked": "2026-10-28",
+  "selection_engine": {
+    "file": "bands_model.pkl",
+    "sha256_16": "f48986cb2d94008a",
+    "model": "HistGradientBoostingClassifier depth 3, lr 0.04, 300 iters, min_samples_leaf 80, l2 1.0",
+    "features": [
+      "h_l5L_gf",
+      "h_l5L_ga",
+      "a_l5L_gf",
+      "a_l5L_ga",
+      "h_l5L_over25",
+      "a_l5L_over25",
+      "h_l5L_btts",
+      "a_l5L_btts",
+      "h_l5L_gf2",
+      "h_l5L_ga2",
+      "a_l5L_gf2",
+      "a_l5L_ga2",
+      "h_l5L_cs",
+      "a_l5L_cs",
+      "h_l5L_fts",
+      "a_l5L_fts",
+      "h_l5L_tot",
+      "a_l5L_tot",
+      "h_l5L_tot4",
+      "a_l5L_tot4",
+      "h_l5L_maxtot",
+      "a_l5L_maxtot",
+      "h_l5L_n",
+      "a_l5L_n",
+      "h_v3L_gf",
+      "h_v3L_ga",
+      "a_v3L_gf",
+      "a_v3L_ga",
+      "h_v3L_tot",
+      "a_v3L_tot",
+      "h_v3L_over25",
+      "a_v3L_over25",
+      "h_v3L_n",
+      "a_v3L_n",
+      "lg_o25",
+      "lg_tot",
+      "lg_n",
+      "is_cup"
+    ],
+    "train_seasons": [
+      2023,
+      2024
+    ],
+    "validation_season": 2025,
+    "cut_high": 0.630204,
+    "cut_medium": 0.58084,
+    "cut_weak_within_medium": "amber + (green-amber)/4",
+    "caps": [
+      "fewer than 3 league games for a side -> rejected",
+      "High with Mixed match-up profile -> Medium"
+    ],
+    "form_window": "last 5 completed league games this season; venue last 3 (model) / last 5 (card)",
+    "fit_script": "bands.py",
+    "feature_script": "features.py (rolling fix of 19 Oct 2026)",
+    "sklearn_version": "1.8.0"
+  },
+  "btts_engine": {
+    "file": "btts_model.pkl",
+    "sha256_16": "56cb8dcb47618aca",
+    "cut_high": 0.574623,
+    "cut_medium": 0.513753,
+    "verdict_rule": "YES when goal pattern is 'both teams contribute'"
+  },
+  "out_of_sample_baseline": {
+    "window": "Jan-Jun 2026 + Aug-Oct 2026",
+    "fixtures": 7535,
+    "high": "504/729 = 69%",
+    "selected": "1607/2518 = 64%",
+    "rejected": "2708/5017 = 54%"
+  },
+  "production_scripts": {
+    "download": "download.py --results (results-only, ~65 calls)",
+    "analysis": "analyse_fixtures.py football.db fixtures_YYYYMMDD.txt --out over25_analysis_YYYYMMDD",
+    "report": "report_v4.py <pkl> football.db <pdf> <csv> \"window\"",
+    "review": "review.py football.db"
+  },
+  "experimental_not_in_production": [
+    "report_v2.py (V2 alignment)",
+    "V3 formulas (v3_backtest_20261028.md)",
+    "midweek_extras.py (corners/cards/injuries sheet)"
+  ],
+  "display_rules": [
+    "no averages, no percentages on cards",
+    "counts as x/5",
+    "Scored 2+ and Let in 2+ prominent",
+    "both attacks 3/5+ highlighted, never required",
+    "no V2/V3 scores on shortlist"
+  ]
+}
