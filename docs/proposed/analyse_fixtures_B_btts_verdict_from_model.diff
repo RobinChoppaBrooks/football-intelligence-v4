@@ -1,0 +1,14 @@
+--- a/analyse_fixtures.py
++++ b/analyse_fixtures.py
+@@ -197,7 +197,10 @@
+             xg = f"Shots on target per game: home {r.h_l5_shots_on_target_f:.1f} for / {r.h_l5_shots_on_target_a:.1f} faced; away {r.a_l5_shots_on_target_f:.1f} for / {r.a_l5_shots_on_target_a:.1f} faced. xG not covered"
+         btts_lab = btts_label(bb, float(r.p_btts))
+         pattern, why, risk, route = pattern_text(r.home, r.away, hr, ar, hv5, av5, ev_against)
+-        btts_yes = pattern == "Both teams contribute"      # verdict follows the pattern; the model gives the likelihood
++        # btts_v2 (proposed, awaiting approval): the verdict follows the BTTS model's own band, as btts.py intended.
++        # The goal pattern needs an Over 2.5 route (2+ goals) per side and told us nothing about BTTS: 'One side dominates'
++        # went BTTS 55% (2025-26, n=10,678) and 57% (2026-27, n=2,013), the base rate. Model High: 61% / 67%.
++        btts_yes = btts_lab == "HIGH"
+         d = dict(comp=r.comp, hv5=hv5, av5=av5, p_btts=round(float(r.p_btts), 3), btts=("YES" if btts_yes else "NO"), btts_lik=btts_lab.title(),
+                  pattern=pattern, why=why, risk=risk, route=route, kickoff=r.kickoff_utc.tz_convert("Europe/London").strftime("%a %d %b %H:%M"), fixture=f"{r.home} v {r.away}",
+                  h_l5=f"{sum(x['gf'] for x in hr)}-{sum(x['ga'] for x in hr)}", h_seq=seq(hr), h_over=f"{cnt(hr, lambda x: x['tot']>=3)}/{len(hr)}",

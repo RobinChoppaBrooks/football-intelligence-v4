@@ -1,0 +1,97 @@
+--- a/.github/workflows/football.yml
++++ b/.github/workflows/football.yml
+@@ -1,10 +1,16 @@
+ name: Football Intelligence V4
+ 
+ on:
++  # Targets are Europe/London: Monday 08:30 (review), Monday 12:30 (midweek), Thursday 08:30 (weekend), which leaves
++  # about 1h40m before the 10:09 / 14:09 / 10:09 London delivery tasks. GitHub cron is UTC only, so each slot has two
++  # entries, one for GMT and one for BST, and the "Pick the mode" step skips the one that is wrong for today's clock.
+   schedule:
+-    - cron: "30 8 * * 1"
+-    - cron: "30 12 * * 1"
+-    - cron: "30 8 * * 4"
++    - cron: "30 8 * * 1"     # review, GMT (08:30 London)
++    - cron: "30 7 * * 1"     # review, BST (08:30 London)
++    - cron: "30 12 * * 1"    # midweek, GMT (12:30 London)
++    - cron: "30 11 * * 1"    # midweek, BST (12:30 London)
++    - cron: "30 8 * * 4"     # weekend, GMT (08:30 London)
++    - cron: "30 7 * * 4"     # weekend, BST (08:30 London)
+   workflow_dispatch:
+     inputs:
+       mode:
+@@ -36,14 +42,23 @@
+       - name: Pick the mode
+         id: mode
+         run: |
+-          case "${{ github.event_name }}:${{ github.event.schedule }}" in
+-            schedule:"30 8 * * 1")  echo "mode=review"  >> $GITHUB_OUTPUT ;;
+-            schedule:"30 12 * * 1") echo "mode=midweek" >> $GITHUB_OUTPUT ;;
+-            schedule:"30 8 * * 4")  echo "mode=weekend" >> $GITHUB_OUTPUT ;;
++          # London clock right now: GMT or BST. Each cron entry is valid for one of the two; the other is skipped.
++          CLOCK=$(TZ=Europe/London date +%Z)
++          echo "London clock is $CLOCK, schedule '${{ github.event.schedule }}'"
++          case "${{ github.event_name }}:${{ github.event.schedule }}:$CLOCK" in
++            schedule:"30 8 * * 1":GMT  | schedule:"30 7 * * 1":BST)  echo "mode=review"  >> $GITHUB_OUTPUT ;;
++            schedule:"30 12 * * 1":GMT | schedule:"30 11 * * 1":BST) echo "mode=midweek" >> $GITHUB_OUTPUT ;;
++            schedule:"30 8 * * 4":GMT  | schedule:"30 7 * * 4":BST)  echo "mode=weekend" >> $GITHUB_OUTPUT ;;
++            schedule:*) echo "mode=skip" >> $GITHUB_OUTPUT ;;
+             *) echo "mode=${{ github.event.inputs.mode }}" >> $GITHUB_OUTPUT ;;
+           esac
+ 
++      - name: Stop here if this cron entry is the wrong one for today's clock
++        if: steps.mode.outputs.mode == 'skip'
++        run: echo "Wrong DST variant of this slot, nothing to do." && exit 0
++
+       - name: Fetch the current database (branch data, else the seed)
++        if: steps.mode.outputs.mode != 'skip'
+         run: |
+           if git ls-remote --exit-code --heads origin data; then
+             git fetch --depth 1 origin data
+@@ -54,18 +69,37 @@
+           ls -la football.db
+ 
+       - name: Pull fixtures and results from API-Football
++        if: steps.mode.outputs.mode != 'skip'
+         env:
+           APISPORTS_KEY: ${{ secrets.APISPORTS_KEY }}
+         run: python download.py --results
+ 
+       - name: Run the V4 model
+-        if: steps.mode.outputs.mode != 'download-only'
++        if: steps.mode.outputs.mode != 'download-only' && steps.mode.outputs.mode != 'skip'
+         run: python run_v4.py ${{ steps.mode.outputs.mode }}
+ 
++      # Independent BTTS audit (btts_audit_v1): reads the finished run, writes only new files under reports/btts_audit and
++      # reports/chatgpt_review. Production verdicts are not changed. Remove this step if the audit should stay manual.
++      - name: BTTS audit of this run
++        if: always() && (steps.mode.outputs.mode == 'midweek' || steps.mode.outputs.mode == 'weekend' || steps.mode.outputs.mode == 'range')
++        run: |
++          RUN_ID=$(tail -n 1 logs/execution/executions.csv | cut -d, -f1)
++          python btts_audit.py "$RUN_ID" || echo "audit skipped: $?"
++
++      # Completion manifest: written even when the model step failed, so a reviewer can see status "error" rather than
++      # nothing. reports/manifests/latest_<mode>.json is the fixed path to check before delivering a report.
++      - name: Write the completion manifest
++        if: always() && steps.mode.outputs.mode != 'download-only' && steps.mode.outputs.mode != 'skip'
++        run: |
++          RUN_ID=$(tail -n 1 logs/execution/executions.csv | cut -d, -f1)
++          python write_manifest.py "$RUN_ID" --commit "$GITHUB_SHA"
++
+       - name: Slim the database
++        if: steps.mode.outputs.mode != 'skip'
+         run: python export_slim.py football.db football_slim.db
+ 
+       - name: Commit reports and logs to main
++        if: always() && steps.mode.outputs.mode != 'skip'
+         run: |
+           git config user.name "football-v4-bot"
+           git config user.email "football-v4-bot@users.noreply.github.com"
+@@ -74,6 +108,7 @@
+           git push
+ 
+       - name: Push the slim database to branch data (single commit, replaced each run)
++        if: steps.mode.outputs.mode != 'skip'
+         run: |
+           mkdir -p /tmp/data && cd /tmp/data
+           git init -q -b data
