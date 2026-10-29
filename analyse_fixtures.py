@@ -40,8 +40,10 @@ def parse_list(path):
         else: print(f"  could not read line: {s!r}")
     return out
 
+FINISHED = ("FT", "AET", "PEN")   # same rule as features.py: a score on an abandoned, awarded or cancelled match is not a result
+
 def last_n(fx, tid, season, before, n, venue=None, league_only=True):
-    g = fx[(fx.season == season) & (fx.kickoff_utc < before) & fx.ft_home.notna()]
+    g = fx[(fx.season == season) & (fx.kickoff_utc < before) & fx.ft_home.notna() & fx.status.isin(FINISHED)]
     if league_only: g = g[g.is_cup == 0]
     if venue == "H": g = g[g.home_id == tid]
     elif venue == "A": g = g[g.away_id == tid]
