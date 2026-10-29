@@ -4,7 +4,7 @@
   {
    "id": "A",
    "name": "Weekend results and performance review",
-   "when": "Monday 10:00 (scheduled a few minutes early to avoid on-the-hour queueing)",
+   "when": "Monday 08:30 Europe/London (GitHub Actions cron, UTC entries for GMT and BST; can queue up to an hour). Email delivery task Monday 10:09 Europe/London.",
    "command": "review results",
    "window": "previous Friday to Sunday predictions",
    "outputs": "reports/performance/performance_YYYY-MM-DD.md, data/results/results_log.csv"
@@ -12,7 +12,7 @@
   {
    "id": "B",
    "name": "Midweek fixture analysis",
-   "when": "Monday 14:00",
+   "when": "Monday 12:30 Europe/London (GitHub Actions). Email delivery task Monday 14:09 Europe/London.",
    "command": "run midweek",
    "window": "Monday to Thursday of the current week, fixtures not yet kicked off",
    "outputs": "reports/midweek/YYYY-MM-DD/ (english, european, combined PDFs + CSV + JSON), reports/chatgpt_review/chatgpt_review_YYYY-MM-DD_midweek.md"
@@ -20,11 +20,12 @@
   {
    "id": "C",
    "name": "Weekend fixture analysis",
-   "when": "Thursday 10:00",
+   "when": "Thursday 08:30 Europe/London (GitHub Actions). Email delivery task Thursday 10:09 Europe/London.",
    "command": "run weekend",
    "window": "Friday to Sunday of the coming weekend",
    "outputs": "reports/weekend/YYYY-MM-DD/ ..., reports/chatgpt_review/chatgpt_review_YYYY-MM-DD_weekend.md"
   }
  ],
- "mechanics": "Each run is a fresh cloud session that must have Rob's PC linked (Claude desktop app open): the API pull (py download.py --results) runs on the PC, the analysis runs in the cloud workspace, outputs are written back to the PC folder. Push and email notification on completion. No Friday or Saturday runs; manual runs remain available via the skill."
+ "mechanics": "Each run is a GitHub Actions job (.github/workflows/football.yml): fetch football.db from branch data, py download.py --results (API-Football, the only API step), python run_v4.py <mode>, btts_audit.py and write_manifest.py, commit reports/data/logs/runs to main, push the slim database to branch data. reports/manifests/latest_<mode>.json says whether the run completed. A separate Claude scheduled task then reads the repository and emails Rob. No Friday or Saturday runs; manual runs via workflow_dispatch.",
+ "outputs_note": "Each run also writes reports/manifests/<run_id>.json (completion manifest) and, for midweek/weekend/range, reports/btts_audit/<date>/ and reports/chatgpt_review/btts_audit_review_<date>_<mode>.md (independent BTTS assessment, production verdict unchanged)."
 }
