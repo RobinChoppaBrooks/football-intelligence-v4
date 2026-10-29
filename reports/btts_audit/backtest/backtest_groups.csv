@@ -1,0 +1,59 @@
+period,prod_verdict,model_likelihood,n,btts_hit,actual_rate
+validation 2025-26,NO,High,1081,641,0.593
+validation 2025-26,NO,Medium,8964,4978,0.555
+validation 2025-26,NO,Low,3242,1628,0.502
+validation 2025-26,YES,High,546,349,0.639
+validation 2025-26,YES,Medium,1378,796,0.578
+validation 2025-26,YES,Low,52,22,0.423
+validation 2025-26,NO,"any, both sides BTTS >= 0/5 (min = 0)",567,287,0.506
+validation 2025-26,NO,"any, both sides BTTS >= 1/5 (min = 1)",3206,1721,0.537
+validation 2025-26,NO,"any, both sides BTTS >= 2/5 (min = 2)",5668,3083,0.544
+validation 2025-26,NO,"any, both sides BTTS >= 3/5 (min = 3)",3331,1851,0.556
+validation 2025-26,NO,"any, both sides BTTS >= 4/5 (min = 4)",492,287,0.583
+validation 2025-26,NO,"any, both sides BTTS >= 5/5 (min = 5)",23,18,0.783
+validation 2025-26,any,evidence score = 14,541,296,0.547
+validation 2025-26,any,evidence score = 15,710,370,0.521
+validation 2025-26,any,evidence score = 16,847,461,0.544
+validation 2025-26,any,evidence score = 17,1049,562,0.536
+validation 2025-26,any,evidence score = 18,1271,702,0.552
+validation 2025-26,any,evidence score = 19,1382,729,0.527
+validation 2025-26,any,evidence score = 20,1406,790,0.562
+validation 2025-26,any,evidence score = 21,1336,742,0.555
+validation 2025-26,any,evidence score = 22,1399,779,0.557
+validation 2025-26,any,evidence score = 23,1065,617,0.579
+validation 2025-26,any,evidence score = 24,1079,621,0.576
+validation 2025-26,any,evidence score = 25,734,403,0.549
+validation 2025-26,any,evidence score = 26,522,322,0.617
+validation 2025-26,any,evidence score = 27,447,259,0.579
+validation 2025-26,any,evidence score = 28,197,111,0.563
+validation 2025-26,any,evidence score = 29,176,84,0.477
+validation 2025-26,any,evidence score = 30,94,60,0.638
+out of sample 2026-27,NO,High,265,177,0.668
+out of sample 2026-27,NO,Medium,1663,911,0.548
+out of sample 2026-27,NO,Low,509,285,0.56
+out of sample 2026-27,YES,High,184,122,0.663
+out of sample 2026-27,YES,Medium,298,173,0.581
+out of sample 2026-27,YES,Low,12,8,0.667
+out of sample 2026-27,NO,"any, both sides BTTS >= 0/5 (min = 0)",92,56,0.609
+out of sample 2026-27,NO,"any, both sides BTTS >= 1/5 (min = 1)",545,308,0.565
+out of sample 2026-27,NO,"any, both sides BTTS >= 2/5 (min = 2)",1076,593,0.551
+out of sample 2026-27,NO,"any, both sides BTTS >= 3/5 (min = 3)",620,357,0.576
+out of sample 2026-27,NO,"any, both sides BTTS >= 4/5 (min = 4)",101,57,0.564
+out of sample 2026-27,NO,"any, both sides BTTS >= 5/5 (min = 5)",3,2,0.667
+out of sample 2026-27,any,evidence score = 14,75,45,0.6
+out of sample 2026-27,any,evidence score = 15,114,67,0.588
+out of sample 2026-27,any,evidence score = 16,163,91,0.558
+out of sample 2026-27,any,evidence score = 17,187,100,0.535
+out of sample 2026-27,any,evidence score = 18,213,113,0.531
+out of sample 2026-27,any,evidence score = 19,231,132,0.571
+out of sample 2026-27,any,evidence score = 20,281,155,0.552
+out of sample 2026-27,any,evidence score = 21,287,164,0.571
+out of sample 2026-27,any,evidence score = 22,274,157,0.573
+out of sample 2026-27,any,evidence score = 23,199,115,0.578
+out of sample 2026-27,any,evidence score = 24,234,120,0.513
+out of sample 2026-27,any,evidence score = 25,155,96,0.619
+out of sample 2026-27,any,evidence score = 26,137,89,0.65
+out of sample 2026-27,any,evidence score = 27,105,69,0.657
+out of sample 2026-27,any,evidence score = 28,55,33,0.6
+out of sample 2026-27,any,evidence score = 29,47,33,0.702
+out of sample 2026-27,any,evidence score = 30,24,14,0.583

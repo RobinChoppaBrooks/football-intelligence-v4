@@ -1,0 +1,61 @@
+period,rule,n,base_rate,yes_n,yes_hit,yes_precision,no_n,no_hit,no_precision,accuracy
+"train 2023-25 (league, 5 games each side)",PROD_pattern_rule,30149,0.542,3826,2213,0.578,26323,12202,0.464,0.478
+"train 2023-25 (league, 5 games each side)",MODEL_high_or_medium,30149,0.542,23894,13354,0.559,6255,3275,0.524,0.552
+"train 2023-25 (league, 5 games each side)",MODEL_high_only,30149,0.542,3043,1902,0.625,27106,12674,0.468,0.483
+"train 2023-25 (league, 5 games each side)",EVID_both_scoring_no_routes,30149,0.542,8293,4658,0.562,21856,10180,0.466,0.492
+"train 2023-25 (league, 5 games each side)",EVID_both_btts_3of5,30149,0.542,10147,5719,0.564,20002,9387,0.469,0.501
+"train 2023-25 (league, 5 games each side)",EVID_score_yes,30149,0.542,8076,4612,0.571,22073,10351,0.469,0.496
+"train 2023-25 (league, 5 games each side)",BASE_always_yes,30149,0.542,30149,16334,0.542,0,0,,0.542
+"train 2023-25 (league, 5 games each side)",BASE_always_no,30149,0.542,0,0,,30149,13815,0.458,0.458
+"train 2023-25 (league, 5 games each side)",BASE_league_rate_over_50,30149,0.542,22656,12590,0.556,7493,3749,0.5,0.542
+"train 2023-25 (league, 5 games each side)",AUDIT_v1_yes_or_lean_yes,30149,0.542,9216,5360,0.582,20933,9959,0.476,0.508
+"train 2023-25 (league, 5 games each side)",AUDIT_v1_yes_only,30149,0.542,3043,1902,0.625,27106,12674,0.468,0.483
+"train 2023-25 (league, 5 games each side)",COMBO_model_high_and_evidence_25,30149,0.542,1010,631,0.625,29139,13436,0.461,0.467
+"validation 2025-26 (league, 5 games each side)",PROD_pattern_rule,15263,0.551,1976,1167,0.591,13287,6040,0.455,0.472
+"validation 2025-26 (league, 5 games each side)",MODEL_high_or_medium,15263,0.551,11969,6764,0.565,3294,1644,0.499,0.551
+"validation 2025-26 (league, 5 games each side)",MODEL_high_only,15263,0.551,1627,990,0.608,13636,6212,0.456,0.472
+"validation 2025-26 (league, 5 games each side)",EVID_both_scoring_no_routes,15263,0.551,4545,2596,0.571,10718,4900,0.457,0.491
+"validation 2025-26 (league, 5 games each side)",EVID_both_btts_3of5,15263,0.551,5534,3138,0.567,9729,4453,0.458,0.497
+"validation 2025-26 (league, 5 games each side)",EVID_score_yes,15263,0.551,4368,2513,0.575,10895,4994,0.458,0.492
+"validation 2025-26 (league, 5 games each side)",BASE_always_yes,15263,0.551,15263,8414,0.551,0,0,,0.551
+"validation 2025-26 (league, 5 games each side)",BASE_always_no,15263,0.551,0,0,,15263,6849,0.449,0.449
+"validation 2025-26 (league, 5 games each side)",BASE_league_rate_over_50,15263,0.551,12574,7061,0.562,2689,1336,0.497,0.55
+"validation 2025-26 (league, 5 games each side)",AUDIT_v1_yes_or_lean_yes,15263,0.551,4892,2839,0.58,10371,4796,0.462,0.5
+"validation 2025-26 (league, 5 games each side)",AUDIT_v1_yes_only,15263,0.551,1627,990,0.608,13636,6212,0.456,0.472
+"validation 2025-26 (league, 5 games each side)",COMBO_model_high_and_evidence_25,15263,0.551,560,339,0.605,14703,6628,0.451,0.456
+"out of sample 2026-27 (league, 5 games each side)",PROD_pattern_rule,2931,0.572,494,303,0.613,2437,1064,0.437,0.466
+"out of sample 2026-27 (league, 5 games each side)",MODEL_high_or_medium,2931,0.572,2410,1383,0.574,521,228,0.438,0.55
+"out of sample 2026-27 (league, 5 games each side)",MODEL_high_only,2931,0.572,449,299,0.666,2482,1105,0.445,0.479
+"out of sample 2026-27 (league, 5 games each side)",EVID_both_scoring_no_routes,2931,0.572,936,546,0.583,1995,865,0.434,0.481
+"out of sample 2026-27 (league, 5 games each side)",EVID_both_btts_3of5,2931,0.572,1165,685,0.588,1766,775,0.439,0.498
+"out of sample 2026-27 (league, 5 games each side)",EVID_score_yes,2931,0.572,974,580,0.595,1957,861,0.44,0.492
+"out of sample 2026-27 (league, 5 games each side)",BASE_always_yes,2931,0.572,2931,1676,0.572,0,0,,0.572
+"out of sample 2026-27 (league, 5 games each side)",BASE_always_no,2931,0.572,0,0,,2931,1255,0.428,0.428
+"out of sample 2026-27 (league, 5 games each side)",BASE_league_rate_over_50,2931,0.572,2394,1377,0.575,537,238,0.443,0.551
+"out of sample 2026-27 (league, 5 games each side)",AUDIT_v1_yes_or_lean_yes,2931,0.572,1109,674,0.608,1822,820,0.45,0.51
+"out of sample 2026-27 (league, 5 games each side)",AUDIT_v1_yes_only,2931,0.572,449,299,0.666,2482,1105,0.445,0.479
+"out of sample 2026-27 (league, 5 games each side)",COMBO_model_high_and_evidence_25,2931,0.572,198,141,0.712,2733,1198,0.438,0.457
+"out of sample 2026-27 (league, 3+ games each side)",PROD_pattern_rule,3686,0.573,507,309,0.609,3179,1376,0.433,0.457
+"out of sample 2026-27 (league, 3+ games each side)",MODEL_high_or_medium,3686,0.573,2972,1713,0.576,714,315,0.441,0.55
+"out of sample 2026-27 (league, 3+ games each side)",MODEL_high_only,3686,0.573,549,366,0.667,3137,1391,0.443,0.477
+"out of sample 2026-27 (league, 3+ games each side)",EVID_both_scoring_no_routes,3686,0.573,965,564,0.584,2721,1173,0.431,0.471
+"out of sample 2026-27 (league, 3+ games each side)",EVID_both_btts_3of5,3686,0.573,1241,733,0.591,2445,1066,0.436,0.488
+"out of sample 2026-27 (league, 3+ games each side)",EVID_score_yes,3686,0.573,987,588,0.596,2699,1175,0.435,0.478
+"out of sample 2026-27 (league, 3+ games each side)",BASE_always_yes,3686,0.573,3686,2112,0.573,0,0,,0.573
+"out of sample 2026-27 (league, 3+ games each side)",BASE_always_no,3686,0.573,0,0,,3686,1574,0.427,0.427
+"out of sample 2026-27 (league, 3+ games each side)",BASE_league_rate_over_50,3686,0.573,2920,1685,0.577,766,339,0.443,0.549
+"out of sample 2026-27 (league, 3+ games each side)",AUDIT_v1_yes_or_lean_yes,3686,0.573,1218,748,0.614,2468,1104,0.447,0.502
+"out of sample 2026-27 (league, 3+ games each side)",AUDIT_v1_yes_only,3686,0.573,549,366,0.667,3137,1391,0.443,0.477
+"out of sample 2026-27 (league, 3+ games each side)",COMBO_model_high_and_evidence_25,3686,0.573,198,141,0.712,3488,1517,0.435,0.45
+"out of sample 2026-27 (cup ties, 3+ league games each side)",PROD_pattern_rule,405,0.598,76,43,0.566,329,130,0.395,0.427
+"out of sample 2026-27 (cup ties, 3+ league games each side)",MODEL_high_or_medium,405,0.598,395,236,0.597,10,4,0.4,0.593
+"out of sample 2026-27 (cup ties, 3+ league games each side)",MODEL_high_only,405,0.598,118,77,0.653,287,122,0.425,0.491
+"out of sample 2026-27 (cup ties, 3+ league games each side)",EVID_both_scoring_no_routes,405,0.598,120,70,0.583,285,113,0.396,0.452
+"out of sample 2026-27 (cup ties, 3+ league games each side)",EVID_both_btts_3of5,405,0.598,144,83,0.576,261,102,0.391,0.457
+"out of sample 2026-27 (cup ties, 3+ league games each side)",EVID_score_yes,405,0.598,115,61,0.53,290,109,0.376,0.42
+"out of sample 2026-27 (cup ties, 3+ league games each side)",BASE_always_yes,405,0.598,405,242,0.598,0,0,,0.598
+"out of sample 2026-27 (cup ties, 3+ league games each side)",BASE_always_no,405,0.598,0,0,,405,163,0.402,0.402
+"out of sample 2026-27 (cup ties, 3+ league games each side)",BASE_league_rate_over_50,405,0.598,324,202,0.623,81,41,0.506,0.6
+"out of sample 2026-27 (cup ties, 3+ league games each side)",AUDIT_v1_yes_or_lean_yes,405,0.598,180,104,0.578,225,87,0.387,0.472
+"out of sample 2026-27 (cup ties, 3+ league games each side)",AUDIT_v1_yes_only,405,0.598,118,77,0.653,287,122,0.425,0.491
+"out of sample 2026-27 (cup ties, 3+ league games each side)",COMBO_model_high_and_evidence_25,405,0.598,28,20,0.714,377,155,0.411,0.432
