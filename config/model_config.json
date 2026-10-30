@@ -102,6 +102,7 @@
     "drivers20 = home scored 2+ + away scored 2+ + home let in 2+ + away let in 2+ (0 to 20) carried on every row",
     "abandoned, awarded and cancelled matches with a score no longer count as results on the card (29 Oct)",
     "weekend run moved to Friday 07:00 Europe/London so Rob decides Friday morning on Thursday night's data",
-    "selection model, features, cut points and training unchanged: bands_model.pkl f48986cb2d94008a, btts_model.pkl 56cb8dcb47618aca"
+    "selection model, features, cut points and training unchanged: bands_model.pkl f48986cb2d94008a, btts_model.pkl 56cb8dcb47618aca",
+    "BTTS caution (display only): model-High BTTS shown as 'lean YES' with btts_note when either side kept 3+ clean sheets or failed to score in 3+ of its last five; trump card stays BTTS YES; Over 2.5 unaffected. Trump card confirmed loose: both attacks 2+ in 4+ of 5, both defences 2+ against in 1 or fewer"
   ]
 }
