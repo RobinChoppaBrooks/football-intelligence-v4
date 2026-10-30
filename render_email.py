@@ -64,6 +64,8 @@ def main():
         trump = bool(getattr(r, "trump", 0))
         lean = getattr(r, "btts_lean", None) or r.model_btts
         lean_col = GREEN if str(lean).startswith("YES") else (AMBER if "lean" in str(lean) else MUTED)
+        note = getattr(r, "btts_note", "")
+        note = "" if note is None or (isinstance(note, float) and pd.isna(note)) else str(note)
         d20 = getattr(r, "drivers20", None)
         rows.append(
             f'<tr><td style="padding:8px 10px;border-bottom:1px solid #e5e7eb;font-size:13px;color:{MUTED}">'
@@ -71,7 +73,7 @@ def main():
             f'{" &nbsp;<b style=\"color:" + GREEN + "\">TRUMP CARD</b>" if trump else ""} &nbsp;<span style="color:{MUTED}">{esc(r.competition)}, {esc(r.date)} UK, score {r.model_score:.3f}</span></div>'
             f'<div>{esc(home)}: Scored 2+ <b>{r.home_scored2} of 5</b>, Let in 2+ <b>{r.home_letin2} of 5</b> &nbsp;|&nbsp; {esc(away)}: Scored 2+ <b>{r.away_scored2} of 5</b>, Let in 2+ <b>{r.away_letin2} of 5</b>'
             f'{" &nbsp;|&nbsp; drivers <b>" + str(int(d20)) + " of 20</b>" if d20 is not None and not pd.isna(d20) else ""}'
-            f' &nbsp;|&nbsp; BTTS <b style="color:{lean_col}">{esc(lean)}</b> (model {esc(r.model_btts_likelihood)})</div>'
+            f' &nbsp;|&nbsp; BTTS <b style="color:{lean_col}">{esc(lean)}</b> (model {esc(r.model_btts_likelihood)}){", caution: " + esc(note) if note else ""}</div>'
             f'<div>Last five: {esc(home)} {esc(r.home_scores)} &nbsp;|&nbsp; {esc(away)} {esc(r.away_scores)}</div>'
             f'<div>Why: {esc(r.why)}</div><div style="color:{RED}">Risk: {esc(r.risk)}</div></td></tr>')
     shortlist = '<table width="100%" cellpadding="0" cellspacing="0">' + "".join(rows) + "</table>" if rows else f'<p style="color:{MUTED}">Nothing above the line this window.</p>'
@@ -88,7 +90,7 @@ def main():
 <h2 style="font-size:16px;margin:16px 0 6px;border-bottom:2px solid #111;padding-bottom:3px">By league, in order</h2>
 {league_table}
 <h2 style="font-size:16px;margin:20px 0 6px;border-bottom:2px solid #111;padding-bottom:3px">Shortlist, ranked by model score</h2>
-<p style="margin:0 0 6px;font-size:13px;color:{MUTED}">High is model score 0.630 or more, Medium 0.581 to 0.630, Weak the bottom quarter of Medium. The two drivers are Scored 2+ and Let in 2+ over each side's last five league games. BTTS YES is the BTTS model's High band, lean YES its Medium band. A trump card (both attacks 2+ in 4 or more of 5, both defences 2+ against in 1 or fewer) is in by Rob's rule.</p>
+<p style="margin:0 0 6px;font-size:13px;color:{MUTED}">High is model score 0.630 or more, Medium 0.581 to 0.630, Weak the bottom quarter of Medium. The two drivers are Scored 2+ and Let in 2+ over each side's last five league games. BTTS is secondary and never affects the Over 2.5 call: YES is the BTTS model's High band, lean YES its Medium band, or its High band with a caution when a side kept 3+ clean sheets or failed to score in 3+ of 5. A trump card (both attacks 2+ in 4 or more of 5, both defences 2+ against in 1 or fewer) is in by Rob's rule.</p>
 {shortlist}
 <h2 style="font-size:16px;margin:20px 0 6px;border-bottom:2px solid #111;padding-bottom:3px">Postponed, flagged, warnings</h2>
 <p style="margin:4px 0;font-size:13px">{esc("; ".join(flagged)) if flagged else "No postponed or other-status fixtures in the window."}</p>

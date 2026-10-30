@@ -75,7 +75,7 @@ def chatgpt_review(rows, run_id, label, window, path, flagged_notes):
         hr, ar, hv, av = d["hr"], d["ar"], d.get("hv5", d["hv"]), d.get("av5", d["av"])
         conf = "High" if d["light"] == "GREEN" else "Medium"
         L += [f"## {d['fixture']}  ({d['comp']}, {d['kickoff']} UK)  fixture_id {d['fixture_id']}",
-              f"- Classification: {conf}{' (trump card)' if d.get('trump') else ''}. Over 2.5: YES. BTTS: {d.get('btts_lean', d['btts'])} (model {d['btts_lik']}). Drivers: {d.get('drivers20')} of 20. Pattern: {d['pattern']}.",
+              f"- Classification: {conf}{' (trump card)' if d.get('trump') else ''}. Over 2.5: YES. BTTS: {d.get('btts_lean', d['btts'])} (model {d['btts_lik']}){'; caution: ' + d['btts_note'] if d.get('btts_note') else ''}. Drivers: {d.get('drivers20')} of 20. Pattern: {d['pattern']}.",
               f"- {d['home']}: scored 2+ {n_(hr, lambda x: x['gf']>=2)}/{len(hr)}, let in 2+ {n_(hr, lambda x: x['ga']>=2)}/{len(hr)}, 3+ in {n_(hr, lambda x: x['tot']>=3)}/{len(hr)}, BTTS {n_(hr, lambda x: x['gf']>0 and x['ga']>0)}/{len(hr)}, clean sheets {n_(hr, lambda x: x['ga']==0)}/{len(hr)}, failed to score {n_(hr, lambda x: x['gf']==0)}/{len(hr)}. Last five: " + ", ".join(f"{x['gf']}-{x['ga']}" for x in hr) + f". Home last {len(hv)}: " + ", ".join(f"{x['gf']}-{x['ga']}" for x in hv),
               f"- {d['away']}: scored 2+ {n_(ar, lambda x: x['gf']>=2)}/{len(ar)}, let in 2+ {n_(ar, lambda x: x['ga']>=2)}/{len(ar)}, 3+ in {n_(ar, lambda x: x['tot']>=3)}/{len(ar)}, BTTS {n_(ar, lambda x: x['gf']>0 and x['ga']>0)}/{len(ar)}, clean sheets {n_(ar, lambda x: x['ga']==0)}/{len(ar)}, failed to score {n_(ar, lambda x: x['gf']==0)}/{len(ar)}. Last five: " + ", ".join(f"{x['gf']}-{x['ga']}" for x in ar) + f". Away last {len(av)}: " + ", ".join(f"{x['gf']}-{x['ga']}" for x in av),
               f"- Supporting: {d['why']}", f"- Concern: {d['risk']}", f"- Notes: {'; '.join(e for e in d['ev_against'] if 'average' not in e) or 'none'}", ""]
@@ -105,7 +105,7 @@ def run_analysis(mode, start=None, end=None, sets=("english", "european")):
         n_ = lambda rs, f: sum(1 for x in rs if f(x))
         js = [dict(run_id=run_id, fixture_id=d["fixture_id"], competition=d["comp"], league_id=ALL[d["comp"]][0], kickoff_uk=d["kickoff"], home=d["home"], away=d["away"],
                    model_version=MODEL_VERSION, classification=("High" if d["light"] == "GREEN" else "Medium" if d["light"] == "AMBER" else "rejected"), over25=("Yes" if d["light"] != "RED" else "No"),
-                   btts=d["btts"], btts_likelihood=d["btts_lik"], btts_lean=d.get("btts_lean"), trump=bool(d.get("trump", False)), drivers20=d.get("drivers20"), pattern=d["pattern"], model_score=d["p"],
+                   btts=d["btts"], btts_likelihood=d["btts_lik"], btts_lean=d.get("btts_lean"), btts_note=d.get("btts_note", ""), trump=bool(d.get("trump", False)), drivers20=d.get("drivers20"), pattern=d["pattern"], model_score=d["p"],
                    home_scored2=n_(d["hr"], lambda x: x["gf"] >= 2), home_letin2=n_(d["hr"], lambda x: x["ga"] >= 2), away_scored2=n_(d["ar"], lambda x: x["gf"] >= 2), away_letin2=n_(d["ar"], lambda x: x["ga"] >= 2),
                    home_last5=[f"{x['gf']}-{x['ga']}" for x in d["hr"]], away_last5=[f"{x['gf']}-{x['ga']}" for x in d["ar"]], why=d["why"], risk=d["risk"]) for d in allrows]
         json.dump(js, open(f"{outdir}/predictions_{t0:%Y-%m-%d}.json", "w"), indent=1)
@@ -127,7 +127,7 @@ def _db_append(rows, run_id):
     n_ = lambda rs, f: sum(1 for x in rs if f(x))
     recs = [dict(run_id=run_id, generated_at=now_l().strftime("%Y-%m-%d %H:%M"), model_version=MODEL_VERSION, fixture_id=d["fixture_id"], league_id=ALL[d["comp"]][0], competition=d["comp"],
                  kickoff_uk=d["kickoff"], home=d["home"], away=d["away"], classification=("High" if d["light"] == "GREEN" else "Medium" if d["light"] == "AMBER" else "rejected"),
-                 over25=("Yes" if d["light"] != "RED" else "No"), btts=d["btts"], btts_likelihood=d["btts_lik"], btts_lean=d.get("btts_lean"), trump=int(bool(d.get("trump", False))), drivers20=d.get("drivers20"), model_score=d["p"], p_btts=d["p_btts"], pattern=d["pattern"],
+                 over25=("Yes" if d["light"] != "RED" else "No"), btts=d["btts"], btts_likelihood=d["btts_lik"], btts_lean=d.get("btts_lean"), btts_note=d.get("btts_note", ""), trump=int(bool(d.get("trump", False))), drivers20=d.get("drivers20"), model_score=d["p"], p_btts=d["p_btts"], pattern=d["pattern"],
                  h_s2=n_(d["hr"], lambda x: x["gf"] >= 2), h_c2=n_(d["hr"], lambda x: x["ga"] >= 2), a_s2=n_(d["ar"], lambda x: x["gf"] >= 2), a_c2=n_(d["ar"], lambda x: x["ga"] >= 2),
                  h_over=n_(d["hr"], lambda x: x["tot"] >= 3), a_over=n_(d["ar"], lambda x: x["tot"] >= 3), h_btts=n_(d["hr"], lambda x: x["gf"] > 0 and x["ga"] > 0), a_btts=n_(d["ar"], lambda x: x["gf"] > 0 and x["ga"] > 0),
                  h_cs=n_(d["hr"], lambda x: x["ga"] == 0), a_cs=n_(d["ar"], lambda x: x["ga"] == 0), h_fts=n_(d["hr"], lambda x: x["gf"] == 0), a_fts=n_(d["ar"], lambda x: x["gf"] == 0), h_n=len(d["hr"]), a_n=len(d["ar"]),

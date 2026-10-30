@@ -97,7 +97,7 @@ def flat(d):
                 route_home_attack=al["rA"], route_away_attack=al["rB"], venue_component=al.get("ven"), other_component=al.get("oth"), penalty=al.get("pen"),
                 alignment_score=al["score"], classification=al["cls"], route_home_strength=al["strA"], route_away_strength=al["strB"],
                 over25_v2=("Yes" if al["cls"] in ("Primary", "Secondary", "Watchlist") else "No"), btts_v2=d["btts_v2"],
-                model_confidence=d["conf"], model_over25=("Yes" if d["light"] != "RED" else "No"), model_btts=d["btts"], model_btts_likelihood=d["btts_lik"], btts_lean=d.get("btts_lean"), trump=int(bool(d.get("trump", False))), drivers20=d.get("drivers20"), model_score=d["p"],
+                model_confidence=d["conf"], model_over25=("Yes" if d["light"] != "RED" else "No"), model_btts=d["btts"], model_btts_likelihood=d["btts_lik"], btts_lean=d.get("btts_lean"), btts_note=d.get("btts_note", ""), trump=int(bool(d.get("trump", False))), drivers20=d.get("drivers20"), model_score=d["p"],
                 home_scores="; ".join(f"{x['gf']}-{x['ga']}" for x in d["hr"]), away_scores="; ".join(f"{x['gf']}-{x['ga']}" for x in d["ar"]),
                 home_venue_scores="; ".join(f"{x['gf']}-{x['ga']}" for x in d.get("hv5", d["hv"])), away_venue_scores="; ".join(f"{x['gf']}-{x['ga']}" for x in d.get("av5", d["av"])),
                 why=d["why"], risk=d["risk_v2"], rejection_reason=al["reason"] if al["cls"] in ("Rejected", "Insufficient data") else "")

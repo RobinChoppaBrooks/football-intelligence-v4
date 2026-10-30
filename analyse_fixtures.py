@@ -210,9 +210,17 @@ def main():
             light = "GREEN"; ev_for.insert(0, f"Rob's trump card: both attacks scored 2+ in {hs2_} and {as2_} of 5, both defences let in 2+ in only {hc2_} and {ac2_} of 5")
         btts_yes = btts_lab == "HIGH" or trump
         btts_lean = "YES" if btts_yes else ("lean YES" if btts_lab == "MEDIUM" else "no lean")
+        # V4.1 (30 Oct 2026): BTTS caution, display only. When either side kept 3+ clean sheets or failed to score in 3+ of its
+        # last five, a model-High BTTS YES is shown as "lean YES" with the reason (model High with a 3+ clean-sheet side: 13 of 25
+        # went BTTS, against 64% for the High band). The YES/NO verdict, the trump card and every Over 2.5 call are unchanged.
+        cs_h, cs_a = cnt(hr, lambda x: x["ga"] == 0), cnt(ar, lambda x: x["ga"] == 0); fts_h, fts_a = cnt(hr, lambda x: x["gf"] == 0), cnt(ar, lambda x: x["gf"] == 0)
+        notes_ = [f"{r.home} kept {cs_h} clean sheets in {len(hr)}" if cs_h >= 3 else "", f"{r.away} kept {cs_a} clean sheets in {len(ar)}" if cs_a >= 3 else "",
+                  f"{r.home} failed to score in {fts_h} of {len(hr)}" if fts_h >= 3 else "", f"{r.away} failed to score in {fts_a} of {len(ar)}" if fts_a >= 3 else ""]
+        btts_note = "; ".join(n for n in notes_ if n)
+        if btts_note and btts_lean == "YES" and not trump: btts_lean = "lean YES"
         drivers20 = hs2_ + as2_ + hc2_ + ac2_      # the two drivers across both sides, out of 20
         d = dict(comp=r.comp, hv5=hv5, av5=av5, p_btts=round(float(r.p_btts), 3), btts=("YES" if btts_yes else "NO"), btts_lik=btts_lab.title(),
-                 btts_lean=btts_lean, trump=trump, drivers20=drivers20,
+                 btts_lean=btts_lean, btts_note=btts_note, trump=trump, drivers20=drivers20,
                  pattern=pattern, why=why, risk=risk, route=route, kickoff=r.kickoff_utc.tz_convert("Europe/London").strftime("%a %d %b %H:%M"), fixture=f"{r.home} v {r.away}",
                  h_l5=f"{sum(x['gf'] for x in hr)}-{sum(x['ga'] for x in hr)}", h_seq=seq(hr), h_over=f"{cnt(hr, lambda x: x['tot']>=3)}/{len(hr)}",
                  a_l5=f"{sum(x['gf'] for x in ar)}-{sum(x['ga'] for x in ar)}", a_seq=seq(ar), a_over=f"{cnt(ar, lambda x: x['tot']>=3)}/{len(ar)}",
@@ -229,7 +237,7 @@ def main():
     log = pd.DataFrame([dict(run_date=pd.Timestamp.now().strftime("%Y-%m-%d"), model_version="v4", generated_at=pd.Timestamp.now(tz="Europe/London").strftime("%Y-%m-%d %H:%M"),
                              fixture_id=d["fixture_id"], league_id=ALL[d["comp"]][0], comp=d["comp"], fixture=d["fixture"], home=d["home"], away=d["away"], kickoff=d["kickoff"],
                              over25=("YES" if d["light"] != "RED" else "NO"), confidence={"GREEN": "High", "AMBER": "Medium", "RED": "Rejected"}[d["light"]], p=d["p"],
-                             btts=d["btts"], btts_likelihood=d["btts_lik"], p_btts=d["p_btts"], pattern=d["pattern"], btts_lean=d["btts_lean"], trump=int(d["trump"]), drivers20=d["drivers20"],
+                             btts=d["btts"], btts_likelihood=d["btts_lik"], p_btts=d["p_btts"], pattern=d["pattern"], btts_lean=d["btts_lean"], btts_note=d["btts_note"], trump=int(d["trump"]), drivers20=d["drivers20"],
                              h_over=cnt_(d["hr"], lambda x: x["tot"] >= 3), a_over=cnt_(d["ar"], lambda x: x["tot"] >= 3),
                              h_s1=cnt_(d["hr"], lambda x: x["gf"] >= 1), a_s1=cnt_(d["ar"], lambda x: x["gf"] >= 1), h_s2=cnt_(d["hr"], lambda x: x["gf"] >= 2), a_s2=cnt_(d["ar"], lambda x: x["gf"] >= 2),
                              h_c1=cnt_(d["hr"], lambda x: x["ga"] >= 1), a_c1=cnt_(d["ar"], lambda x: x["ga"] >= 1), h_c2=cnt_(d["hr"], lambda x: x["ga"] >= 2), a_c2=cnt_(d["ar"], lambda x: x["ga"] >= 2),
