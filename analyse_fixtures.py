@@ -188,7 +188,8 @@ def main():
         ev_for, ev_against = for_(hr, ar, hv, av), against(hr, ar, hv, av, teams)
         light = r.light
         if len(hr) < 3 or len(ar) < 3: light = "RED"; ev_against.append("Fewer than 3 league games for one side: not enough evidence")
-        if light == "GREEN" and prof == "Mixed": light = "AMBER"; ev_against.append("Match-up contradicts the headline numbers (neither attack-v-defence route is strong)")
+        # V4.1: the 'Mixed profile' demotion is gone. On Rob's 14 leagues the demoted fixtures hit 3+ in 14 of 18 (2025-26) and 12 of 18 (2026-27).
+        if light == "GREEN" and prof == "Mixed": ev_against.append("Match-up profile Mixed (neither attack-v-defence route strong); kept High")
         if prof == "Chaos": ev_against.append("Goals rely on poor defending rather than proven attacks")
         oq_h = opp_quality(hr, fx, r.season, r.kickoff_utc, lg_ga[r.league_id]); oq_a = opp_quality(ar, fx, r.season, r.kickoff_utc, lg_ga[r.league_id])
         xg = "Unavailable"
@@ -199,8 +200,19 @@ def main():
             xg = f"Shots on target per game: home {r.h_l5_shots_on_target_f:.1f} for / {r.h_l5_shots_on_target_a:.1f} faced; away {r.a_l5_shots_on_target_f:.1f} for / {r.a_l5_shots_on_target_a:.1f} faced. xG not covered"
         btts_lab = btts_label(bb, float(r.p_btts))
         pattern, why, risk, route = pattern_text(r.home, r.away, hr, ar, hv5, av5, ev_against)
-        btts_yes = pattern == "Both teams contribute"      # verdict follows the pattern; the model gives the likelihood
+        # V4.1 (30 Oct 2026): the BTTS verdict follows the BTTS model's own band, as btts.py intended. The goal pattern told us
+        # nothing about BTTS ('One side dominates' went BTTS 55% on 2025-26 and 57% on 2026-27, the base rate); model High 61% / 67%.
+        hs2_, as2_ = cnt(hr, lambda x: x["gf"] >= 2), cnt(ar, lambda x: x["gf"] >= 2); hc2_, ac2_ = cnt(hr, lambda x: x["ga"] >= 2), cnt(ar, lambda x: x["ga"] >= 2)
+        # Rob's trump card: both attacks scored 2+ in 4 or more of 5 and both defences let in 2+ in 1 or fewer. Goes in as Over 2.5 and BTTS
+        # automatically, marked and scored separately (12 of 21 on 2025-26, 4 of 5 on 2026-27, Rob's 14 leagues).
+        trump = len(hr) >= 5 and len(ar) >= 5 and hs2_ >= 4 and as2_ >= 4 and hc2_ <= 1 and ac2_ <= 1
+        if trump:
+            light = "GREEN"; ev_for.insert(0, f"Rob's trump card: both attacks scored 2+ in {hs2_} and {as2_} of 5, both defences let in 2+ in only {hc2_} and {ac2_} of 5")
+        btts_yes = btts_lab == "HIGH" or trump
+        btts_lean = "YES" if btts_yes else ("lean YES" if btts_lab == "MEDIUM" else "no lean")
+        drivers20 = hs2_ + as2_ + hc2_ + ac2_      # the two drivers across both sides, out of 20
         d = dict(comp=r.comp, hv5=hv5, av5=av5, p_btts=round(float(r.p_btts), 3), btts=("YES" if btts_yes else "NO"), btts_lik=btts_lab.title(),
+                 btts_lean=btts_lean, trump=trump, drivers20=drivers20,
                  pattern=pattern, why=why, risk=risk, route=route, kickoff=r.kickoff_utc.tz_convert("Europe/London").strftime("%a %d %b %H:%M"), fixture=f"{r.home} v {r.away}",
                  h_l5=f"{sum(x['gf'] for x in hr)}-{sum(x['ga'] for x in hr)}", h_seq=seq(hr), h_over=f"{cnt(hr, lambda x: x['tot']>=3)}/{len(hr)}",
                  a_l5=f"{sum(x['gf'] for x in ar)}-{sum(x['ga'] for x in ar)}", a_seq=seq(ar), a_over=f"{cnt(ar, lambda x: x['tot']>=3)}/{len(ar)}",
@@ -217,7 +229,7 @@ def main():
     log = pd.DataFrame([dict(run_date=pd.Timestamp.now().strftime("%Y-%m-%d"), model_version="v4", generated_at=pd.Timestamp.now(tz="Europe/London").strftime("%Y-%m-%d %H:%M"),
                              fixture_id=d["fixture_id"], league_id=ALL[d["comp"]][0], comp=d["comp"], fixture=d["fixture"], home=d["home"], away=d["away"], kickoff=d["kickoff"],
                              over25=("YES" if d["light"] != "RED" else "NO"), confidence={"GREEN": "High", "AMBER": "Medium", "RED": "Rejected"}[d["light"]], p=d["p"],
-                             btts=d["btts"], btts_likelihood=d["btts_lik"], p_btts=d["p_btts"], pattern=d["pattern"],
+                             btts=d["btts"], btts_likelihood=d["btts_lik"], p_btts=d["p_btts"], pattern=d["pattern"], btts_lean=d["btts_lean"], trump=int(d["trump"]), drivers20=d["drivers20"],
                              h_over=cnt_(d["hr"], lambda x: x["tot"] >= 3), a_over=cnt_(d["ar"], lambda x: x["tot"] >= 3),
                              h_s1=cnt_(d["hr"], lambda x: x["gf"] >= 1), a_s1=cnt_(d["ar"], lambda x: x["gf"] >= 1), h_s2=cnt_(d["hr"], lambda x: x["gf"] >= 2), a_s2=cnt_(d["ar"], lambda x: x["gf"] >= 2),
                              h_c1=cnt_(d["hr"], lambda x: x["ga"] >= 1), a_c1=cnt_(d["ar"], lambda x: x["ga"] >= 1), h_c2=cnt_(d["hr"], lambda x: x["ga"] >= 2), a_c2=cnt_(d["ar"], lambda x: x["ga"] >= 2),

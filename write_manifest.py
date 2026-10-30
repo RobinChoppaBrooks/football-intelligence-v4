@@ -29,7 +29,7 @@ def main():
     row = ex[ex.run_id == run_id]
     status = dict(status="missing from executions.csv") if row.empty else row.iloc[-1].to_dict()
     db = {}
-    if os.path.exists("football.db"):
+    if os.path.exists("football.db") and os.path.getsize("football.db") > 0:
         c = sqlite3.connect("football.db")
         db = dict(max_finished_kickoff_utc=c.execute("select max(kickoff_utc) from fixtures where status in ('FT','AET','PEN')").fetchone()[0],
                   finished_matches=c.execute("select count(*) from fixtures where status in ('FT','AET','PEN')").fetchone()[0],
@@ -63,7 +63,7 @@ def main():
             if os.path.exists(extra): files.append(describe(extra) | {"audit": True})
     elif mode == "review":
         files += [describe(f"reports/performance/performance_{date}.md"), describe("data/results/results_log.csv"), describe("data/predictions/predictions_log.csv")]
-    if db.get("scored_but_not_finished"): warnings.append(f"{db['scored_but_not_finished']} matches in the database carry a score but are not FT/AET/PEN (abandoned, awarded or cancelled); the card counts include them, the model features do not")
+    if db.get("scored_but_not_finished"): warnings.append(f"{db['scored_but_not_finished']} matches in the database carry a score but are not FT/AET/PEN (abandoned, awarded or cancelled); neither the card nor the model counts them as results since 29 Oct")
     now = dt.datetime.now(dt.timezone.utc)
     man = dict(manifest_version=1, run_id=run_id, mode=mode, model_version=MODEL_VERSION, created_at_utc=now.strftime("%Y-%m-%d %H:%M:%S"),
                created_at_london=pd.Timestamp(now).tz_convert("Europe/London").strftime("%Y-%m-%d %H:%M:%S %Z"), git_commit=commit,

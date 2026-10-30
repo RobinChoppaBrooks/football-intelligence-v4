@@ -95,7 +95,14 @@ def main():
         recs.append(r)
     A = pd.DataFrame(recs)
     yes, pat = prod_pattern(A)
-    A["rule_replicates"] = (yes == (A.btts == "YES")) & (pat == A.pattern)
+    version = next(iter(pub.values()), {}).get("model_version", "v4") if pub else "v4"
+    if str(version).startswith("v4.1"):
+        # v4.1: verdict = BTTS model High band or trump card; the goal pattern no longer drives it
+        trump = pd.Series([bool(d.get("trump", False)) for d in rows], index=A.index)
+        A["rule_replicates"] = ((A.p_btts >= cut_high) | trump) == (A.btts == "YES")
+    else:
+        A["rule_replicates"] = (yes == (A.btts == "YES")) & (pat == A.pattern)
+    A["model_version"] = version
     A["evidence_score"] = evidence_score(A)
     # data flags: a non-finished match with a score inside a last-five window (the card counts it, the model does not)
     fx_status = status

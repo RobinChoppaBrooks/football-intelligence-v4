@@ -97,7 +97,7 @@ def flat(d):
                 route_home_attack=al["rA"], route_away_attack=al["rB"], venue_component=al.get("ven"), other_component=al.get("oth"), penalty=al.get("pen"),
                 alignment_score=al["score"], classification=al["cls"], route_home_strength=al["strA"], route_away_strength=al["strB"],
                 over25_v2=("Yes" if al["cls"] in ("Primary", "Secondary", "Watchlist") else "No"), btts_v2=d["btts_v2"],
-                model_confidence=d["conf"], model_over25=("Yes" if d["light"] != "RED" else "No"), model_btts=d["btts"], model_btts_likelihood=d["btts_lik"], model_score=d["p"],
+                model_confidence=d["conf"], model_over25=("Yes" if d["light"] != "RED" else "No"), model_btts=d["btts"], model_btts_likelihood=d["btts_lik"], btts_lean=d.get("btts_lean"), trump=int(bool(d.get("trump", False))), drivers20=d.get("drivers20"), model_score=d["p"],
                 home_scores="; ".join(f"{x['gf']}-{x['ga']}" for x in d["hr"]), away_scores="; ".join(f"{x['gf']}-{x['ga']}" for x in d["ar"]),
                 home_venue_scores="; ".join(f"{x['gf']}-{x['ga']}" for x in d.get("hv5", d["hv"])), away_venue_scores="; ".join(f"{x['gf']}-{x['ga']}" for x in d.get("av5", d["av"])),
                 why=d["why"], risk=d["risk_v2"], rejection_reason=al["reason"] if al["cls"] in ("Rejected", "Insufficient data") else "")
@@ -138,7 +138,7 @@ class Card(Flowable):
         cv.setFillColor(MUTED); cv.setFont("DV", 8); cv.drawRightString(s.width - 6 * mm, top - 9 * mm, f"{d['comp']} · {d['kickoff']} UK")
         y = top - 16 * mm
         cv.setFillColor(CC[al["cls"]]); cv.setFont("DVB", 9); cv.drawString(6 * mm, y, f"OVER 2.5 {'YES' if d['light'] != 'RED' else 'NO'}  ·  confidence {d['conf'].upper()}")
-        cv.setFillColor(MUTED); cv.setFont("DV", 8); cv.drawString(84 * mm, y, f"BTTS {d['btts']} ({d['btts_lik']}) · {d['pattern']}")
+        cv.setFillColor(MUTED); cv.setFont("DV", 8); cv.drawString(84 * mm, y, f"BTTS {d.get('btts_lean', d['btts'])} (model {d['btts_lik']}) · drivers {d.get('drivers20', '-')} of 20{' · TRUMP CARD' if d.get('trump') else ''}")
         cv.setFillColor(GREEN if d["both3"] else MUTED); cv.setFont("DVB" if d["both3"] else "DV", 8); cv.drawRightString(s.width - 6 * mm, y - 4.5 * mm, "both attacks 3 of 5+" if d["both3"] else "")
         y -= 4.5 * mm; cv.setFillColor(MUTED); cv.setFont("DV", 7.5); cv.drawString(6 * mm, y, f"Division: {d['div'] or 'too few games yet'}")
         y -= 5 * mm; cv.setStrokeColor(LINE); cv.setLineWidth(0.6); cv.line(6 * mm, y, s.width - 6 * mm, y)
