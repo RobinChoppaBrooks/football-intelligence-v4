@@ -1,0 +1,104 @@
+{
+ "manifest_version": 1,
+ "run_id": "weekend_20261030_1200",
+ "mode": "weekend",
+ "model_version": "v4",
+ "created_at_utc": "2026-10-30 12:04:29",
+ "created_at_london": "2026-10-30 12:04:29 GMT",
+ "git_commit": "pending upload",
+ "fixture_window": {
+  "text": "Fri 30 Oct 2026 to Sun 01 Nov 2026"
+ },
+ "completion": {
+  "status": "ok",
+  "start_london": "2026-10-30 12:00:47",
+  "finish_london": "2026-10-30 12:03:48",
+  "message": "{\"english\": \"81 analysed, 14 selected, 0 flagged\", \"european\": \"55 analysed, 27 selected, 1 flagged\"}"
+ },
+ "model_files": {
+  "bands_model_pkl": "f48986cb2d94008a",
+  "btts_model_pkl": "56cb8dcb47618aca"
+ },
+ "database": {
+  "max_finished_kickoff_utc": "2026-10-28T20:00:00+00:00",
+  "finished_matches": 67622,
+  "scheduled_matches": 8881,
+  "scored_but_not_finished": 13
+ },
+ "counts": {
+  "fixtures": 136,
+  "by_classification": {
+   "rejected": 95,
+   "Medium": 25,
+   "High": 16
+  },
+  "btts_yes": 18,
+  "competitions": 14
+ },
+ "report_files": [
+  {
+   "path": "reports/weekend/2026-10-30/english_2026-10-30.pdf",
+   "bytes": 105057,
+   "sha256_16": "e984d70a693730db"
+  },
+  {
+   "path": "reports/weekend/2026-10-30/english_2026-10-30.csv",
+   "bytes": 42499,
+   "sha256_16": "4966288ee5314baa"
+  },
+  {
+   "path": "reports/weekend/2026-10-30/european_2026-10-30.pdf",
+   "bytes": 146480,
+   "sha256_16": "abf78fe91032d8bd"
+  },
+  {
+   "path": "reports/weekend/2026-10-30/european_2026-10-30.csv",
+   "bytes": 26363,
+   "sha256_16": "819f4c041c137558"
+  },
+  {
+   "path": "reports/weekend/2026-10-30/combined_2026-10-30.pdf",
+   "bytes": 199662,
+   "sha256_16": "041217c8637c672f"
+  },
+  {
+   "path": "reports/weekend/2026-10-30/combined_2026-10-30.csv",
+   "bytes": 68567,
+   "sha256_16": "93426537ce07cf14"
+  },
+  {
+   "path": "reports/weekend/2026-10-30/predictions_2026-10-30.json",
+   "bytes": 125450,
+   "sha256_16": "1a051b5bc24e6e78"
+  },
+  {
+   "path": "reports/chatgpt_review/chatgpt_review_2026-10-30_weekend.md",
+   "bytes": 45208,
+   "sha256_16": "acf41ba7aa995c01"
+  },
+  {
+   "path": "reports/btts_audit/2026-10-30/btts_audit_2026-10-30_weekend.csv",
+   "bytes": 74130,
+   "sha256_16": "d6a16a0a49ee9ab9",
+   "audit": true
+  },
+  {
+   "path": "reports/btts_audit/2026-10-30/btts_audit_2026-10-30_weekend.json",
+   "bytes": 196768,
+   "sha256_16": "f4609d733e25f811",
+   "audit": true
+  },
+  {
+   "path": "reports/chatgpt_review/btts_audit_review_2026-10-30_weekend.md",
+   "bytes": 69126,
+   "sha256_16": "1abecb1ef0dbdba7",
+   "audit": true
+  }
+ ],
+ "missing_files": [],
+ "data_quality_warnings": [
+  "1 european fixtures postponed/other status, not analysed (see flagged_european.csv)",
+  "13 matches in the database carry a score but are not FT/AET/PEN (abandoned, awarded or cancelled); neither the card nor the model counts them as results since 29 Oct"
+ ],
+ "complete": true
+}
