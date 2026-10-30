@@ -20,12 +20,13 @@
   {
    "id": "C",
    "name": "Weekend fixture analysis",
-   "when": "Thursday 08:30 Europe/London (GitHub Actions). Email delivery task Thursday 10:09 Europe/London.",
+   "when": "Friday 07:00 Europe/London (GitHub Actions; UTC cron entries for GMT and BST; can queue up to an hour). Email delivery task Friday 08:39 Europe/London. Rob decides Friday morning; there is no Saturday run.",
    "command": "run weekend",
-   "window": "Friday to Sunday of the coming weekend",
+   "window": "Friday to Sunday of this weekend (fixtures not yet kicked off)",
    "outputs": "reports/weekend/YYYY-MM-DD/ ..., reports/chatgpt_review/chatgpt_review_YYYY-MM-DD_weekend.md"
   }
  ],
  "mechanics": "Each run is a GitHub Actions job (.github/workflows/football.yml): fetch football.db from branch data, py download.py --results (API-Football, the only API step), python run_v4.py <mode>, btts_audit.py and write_manifest.py, commit reports/data/logs/runs to main, push the slim database to branch data. reports/manifests/latest_<mode>.json says whether the run completed. A separate Claude scheduled task then reads the repository and emails Rob. No Friday or Saturday runs; manual runs via workflow_dispatch.",
- "outputs_note": "Each run also writes reports/manifests/<run_id>.json (completion manifest) and, for midweek/weekend/range, reports/btts_audit/<date>/ and reports/chatgpt_review/btts_audit_review_<date>_<mode>.md (independent BTTS assessment, production verdict unchanged)."
+ "outputs_note": "Each run also writes reports/manifests/<run_id>.json (completion manifest) and, for midweek/weekend/range, reports/btts_audit/<date>/ and reports/chatgpt_review/btts_audit_review_<date>_<mode>.md (independent BTTS assessment, production verdict unchanged).",
+ "leagues": "V4.1: the 14 leagues in config/competitions.json, in Rob's order. No cups."
 }

@@ -1,5 +1,5 @@
 {
-  "version": "v4",
+  "version": "v4.1",
   "locked": "2026-10-28",
   "selection_engine": {
     "file": "bands_model.pkl",
@@ -55,7 +55,7 @@
     "cut_weak_within_medium": "amber + (green-amber)/4",
     "caps": [
       "fewer than 3 league games for a side -> rejected",
-      "High with Mixed match-up profile -> Medium"
+      "(removed in v4.1) High with Mixed match-up profile -> Medium"
     ],
     "form_window": "last 5 completed league games this season; venue last 3 (model) / last 5 (card)",
     "fit_script": "bands.py",
@@ -67,7 +67,7 @@
     "sha256_16": "56cb8dcb47618aca",
     "cut_high": 0.574623,
     "cut_medium": 0.513753,
-    "verdict_rule": "YES when goal pattern is 'both teams contribute'"
+    "verdict_rule": "v4.1: YES when the BTTS model is in its High band (p >= cut_high) or the fixture is a trump card; btts_lean = YES / lean YES (Medium band) / no lean (Low band)"
   },
   "out_of_sample_baseline": {
     "window": "Jan-Jun 2026 + Aug-Oct 2026",
@@ -93,5 +93,15 @@
     "Scored 2+ and Let in 2+ prominent",
     "both attacks 3/5+ highlighted, never required",
     "no V2/V3 scores on shortlist"
+  ],
+  "v4_1_changes_30_oct_2026": [
+    "Rob's 14 leagues only (config/competitions.json), in Rob's order",
+    "'High with Mixed match-up profile -> Medium' cap removed (demoted fixtures hit 14 of 18 on 2025-26, 12 of 18 on 2026-27, Rob's 14 leagues)",
+    "Rob's trump card: both attacks scored 2+ in 4+ of 5 and both defences let in 2+ in 1 or fewer -> High and BTTS YES automatically, field trump=1, scored separately",
+    "BTTS verdict = BTTS model High band (or trump card); btts_lean shows YES / lean YES / no lean; the goal pattern no longer drives BTTS",
+    "drivers20 = home scored 2+ + away scored 2+ + home let in 2+ + away let in 2+ (0 to 20) carried on every row",
+    "abandoned, awarded and cancelled matches with a score no longer count as results on the card (29 Oct)",
+    "weekend run moved to Friday 07:00 Europe/London so Rob decides Friday morning on Thursday night's data",
+    "selection model, features, cut points and training unchanged: bands_model.pkl f48986cb2d94008a, btts_model.pkl 56cb8dcb47618aca"
   ]
 }
