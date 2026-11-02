@@ -68,7 +68,7 @@ def pattern_text(hn, an, hr, ar, hv5, av5, catches):
     hc1, ac1 = n(hr, lambda x: x["ga"] >= 1), n(ar, lambda x: x["ga"] >= 1)
     route_h = hs2 >= 3 or ac2 >= 3; route_a = as2 >= 3 or hc2 >= 3
     # "Both teams contribute" also requires each side to be scoring (4 of 5) and conceding (3 of 5): validated 59% BTTS
-    # on 2,190 fixtures v 55% base (21 Oct 2026). The BTTS verdict is YES exactly when this pattern holds, so the two never disagree.
+    # on 2,190 fixtures v 55% base (21 Oct 2026). Since V4.1 (30 Oct 2026) the BTTS verdict comes from the BTTS model band, not this pattern.
     both_scoring = hs1 >= 4 and as1 >= 4 and hc1 >= 3 and ac1 >= 3
     if route_h and route_a and both_scoring: pattern, route = "Both teams contribute", f"two routes: {hn} attack v {an} defence, and {an} attack v {hn} defence; both sides scoring in {hs1} and {as1} of 5"
     elif route_h and route_a:
@@ -231,23 +231,8 @@ def main():
     out = a.out or os.path.join(os.path.dirname(os.path.abspath(a.db)), f"over25_analysis_{pd.Timestamp.now():%Y%m%d}")
     pd.DataFrame([{k: v for k, v in d.items() if k not in ("hr", "ar", "hv", "av", "hv5", "av5", "ev_for", "ev_against")} | {"ev_for": "; ".join(d["ev_for"]), "ev_against": "; ".join(d["ev_against"])} for d in rows]).to_csv(out + ".csv", index=False)
     pickle.dump(rows, open(out + ".pkl", "wb"))
-    # structured prediction log (one row per fixture per run), scored later by review.py
-    logp = os.path.join(os.path.dirname(os.path.abspath(a.db)), "predictions_log.csv")
-    cnt_ = lambda rs, f: sum(1 for x in rs if f(x))
-    log = pd.DataFrame([dict(run_date=pd.Timestamp.now().strftime("%Y-%m-%d"), model_version="v4", generated_at=pd.Timestamp.now(tz="Europe/London").strftime("%Y-%m-%d %H:%M"),
-                             fixture_id=d["fixture_id"], league_id=ALL[d["comp"]][0], comp=d["comp"], fixture=d["fixture"], home=d["home"], away=d["away"], kickoff=d["kickoff"],
-                             over25=("YES" if d["light"] != "RED" else "NO"), confidence={"GREEN": "High", "AMBER": "Medium", "RED": "Rejected"}[d["light"]], p=d["p"],
-                             btts=d["btts"], btts_likelihood=d["btts_lik"], p_btts=d["p_btts"], pattern=d["pattern"], btts_lean=d["btts_lean"], btts_note=d["btts_note"], trump=int(d["trump"]), drivers20=d["drivers20"],
-                             h_over=cnt_(d["hr"], lambda x: x["tot"] >= 3), a_over=cnt_(d["ar"], lambda x: x["tot"] >= 3),
-                             h_s1=cnt_(d["hr"], lambda x: x["gf"] >= 1), a_s1=cnt_(d["ar"], lambda x: x["gf"] >= 1), h_s2=cnt_(d["hr"], lambda x: x["gf"] >= 2), a_s2=cnt_(d["ar"], lambda x: x["gf"] >= 2),
-                             h_c1=cnt_(d["hr"], lambda x: x["ga"] >= 1), a_c1=cnt_(d["ar"], lambda x: x["ga"] >= 1), h_c2=cnt_(d["hr"], lambda x: x["ga"] >= 2), a_c2=cnt_(d["ar"], lambda x: x["ga"] >= 2),
-                             h_btts=cnt_(d["hr"], lambda x: x["gf"] > 0 and x["ga"] > 0), a_btts=cnt_(d["ar"], lambda x: x["gf"] > 0 and x["ga"] > 0),
-                             h_cs=cnt_(d["hr"], lambda x: x["ga"] == 0), a_cs=cnt_(d["ar"], lambda x: x["ga"] == 0), h_fts=cnt_(d["hr"], lambda x: x["gf"] == 0), a_fts=cnt_(d["ar"], lambda x: x["gf"] == 0),
-                             h_n=len(d["hr"]), a_n=len(d["ar"]), hv_over=cnt_(d["hv5"], lambda x: x["tot"] >= 3), hv_n=len(d["hv5"]), av_over=cnt_(d["av5"], lambda x: x["tot"] >= 3), av_n=len(d["av5"]),
-                             catch="; ".join(d["ev_against"]), why=d["why"], risk=d["risk"], score="", over25_result="", btts_result="") for d in rows])
-    if os.path.exists(logp):
-        old = pd.read_csv(logp); old = old[~(old.fixture_id.isin(log.fixture_id) & (old.run_date == log.run_date.iloc[0]))]; log = pd.concat([old, log])
-    log.to_csv(logp, index=False)
+    # Phase 0 (2 Nov 2026): the second prediction log that used to be written here is retired. The canonical pre-match
+    # record is data/predictions/predictions_log.csv, written by run_v4.py.
     write_md(rows, out + ".md", teams)
     print(f"{len(rows)} fixtures analysed -> {out}.md / .csv")
     print(pd.Series([d["light"] for d in rows]).value_counts().to_string())

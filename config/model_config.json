@@ -80,7 +80,7 @@
     "download": "download.py --results (results-only, ~65 calls)",
     "analysis": "analyse_fixtures.py football.db fixtures_YYYYMMDD.txt --out over25_analysis_YYYYMMDD",
     "report": "report_v4.py <pkl> football.db <pdf> <csv> \"window\"",
-    "review": "review.py football.db"
+    "review": "run_v4.py review"
   },
   "experimental_not_in_production": [
     "report_v2.py (V2 alignment)",

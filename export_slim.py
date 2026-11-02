@@ -9,7 +9,8 @@ for stmt in SCHEMA.split(";"):
     s = stmt.strip()
     if s.upper().startswith("CREATE TABLE"): c.execute(s.replace("CREATE TABLE IF NOT EXISTS ", "CREATE TABLE IF NOT EXISTS slim."))
     elif s.upper().startswith("CREATE INDEX"): c.execute(s.replace("CREATE INDEX IF NOT EXISTS ", "CREATE INDEX IF NOT EXISTS slim."))
-for t in ("competitions", "coverage", "teams", "fixtures", "fixture_stats", "fixture_odds", "fixture_events", "predictions_log"):   # fixture_events added 2 Nov 2026 (research only)
+# predictions_log (an old Poisson table, 28 Sep 2026) is no longer copied: the canonical record is data/predictions/predictions_log.csv
+for t in ("competitions", "coverage", "teams", "fixtures", "fixture_stats", "fixture_odds", "fixture_events"):   # fixture_events added 2 Nov 2026 (research only)
     c.execute(f"INSERT OR REPLACE INTO slim.{t} SELECT * FROM main.{t}")
 c.commit(); c.execute("DETACH DATABASE slim"); c.close()
 d = sqlite3.connect(dst); d.execute("VACUUM"); d.close()

@@ -1,0 +1,45 @@
+{
+ "as_of": "2026-11-01",
+ "season": "2026-27",
+ "fixtures": 1700,
+ "scope": "every finished league fixture in Rob's 14 leagues, season 2026-27, classified as production does",
+ "why_this_window": "only clean out-of-sample season: model trained on 2023-24 and 2024-25, cut points chosen on 2025-26",
+ "over25": {
+  "High": {
+   "hits": 98,
+   "n": 143
+  },
+  "Medium": {
+   "hits": 135,
+   "n": 227
+  },
+  "Trump card": {
+   "hits": 3,
+   "n": 3
+  },
+  "rejected": {
+   "hits": 739,
+   "n": 1327
+  },
+  "Selected (High, Medium, Trump card)": {
+   "hits": 236,
+   "n": 373
+  }
+ },
+ "btts": {
+  "High band": {
+   "hits": 105,
+   "n": 168
+  },
+  "Medium band": {
+   "hits": 750,
+   "n": 1334
+  },
+  "Low band": {
+   "hits": 119,
+   "n": 198
+  }
+ },
+ "note": "classified with information up to each kick-off; a live run uses information up to the run, so a few fixtures sit either side of a line differently",
+ "written_by": "benchmarks.py"
+}

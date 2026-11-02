@@ -15,6 +15,7 @@ import os, sys, json, pickle, sqlite3, subprocess, datetime as dt, uuid, math
 import pandas as pd
 HERE = os.path.dirname(os.path.abspath(__file__)); os.chdir(HERE)
 from config import LEAGUES, CUPS, NONLEAGUE, ORDER
+from benchmarks import text as bench_text, btts_text as bench_btts_text   # the one benchmark source (config/benchmarks.json)
 ALL = {**LEAGUES, **CUPS, **NONLEAGUE}; BYID = {v[0]: k for k, v in ALL.items()}
 COMP = json.load(open("config/competitions.json"))
 SETS = {"english": [c["name"] for c in COMP["english"]], "european": [c["name"] for c in COMP["european"]]}
@@ -69,7 +70,7 @@ def chatgpt_review(rows, run_id, label, window, path, flagged_notes):
     sel = [d for d in rows if d["light"] != "RED"]
     L = [f"# ChatGPT review package: {label}", "", f"Report date: {now_l():%Y-%m-%d %H:%M} UK. Analysis window: {window}. Model version: {MODEL_VERSION} (validated model, unchanged). Run id: {run_id}.",
          f"Fixtures analysed: {len(rows)}. Selected: {len(sel)} (High {sum(d['light']=='GREEN' for d in rows)}, Medium/Weak {sum(d['light']=='AMBER' for d in rows)}). Rejected: {len(rows)-len(sel)}.",
-         "", "Classifications are model bands, not per-fixture probabilities (Rob's 14 leagues, out of sample 2026-27: High 65%, Medium 63%, rejected 50%). Counts are from stored final scores; the five results are listed oldest to newest. BTTS YES = BTTS model High band (67% out of sample); lean YES = Medium band; no lean = Low band. A trump card fixture (both attacks 2+ in 4+ of 5, both defences 2+ against in 1 or fewer) is High and BTTS YES by Rob's rule and is scored separately.",
+         "", "Classifications are model bands, not per-fixture probabilities. " + bench_text() + " Counts are from stored final scores; the five results are listed oldest to newest. BTTS YES = BTTS model High band; lean YES = Medium band; no lean = Low band. " + bench_btts_text() + " A trump card fixture (both attacks 2+ in 4+ of 5, both defences 2+ against in 1 or fewer) is High and BTTS YES by Rob's rule and is scored separately.",
          "", "Data-quality warnings: " + ("; ".join(flagged_notes) if flagged_notes else "none"), ""]
     for d in sorted(sel, key=lambda d: (d["light"] != "GREEN", d["comp"], d["kickoff"])):
         hr, ar, hv, av = d["hr"], d["ar"], d.get("hv5", d["hv"]), d.get("av5", d["av"])
@@ -163,8 +164,9 @@ def review():
         p = k / n; z = 1.96; d = 1 + z * z / n; cc = p + z * z / (2 * n); s = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n)); return f"{(cc - s) / d * 100:.0f} to {(cc + s) / d * 100:.0f}%"
     def line(lab, g): k = int(g.o.sum()); n = len(g); return f"| {lab} | {k} of {n} | {k / n * 100:.0f}% | {w(k, n)} |" if n else f"| {lab} | 0 | - | - |"
     sel = m[m.over25 == "Yes"]; L = [f"# Performance report {t0:%Y-%m-%d}", "", f"Predictions with results: {len(m)} of {len(log[log.published == '1'])} published. New results added this run: {len(new)}.", "",
-                                     "Benchmarks (out of sample): High 69%, selected 64%, rejected 54%; BTTS High 61%, Medium 55%, Low 50%.", "", "| | hit 3+ | rate | 95% range |", "|---|---|---|---|",
-                                     line("Selected (all)", sel), line("High", m[m.classification == "High"]), line("Medium", m[m.classification == "Medium"]), line("Rejected", m[m.classification == "rejected"])]
+                                     bench_text(), "", bench_btts_text(), "", "| | hit 3+ | rate | 95% range |", "|---|---|---|---|",
+                                     line("Selected (all)", sel), line("High (model, excluding trump card)", m[(m.classification == "High") & (m.trump != "1")]), line("Trump card (Rob's rule, scored on its own)", m[m.trump == "1"]),
+                                     line("Medium", m[m.classification == "Medium"]), line("Rejected", m[m.classification == "rejected"])]
     L += ["", f"BTTS: YES predictions correct {int(m[m.btts == 'YES'].bc.sum())} of {int((m.btts == 'YES').sum())}; NO predictions correct {int(m[m.btts == 'NO'].bc.sum())} of {int((m.btts == 'NO').sum())}.", "", "## By competition (selected)", "", "| competition | hit | n | rate |", "|---|---|---|---|"]
     for cp, g in sel.groupby("competition"): L.append(f"| {cp} | {int(g.o.sum())} | {len(g)} | {g.o.mean() * 100:.0f}% |")
     both = sel[(sel.h_s2 >= 3) & (sel.a_s2 >= 3)]; one = sel[((sel.h_s2 >= 3) | (sel.a_s2 >= 3)) & ~((sel.h_s2 >= 3) & (sel.a_s2 >= 3))]; nei = sel[(sel.h_s2 < 3) & (sel.a_s2 < 3)]

@@ -21,9 +21,12 @@ and pushes the slim database to the branch `data` (one commit, replaced every ru
 Actions tab -> Run workflow -> mode `midweek`, `weekend` or `review`.
 
 ## Files
-- `run_v4.py` orchestrator; `analyse_fixtures.py`, `report_v4.py` the production analysis and report.
+- `run_v4.py` orchestrator (midweek, weekend, range, review); `analyse_fixtures.py`, `report_v4.py` the production analysis and report.
 - `bands_model.pkl`, `btts_model.pkl` the locked models (scikit-learn 1.8.0).
-- `over25_model_v4_methodology.md`, `over25_model_v4_config.json`, `over25_backtest_baseline.md`, `over25_changelog.md` the method.
-- `seed/football.db` the starting slim database (used only until branch `data` exists).
+- `config/model_config.json` the exact current model (V4.1); `config/competitions.json` Rob's 14 leagues; `config/schedules.json` the schedule.
+- `config/benchmarks.json` the one benchmark every report quotes, written by `benchmarks.py` each Monday review.
+- `docs/methodology.md` the method, `docs/backtest_baseline.md` the backtest tables, `docs/changelog.md` the history, `docs/research/` research records, `docs/research_policy.md` the rules for any change.
+- `data/predictions/predictions_log.csv` the only pre-match prediction record; `data/results/results_log.csv` the scored results.
+- `seed/football.db` a starting database, used only if branch `data` is ever missing.
 
 Bookmaker odds are never used for selection. The API key is never stored in this repository.

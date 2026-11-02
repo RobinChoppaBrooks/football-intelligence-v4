@@ -23,7 +23,7 @@ import os, sys, json, math, datetime as dt
 import pandas as pd
 
 LOGP, RESP, GDIR = "data/predictions/predictions_log.csv", "data/results/results_log.csv", "reports/research_groups"
-MEDIUM_CUT = 0.58084   # from over25_model_v4_config.json, for display only ('how far below the line')
+MEDIUM_CUT = 0.58084   # from config/model_config.json (cut_medium), for display only ('how far below the line')
 
 def _paths(run_id):
     mode, st = run_id.split("_")[0], run_id.split("_")[1]; date = f"{st[:4]}-{st[4:6]}-{st[6:8]}"

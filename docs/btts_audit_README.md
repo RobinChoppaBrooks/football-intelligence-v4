@@ -10,7 +10,6 @@ New files, all additive. The production model, thresholds, verdict rule and publ
 | write_manifest.py | `python3 write_manifest.py <run_id> [--commit sha]`: completion manifest, reports/manifests/<run_id>.json and latest_<mode>.json |
 | reports/btts_audit/recompute.py | the independent recomputation of every last-five count from football.db used in the audit |
 | docs/btts_audit_2026-10-29.md | the audit report |
-| docs/proposed/ | diffs awaiting approval (workflow, two one-line fixes in analyse_fixtures.py) |
 
 Scoring both versions after the weekend: join reports/btts_audit/2026-10-29/btts_audit_2026-10-29_weekend.csv to data/results/results_log.csv on run_id and fixture_id;
 compare btts (production) and audit_assessment (YES, LEAN YES, NO LEAN) against btts_result.

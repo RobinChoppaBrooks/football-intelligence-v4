@@ -44,6 +44,8 @@ python download_events.py || echo "events skipped: $?"
 # 3. the model. A failure here is recorded (manifest, logs) and committed, then the job exits non-zero at the end.
 MODEL_STATUS=0
 if [ "$MODE" != "download-only" ]; then
+  # the one benchmark source: refreshed each Monday review from football.db, read by every report (Phase 0, 2 Nov 2026)
+  if [ "$MODE" = "review" ]; then python benchmarks.py football.db > /dev/null || echo "benchmarks skipped: $?"; fi
   python run_v4.py "$MODE" || MODEL_STATUS=$?
   RUN_ID=$(tail -n 1 logs/execution/executions.csv | cut -d, -f1)
   echo "run id $RUN_ID, model exit $MODEL_STATUS"
@@ -70,7 +72,7 @@ python export_slim.py football.db football_slim.db
 # 5. commit reports and logs to main
 git config user.name "football-v4-bot"
 git config user.email "football-v4-bot@users.noreply.github.com"
-git add -A reports data logs runs predictions_log.csv
+git add -A reports data logs runs config
 git commit -m "V4.1 $MODE run $(date -u +'%Y-%m-%d %H:%M') UTC" || echo "nothing to commit"
 git push
 
