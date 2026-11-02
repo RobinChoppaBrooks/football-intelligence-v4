@@ -23,6 +23,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, Flowable, KeepTogether, PageBreak
 from reportlab.lib.styles import ParagraphStyle
 from config import LEAGUES, CUPS, NONLEAGUE, ORDER
+from benchmarks import text as bench_text, btts_text as bench_btts_text   # the one benchmark source (config/benchmarks.json)
 ALL = {**LEAGUES, **CUPS, **NONLEAGUE}
 
 ap = argparse.ArgumentParser(); ap.add_argument("pkl"); ap.add_argument("db"); ap.add_argument("out"); ap.add_argument("csv"); ap.add_argument("window")
@@ -196,8 +197,8 @@ S = [P("Over 2.5 goals: V4 report", "h1"), Spacer(1, 2 * mm), P(a.window + ". Al
      P("Executive summary", "h2"), Spacer(1, 1.5 * mm),
      P(f"{len(rows)} fixtures analysed: High {ncls['High']}, Medium {ncls['Medium']}, Weak {ncls['Weak']}, rejected {ncls['rejected']}. Selected fixtures with both attacks scoring 2+ in 3 of 5 or better: {nboth}."),
      Spacer(1, 1.5 * mm),
-     P("Selection engine: the validated model (V4 lock, unchanged since 19 Oct 2026). Out of sample it hit 69% in High (729 fixtures), 64% across all selected (2,518), 54% rejected (5,017). "
-       "Those are band rates, not the chance of any one fixture. Scored 2+ and Let in 2+ counts are shown on every card as supporting evidence; both attacks at 3 of 5+ adds about three points inside the bands and is highlighted, not required.", "mut"), Spacer(1, 4 * mm)]
+     P("Selection engine: the validated model (V4 lock; V4.1 changes in config/model_config.json). " + bench_text() + " "
+       "Scored 2+ and Let in 2+ counts are shown on every card as supporting evidence; both attacks at 3 of 5+ adds about three points inside the bands and is highlighted, not required.", "mut"), Spacer(1, 4 * mm)]
 # Top 20
 S += [P("Selected fixtures ranked by model score (up to 20)", "h2"), Spacer(1, 1.5 * mm)]
 hdr = [P(h, "smb") for h in ["#", "Kick-off (UK)", "Competition", "Fixture", "Home sc2+ / let2+", "Away sc2+ / let2+", "Both 3/5+", "BTTS", "Confidence", "Division", "Main risk (Over 2.5 = Yes for every row)"]]
@@ -257,10 +258,10 @@ if a.flagged and os.path.exists(a.flagged):
 for ln in cov: S += [P("• " + ln, "mut"), Spacer(1, 1 * mm)]
 S += [Spacer(1, 3 * mm), P("Methodology (V4 lock)", "h2"), Spacer(1, 1.5 * mm)]
 meth = ["Selection: gradient-boosted model on each side's last-5 league counts (goals, 3+, 2+ scored, 2+ conceded, clean sheets, failed to score, BTTS), last-3 venue counts and the division's 3+ share. Trained on 2023-24 and 2024-25, validated on 2025-26; cut points from validation deciles. High = top decile; Medium = next two; Weak = bottom quarter of Medium; rejected below.",
-        "Out of sample (Jan to Jun 2026 and Aug to Oct 2026, 7,535 fixtures): High 69% (729), Selected 64% (2,518), rejected 54% (5,017). Band rates, not per-fixture probabilities.",
+        bench_text(),
         "Scored 2+ and Let in 2+ are shown for both sides as evidence. Both attacks 3 of 5+ is highlighted (Selected with it 66%, High 71%) but never required: High fixtures failing a 2-of-5 attacking rule hit 73% on 222 fixtures.",
-        "BTTS: YES when the pattern is 'both teams contribute' (two scoring routes, each side scoring in 4 of 5 and conceding in 3 of 5); likelihood from a second validated model (High 61%, Medium 55%, Low 50%). A lean, not a pick.",
-        "V2 and V3 alignment scores were tested (62 to 66% at comparable sizes) and are not used for selection. Full tables in over25_backtest_baseline.md.",
+        "BTTS (V4.1): YES when the BTTS model is in its High band or the fixture is a trump card; lean YES for the Medium band; no lean for the Low band. " + bench_btts_text() + " A lean, not a pick, and never a veto on Over 2.5.",
+        "V2 and V3 alignment scores were tested (62 to 66% at comparable sizes) and are not used for selection. Full tables in docs/backtest_baseline.md.",
         "No averages anywhere. Nothing inferred for missing data. Every count comes from stored final scores; the five scorelines are printed on each card."]
 for ln in meth: S += [P("• " + ln, "mut"), Spacer(1, 1 * mm)]
 SimpleDocTemplate(a.out, pagesize=A4, leftMargin=12 * mm, rightMargin=12 * mm, topMargin=12 * mm, bottomMargin=14 * mm).build(S, onFirstPage=on_page, onLaterPages=on_page)

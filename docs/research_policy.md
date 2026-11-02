@@ -15,4 +15,4 @@ Every experiment:
 
 Complexity is not added because a theory sounds plausible. Research outputs (watchlists, experimental categories) are shown
 beside the official selections, are labelled as research, and never promote or demote a fixture. A proposed change follows
-section 11 of `over25_model_v4_methodology.md` and is logged in `over25_changelog.md`.
+section 11 of `docs/methodology.md` and is logged in `docs/changelog.md`.
