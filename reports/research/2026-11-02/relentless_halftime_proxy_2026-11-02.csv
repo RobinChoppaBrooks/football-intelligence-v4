@@ -1,0 +1,287 @@
+league,team,n,ht20,ht20_again,ht20_2h_goals,ht_other2,ht_other2_again,ht10,ht10_to30,behind2,behind2_conc,fixtures,last5_n,last5_ht20,last5_ht20_again,last5_ht_other2,last5_ht_other2_again,again_total,opp_total
+Bundesliga,SC Freiburg,8,2,2,5,0,0,1,0,1,1,2026-08-30 H Werder Bremen HT 2-0 FT 4-1; 2026-09-12 H Borussia Monchengladbach HT 2-0 FT 5-0,5,0,0,0,0,2,2
+Bundesliga,SV Elversberg,8,1,1,1,1,1,0,0,0,0,2026-08-29 H Bayer Leverkusen HT 2-0 FT 3-2,5,0,0,1,1,2,2
+Bundesliga,FSV Mainz 05,8,1,1,3,0,0,1,0,2,2,2026-09-06 A Hamburger SV HT 0-2 FT 0-5,5,0,0,0,0,1,1
+Bundesliga,RB Leipzig,8,1,1,3,0,0,2,1,1,1,2026-09-13 H Hamburger SV HT 2-0 FT 5-0,5,0,0,0,0,1,1
+Bundesliga,Bayer Leverkusen,8,1,1,2,0,0,2,0,1,1,2026-09-05 H Union Berlin HT 2-0 FT 4-0,5,0,0,0,0,1,1
+Bundesliga,Bayern Munich,8,1,1,1,0,0,3,0,0,0,2026-10-25 A SC Freiburg HT 0-2 FT 1-3,5,1,1,0,0,1,1
+Bundesliga,Eintracht Frankfurt,8,1,1,1,0,0,1,0,1,1,2026-09-12 A FSV Mainz 05 HT 0-2 FT 1-3,5,0,0,0,0,1,1
+Bundesliga,SC Paderborn 07,8,2,1,1,0,0,0,0,0,0,2026-09-20 H 1899 Hoffenheim HT 2-0 FT 3-1; 2026-10-17 A Werder Bremen HT 0-2 FT 2-2,5,2,1,0,0,1,2
+Bundesliga,Werder Bremen,8,0,0,0,0,0,1,0,2,1,,5,0,0,0,0,0,0
+Bundesliga,Borussia Monchengladbach,8,0,0,0,0,0,0,0,1,1,,5,0,0,0,0,0,0
+Bundesliga,Borussia Dortmund,8,1,0,0,0,0,1,1,0,0,2026-08-29 H Hamburger SV HT 2-0 FT 2-0,5,0,0,0,0,0,1
+Bundesliga,1899 Hoffenheim,8,0,0,0,0,0,4,0,1,1,,5,0,0,0,0,0,0
+Bundesliga,FC Augsburg,8,0,0,0,0,0,4,1,1,1,,5,0,0,0,0,0,0
+Bundesliga,VfB Stuttgart,8,0,0,0,0,0,2,0,0,0,,5,0,0,0,0,0,0
+Bundesliga,FC Schalke 04,8,0,0,0,0,0,1,0,0,0,,5,0,0,0,0,0,0
+Bundesliga,Hamburger SV,8,0,0,0,0,0,1,0,3,2,,5,0,0,0,0,0,0
+Bundesliga,Union Berlin,8,0,0,0,0,0,1,0,2,2,,5,0,0,0,0,0,0
+Bundesliga,1. FC Köln,8,0,0,0,0,0,1,0,0,0,,5,0,0,0,0,0,0
+Championship,Middlesbrough,10,1,1,1,2,2,3,0,2,0,2026-10-31 H Charlton HT 2-0 FT 3-0,5,1,1,1,1,3,3
+Championship,West Ham,10,1,1,4,0,0,3,2,2,0,2026-09-11 H Wrexham HT 2-0 FT 6-0,5,0,0,0,0,1,1
+Championship,Wolves,10,1,1,1,0,0,1,0,0,0,2026-10-31 H Cardiff HT 2-0 FT 3-0,5,1,1,0,0,1,1
+Championship,Southampton,10,1,1,1,1,0,5,0,0,0,2026-09-08 H Swansea HT 2-0 FT 3-1,5,0,0,1,0,1,2
+Championship,Swansea,10,2,1,1,0,0,0,0,2,2,2026-09-01 H Watford HT 2-0 FT 2-0; 2026-09-12 H Burnley HT 2-0 FT 3-1,5,0,0,0,0,1,2
+Championship,Watford,10,1,0,0,0,0,0,0,3,2,2026-10-31 A Norwich HT 0-2 FT 3-2,5,1,0,0,0,0,1
+Championship,Cardiff,10,1,0,0,0,0,1,0,2,1,2026-10-17 A Middlesbrough HT 0-2 FT 2-2,5,1,0,0,0,0,1
+Championship,Burnley,10,0,0,0,0,0,3,0,1,1,,5,0,0,0,0,0,0
+Championship,Birmingham,10,0,0,0,0,0,3,1,1,0,,5,0,0,0,0,0,0
+Championship,Bristol City,10,0,0,0,0,0,2,0,0,0,,5,0,0,0,0,0,0
+Championship,Millwall,10,2,0,0,0,0,1,1,1,0,2026-09-15 A Middlesbrough HT 0-2 FT 2-2; 2026-09-19 H West Ham HT 2-0 FT 2-2,5,0,0,0,0,0,2
+Championship,Preston,10,2,0,0,0,0,1,0,1,1,2026-09-05 H Blackburn HT 2-0 FT 2-1; 2026-09-19 A QPR HT 0-2 FT 2-2,5,0,0,0,0,0,2
+Championship,West Brom,10,0,0,0,0,0,2,0,0,0,,5,0,0,0,0,0,0
+Championship,Sheffield Utd,10,0,0,0,0,0,3,1,0,0,,5,0,0,0,0,0,0
+Championship,Blackburn,10,1,0,0,0,0,3,0,2,1,2026-10-10 H Cardiff HT 2-0 FT 2-1,5,1,0,0,0,0,1
+Championship,Bolton,10,0,0,0,0,0,1,0,1,1,,5,0,0,0,0,0,0
+Championship,Derby,10,0,0,0,0,0,3,0,2,2,,5,0,0,0,0,0,0
+Championship,Norwich,10,1,0,0,0,0,1,0,2,1,2026-09-09 H Birmingham HT 2-0 FT 2-1,5,0,0,0,0,0,1
+Championship,QPR,10,0,0,0,0,0,2,0,1,0,,5,0,0,0,0,0,0
+Championship,Stoke City,10,0,0,0,0,0,5,0,0,0,,5,0,0,0,0,0,0
+Championship,Charlton,10,0,0,0,0,0,0,0,2,1,,5,0,0,0,0,0,0
+Championship,Portsmouth,10,0,0,0,0,0,2,0,0,0,,5,0,0,0,0,0,0
+Championship,Lincoln,10,1,0,0,0,0,1,0,0,0,2026-10-17 A Millwall HT 0-2 FT 2-2,5,1,0,0,0,0,1
+Championship,Wrexham,10,0,0,0,0,0,2,1,1,1,,5,0,0,0,0,0,0
+Eredivisie,Ajax,10,2,2,6,0,0,3,1,0,0,2026-09-15 H Willem II HT 2-0 FT 5-1; 2026-10-18 A Groningen HT 0-2 FT 2-5,5,1,1,0,0,2,2
+Eredivisie,PSV Eindhoven,10,1,1,5,1,1,4,0,0,0,2026-10-31 H Willem II HT 2-0 FT 7-0,5,1,1,0,0,2,2
+Eredivisie,Heerenveen,10,1,1,2,0,0,2,1,0,0,2026-09-19 A Sparta Rotterdam HT 0-2 FT 0-4,5,1,1,0,0,1,1
+Eredivisie,Twente,10,1,1,2,0,0,1,0,0,0,2026-08-30 A Cambuur HT 0-2 FT 1-4,5,0,0,0,0,1,1
+Eredivisie,Excelsior,10,1,1,1,0,0,1,0,1,1,2026-09-05 A Willem II HT 0-2 FT 0-3,5,0,0,0,0,1,1
+Eredivisie,Groningen,10,2,1,1,0,0,1,0,2,2,2026-09-18 H PEC Zwolle HT 2-0 FT 3-0; 2026-10-25 A NEC Nijmegen HT 0-2 FT 2-2,5,2,1,0,0,1,2
+Eredivisie,Fortuna Sittard,10,1,1,1,0,0,0,0,0,0,2026-09-06 A ADO Den Haag HT 0-2 FT 2-3,5,0,0,0,0,1,1
+Eredivisie,GO Ahead Eagles,10,1,1,1,0,0,3,0,2,1,2026-10-23 H Telstar HT 2-0 FT 3-2,5,1,1,0,0,1,1
+Eredivisie,Telstar,10,0,0,0,1,1,0,0,1,1,,5,0,0,1,1,1,1
+Eredivisie,PEC Zwolle,10,0,0,0,0,0,1,0,2,2,,5,0,0,0,0,0,0
+Eredivisie,Willem II,10,0,0,0,0,0,0,0,4,4,,5,0,0,0,0,0,0
+Eredivisie,ADO Den Haag,10,0,0,0,0,0,1,0,2,2,,5,0,0,0,0,0,0
+Eredivisie,AZ Alkmaar,10,0,0,0,0,0,3,0,0,0,,5,0,0,0,0,0,0
+Eredivisie,Utrecht,10,0,0,0,0,0,1,0,2,2,,5,0,0,0,0,0,0
+Eredivisie,Feyenoord,10,1,0,0,0,0,1,0,0,0,2026-08-16 H GO Ahead Eagles HT 2-0 FT 2-2,5,0,0,0,0,0,1
+Eredivisie,NEC Nijmegen,10,0,0,0,0,0,1,0,1,0,,5,0,0,0,0,0,0
+Eredivisie,Cambuur,10,0,0,0,0,0,2,1,2,2,,5,0,0,0,0,0,0
+Eredivisie,Sparta Rotterdam,10,0,0,0,0,0,2,0,1,1,,5,0,0,0,0,0,0
+La Liga,Barcelona,10,3,3,6,0,0,1,0,0,0,2026-09-06 A Valencia HT 0-2 FT 0-5; 2026-09-13 A Levante HT 0-2 FT 2-4; 2026-10-10 H Getafe HT 2-0 FT 3-0,5,1,1,0,0,3,3
+La Liga,Real Sociedad,10,3,3,5,0,0,1,0,0,0,2026-09-07 A Elche HT 0-2 FT 2-3; 2026-10-11 H Deportivo La Coruna HT 2-0 FT 3-2; 2026-10-18 A Malaga HT 0-2 FT 2-5,5,2,2,0,0,3,3
+La Liga,Real Madrid,10,2,2,3,0,0,1,0,0,0,2026-09-15 A Elche HT 0-2 FT 2-3; 2026-10-18 H Sevilla HT 2-0 FT 4-1,5,1,1,0,0,2,2
+La Liga,Elche,10,2,2,2,0,0,0,0,4,3,2026-09-18 A Espanyol HT 0-2 FT 1-3; 2026-10-24 A Rayo Vallecano HT 0-2 FT 0-3,5,2,2,0,0,2,2
+La Liga,Celta Vigo,10,1,1,3,0,0,2,0,1,0,2026-09-19 H Racing Santander HT 2-0 FT 5-0,5,1,1,0,0,1,1
+La Liga,Alaves,10,1,1,3,0,0,1,0,1,1,2026-09-06 H Osasuna HT 2-0 FT 5-2,5,0,0,0,0,1,1
+La Liga,Real Betis,10,2,1,3,0,0,2,0,0,0,2026-10-11 H Osasuna HT 2-0 FT 5-2; 2026-10-31 H Malaga HT 2-0 FT 2-1,5,2,1,0,0,1,2
+La Liga,Athletic Club,10,2,1,2,0,0,0,0,1,1,2026-08-30 A Celta Vigo HT 0-2 FT 0-2; 2026-10-25 H Getafe HT 2-0 FT 4-0,5,1,1,0,0,1,2
+La Liga,Levante,10,1,1,1,0,0,0,0,1,1,2026-10-21 H Athletic Club HT 2-0 FT 3-1,5,1,1,0,0,1,1
+La Liga,Atletico Madrid,10,0,0,0,0,0,2,1,0,0,,5,0,0,0,0,0,0
+La Liga,Valencia,10,0,0,0,0,0,1,0,1,1,,5,0,0,0,0,0,0
+La Liga,Villarreal,10,0,0,0,0,0,0,0,0,0,,5,0,0,0,0,0,0
+La Liga,Malaga,10,0,0,0,0,0,1,0,3,2,,5,0,0,0,0,0,0
+La Liga,Sevilla,10,0,0,0,0,0,4,0,2,1,,5,0,0,0,0,0,0
+La Liga,Espanyol,10,1,0,0,0,0,1,0,2,1,2026-09-12 A Osasuna HT 0-2 FT 0-2,5,0,0,0,0,0,1
+La Liga,Deportivo La Coruna,10,0,0,0,0,0,1,0,1,1,,5,0,0,0,0,0,0
+La Liga,Getafe,10,0,0,0,0,0,1,0,2,2,,5,0,0,0,0,0,0
+La Liga,Osasuna,10,0,0,0,0,0,3,0,3,2,,5,0,0,0,0,0,0
+La Liga,Rayo Vallecano,10,1,0,0,0,0,3,1,2,2,2026-09-15 H Espanyol HT 2-0 FT 2-1,5,1,0,0,0,0,1
+La Liga,Racing Santander,10,0,0,0,0,0,0,0,3,2,,5,0,0,0,0,0,0
+League One,Milton Keynes Dons,10,1,1,4,0,0,2,0,1,1,2026-10-31 H Doncaster HT 2-0 FT 6-1,5,1,1,0,0,1,1
+League One,Blackpool,10,1,1,2,0,0,0,0,0,0,2026-08-29 H Peterborough HT 2-0 FT 4-0,5,0,0,0,0,1,1
+League One,Luton,10,2,1,2,0,0,3,0,0,0,2026-10-10 A Wycombe HT 0-2 FT 1-4; 2026-10-20 H Barnsley HT 2-0 FT 2-1,5,1,0,0,0,1,2
+League One,Plymouth,10,1,1,1,0,0,2,0,1,1,2026-09-12 H Barnsley HT 2-0 FT 3-0,5,0,0,0,0,1,1
+League One,Wycombe,10,1,1,1,0,0,3,0,1,1,2026-09-05 H Milton Keynes Dons HT 2-0 FT 3-3,5,0,0,0,0,1,1
+League One,Stevenage,10,1,1,1,0,0,1,0,0,0,2026-10-20 H Plymouth HT 2-0 FT 3-0,5,1,1,0,0,1,1
+League One,Mansfield Town,10,1,1,1,0,0,0,0,1,1,2026-10-20 A AFC Wimbledon HT 0-2 FT 0-3,5,1,1,0,0,1,1
+League One,Huddersfield,10,0,0,0,0,0,4,1,0,0,,5,0,0,0,0,0,0
+League One,Leicester,10,1,0,0,0,0,3,1,1,0,2026-09-01 H Plymouth HT 2-0 FT 2-0,5,0,0,0,0,0,1
+League One,Reading,10,0,0,0,0,0,3,0,0,0,,5,0,0,0,0,0,0
+League One,Wigan,10,0,0,0,0,0,1,0,1,1,,5,0,0,0,0,0,0
+League One,Sheffield Wednesday,10,0,0,0,0,0,2,0,1,0,,5,0,0,0,0,0,0
+League One,Barnsley,10,0,0,0,0,0,5,0,2,1,,5,0,0,0,0,0,0
+League One,Burton Albion,10,0,0,0,0,0,0,0,0,0,,5,0,0,0,0,0,0
+League One,AFC Wimbledon,10,0,0,0,0,0,4,0,2,2,,5,0,0,0,0,0,0
+League One,Oxford United,10,0,0,0,0,0,6,1,0,0,,5,0,0,0,0,0,0
+League One,Bradford,10,0,0,0,0,0,3,0,0,0,,5,0,0,0,0,0,0
+League One,Peterborough,10,0,0,0,0,0,0,0,0,0,,5,0,0,0,0,0,0
+League One,Doncaster,10,1,0,0,0,0,3,0,1,1,2026-10-24 H Sheffield Wednesday HT 2-0 FT 2-0,5,1,0,0,0,0,1
+League One,Cambridge United,10,0,0,0,0,0,0,0,0,0,,5,0,0,0,0,0,0
+League One,Leyton Orient,10,0,0,0,0,0,4,2,0,0,,5,0,0,0,0,0,0
+League One,Notts County,10,0,0,0,0,0,3,0,0,0,,5,0,0,0,0,0,0
+League One,Bromley,10,0,0,0,0,0,1,0,1,1,,5,0,0,0,0,0,0
+League One,Stockport County,10,0,0,0,0,0,1,0,0,0,,5,0,0,0,0,0,0
+League Two,Crewe,10,2,2,2,0,0,0,0,1,0,2026-10-03 H Bristol Rovers HT 2-0 FT 3-1; 2026-10-17 H Rochdale HT 2-0 FT 3-2,5,1,1,0,0,2,2
+League Two,York,10,1,1,2,0,0,2,1,0,0,2026-09-12 H Swindon Town HT 2-0 FT 4-0,5,0,0,0,0,1,1
+League Two,Walsall,10,1,1,1,0,0,2,0,0,0,2026-10-20 H Oldham HT 2-0 FT 3-0,5,1,1,0,0,1,1
+League Two,Oldham,10,0,0,0,1,1,1,0,1,1,,5,0,0,1,1,1,1
+League Two,Rotherham,10,0,0,0,0,0,0,0,0,0,,5,0,0,0,0,0,0
+League Two,Bristol Rovers,10,0,0,0,0,0,2,0,3,1,,5,0,0,0,0,0,0
+League Two,Fleetwood Town,10,0,0,0,0,0,2,0,1,1,,5,0,0,0,0,0,0
+League Two,Northampton,10,0,0,0,0,0,4,0,1,0,,5,0,0,0,0,0,0
+League Two,Rochdale,10,0,0,0,0,0,2,0,3,3,,5,0,0,0,0,0,0
+League Two,Chesterfield,10,0,0,0,0,0,4,0,2,0,,5,0,0,0,0,0,0
+League Two,Gillingham,10,0,0,0,0,0,3,0,0,0,,5,0,0,0,0,0,0
+League Two,Port Vale,10,0,0,0,0,0,2,0,0,0,,5,0,0,0,0,0,0
+League Two,Shrewsbury,10,1,0,0,0,0,1,0,0,0,2026-09-12 H Northampton HT 2-0 FT 2-0,5,0,0,0,0,0,1
+League Two,Swindon Town,10,0,0,0,0,0,2,0,1,1,,5,0,0,0,0,0,0
+League Two,Accrington ST,10,0,0,0,0,0,2,0,0,0,,5,0,0,0,0,0,0
+League Two,Colchester,10,0,0,0,0,0,2,0,0,0,,5,0,0,0,0,0,0
+League Two,Crawley Town,10,0,0,0,0,0,1,0,2,0,,5,0,0,0,0,0,0
+League Two,Exeter City,10,0,0,0,0,0,2,0,0,0,,5,0,0,0,0,0,0
+League Two,Grimsby,10,2,0,0,0,0,0,0,1,0,2026-09-12 H Bristol Rovers HT 2-0 FT 2-0; 2026-09-19 H Crawley Town HT 2-0 FT 2-0,5,0,0,0,0,0,2
+League Two,Newport County,10,0,0,0,0,0,1,0,0,0,,5,0,0,0,0,0,0
+League Two,Barnet,10,0,0,0,0,0,2,0,1,0,,5,0,0,0,0,0,0
+League Two,Cheltenham,10,2,0,0,0,0,1,0,2,1,2026-09-05 H Grimsby HT 2-0 FT 2-2; 2026-09-26 H Chesterfield HT 2-0 FT 2-1,5,0,0,0,0,0,2
+League Two,Tranmere,10,0,0,0,1,0,4,0,0,0,,5,0,0,1,0,0,1
+League Two,Salford City,10,1,0,0,0,0,2,0,0,0,2026-10-20 A Bristol Rovers HT 0-2 FT 1-2,5,1,0,0,0,0,1
+Ligue 1,Lyon,9,1,1,2,0,0,1,0,0,0,2026-09-19 H Rennes HT 2-0 FT 4-0,5,1,1,0,0,1,1
+Ligue 1,Marseille,9,2,1,2,0,0,0,0,0,0,2026-10-25 H Le Havre HT 2-0 FT 4-3; 2026-11-01 H Toulouse HT 2-0 FT 2-0,5,2,1,0,0,1,2
+Ligue 1,Rennes,9,2,1,1,0,0,0,0,2,2,2026-08-23 H Paris Saint Germain HT 2-0 FT 2-2; 2026-10-25 H Strasbourg HT 2-0 FT 3-0,5,1,1,0,0,1,2
+Ligue 1,Paris FC,9,1,1,1,0,0,3,1,0,0,2026-11-01 H Monaco HT 2-0 FT 3-1,5,1,1,0,0,1,1
+Ligue 1,Nice,9,0,0,0,1,1,1,0,0,0,,5,0,0,1,1,1,1
+Ligue 1,Angers,9,0,0,0,0,0,1,0,2,1,,5,0,0,0,0,0,0
+Ligue 1,Lille,9,1,0,0,0,0,4,0,0,0,2026-08-23 A Angers HT 0-2 FT 0-2,5,0,0,0,0,0,1
+Ligue 1,Paris Saint Germain,9,0,0,0,0,0,3,0,1,0,,5,0,0,0,0,0,0
+Ligue 1,Monaco,9,1,0,0,0,0,3,0,1,1,2026-10-10 H Toulouse HT 2-0 FT 2-2,5,1,0,0,0,0,1
+Ligue 1,Strasbourg,9,0,0,0,0,0,2,0,1,1,,5,0,0,0,0,0,0
+Ligue 1,Toulouse,9,0,0,0,0,0,0,0,3,0,,5,0,0,0,0,0,0
+Ligue 1,Lorient,8,1,0,0,0,0,0,0,1,0,2026-09-12 H Toulouse HT 2-0 FT 2-2,5,1,0,0,0,0,1
+Ligue 1,Stade Brestois 29,8,0,0,0,0,0,4,0,0,0,,5,0,0,0,0,0,0
+Ligue 1,Auxerre,9,0,0,0,0,0,1,0,0,0,,5,0,0,0,0,0,0
+Ligue 1,Estac Troyes,9,1,0,0,0,0,1,0,0,0,2026-08-29 A Lorient HT 0-2 FT 1-2,5,0,0,0,0,0,1
+Ligue 1,Le Havre,9,0,0,0,0,0,0,0,1,1,,5,0,0,0,0,0,0
+Ligue 1,Lens,9,0,0,0,0,0,3,0,0,0,,5,0,0,0,0,0,0
+Ligue 1,Le Mans,9,0,0,0,0,0,1,0,0,0,,5,0,0,0,0,0,0
+National League,Boreham Wood,10,2,2,3,0,0,1,1,0,0,2026-09-29 H Kidderminster Harriers HT 2-0 FT 3-1; 2026-10-31 H Hartlepool HT 2-0 FT 4-3,5,1,1,0,0,2,2
+National League,Woking,10,1,1,1,1,1,0,0,0,0,2026-10-24 A Scunthorpe HT 0-2 FT 2-3,5,1,1,0,0,2,2
+National League,AFC Fylde,10,1,1,2,0,0,1,0,1,1,2026-09-12 A Yeovil Town HT 0-2 FT 1-4,5,0,0,0,0,1,1
+National League,Wealdstone,10,1,1,2,0,0,1,0,1,1,2026-09-26 H Gateshead HT 2-0 FT 4-0,5,0,0,0,0,1,1
+National League,Southend,10,1,1,1,0,0,1,0,0,0,2026-10-27 A Worthing HT 0-2 FT 3-3,5,1,1,0,0,1,1
+National League,Carlisle,10,1,1,1,0,0,3,1,0,0,2026-10-03 A Aldershot Town HT 0-2 FT 1-3,5,1,1,0,0,1,1
+National League,Solihull Moors,10,1,1,1,0,0,2,0,1,1,2026-10-27 A Wealdstone HT 0-2 FT 2-3,5,1,1,0,0,1,1
+National League,Tamworth,10,0,0,0,1,1,1,0,1,1,,5,0,0,1,1,1,1
+National League,Scunthorpe,10,0,0,0,0,0,1,0,3,2,,5,0,0,0,0,0,0
+National League,Hartlepool,10,0,0,0,0,0,2,0,1,1,,5,0,0,0,0,0,0
+National League,Yeovil Town,10,0,0,0,0,0,4,1,1,1,,5,0,0,0,0,0,0
+National League,Forest Green,10,1,0,0,0,0,4,1,0,0,2026-10-31 H Harrogate Town HT 2-0 FT 2-2,5,1,0,0,0,0,1
+National League,Aldershot Town,10,0,0,0,0,0,1,0,2,1,,5,0,0,0,0,0,0
+National League,Barrow,10,1,0,0,0,0,1,1,0,0,2026-09-12 A Worthing HT 0-2 FT 2-2,5,0,0,0,0,0,1
+National League,Eastleigh,10,0,0,0,0,0,1,0,1,0,,5,0,0,0,0,0,0
+National League,Gateshead,10,0,0,0,0,0,2,0,2,1,,5,0,0,0,0,0,0
+National League,Sutton Utd,10,2,0,0,0,0,0,0,1,0,2026-09-15 H Eastleigh HT 2-0 FT 2-1; 2026-10-28 H Aldershot Town HT 2-0 FT 2-0,5,1,0,0,0,0,2
+National League,FC Halifax Town,10,0,0,0,0,0,2,1,0,0,,5,0,0,0,0,0,0
+National League,Harrogate Town,10,0,0,0,0,0,2,1,1,0,,5,0,0,0,0,0,0
+National League,Kidderminster Harriers,10,0,0,0,0,0,4,0,1,1,,5,0,0,0,0,0,0
+National League,Altrincham,10,0,0,0,0,0,4,1,1,1,,5,0,0,0,0,0,0
+National League,AFC Hornchurch,10,0,0,0,0,0,1,0,0,0,,5,0,0,0,0,0,0
+National League,Worthing,10,0,0,0,0,0,3,0,3,1,,5,0,0,0,0,0,0
+National League,Boston United,10,1,0,0,0,0,2,0,1,1,2026-10-31 H Scunthorpe HT 2-0 FT 2-1,5,1,0,0,0,0,1
+National League North,Oxford City,10,2,2,3,0,0,2,2,2,1,2026-09-05 H Chorley HT 2-0 FT 4-0; 2026-09-12 A Radcliffe HT 0-2 FT 0-3,5,0,0,0,0,2,2
+National League North,Spalding United,10,2,2,2,0,0,2,0,0,0,2026-08-29 H Worksop Town HT 2-0 FT 3-1; 2026-10-31 H Darlington 1883 HT 2-0 FT 3-2,5,1,1,0,0,2,2
+National League North,Worksop Town,10,3,1,3,0,0,2,0,0,0,2026-10-10 H Morecambe HT 2-0 FT 2-1; 2026-10-17 A Buxton HT 0-2 FT 2-2; 2026-10-27 H King's Lynn Town HT 2-0 FT 5-0,5,3,1,0,0,1,3
+National League North,South Shields,10,2,1,2,1,0,2,0,1,1,2026-09-08 H Marine HT 2-0 FT 2-1; 2026-09-26 H Buxton HT 2-0 FT 4-0,5,0,0,1,0,1,3
+National League North,Macclesfield,10,1,1,1,0,0,3,1,0,0,2026-10-31 A Bedford Town HT 0-2 FT 0-3,5,1,1,0,0,1,1
+National League North,Chorley,10,1,1,1,0,0,2,0,1,1,2026-10-27 A Radcliffe HT 0-2 FT 0-3,5,1,1,0,0,1,1
+National League North,Bedford Town,10,1,1,1,0,0,3,0,1,1,2026-08-29 H Spennymoor Town HT 2-0 FT 3-1,5,0,0,0,0,1,1
+National League North,King's Lynn Town,10,1,1,1,0,0,4,1,1,1,2026-10-31 A Hereford HT 0-2 FT 0-3,5,1,1,0,0,1,1
+National League North,Hednesford Town,10,0,0,0,2,1,2,0,0,0,,5,0,0,1,0,1,2
+National League North,Radcliffe,10,0,0,0,1,1,3,0,3,3,,5,0,0,0,0,1,1
+National League North,Morecambe,10,2,0,0,0,0,2,1,1,0,2026-08-28 H AFC Telford United HT 2-0 FT 2-1; 2026-10-31 H Scarborough Athletic HT 2-0 FT 2-0,5,1,0,0,0,0,2
+National League North,Chester,10,0,0,0,0,0,2,0,0,0,,5,0,0,0,0,0,0
+National League North,Southport,10,1,0,0,0,0,1,0,1,1,2026-09-26 H Spennymoor Town HT 2-0 FT 2-2,5,1,0,0,0,0,1
+National League North,AFC Telford United,10,0,0,0,0,0,1,0,0,0,,5,0,0,0,0,0,0
+National League North,Hereford,10,0,0,0,0,0,2,0,1,1,,5,0,0,0,0,0,0
+National League North,Brackley Town,10,0,0,0,0,0,3,0,1,0,,5,0,0,0,0,0,0
+National League North,Spennymoor Town,10,0,0,0,0,0,1,0,2,1,,5,0,0,0,0,0,0
+National League North,Marine,10,0,0,0,0,0,2,0,1,0,,5,0,0,0,0,0,0
+National League North,Buxton,10,0,0,0,0,0,3,2,2,1,,5,0,0,0,0,0,0
+National League North,Merthyr Town,10,0,0,0,0,0,3,0,0,0,,5,0,0,0,0,0,0
+National League North,Scarborough Athletic,10,0,0,0,0,0,1,0,1,0,,5,0,0,0,0,0,0
+National League North,Harborough Town,10,0,0,0,0,0,2,0,0,0,,5,0,0,0,0,0,0
+National League North,Hebburn Town,10,0,0,0,0,0,1,0,1,1,,5,0,0,0,0,0,0
+National League North,Darlington 1883,10,0,0,0,0,0,3,1,2,2,,5,0,0,0,0,0,0
+National League South,Billericay Town,10,5,4,7,0,0,0,0,0,0,2026-09-08 A Chesham United HT 0-2 FT 1-2; 2026-09-15 H Braintree HT 2-0 FT 3-2; 2026-09-26 H Torquay HT 2-0 FT 3-0; 2026-10-10 H Farnborough HT 2-0 FT 4-0; 2026-10-31 H Hemel Hempstead Town HT 2-0 FT 5-0,5,4,4,0,0,4,5
+National League South,Farnham Town,10,1,1,4,1,0,2,0,1,0,2026-10-24 H Braintree HT 2-0 FT 6-0,5,1,1,0,0,1,2
+National League South,Horsham,10,1,1,3,0,0,1,0,0,0,2026-10-31 A Farnborough HT 0-2 FT 0-5,5,1,1,0,0,1,1
+National League South,Ebbsfleet United,10,1,1,2,0,0,2,0,0,0,2026-10-24 H Maidenhead HT 2-0 FT 4-0,5,1,1,0,0,1,1
+National League South,Tonbridge Angels,10,1,1,2,0,0,2,0,0,0,2026-09-05 A Farnborough HT 0-2 FT 0-4,5,0,0,0,0,1,1
+National League South,Torquay,10,1,1,1,0,0,2,1,1,1,2026-09-05 H Folkestone Invicta HT 2-0 FT 3-2,5,0,0,0,0,1,1
+National League South,Weston-super-Mare,10,1,1,1,0,0,1,0,2,1,2026-09-08 H AFC Totton HT 2-0 FT 3-1,5,0,0,0,0,1,1
+National League South,Dagenham & Redbridge,10,1,0,0,0,0,1,0,0,0,2026-10-24 H Chesham United HT 2-0 FT 2-0,5,1,0,0,0,0,1
+National League South,Maidstone Utd,10,0,0,0,0,0,5,0,0,0,,5,0,0,0,0,0,0
+National League South,Dover,10,1,0,0,0,0,4,0,0,0,2026-09-26 H AFC Totton HT 2-0 FT 2-0,5,1,0,0,0,0,1
+National League South,Braintree,10,0,0,0,0,0,2,0,2,2,,5,0,0,0,0,0,0
+National League South,Maidenhead,10,0,0,0,0,0,2,2,1,1,,5,0,0,0,0,0,0
+National League South,Hampton & Richmond,10,0,0,0,0,0,1,0,1,1,,5,0,0,0,0,0,0
+National League South,Slough Town,10,0,0,0,0,0,2,0,0,0,,5,0,0,0,0,0,0
+National League South,Chelmsford City,10,0,0,0,0,0,3,0,0,0,,5,0,0,0,0,0,0
+National League South,Truro City,10,1,0,0,0,0,0,0,0,0,2026-10-06 A Farnham Town HT 0-2 FT 2-2,5,1,0,0,0,0,1
+National League South,Chesham United,10,0,0,0,0,0,2,0,3,0,,5,0,0,0,0,0,0
+National League South,AFC Totton,10,0,0,0,0,0,0,0,4,1,,5,0,0,0,0,0,0
+National League South,Farnborough,10,0,0,0,0,0,0,0,3,3,,5,0,0,0,0,0,0
+National League South,Folkestone Invicta,10,1,0,0,0,0,3,0,2,1,2026-10-17 H AFC Totton HT 2-0 FT 2-1,5,1,0,0,0,0,1
+National League South,Salisbury,10,1,0,0,0,0,3,0,0,0,2026-09-26 H Folkestone Invicta HT 2-0 FT 2-0,5,1,0,0,0,0,1
+National League South,Dorking Wanderers,10,0,0,0,0,0,1,0,0,0,,5,0,0,0,0,0,0
+National League South,Hemel Hempstead Town,10,0,0,0,0,0,1,0,1,1,,5,0,0,0,0,0,0
+National League South,Walton & Hersham,10,0,0,0,0,0,0,0,1,1,,5,0,0,0,0,0,0
+Premier League,Chelsea,9,1,1,3,1,1,0,0,0,0,2026-10-10 H Bournemouth HT 2-0 FT 5-1,5,1,1,0,0,2,2
+Premier League,Bournemouth,9,1,1,1,0,0,4,0,1,1,2026-10-25 A Manchester United HT 0-2 FT 0-3,5,1,1,0,0,1,1
+Premier League,Arsenal,9,1,1,1,0,0,2,0,1,1,2026-08-21 H Coventry HT 2-0 FT 3-0,5,0,0,0,0,1,1
+Premier League,Brighton,9,1,1,1,0,0,2,1,2,1,2026-09-19 H Arsenal HT 2-0 FT 3-0,5,1,1,0,0,1,1
+Premier League,Brentford,9,1,1,1,0,0,3,0,0,0,2026-08-22 H Tottenham HT 2-0 FT 3-0,5,0,0,0,0,1,1
+Premier League,Coventry,9,1,1,1,0,0,1,0,1,1,2026-10-31 H Sunderland HT 2-0 FT 3-1,5,1,1,0,0,1,1
+Premier League,Manchester United,9,0,0,0,0,0,1,0,2,1,,5,0,0,0,0,0,0
+Premier League,Newcastle,8,1,0,0,0,0,1,0,1,1,2026-09-19 H Hull City HT 2-0 FT 2-1,5,1,0,0,0,0,1
+Premier League,Fulham,9,0,0,0,0,0,1,0,0,0,,5,0,0,0,0,0,0
+Premier League,Liverpool,9,2,0,0,0,0,0,0,0,0,2026-09-04 A Ipswich HT 0-2 FT 0-2; 2026-10-25 H Brighton HT 2-0 FT 2-0,5,1,0,0,0,0,2
+Premier League,Everton,8,0,0,0,0,0,2,0,0,0,,5,0,0,0,0,0,0
+Premier League,Tottenham,9,0,0,0,0,0,2,0,1,1,,5,0,0,0,0,0,0
+Premier League,Manchester City,9,0,0,0,0,0,2,0,0,0,,5,0,0,0,0,0,0
+Premier League,Crystal Palace,9,0,0,0,0,0,0,0,1,1,,5,0,0,0,0,0,0
+Premier League,Ipswich,9,0,0,0,0,0,1,0,1,0,,5,0,0,0,0,0,0
+Premier League,Leeds,9,0,0,0,0,0,1,0,0,0,,5,0,0,0,0,0,0
+Premier League,Hull City,9,1,0,0,0,0,1,0,1,0,2026-08-22 H Manchester United HT 2-0 FT 2-0,5,0,0,0,0,0,1
+Premier League,Nottingham Forest,9,0,0,0,0,0,1,0,0,0,,5,0,0,0,0,0,0
+Premier League,Aston Villa,9,0,0,0,0,0,4,0,1,0,,5,0,0,0,0,0,0
+Premier League,Sunderland,9,0,0,0,0,0,0,0,1,1,,5,0,0,0,0,0,0
+Primeira Liga,Benfica,9,1,1,5,0,0,5,2,0,0,2026-08-17 A Casa Pia HT 0-2 FT 0-7,5,0,0,0,0,1,1
+Primeira Liga,Moreirense,10,1,1,1,0,0,1,0,1,1,2026-09-14 H Maritimo HT 2-0 FT 3-1,5,1,1,0,0,1,1
+Primeira Liga,FC Porto,10,1,0,0,0,0,3,1,0,0,2026-08-09 H Alverca HT 2-0 FT 2-0,5,0,0,0,0,0,1
+Primeira Liga,Maritimo,10,0,0,0,0,0,0,0,2,1,,5,0,0,0,0,0,0
+Primeira Liga,SC Braga,10,0,0,0,0,0,2,0,0,0,,5,0,0,0,0,0,0
+Primeira Liga,Vitória SC,9,0,0,0,0,0,2,1,1,0,,5,0,0,0,0,0,0
+Primeira Liga,Nacional,10,0,0,0,0,0,1,0,2,1,,5,0,0,0,0,0,0
+Primeira Liga,Rio Ave,10,0,0,0,0,0,2,0,1,0,,5,0,0,0,0,0,0
+Primeira Liga,Santa Clara,10,1,0,0,0,0,5,1,0,0,2026-09-13 A Arouca HT 0-2 FT 1-2,5,1,0,0,0,0,1
+Primeira Liga,Sporting CP,10,1,0,0,0,0,3,0,0,0,2026-09-19 H Arouca HT 2-0 FT 2-2,5,1,0,0,0,0,1
+Primeira Liga,Estoril,10,0,0,0,0,0,0,0,1,0,,5,0,0,0,0,0,0
+Primeira Liga,Academico Viseu,10,2,0,0,0,0,3,0,1,0,2026-08-22 A Maritimo HT 0-2 FT 2-2; 2026-09-20 A Estrela HT 0-2 FT 0-2,5,1,0,0,0,0,2
+Primeira Liga,Arouca,10,0,0,0,0,0,2,0,2,0,,5,0,0,0,0,0,0
+Primeira Liga,Famalicao,10,0,0,0,0,0,2,0,0,0,,5,0,0,0,0,0,0
+Primeira Liga,GIL Vicente,9,1,0,0,0,0,1,0,0,0,2026-08-24 H Casa Pia HT 2-0 FT 2-0,5,0,0,0,0,0,1
+Primeira Liga,Casa Pia,10,0,0,0,0,0,1,0,2,1,,5,0,0,0,0,0,0
+Primeira Liga,Alverca,9,0,0,0,0,0,2,0,1,0,,5,0,0,0,0,0,0
+Primeira Liga,Estrela,10,0,0,0,0,0,0,0,1,0,,5,0,0,0,0,0,0
+Scottish Premiership,Heart Of Midlothian,10,4,3,6,0,0,1,0,1,1,2026-08-09 H Dundee Utd HT 2-0 FT 4-0; 2026-08-29 H ST Johnstone HT 2-0 FT 2-1; 2026-09-03 A Hibernian HT 0-2 FT 1-3; 2026-10-10 H ST Mirren HT 2-0 FT 5-0,5,1,1,0,0,3,4
+Scottish Premiership,Falkirk,10,2,1,1,0,0,2,0,1,0,2026-10-24 H Kilmarnock HT 2-0 FT 3-0; 2026-11-01 H Celtic HT 2-0 FT 2-0,5,2,1,0,0,1,2
+Scottish Premiership,Celtic,10,1,0,0,0,0,1,0,1,0,2026-08-29 H Falkirk HT 2-0 FT 2-1,5,0,0,0,0,0,1
+Scottish Premiership,Hibernian,10,0,0,0,0,0,2,0,1,1,,5,0,0,0,0,0,0
+Scottish Premiership,Kilmarnock,10,0,0,0,0,0,2,0,3,2,,5,0,0,0,0,0,0
+Scottish Premiership,ST Mirren,10,0,0,0,0,0,3,0,2,1,,5,0,0,0,0,0,0
+Scottish Premiership,Aberdeen,10,0,0,0,0,0,2,1,1,0,,5,0,0,0,0,0,0
+Scottish Premiership,Dundee,10,0,0,0,0,0,4,0,0,0,,5,0,0,0,0,0,0
+Scottish Premiership,Motherwell,10,0,0,0,0,0,1,1,0,0,,5,0,0,0,0,0,0
+Scottish Premiership,Rangers,10,0,0,0,0,0,4,1,0,0,,5,0,0,0,0,0,0
+Scottish Premiership,ST Johnstone,10,0,0,0,0,0,2,0,1,0,,5,0,0,0,0,0,0
+Scottish Premiership,Dundee Utd,10,0,0,0,0,0,1,0,1,1,,5,0,0,0,0,0,0
+Super Lig,Beşiktaş,10,2,2,5,0,0,2,0,1,1,2026-08-31 H Çorum FK HT 2-0 FT 6-2; 2026-09-11 H Erzurumspor FK HT 2-0 FT 3-0,5,0,0,0,0,2,2
+Super Lig,Başakşehir,10,1,1,2,1,1,3,0,0,0,2026-09-19 H Gençlerbirliği S.K. HT 2-0 FT 4-0,5,1,1,1,1,2,2
+Super Lig,Çorum FK,10,1,1,1,1,1,2,1,2,1,2026-09-06 H Eyüpspor HT 2-0 FT 3-0,5,0,0,0,0,2,2
+Super Lig,Galatasaray,10,2,1,2,0,0,2,0,1,1,2026-10-26 H Fenerbahçe HT 2-0 FT 2-1; 2026-10-30 A Konyaspor HT 0-2 FT 0-4,5,2,1,0,0,1,2
+Super Lig,Rizespor,10,2,1,1,0,0,1,0,0,0,2026-08-29 A Gaziantep FK HT 0-2 FT 1-2; 2026-10-26 H Trabzonspor HT 2-0 FT 3-4,5,1,1,0,0,1,2
+Super Lig,Amed,10,1,1,1,0,0,2,1,0,0,2026-09-20 H Beşiktaş HT 2-0 FT 3-2,5,1,1,0,0,1,1
+Super Lig,Fenerbahçe,10,0,0,0,1,1,4,2,1,0,,5,0,0,0,0,1,1
+Super Lig,Konyaspor,10,0,0,0,0,0,3,0,2,2,,5,0,0,0,0,0,0
+Super Lig,Göztepe,10,1,0,0,0,0,4,1,1,0,2026-10-25 H Çorum FK HT 2-0 FT 2-0,5,1,0,0,0,0,1
+Super Lig,Alanyaspor,9,0,0,0,0,0,1,0,1,0,,5,0,0,0,0,0,0
+Super Lig,Gençlerbirliği S.K.,9,0,0,0,0,0,1,0,2,2,,5,0,0,0,0,0,0
+Super Lig,Trabzonspor,10,0,0,0,0,0,3,0,1,1,,5,0,0,0,0,0,0
+Super Lig,Kasımpaşa,10,0,0,0,0,0,3,0,0,0,,5,0,0,0,0,0,0
+Super Lig,Erzurumspor FK,10,0,0,0,0,0,3,0,2,2,,5,0,0,0,0,0,0
+Super Lig,Gaziantep FK,10,0,0,0,0,0,0,0,1,0,,5,0,0,0,0,0,0
+Super Lig,Eyüpspor,10,0,0,0,0,0,0,0,3,3,,5,0,0,0,0,0,0
+Super Lig,Samsunspor,10,0,0,0,0,0,2,0,3,2,,5,0,0,0,0,0,0
+Super Lig,Kocaelispor,10,1,0,0,0,0,2,0,0,0,2026-10-23 A Alanyaspor HT 0-2 FT 1-2,5,1,0,0,0,0,1
