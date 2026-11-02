@@ -37,6 +37,9 @@ ls -la football.db
 
 # 2. fixtures and results from API-Football (the only API step)
 python download.py --results
+# goal events for each team's last 10 league games (research only, 2 Nov 2026). Incremental: after the first back-fill
+# (about 71 calls) only new fixtures are fetched. A failure here never stops the model run.
+python download_events.py || echo "events skipped: $?"
 
 # 3. the model. A failure here is recorded (manifest, logs) and committed, then the job exits non-zero at the end.
 MODEL_STATUS=0
@@ -47,6 +50,10 @@ if [ "$MODE" != "download-only" ]; then
   case "$MODE" in
     midweek|weekend|range)
       python btts_audit.py "$RUN_ID" || echo "audit skipped: $?"
+      python research_groups.py build "$RUN_ID" || echo "research groups skipped: $?"
+      ;;
+    review)
+      python research_groups.py review || echo "research groups review skipped: $?"
       ;;
   esac
   python write_manifest.py "$RUN_ID" --commit "$GITHUB_SHA" || echo "manifest skipped: $?"

@@ -1,0 +1,22 @@
+tier,fixture_id,competition,kickoff_uk,home,away,v41_classification,v41_model_score,score,over25
+A,1563230,Championship,Sat 31 Oct 15:00,Middlesbrough,Charlton,Medium,0.603,3-0,Y
+A,1563841,League Two,Sat 31 Oct 15:00,Crewe,Barnet,rejected,0.536,1-1,N
+A,1585326,National League,Sat 31 Oct 15:00,Wealdstone,Southend,Medium,0.613,3-2,Y
+A,1587884,National League North,Sat 31 Oct 15:00,Worksop Town,Brackley Town,Medium,0.584,0-1,N
+A,1588429,National League South,Sat 31 Oct 15:00,Dorking Wanderers,Weston-super-Mare,Medium,0.598,2-0,N
+A,1575209,Bundesliga,Sat 31 Oct 14:30,Werder Bremen,1899 Hoffenheim,High,0.669,2-0,N
+A,1575206,Bundesliga,Sat 31 Oct 14:30,FC Augsburg,SC Freiburg,High,0.659,1-2,Y
+A,1552215,Eredivisie,Sun 01 Nov 15:45,Groningen,Sparta Rotterdam,High,0.676,2-3,Y
+A,1552805,Ligue 1,Sun 01 Nov 19:45,Marseille,Toulouse,Medium,0.591,2-0,N
+A,1585325,National League,Sat 31 Oct 15:00,Tamworth,Woking,Medium,0.625,0-1,N
+B,1564397,League One,Sat 31 Oct 15:00,Peterborough,Luton,rejected,0.561,0-2,N
+B,1585322,National League,Sat 31 Oct 15:00,Barrow,Eastleigh,Medium,0.62,1-1,N
+B,1585328,National League,Sat 31 Oct 17:30,Boston United,Scunthorpe,Medium,0.613,2-1,Y
+B,1585318,National League,Sat 31 Oct 12:30,FC Halifax Town,Yeovil Town,Medium,0.61,2-0,N
+B,1587874,National League North,Sat 31 Oct 15:00,Buxton,Marine,rejected,0.55,4-2,Y
+B,1588435,National League South,Sat 31 Oct 15:00,Truro City,Ebbsfleet United,Medium,0.619,3-0,Y
+B,1588427,National League South,Sat 31 Oct 15:00,Braintree,Hampton & Richmond,rejected,0.545,1-0,N
+B,1575208,Bundesliga,Sat 31 Oct 14:30,Borussia Monchengladbach,SC Paderborn 07,High,0.642,0-0,N
+B,1552214,Eredivisie,Sun 01 Nov 13:30,Telstar,Utrecht,High,0.654,4-2,Y
+B,1552209,Eredivisie,Sat 31 Oct 17:45,PSV Eindhoven,Willem II,High,0.646,7-0,Y
+B,1570440,La Liga,Sun 01 Nov 15:15,Racing Santander,Real Madrid,Medium,0.59,0-3,Y

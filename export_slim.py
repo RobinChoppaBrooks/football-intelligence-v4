@@ -1,5 +1,5 @@
 """export_slim.py  -  football.db -> football_slim.db without the raw API cache and logs (what the cloud needs: fixtures,
-results, teams, competitions, coverage, match statistics, goals odds).    python3 export_slim.py football.db football_slim.db"""
+results, teams, competitions, coverage, match statistics, goals odds, goal events).    python3 export_slim.py football.db football_slim.db"""
 import sys, sqlite3, os
 src, dst = sys.argv[1], sys.argv[2]
 if os.path.exists(dst): os.remove(dst)
@@ -9,7 +9,7 @@ for stmt in SCHEMA.split(";"):
     s = stmt.strip()
     if s.upper().startswith("CREATE TABLE"): c.execute(s.replace("CREATE TABLE IF NOT EXISTS ", "CREATE TABLE IF NOT EXISTS slim."))
     elif s.upper().startswith("CREATE INDEX"): c.execute(s.replace("CREATE INDEX IF NOT EXISTS ", "CREATE INDEX IF NOT EXISTS slim."))
-for t in ("competitions", "coverage", "teams", "fixtures", "fixture_stats", "fixture_odds", "predictions_log"):
+for t in ("competitions", "coverage", "teams", "fixtures", "fixture_stats", "fixture_odds", "fixture_events", "predictions_log"):   # fixture_events added 2 Nov 2026 (research only)
     c.execute(f"INSERT OR REPLACE INTO slim.{t} SELECT * FROM main.{t}")
 c.commit(); c.execute("DETACH DATABASE slim"); c.close()
 d = sqlite3.connect(dst); d.execute("VACUUM"); d.close()

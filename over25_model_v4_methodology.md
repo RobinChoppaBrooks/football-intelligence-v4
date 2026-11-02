@@ -89,3 +89,7 @@ Injuries, suspensions, lineups, rotation, weather, xG below the Championship, hi
 - Dashboard: review.py reports High / Medium / Weak / selected hit rates, BTTS accuracy, by competition, by Scored 2+ and Let in 2+ counts, both-attacks-3/5+, one-sided v two-way, with sample sizes, against the out-of-sample baseline.
 - Change control: any proposed change is tested against this model on identical chronological out-of-sample fixtures with counts, rates, ranges and by-competition results, and must show a meaningful improvement before adoption. Experimental scripts stay out of production. Every change goes in over25_changelog.md.
 - Market price at prediction time is recorded when available (download.py --extras pulls all markets into market_odds; fixture_odds holds goals prices).
+
+## 12. Research policy (2 November 2026)
+- No additional signal, filter, threshold or weighting goes into V4.1 without a meaningful improvement in chronological out-of-sample testing: pre-match information only, equal selection sizes, several periods and leagues, comparison within V4.1 score ranges, value beyond the model score, sample sizes and ranges reported, failed experiments kept. Full text: docs/research_policy.md.
+- Research views (top 10 rejected, experimental open-game watchlist, complete rankings) are reporting only and never change a classification. Record of the 2 Nov investigations: docs/research/2026-11-02_over25_research.md.

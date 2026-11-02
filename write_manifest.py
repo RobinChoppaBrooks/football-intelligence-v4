@@ -61,6 +61,8 @@ def main():
                           competitions=int(P.competition.nunique()))
         for extra in (f"reports/btts_audit/{date}/btts_audit_{date}_{mode}.csv", f"reports/btts_audit/{date}/btts_audit_{date}_{mode}.json", f"reports/chatgpt_review/btts_audit_review_{date}_{mode}.md"):
             if os.path.exists(extra): files.append(describe(extra) | {"audit": True})
+        rg = f"reports/research_groups/{run_id}.csv"      # research watchlists (2 Nov 2026), optional like the audit
+        if os.path.exists(rg): files.append(describe(rg) | {"research": True})
     elif mode == "review":
         files += [describe(f"reports/performance/performance_{date}.md"), describe("data/results/results_log.csv"), describe("data/predictions/predictions_log.csv")]
     if db.get("scored_but_not_finished"): warnings.append(f"{db['scored_but_not_finished']} matches in the database carry a score but are not FT/AET/PEN (abandoned, awarded or cancelled); neither the card nor the model counts them as results since 29 Oct")

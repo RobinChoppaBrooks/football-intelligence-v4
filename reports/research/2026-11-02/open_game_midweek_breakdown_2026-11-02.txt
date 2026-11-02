@@ -1,0 +1,460 @@
+
+=== Premier League | Newcastle v Everton | Mon 02 Nov 20:00 | V4.1 rejected 0.502 | CAT B pts 7+3.5 shut False/False pers True/False shots5 H [5, 64, 19] A [5, 66, 23]
+ H5  sc 4/5 sc2 2 conc 4 conc2 2 cs 1 | 2H gf 4 ga 5 | 60+ 2/3 75+ 1/2 | opps 7/9 | behind: sc 2 conc 6 2down conc 3 | aftereq 0 afterlead 2 | 3+ 3 | streak 4
+ H10 sc 7/8 sc2 5 conc 6 conc2 4 cs 2 | 2H gf 8 ga 7 | 60+ 5/4 75+ 2/3 | opps 11/14 | behind: sc 4 conc 7 2down conc 3 | aftereq 0 afterlead 3 | 3+ 5 | streak 5
+ Hv  sc 3/4 sc2 3 conc 4 conc2 2 cs 0 | 2H gf 2 ga 3 | 60+ 1/2 75+ 1/1 | opps 5/6 | behind: sc 2 conc 1 2down conc 0 | aftereq 0 afterlead 1 | 3+ 3 | streak 4
+ A5  sc 2/5 sc2 1 conc 3 conc2 3 cs 2 | 2H gf 2 ga 5 | 60+ 1/3 75+ 0/1 | opps 3/5 | behind: sc 1 conc 2 2down conc 0 | aftereq 1 afterlead 0 | 3+ 1 | streak 3
+ A10 sc 5/8 sc2 3 conc 5 conc2 4 cs 3 | 2H gf 6 ga 7 | 60+ 4/4 75+ 3/2 | opps 6/9 | behind: sc 4 conc 2 2down conc 0 | aftereq 2 afterlead 1 | 3+ 2 | streak 3
+ Av  sc 2/4 sc2 1 conc 3 conc2 2 cs 1 | 2H gf 3 ga 3 | 60+ 2/2 75+ 1/0 | opps 3/4 | behind: sc 2 conc 1 2down conc 0 | aftereq 1 afterlead 0 | 3+ 1 | streak 2
+ Hflags ['conceded in 4+ of 5', 'conceded 2+ in 2+ of 5', '1 or 0 clean sheets', 'scored in 4+ of 5', '9 second-half goals in its games', "goal after 60' in 3 of 5", "1-0/2-0 before 75' followed by another goal in 7 of 9"]
+ Aflags ['conceded 2+ in 2+ of 5', '7 second-half goals in its games', "goal after 60' in 3 of 5", "1-0/2-0 before 75' followed by another goal in 3 of 5"]
+   H: 09-14 A Leeds 4-1 (HT 0-3): 0-1 (32 opp) > 0-2 (34 opp) > 0-3 (45 opp) > 0-4 (59 opp) > 1-4 (90)
+   H: 09-19 H Hull City 2-1 (HT 2-0): 1-0 (3) > 2-0 (7) > 2-1 (67 opp)
+   H: 10-12 A Coventry 4-1 (HT 0-1): 0-1 (6 opp) > 0-2 (48 opp) > 1-2 (70) > 1-3 (81 opp) > 1-4 (86 opp)
+   H: 10-17 H Aston Villa 0-1 (HT 0-1): 0-1 (36 opp)
+   H: 10-25 A Crystal Palace 0-2 (HT 0-0): 1-0 (47) > 2-0 (58)
+   A: 09-12 A Tottenham 0-0 (HT 0-0): 0-0
+   A: 09-19 H Ipswich 1-0 (HT 1-0): 1-0 (11)
+   A: 10-11 A Hull City 2-2 (HT 0-0): 0-1 (48 opp) > 1-1 (55) > 2-1 (68) > 2-2 (74 opp)
+   A: 10-17 H Chelsea 0-2 (HT 0-0): 0-1 (46 opp) > 0-2 (90 opp)
+   A: 10-24 A Arsenal 2-0 (HT 0-1): 0-1 (7 opp) > 0-2 (68 opp)
+
+=== Championship | Blackburn v Stoke City | Tue 03 Nov 19:45 | V4.1 rejected 0.547 | CAT C pts 3.5+3 shut False/True pers True/False shots5 H [5, 54, 21] A [5, 52, 15]
+ H5  sc 4/5 sc2 3 conc 3 conc2 2 cs 2 | 2H gf 1 ga 4 | 60+ 1/2 75+ 1/1 | opps 7/8 | behind: sc 0 conc 3 2down conc 2 | aftereq 0 afterlead 3 | 3+ 3 | streak 1
+ H10 sc 8/10 sc2 5 conc 7 conc2 5 cs 3 | 2H gf 5 ga 6 | 60+ 2/3 75+ 2/1 | opps 12/13 | behind: sc 2 conc 4 2down conc 2 | aftereq 1 afterlead 4 | 3+ 7 | streak 5
+ Hv  sc 4/4 sc2 3 conc 3 conc2 1 cs 1 | 2H gf 3 ga 2 | 60+ 2/0 75+ 2/0 | opps 5/5 | behind: sc 0 conc 0 2down conc 0 | aftereq 0 afterlead 3 | 3+ 3 | streak 3
+ A5  sc 4/5 sc2 3 conc 2 conc2 1 cs 3 | 2H gf 5 ga 4 | 60+ 2/3 75+ 1/2 | opps 4/6 | behind: sc 2 conc 0 2down conc 0 | aftereq 1 afterlead 2 | 3+ 2 | streak 2
+ A10 sc 9/10 sc2 6 conc 5 conc2 1 cs 5 | 2H gf 8 ga 7 | 60+ 4/5 75+ 3/3 | opps 10/13 | behind: sc 3 conc 0 2down conc 0 | aftereq 2 afterlead 6 | 3+ 5 | streak 5
+ Av  sc 4/4 sc2 2 conc 3 conc2 0 cs 1 | 2H gf 3 ga 3 | 60+ 1/3 75+ 0/2 | opps 5/6 | behind: sc 0 conc 0 2down conc 0 | aftereq 0 afterlead 2 | 3+ 2 | streak 3
+ Hflags ['conceded 2+ in 2+ of 5', 'scored in 4+ of 5', '5 second-half goals in its games', "1-0/2-0 before 75' followed by another goal in 7 of 8"]
+ Aflags ['scored in 4+ of 5', '9 second-half goals in its games', "1-0/2-0 before 75' followed by another goal in 4 of 6"]
+   H: 10-10 H Cardiff 2-1 (HT 2-0): 1-0 (28) > 2-0 (38) > 2-1 (53 opp)
+   H: 10-13 A Bristol City 0-1 (HT 1-0): 1-0 (38)
+   H: 10-17 A West Brom 3-2 (HT 2-1): 1-0 (6) > 2-0 (12) > 2-1 (19 opp) > 2-2 (72 opp) > 2-3 (89 opp)
+   H: 10-24 H Wrexham 2-0 (HT 1-0): 1-0 (44) > 2-0 (79)
+   H: 10-31 A Swansea 4-0 (HT 0-3): 0-1 (11 opp) > 0-2 (32 opp) > 0-3 (36 opp) > 0-4 (59 opp)
+   A: 10-10 A Bolton 1-2 (HT 1-0): 1-0 (45) > 2-0 (62) > 2-1 (90 opp)
+   A: 10-13 H Middlesbrough 2-3 (HT 0-0): 0-1 (48 opp) > 1-1 (50) > 1-2 (73 opp) > 2-2 (85) > 2-3 (90 opp)
+   A: 10-17 A Derby 0-1 (HT 0-0): 1-0 (49)
+   A: 10-24 H Bristol City 0-0 (HT 0-0): 0-0
+   A: 10-31 H Preston 2-0 (HT 1-0): 1-0 (29) > 2-0 (53)
+
+=== Championship | Charlton v Bolton | Tue 03 Nov 19:45 | V4.1 rejected 0.538 | CAT A pts 6.5+7 shut False/False pers True/True shots5 H [5, 49, 18] A [5, 75, 23]
+ H5  sc 3/5 sc2 1 conc 5 conc2 4 cs 0 | 2H gf 2 ga 6 | 60+ 1/3 75+ 1/3 | opps 6/6 | behind: sc 2 conc 4 2down conc 1 | aftereq 1 afterlead 0 | 3+ 3 | streak 5
+ H10 sc 5/10 sc2 1 conc 8 conc2 6 cs 2 | 2H gf 3 ga 8 | 60+ 2/4 75+ 1/3 | opps 11/11 | behind: sc 4 conc 9 2down conc 3 | aftereq 1 afterlead 0 | 3+ 5 | streak 6
+ Hv  sc 2/4 sc2 0 conc 2 conc2 1 cs 2 | 2H gf 0 ga 2 | 60+ 0/1 75+ 0/1 | opps 2/2 | behind: sc 0 conc 1 2down conc 0 | aftereq 0 afterlead 0 | 3+ 1 | streak 2
+ A5  sc 4/5 sc2 2 conc 4 conc2 3 cs 1 | 2H gf 4 ga 6 | 60+ 3/5 75+ 2/3 | opps 6/6 | behind: sc 3 conc 5 2down conc 3 | aftereq 1 afterlead 1 | 3+ 4 | streak 2
+ A10 sc 8/10 sc2 5 conc 8 conc2 7 cs 2 | 2H gf 8 ga 13 | 60+ 6/12 75+ 3/8 | opps 10/10 | behind: sc 6 conc 8 2down conc 5 | aftereq 5 afterlead 1 | 3+ 8 | streak 3
+ Av  sc 3/5 sc2 3 conc 4 conc2 3 cs 1 | 2H gf 5 ga 7 | 60+ 4/6 75+ 1/4 | opps 4/4 | behind: sc 2 conc 3 2down conc 2 | aftereq 3 afterlead 1 | 3+ 4 | streak 4
+ Hflags ['conceded in 4+ of 5', 'conceded 2+ in 2+ of 5', '1 or 0 clean sheets', 'scored in 3 of 5', '8 second-half goals in its games', "goal after 60' in 4 of 5", "1-0/2-0 before 75' followed by another goal in 6 of 6"]
+ Aflags ['conceded in 4+ of 5', 'conceded 2+ in 2+ of 5', '1 or 0 clean sheets', 'scored in 4+ of 5', '10 second-half goals in its games', "goal after 60' in 4 of 5", "1-0/2-0 before 75' followed by another goal in 6 of 6"]
+   H: 10-10 H Bristol City 1-1 (HT 1-1): 1-0 (8) > 1-1 (27 opp)
+   H: 10-13 A Burnley 2-2 (HT 0-1): 0-1 (36 opp) > 1-1 (50) > 1-2 (57 opp) > 2-2 (90)
+   H: 10-17 A Watford 2-0 (HT 0-0): 0-1 (58 opp) > 0-2 (90 opp)
+   H: 10-24 H Norwich 1-3 (HT 1-1): 1-0 (10) > 1-1 (35 opp) > 1-2 (50 opp) > 1-3 (76 opp)
+   H: 10-31 A Middlesbrough 3-0 (HT 0-2): 0-1 (12 opp) > 0-2 (44 opp) > 0-3 (82 opp)
+   A: 10-10 H Stoke City 1-2 (HT 0-1): 0-1 (45 opp) > 0-2 (62 opp) > 1-2 (90)
+   A: 10-13 A Wolves 1-3 (HT 1-0): 1-0 (28) > 1-1 (50 opp) > 2-1 (72) > 3-1 (82)
+   A: 10-17 A Southampton 0-0 (HT 0-0): 0-0
+   A: 10-23 H Middlesbrough 1-5 (HT 1-3): 0-1 (13 opp) > 0-2 (31 opp) > 0-3 (39 opp) > 1-3 (45) > 1-4 (73 opp) > 1-5 (78 opp)
+   A: 10-31 H Bristol City 2-3 (HT 1-1): 0-1 (13 opp) > 1-1 (16) > 2-1 (57) > 2-2 (84 opp) > 2-3 (90+3 opp)
+
+=== Championship | Derby v Norwich | Tue 03 Nov 19:45 | V4.1 rejected 0.534 | CAT A pts 7+5.5 shut False/False pers True/True shots5 H [5, 70, 23] A [5, 59, 20]
+ H5  sc 4/5 sc2 0 conc 5 conc2 2 cs 0 | 2H gf 2 ga 5 | 60+ 2/4 75+ 2/3 | opps 6/7 | behind: sc 2 conc 6 2down conc 4 | aftereq 0 afterlead 0 | 3+ 2 | streak 5
+ H10 sc 7/10 sc2 1 conc 9 conc2 4 cs 1 | 2H gf 4 ga 8 | 60+ 4/7 75+ 3/5 | opps 10/13 | behind: sc 3 conc 8 2down conc 5 | aftereq 0 afterlead 1 | 3+ 4 | streak 9
+ Hv  sc 2/4 sc2 0 conc 4 conc2 1 cs 0 | 2H gf 0 ga 3 | 60+ 0/2 75+ 0/1 | opps 2/4 | behind: sc 0 conc 0 2down conc 0 | aftereq 0 afterlead 0 | 3+ 1 | streak 4
+ A5  sc 3/5 sc2 2 conc 5 conc2 2 cs 0 | 2H gf 5 ga 4 | 60+ 3/0 75+ 1/0 | opps 4/6 | behind: sc 3 conc 1 2down conc 0 | aftereq 3 afterlead 1 | 3+ 3 | streak 5
+ A10 sc 7/10 sc2 6 conc 10 conc2 4 cs 0 | 2H gf 9 ga 8 | 60+ 7/3 75+ 1/1 | opps 9/12 | behind: sc 6 conc 2 2down conc 0 | aftereq 3 afterlead 3 | 3+ 7 | streak 10
+ Av  sc 4/5 sc2 3 conc 5 conc2 2 cs 0 | 2H gf 5 ga 3 | 60+ 4/1 75+ 1/1 | opps 4/5 | behind: sc 3 conc 1 2down conc 0 | aftereq 2 afterlead 2 | 3+ 4 | streak 5
+ Hflags ['conceded in 4+ of 5', 'conceded 2+ in 2+ of 5', '1 or 0 clean sheets', 'scored in 4+ of 5', '7 second-half goals in its games', "goal after 60' in 4 of 5", "1-0/2-0 before 75' followed by another goal in 6 of 7"]
+ Aflags ['conceded in 4+ of 5', 'conceded 2+ in 2+ of 5', '1 or 0 clean sheets', 'scored in 3 of 5', '9 second-half goals in its games', "1-0/2-0 before 75' followed by another goal in 4 of 6"]
+   H: 10-10 H Wrexham 1-1 (HT 1-0): 1-0 (9) > 1-1 (88 opp)
+   H: 10-14 A QPR 4-1 (HT 0-3): 0-1 (18 opp) > 0-2 (22 opp) > 0-3 (45 opp) > 0-4 (68 opp) > 1-4 (90)
+   H: 10-17 H Stoke City 0-1 (HT 0-0): 0-1 (49 opp)
+   H: 10-24 A Sheffield Utd 1-1 (HT 1-0): 1-0 (37) > 1-1 (79 opp)
+   H: 10-31 A Millwall 4-1 (HT 0-3): 0-1 (3 opp) > 0-2 (10 opp) > 0-3 (17 opp) > 0-4 (84 opp) > 1-4 (87)
+   A: 10-10 A Swansea 2-1 (HT 1-0): 1-0 (28) > 1-1 (49 opp) > 1-2 (59 opp)
+   A: 10-14 H Southampton 0-1 (HT 0-0): 0-1 (54 opp)
+   A: 10-17 H Portsmouth 0-1 (HT 0-0): 0-1 (51 opp)
+   A: 10-24 A Charlton 1-3 (HT 1-1): 0-1 (10 opp) > 1-1 (35) > 2-1 (50) > 3-1 (76)
+   A: 10-31 H Watford 3-2 (HT 0-2): 0-1 (10 opp) > 0-2 (27 opp) > 1-2 (53) > 2-2 (62) > 3-2 (71)
+
+=== Championship | Portsmouth v Swansea | Tue 03 Nov 19:45 | V4.1 rejected 0.548 | CAT C pts 4+2.0 shut False/False pers False/False shots5 H [5, 64, 14] A [5, 55, 17]
+ H5  sc 4/5 sc2 2 conc 3 conc2 1 cs 2 | 2H gf 5 ga 3 | 60+ 3/2 75+ 3/0 | opps 4/5 | behind: sc 2 conc 0 2down conc 0 | aftereq 1 afterlead 1 | 3+ 2 | streak 2
+ H10 sc 6/10 sc2 4 conc 6 conc2 3 cs 4 | 2H gf 7 ga 5 | 60+ 4/3 75+ 3/0 | opps 7/11 | behind: sc 3 conc 1 2down conc 0 | aftereq 1 afterlead 2 | 3+ 3 | streak 3
+ Hv  sc 4/5 sc2 4 conc 4 conc2 3 cs 1 | 2H gf 5 ga 4 | 60+ 3/2 75+ 2/0 | opps 6/8 | behind: sc 2 conc 1 2down conc 0 | aftereq 1 afterlead 2 | 3+ 3 | streak 3
+ A5  sc 3/5 sc2 2 conc 3 conc2 1 cs 2 | 2H gf 4 ga 1 | 60+ 1/1 75+ 1/1 | opps 5/6 | behind: sc 1 conc 4 2down conc 3 | aftereq 1 afterlead 3 | 3+ 3 | streak 2
+ A10 sc 7/10 sc2 5 conc 6 conc2 2 cs 4 | 2H gf 8 ga 3 | 60+ 2/2 75+ 1/2 | opps 11/13 | behind: sc 3 conc 6 2down conc 3 | aftereq 2 afterlead 6 | 3+ 6 | streak 4
+ Av  sc 3/4 sc2 1 conc 3 conc2 2 cs 1 | 2H gf 4 ga 2 | 60+ 1/2 75+ 1/2 | opps 5/5 | behind: sc 2 conc 6 2down conc 3 | aftereq 1 afterlead 0 | 3+ 3 | streak 2
+ Hflags ['scored in 4+ of 5', '8 second-half goals in its games', "goal after 60' in 3 of 5", "1-0/2-0 before 75' followed by another goal in 4 of 5"]
+ Aflags ['scored in 3 of 5', '5 second-half goals in its games', "1-0/2-0 before 75' followed by another goal in 5 of 6"]
+   H: 10-14 H Sheffield Utd 3-2 (HT 1-0): 1-0 (41) > 2-0 (54) > 2-1 (59 opp) > 2-2 (67 opp) > 3-2 (89)
+   H: 10-17 A Norwich 0-1 (HT 0-0): 1-0 (51)
+   H: 10-20 A Wolves 1-1 (HT 0-0): 0-1 (62 opp) > 1-1 (86)
+   H: 10-24 H Millwall 2-1 (HT 1-1): 0-1 (6 opp) > 1-1 (16) > 2-1 (82)
+   H: 10-31 A Burnley 0-0 (HT 0-0): 0-0
+   A: 10-10 H Norwich 2-1 (HT 0-1): 0-1 (28 opp) > 1-1 (49) > 2-1 (59)
+   A: 10-13 A Millwall 0-1 (HT 0-0): 1-0 (90)
+   A: 10-17 H West Ham 0-1 (HT 0-1): 0-1 (34 opp)
+   A: 10-24 A QPR 5-0 (HT 0-4): 0-1 (2 opp) > 0-2 (9 opp) > 0-3 (15 opp) > 0-4 (45+1 opp) > 0-5 (86 opp)
+   A: 10-31 H Blackburn 4-0 (HT 3-0): 1-0 (11) > 2-0 (32) > 3-0 (36) > 4-0 (59)
+
+=== Championship | Preston v Sheffield Utd | Tue 03 Nov 19:45 | V4.1 rejected 0.499 | CAT C pts 6+4 shut False/True pers True/True shots5 H [5, 62, 10] A [5, 70, 24]
+ H5  sc 2/5 sc2 0 conc 5 conc2 3 cs 0 | 2H gf 1 ga 6 | 60+ 1/4 75+ 1/3 | opps 4/5 | behind: sc 1 conc 6 2down conc 3 | aftereq 0 afterlead 0 | 3+ 2 | streak 5
+ H10 sc 6/10 sc2 2 conc 10 conc2 6 cs 0 | 2H gf 2 ga 14 | 60+ 1/11 75+ 1/8 | opps 10/11 | behind: sc 2 conc 7 2down conc 3 | aftereq 0 afterlead 2 | 3+ 6 | streak 10
+ Hv  sc 3/5 sc2 1 conc 5 conc2 1 cs 0 | 2H gf 2 ga 6 | 60+ 1/5 75+ 1/5 | opps 3/3 | behind: sc 1 conc 1 2down conc 0 | aftereq 0 afterlead 1 | 3+ 2 | streak 5
+ A5  sc 5/5 sc2 2 conc 2 conc2 1 cs 3 | 2H gf 5 ga 2 | 60+ 3/1 75+ 2/1 | opps 5/7 | behind: sc 3 conc 1 2down conc 0 | aftereq 0 afterlead 2 | 3+ 2 | streak 1
+ A10 sc 9/10 sc2 4 conc 7 conc2 4 cs 3 | 2H gf 8 ga 7 | 60+ 5/6 75+ 3/4 | opps 9/11 | behind: sc 7 conc 2 2down conc 0 | aftereq 3 afterlead 2 | 3+ 6 | streak 5
+ Av  sc 4/4 sc2 2 conc 3 conc2 2 cs 1 | 2H gf 3 ga 4 | 60+ 1/3 75+ 0/3 | opps 4/5 | behind: sc 3 conc 1 2down conc 0 | aftereq 1 afterlead 0 | 3+ 3 | streak 3
+ Hflags ['conceded in 4+ of 5', 'conceded 2+ in 2+ of 5', '1 or 0 clean sheets', '7 second-half goals in its games', "goal after 60' in 4 of 5", "1-0/2-0 before 75' followed by another goal in 4 of 5"]
+ Aflags ['scored in 4+ of 5', '7 second-half goals in its games', "goal after 60' in 3 of 5", "1-0/2-0 before 75' followed by another goal in 5 of 7"]
+   H: 10-10 H Millwall 0-1 (HT 0-0): 0-1 (79 opp)
+   H: 10-13 A Birmingham 4-0 (HT 0-3): 0-1 (34 opp) > 0-2 (45 opp) > 0-3 (45 opp) > 0-4 (76 opp)
+   H: 10-17 A Wrexham 4-1 (HT 1-2): 0-1 (31 opp) > 1-1 (36) > 1-2 (42 opp) > 1-3 (59 opp) > 1-4 (63 opp)
+   H: 10-24 H West Brom 1-1 (HT 0-0): 1-0 (78) > 1-1 (82 opp)
+   H: 10-31 A Stoke City 2-0 (HT 0-1): 0-1 (29 opp) > 0-2 (53 opp)
+   A: 10-10 H Lincoln 3-0 (HT 1-0): 1-0 (43) > 2-0 (52) > 3-0 (77)
+   A: 10-14 A Portsmouth 3-2 (HT 0-1): 0-1 (41 opp) > 0-2 (54 opp) > 1-2 (59) > 2-2 (67) > 2-3 (89 opp)
+   A: 10-17 A Bristol City 0-1 (HT 1-0): 1-0 (5)
+   A: 10-24 H Derby 1-1 (HT 0-1): 0-1 (37 opp) > 1-1 (79)
+   A: 10-30 H Wrexham 1-0 (HT 1-0): 1-0 (30)
+
+=== Championship | QPR v Burnley | Tue 03 Nov 19:45 | V4.1 rejected 0.575 | CAT B pts 7+5 shut False/False pers False/True shots5 H [5, 73, 26] A [5, 64, 22]
+ H5  sc 4/5 sc2 2 conc 4 conc2 2 cs 1 | 2H gf 3 ga 7 | 60+ 3/5 75+ 1/3 | opps 9/9 | behind: sc 1 conc 5 2down conc 3 | aftereq 0 afterlead 7 | 3+ 4 | streak 3
+ H10 sc 7/10 sc2 4 conc 8 conc2 3 cs 2 | 2H gf 6 ga 8 | 60+ 5/6 75+ 2/3 | opps 14/15 | behind: sc 3 conc 6 2down conc 3 | aftereq 0 afterlead 8 | 3+ 6 | streak 5
+ Hv  sc 4/5 sc2 4 conc 4 conc2 1 cs 1 | 2H gf 5 ga 2 | 60+ 4/2 75+ 2/1 | opps 8/9 | behind: sc 2 conc 1 2down conc 0 | aftereq 0 afterlead 8 | 3+ 4 | streak 4
+ A5  sc 4/5 sc2 2 conc 3 conc2 3 cs 2 | 2H gf 2 ga 6 | 60+ 1/3 75+ 1/1 | opps 5/5 | behind: sc 0 conc 2 2down conc 1 | aftereq 0 afterlead 3 | 3+ 4 | streak 3
+ A10 sc 9/10 sc2 2 conc 8 conc2 5 cs 2 | 2H gf 5 ga 11 | 60+ 1/7 75+ 1/4 | opps 11/11 | behind: sc 2 conc 4 2down conc 1 | aftereq 0 afterlead 3 | 3+ 6 | streak 5
+ Av  sc 4/4 sc2 1 conc 3 conc2 2 cs 1 | 2H gf 2 ga 5 | 60+ 1/2 75+ 1/0 | opps 6/6 | behind: sc 1 conc 4 2down conc 1 | aftereq 0 afterlead 3 | 3+ 3 | streak 2
+ Hflags ['conceded in 4+ of 5', 'conceded 2+ in 2+ of 5', '1 or 0 clean sheets', 'scored in 4+ of 5', '10 second-half goals in its games', "goal after 60' in 5 of 5", "1-0/2-0 before 75' followed by another goal in 9 of 9"]
+ Aflags ['conceded 2+ in 2+ of 5', 'scored in 4+ of 5', '8 second-half goals in its games', "goal after 60' in 4 of 5", "1-0/2-0 before 75' followed by another goal in 5 of 5"]
+   H: 10-09 A West Ham 1-1 (HT 1-0): 1-0 (18) > 1-1 (70 opp)
+   H: 10-14 H Derby 4-1 (HT 3-0): 1-0 (18) > 2-0 (22) > 3-0 (45) > 4-0 (68) > 4-1 (90 opp)
+   H: 10-17 A Birmingham 3-0 (HT 0-1): 0-1 (27 opp) > 0-2 (49 opp) > 0-3 (90 opp)
+   H: 10-24 H Swansea 5-0 (HT 4-0): 1-0 (2) > 2-0 (9) > 3-0 (15) > 4-0 (45+1) > 5-0 (86)
+   H: 10-31 A Southampton 4-1 (HT 0-1): 0-1 (11 opp) > 0-2 (55 opp) > 0-3 (66 opp) > 1-3 (68) > 1-4 (90+5 opp)
+   A: 10-10 A Watford 0-4 (HT 3-0): 1-0 (13) > 2-0 (19) > 3-0 (25) > 4-0 (87)
+   A: 10-13 H Charlton 2-2 (HT 1-0): 1-0 (36) > 1-1 (50 opp) > 2-1 (57) > 2-2 (90 opp)
+   A: 10-16 H Wolves 1-2 (HT 1-1): 1-0 (20) > 1-1 (39 opp) > 1-2 (72 opp)
+   A: 10-24 A Lincoln 4-1 (HT 1-1): 1-0 (39) > 1-1 (45 opp) > 1-2 (49 opp) > 1-3 (57 opp) > 1-4 (67 opp)
+   A: 10-31 H Portsmouth 0-0 (HT 0-0): 0-0
+
+=== Championship | Watford v Lincoln | Tue 03 Nov 19:45 | V4.1 rejected 0.548 | CAT A pts 6.5+6.5 shut False/False pers True/True shots5 H [5, 64, 23] A [5, 60, 17]
+ H5  sc 3/5 sc2 2 conc 4 conc2 3 cs 1 | 2H gf 3 ga 5 | 60+ 2/4 75+ 2/2 | opps 7/8 | behind: sc 1 conc 7 2down conc 5 | aftereq 0 afterlead 2 | 3+ 3 | streak 2
+ H10 sc 5/10 sc2 3 conc 9 conc2 5 cs 1 | 2H gf 6 ga 6 | 60+ 5/4 75+ 4/2 | opps 11/15 | behind: sc 3 conc 9 2down conc 5 | aftereq 1 afterlead 2 | 3+ 5 | streak 7
+ Hv  sc 3/4 sc2 2 conc 3 conc2 2 cs 1 | 2H gf 5 ga 2 | 60+ 4/1 75+ 3/1 | opps 6/6 | behind: sc 2 conc 4 2down conc 2 | aftereq 1 afterlead 1 | 3+ 3 | streak 3
+ A5  sc 3/5 sc2 2 conc 5 conc2 4 cs 0 | 2H gf 4 ga 11 | 60+ 2/7 75+ 0/4 | opps 9/9 | behind: sc 2 conc 9 2down conc 5 | aftereq 3 afterlead 3 | 3+ 5 | streak 5
+ A10 sc 7/10 sc2 2 conc 7 conc2 5 cs 3 | 2H gf 7 ga 13 | 60+ 4/7 75+ 2/4 | opps 11/12 | behind: sc 3 conc 9 2down conc 5 | aftereq 3 afterlead 3 | 3+ 6 | streak 6
+ Av  sc 3/4 sc2 1 conc 2 conc2 2 cs 2 | 2H gf 2 ga 4 | 60+ 1/3 75+ 1/2 | opps 4/5 | behind: sc 0 conc 2 2down conc 1 | aftereq 0 afterlead 1 | 3+ 2 | streak 2
+ Hflags ['conceded in 4+ of 5', 'conceded 2+ in 2+ of 5', '1 or 0 clean sheets', 'scored in 3 of 5', '8 second-half goals in its games', "goal after 60' in 4 of 5", "1-0/2-0 before 75' followed by another goal in 7 of 8"]
+ Aflags ['conceded in 4+ of 5', 'conceded 2+ in 2+ of 5', '1 or 0 clean sheets', 'scored in 3 of 5', '15 second-half goals in its games', "goal after 60' in 5 of 5", "1-0/2-0 before 75' followed by another goal in 9 of 9"]
+   H: 10-10 H Burnley 0-4 (HT 0-3): 0-1 (13 opp) > 0-2 (19 opp) > 0-3 (25 opp) > 0-4 (87 opp)
+   H: 10-13 A Cardiff 5-1 (HT 0-4): 0-1 (11 opp) > 0-2 (35 opp) > 0-3 (41 opp) > 0-4 (45 opp) > 0-5 (85 opp) > 1-5 (87)
+   H: 10-17 H Charlton 2-0 (HT 0-0): 1-0 (58) > 2-0 (90)
+   H: 10-24 A Wolves 1-0 (HT 0-1): 0-1 (35 opp)
+   H: 10-31 A Norwich 3-2 (HT 2-0): 1-0 (10) > 2-0 (27) > 2-1 (53 opp) > 2-2 (62 opp) > 2-3 (71 opp)
+   A: 10-10 A Sheffield Utd 3-0 (HT 0-1): 0-1 (43 opp) > 0-2 (52 opp) > 0-3 (77 opp)
+   A: 10-14 H West Ham 0-6 (HT 0-1): 0-1 (45 opp) > 0-2 (48 opp) > 0-3 (50 opp) > 0-4 (75 opp) > 0-5 (79 opp) > 0-6 (89 opp)
+   A: 10-17 A Millwall 2-2 (HT 2-0): 1-0 (1) > 2-0 (33) > 2-1 (63 opp) > 2-2 (82 opp)
+   A: 10-24 H Burnley 4-1 (HT 1-1): 0-1 (39 opp) > 1-1 (45) > 2-1 (49) > 3-1 (57) > 4-1 (67)
+   A: 10-31 H Birmingham 1-3 (HT 0-1): 0-1 (16 opp) > 0-2 (60 opp) > 1-2 (63) > 1-3 (73 opp)
+
+=== Championship | Birmingham v Millwall | Tue 03 Nov 20:00 | V4.1 Medium 0.594 | CAT C pts 4+7 shut True/False pers False/True shots5 H [5, 66, 24] A [5, 66, 21]
+ H5  sc 4/5 sc2 3 conc 2 conc2 0 cs 3 | 2H gf 5 ga 1 | 60+ 3/1 75+ 2/0 | opps 6/8 | behind: sc 0 conc 0 2down conc 0 | aftereq 0 afterlead 7 | 3+ 3 | streak 2
+ H10 sc 9/10 sc2 6 conc 7 conc2 3 cs 3 | 2H gf 10 ga 2 | 60+ 5/2 75+ 2/1 | opps 12/14 | behind: sc 6 conc 1 2down conc 0 | aftereq 3 afterlead 7 | 3+ 7 | streak 5
+ Hv  sc 5/5 sc2 4 conc 3 conc2 2 cs 2 | 2H gf 6 ga 1 | 60+ 2/1 75+ 2/1 | opps 7/7 | behind: sc 4 conc 0 2down conc 0 | aftereq 2 afterlead 5 | 3+ 4 | streak 3
+ A5  sc 4/5 sc2 2 conc 4 conc2 2 cs 1 | 2H gf 4 ga 3 | 60+ 4/3 75+ 3/3 | opps 5/5 | behind: sc 2 conc 1 2down conc 0 | aftereq 0 afterlead 3 | 3+ 3 | streak 4
+ A10 sc 8/10 sc2 5 conc 8 conc2 6 cs 2 | 2H gf 8 ga 11 | 60+ 7/8 75+ 6/5 | opps 13/13 | behind: sc 3 conc 4 2down conc 1 | aftereq 0 afterlead 8 | 3+ 8 | streak 4
+ Av  sc 4/4 sc2 1 conc 3 conc2 3 cs 1 | 2H gf 2 ga 5 | 60+ 1/3 75+ 1/2 | opps 4/4 | behind: sc 1 conc 1 2down conc 0 | aftereq 0 afterlead 1 | 3+ 3 | streak 2
+ Hflags ['scored in 4+ of 5', '6 second-half goals in its games', "goal after 60' in 3 of 5", "1-0/2-0 before 75' followed by another goal in 6 of 8"]
+ Aflags ['conceded in 4+ of 5', 'conceded 2+ in 2+ of 5', '1 or 0 clean sheets', 'scored in 4+ of 5', '7 second-half goals in its games', "goal after 60' in 5 of 5", "1-0/2-0 before 75' followed by another goal in 5 of 5"]
+   H: 10-10 A West Brom 0-1 (HT 1-0): 1-0 (41)
+   H: 10-13 H Preston 4-0 (HT 3-0): 1-0 (34) > 2-0 (45) > 3-0 (45) > 4-0 (76)
+   H: 10-17 H QPR 3-0 (HT 1-0): 1-0 (27) > 2-0 (49) > 3-0 (90)
+   H: 10-24 A Cardiff 1-0 (HT 0-1): 0-1 (32 opp)
+   H: 10-31 A Lincoln 1-3 (HT 1-0): 1-0 (16) > 2-0 (60) > 2-1 (63 opp) > 3-1 (73)
+   A: 10-10 A Preston 0-1 (HT 0-0): 1-0 (79)
+   A: 10-13 H Swansea 0-1 (HT 0-0): 0-1 (90 opp)
+   A: 10-17 H Lincoln 2-2 (HT 0-2): 0-1 (1 opp) > 0-2 (33 opp) > 1-2 (63) > 2-2 (82)
+   A: 10-24 A Portsmouth 2-1 (HT 1-1): 1-0 (6) > 1-1 (16 opp) > 1-2 (82 opp)
+   A: 10-31 H Derby 4-1 (HT 3-0): 1-0 (3) > 2-0 (10) > 3-0 (17) > 4-0 (84) > 4-1 (87 opp)
+
+=== Championship | West Brom v Southampton | Tue 03 Nov 20:00 | V4.1 rejected 0.536 | CAT C pts 6+3 shut False/True pers False/False shots5 H [5, 75, 16] A [5, 71, 23]
+ H5  sc 4/5 sc2 3 conc 5 conc2 1 cs 0 | 2H gf 7 ga 2 | 60+ 6/2 75+ 4/1 | opps 4/5 | behind: sc 4 conc 1 2down conc 0 | aftereq 2 afterlead 1 | 3+ 3 | streak 5
+ H10 sc 8/10 sc2 3 conc 8 conc2 1 cs 2 | 2H gf 8 ga 4 | 60+ 6/3 75+ 4/1 | opps 6/10 | behind: sc 5 conc 1 2down conc 0 | aftereq 2 afterlead 1 | 3+ 3 | streak 7
+ Hv  sc 4/5 sc2 1 conc 4 conc2 1 cs 1 | 2H gf 3 ga 1 | 60+ 2/1 75+ 1/0 | opps 4/6 | behind: sc 3 conc 1 2down conc 0 | aftereq 1 afterlead 0 | 3+ 1 | streak 3
+ A5  sc 4/5 sc2 2 conc 2 conc2 1 cs 3 | 2H gf 4 ga 2 | 60+ 2/2 75+ 1/1 | opps 4/6 | behind: sc 0 conc 0 2down conc 0 | aftereq 0 afterlead 5 | 3+ 2 | streak 2
+ A10 sc 9/10 sc2 4 conc 7 conc2 2 cs 3 | 2H gf 9 ga 7 | 60+ 6/5 75+ 4/3 | opps 11/13 | behind: sc 1 conc 0 2down conc 0 | aftereq 0 afterlead 10 | 3+ 5 | streak 5
+ Av  sc 5/5 sc2 1 conc 4 conc2 2 cs 1 | 2H gf 2 ga 4 | 60+ 0/3 75+ 0/3 | opps 5/6 | behind: sc 1 conc 0 2down conc 0 | aftereq 0 afterlead 2 | 3+ 2 | streak 3
+ Hflags ['conceded in 4+ of 5', '1 or 0 clean sheets', 'scored in 4+ of 5', '9 second-half goals in its games', "goal after 60' in 4 of 5", "1-0/2-0 before 75' followed by another goal in 4 of 5"]
+ Aflags ['scored in 4+ of 5', '6 second-half goals in its games', "1-0/2-0 before 75' followed by another goal in 4 of 6"]
+   H: 10-10 H Birmingham 0-1 (HT 0-1): 0-1 (41 opp)
+   H: 10-13 A Wrexham 1-2 (HT 0-0): 0-1 (64 opp) > 1-1 (79) > 2-1 (84)
+   H: 10-17 H Blackburn 3-2 (HT 1-2): 0-1 (6 opp) > 0-2 (12 opp) > 1-2 (19) > 2-2 (72) > 3-2 (89)
+   H: 10-24 A Preston 1-1 (HT 0-0): 0-1 (78 opp) > 1-1 (82)
+   H: 10-31 A West Ham 1-3 (HT 1-1): 1-0 (20) > 1-1 (29 opp) > 2-1 (48) > 3-1 (72)
+   A: 10-11 H Portsmouth 1-0 (HT 1-0): 1-0 (20)
+   A: 10-14 A Norwich 0-1 (HT 0-0): 1-0 (54)
+   A: 10-17 H Bolton 0-0 (HT 0-0): 0-0
+   A: 10-24 A West Ham 2-3 (HT 3-1): 1-0 (2) > 2-0 (11) > 2-1 (24 opp) > 3-1 (34) > 3-2 (90 opp)
+   A: 10-31 H QPR 4-1 (HT 1-0): 1-0 (11) > 2-0 (55) > 3-0 (66) > 3-1 (68 opp) > 4-1 (90+5)
+
+=== Championship | Cardiff v West Ham | Wed 04 Nov 19:45 | V4.1 rejected 0.579 | CAT B pts 6+5 shut False/False pers True/False shots5 H [5, 82, 26] A [5, 96, 38]
+ H5  sc 4/5 sc2 2 conc 4 conc2 3 cs 1 | 2H gf 2 ga 4 | 60+ 1/2 75+ 1/1 | opps 8/9 | behind: sc 1 conc 3 2down conc 1 | aftereq 0 afterlead 5 | 3+ 4 | streak 3
+ H10 sc 7/10 sc2 3 conc 9 conc2 5 cs 1 | 2H gf 5 ga 7 | 60+ 4/3 75+ 1/2 | opps 14/16 | behind: sc 3 conc 5 2down conc 1 | aftereq 0 afterlead 7 | 3+ 6 | streak 8
+ Hv  sc 4/4 sc2 2 conc 3 conc2 0 cs 1 | 2H gf 3 ga 1 | 60+ 3/1 75+ 1/1 | opps 5/6 | behind: sc 1 conc 0 2down conc 0 | aftereq 0 afterlead 6 | 3+ 2 | streak 3
+ A5  sc 5/5 sc2 2 conc 3 conc2 2 cs 2 | 2H gf 7 ga 2 | 60+ 5/1 75+ 3/0 | opps 6/7 | behind: sc 4 conc 3 2down conc 0 | aftereq 0 afterlead 5 | 3+ 3 | streak 2
+ A10 sc 10/10 sc2 7 conc 6 conc2 5 cs 4 | 2H gf 18 ga 3 | 60+ 14/2 75+ 9/0 | opps 14/15 | behind: sc 7 conc 4 2down conc 0 | aftereq 1 afterlead 15 | 3+ 8 | streak 2
+ Av  sc 4/4 sc2 3 conc 2 conc2 2 cs 2 | 2H gf 8 ga 0 | 60+ 6/0 75+ 4/0 | opps 5/6 | behind: sc 3 conc 1 2down conc 0 | aftereq 1 afterlead 5 | 3+ 3 | streak 2
+ Hflags ['conceded in 4+ of 5', 'conceded 2+ in 2+ of 5', '1 or 0 clean sheets', 'scored in 4+ of 5', '6 second-half goals in its games', "1-0/2-0 before 75' followed by another goal in 8 of 9"]
+ Aflags ['conceded 2+ in 2+ of 5', 'scored in 4+ of 5', '9 second-half goals in its games', "goal after 60' in 4 of 5", "1-0/2-0 before 75' followed by another goal in 6 of 7"]
+   H: 10-10 A Blackburn 2-1 (HT 0-2): 0-1 (28 opp) > 0-2 (38 opp) > 1-2 (53)
+   H: 10-13 H Watford 5-1 (HT 4-0): 1-0 (11) > 2-0 (35) > 3-0 (41) > 4-0 (45) > 5-0 (85) > 5-1 (87 opp)
+   H: 10-17 A Middlesbrough 2-2 (HT 2-0): 1-0 (22) > 2-0 (45) > 2-1 (58 opp) > 2-2 (61 opp)
+   H: 10-24 H Birmingham 1-0 (HT 1-0): 1-0 (32)
+   H: 10-31 A Wolves 3-0 (HT 0-2): 0-1 (10 opp) > 0-2 (15 opp) > 0-3 (58 opp)
+   A: 10-09 H QPR 1-1 (HT 0-1): 0-1 (18 opp) > 1-1 (70)
+   A: 10-14 A Lincoln 0-6 (HT 1-0): 1-0 (45) > 2-0 (48) > 3-0 (50) > 4-0 (75) > 5-0 (79) > 6-0 (89)
+   A: 10-17 A Swansea 0-1 (HT 1-0): 1-0 (34)
+   A: 10-24 H Southampton 2-3 (HT 1-3): 0-1 (2 opp) > 0-2 (11 opp) > 1-2 (24) > 1-3 (34 opp) > 2-3 (90)
+   A: 10-31 H West Brom 1-3 (HT 1-1): 0-1 (20 opp) > 1-1 (29) > 1-2 (48 opp) > 1-3 (72 opp)
+
+=== Championship | Wrexham v Middlesbrough | Wed 04 Nov 19:45 | V4.1 rejected 0.578 | CAT B pts 6.5+5 shut False/False pers False/True shots5 H [5, 71, 18] A [5, 116, 43]
+ H5  sc 3/5 sc2 1 conc 5 conc2 2 cs 0 | 2H gf 4 ga 3 | 60+ 3/3 75+ 1/3 | opps 4/5 | behind: sc 1 conc 1 2down conc 0 | aftereq 0 afterlead 2 | 3+ 2 | streak 5
+ H10 sc 6/10 sc2 3 conc 8 conc2 3 cs 2 | 2H gf 8 ga 8 | 60+ 5/6 75+ 2/5 | opps 10/11 | behind: sc 2 conc 6 2down conc 4 | aftereq 0 afterlead 4 | 3+ 5 | streak 8
+ Hv  sc 4/4 sc2 2 conc 4 conc2 1 cs 0 | 2H gf 5 ga 3 | 60+ 3/2 75+ 1/2 | opps 4/4 | behind: sc 1 conc 0 2down conc 0 | aftereq 0 afterlead 2 | 3+ 3 | streak 4
+ A5  sc 5/5 sc2 4 conc 3 conc2 2 cs 2 | 2H gf 9 ga 2 | 60+ 6/1 75+ 3/1 | opps 7/8 | behind: sc 2 conc 1 2down conc 0 | aftereq 0 afterlead 6 | 3+ 4 | streak 3
+ A10 sc 10/10 sc2 7 conc 7 conc2 5 cs 3 | 2H gf 13 ga 7 | 60+ 9/3 75+ 5/1 | opps 12/14 | behind: sc 6 conc 2 2down conc 0 | aftereq 3 afterlead 7 | 3+ 7 | streak 3
+ Av  sc 5/5 sc2 3 conc 4 conc2 2 cs 1 | 2H gf 6 ga 5 | 60+ 5/1 75+ 3/1 | opps 5/6 | behind: sc 1 conc 0 2down conc 0 | aftereq 0 afterlead 4 | 3+ 3 | streak 3
+ Hflags ['conceded in 4+ of 5', 'conceded 2+ in 2+ of 5', '1 or 0 clean sheets', 'scored in 3 of 5', '7 second-half goals in its games', "goal after 60' in 4 of 5", "1-0/2-0 before 75' followed by another goal in 4 of 5"]
+ Aflags ['conceded 2+ in 2+ of 5', 'scored in 4+ of 5', '11 second-half goals in its games', "goal after 60' in 4 of 5", "1-0/2-0 before 75' followed by another goal in 7 of 8"]
+   H: 10-10 A Derby 1-1 (HT 0-1): 0-1 (9 opp) > 1-1 (88)
+   H: 10-13 H West Brom 1-2 (HT 0-0): 1-0 (64) > 1-1 (79 opp) > 1-2 (84 opp)
+   H: 10-17 H Preston 4-1 (HT 2-1): 1-0 (31) > 1-1 (36 opp) > 2-1 (42) > 3-1 (59) > 4-1 (63)
+   H: 10-24 A Blackburn 2-0 (HT 0-1): 0-1 (44 opp) > 0-2 (79 opp)
+   H: 10-30 A Sheffield Utd 1-0 (HT 0-1): 0-1 (30 opp)
+   A: 10-10 H Wolves 1-0 (HT 0-0): 1-0 (57)
+   A: 10-13 A Stoke City 2-3 (HT 0-0): 1-0 (48) > 1-1 (50 opp) > 2-1 (73) > 2-2 (85 opp) > 3-2 (90)
+   A: 10-17 H Cardiff 2-2 (HT 0-2): 0-1 (22 opp) > 0-2 (45 opp) > 1-2 (58) > 2-2 (61)
+   A: 10-23 A Bolton 1-5 (HT 3-1): 1-0 (13) > 2-0 (31) > 3-0 (39) > 3-1 (45 opp) > 4-1 (73) > 5-1 (78)
+   A: 10-31 H Charlton 3-0 (HT 2-0): 1-0 (12) > 2-0 (44) > 3-0 (82)
+
+=== Championship | Bristol City v Wolves | Wed 04 Nov 20:00 | V4.1 rejected 0.511 | CAT C pts 2.5+4 shut False/False pers False/False shots5 H [5, 65, 18] A [5, 90, 18]
+ H5  sc 2/5 sc2 1 conc 4 conc2 1 cs 1 | 2H gf 2 ga 1 | 60+ 2/0 75+ 2/0 | opps 2/4 | behind: sc 2 conc 0 2down conc 0 | aftereq 1 afterlead 0 | 3+ 1 | streak 3
+ H10 sc 6/10 sc2 3 conc 8 conc2 2 cs 2 | 2H gf 7 ga 7 | 60+ 7/3 75+ 6/2 | opps 6/10 | behind: sc 4 conc 3 2down conc 1 | aftereq 2 afterlead 1 | 3+ 4 | streak 4
+ Hv  sc 1/4 sc2 0 conc 3 conc2 0 cs 1 | 2H gf 0 ga 1 | 60+ 0/0 75+ 0/0 | opps 0/4 | behind: sc 0 conc 0 2down conc 0 | aftereq 0 afterlead 0 | 3+ 0 | streak 2
+ A5  sc 5/5 sc2 2 conc 3 conc2 1 cs 2 | 2H gf 4 ga 3 | 60+ 2/3 75+ 0/2 | opps 5/6 | behind: sc 2 conc 1 2down conc 0 | aftereq 1 afterlead 2 | 3+ 3 | streak 3
+ A10 sc 9/10 sc2 4 conc 6 conc2 3 cs 4 | 2H gf 7 ga 6 | 60+ 4/4 75+ 1/2 | opps 8/11 | behind: sc 4 conc 4 2down conc 1 | aftereq 1 afterlead 2 | 3+ 5 | streak 4
+ Av  sc 4/5 sc2 3 conc 4 conc2 2 cs 1 | 2H gf 3 ga 3 | 60+ 3/1 75+ 1/0 | opps 4/5 | behind: sc 3 conc 3 2down conc 1 | aftereq 1 afterlead 0 | 3+ 3 | streak 2
+ Hflags ['conceded in 4+ of 5', '1 or 0 clean sheets', "1-0/2-0 before 75' followed by another goal in 2 of 4"]
+ Aflags ['scored in 4+ of 5', '7 second-half goals in its games', "goal after 60' in 3 of 5", "1-0/2-0 before 75' followed by another goal in 5 of 6"]
+   H: 10-10 A Charlton 1-1 (HT 1-1): 0-1 (8 opp) > 1-1 (27)
+   H: 10-13 H Blackburn 0-1 (HT 0-1): 0-1 (38 opp)
+   H: 10-17 H Sheffield Utd 0-1 (HT 0-1): 0-1 (5 opp)
+   H: 10-24 A Stoke City 0-0 (HT 0-0): 0-0
+   H: 10-31 A Bolton 2-3 (HT 1-1): 1-0 (13) > 1-1 (16 opp) > 1-2 (57 opp) > 2-2 (84) > 3-2 (90+3)
+   A: 10-13 H Bolton 1-3 (HT 0-1): 0-1 (28 opp) > 1-1 (50) > 1-2 (72 opp) > 1-3 (82 opp)
+   A: 10-16 A Burnley 1-2 (HT 1-1): 0-1 (20 opp) > 1-1 (39) > 2-1 (72)
+   A: 10-20 H Portsmouth 1-1 (HT 0-0): 1-0 (62) > 1-1 (86 opp)
+   A: 10-24 H Watford 1-0 (HT 1-0): 1-0 (35)
+   A: 10-31 H Cardiff 3-0 (HT 2-0): 1-0 (10) > 2-0 (15) > 3-0 (58)
+
+=== League One | Huddersfield v Luton | Tue 03 Nov 19:45 | V4.1 High 0.608 | CAT B pts 4+6 shut False/False pers False/False shots5 H [5, 80, 32] A [5, 82, 31]
+ H5  sc 5/5 sc2 5 conc 3 conc2 1 cs 2 | 2H gf 9 ga 4 | 60+ 5/4 75+ 2/3 | opps 8/9 | behind: sc 0 conc 0 2down conc 0 | aftereq 0 afterlead 8 | 3+ 4 | streak 2
+ H10 sc 9/10 sc2 7 conc 7 conc2 2 cs 3 | 2H gf 13 ga 6 | 60+ 8/6 75+ 3/3 | opps 12/13 | behind: sc 1 conc 0 2down conc 0 | aftereq 0 afterlead 10 | 3+ 7 | streak 3
+ Hv  sc 5/5 sc2 4 conc 5 conc2 1 cs 0 | 2H gf 9 ga 5 | 60+ 7/5 75+ 3/3 | opps 7/7 | behind: sc 0 conc 0 2down conc 0 | aftereq 0 afterlead 6 | 3+ 4 | streak 5
+ A5  sc 5/5 sc2 4 conc 4 conc2 1 cs 1 | 2H gf 5 ga 4 | 60+ 3/3 75+ 1/3 | opps 7/8 | behind: sc 1 conc 0 2down conc 0 | aftereq 0 afterlead 4 | 3+ 4 | streak 4
+ A10 sc 9/10 sc2 6 conc 8 conc2 2 cs 2 | 2H gf 10 ga 6 | 60+ 6/5 75+ 3/4 | opps 13/15 | behind: sc 2 conc 1 2down conc 0 | aftereq 0 afterlead 8 | 3+ 6 | streak 8
+ Av  sc 4/4 sc2 2 conc 3 conc2 2 cs 1 | 2H gf 5 ga 3 | 60+ 3/3 75+ 1/2 | opps 6/7 | behind: sc 2 conc 1 2down conc 0 | aftereq 0 afterlead 4 | 3+ 3 | streak 3
+ Hflags ['scored in 4+ of 5', '13 second-half goals in its games', "goal after 60' in 3 of 5", "1-0/2-0 before 75' followed by another goal in 8 of 9"]
+ Aflags ['conceded in 4+ of 5', '1 or 0 clean sheets', 'scored in 4+ of 5', '9 second-half goals in its games', "goal after 60' in 3 of 5", "1-0/2-0 before 75' followed by another goal in 7 of 8"]
+   H: 10-10 H Sheffield Wednesday 2-2 (HT 0-0): 1-0 (46) > 2-0 (68) > 2-1 (88 opp) > 2-2 (90 opp)
+   H: 10-17 A Plymouth 0-2 (HT 1-0): 1-0 (6) > 2-0 (55)
+   H: 10-20 H Peterborough 4-1 (HT 1-0): 1-0 (3) > 2-0 (66) > 2-1 (68 opp) > 3-1 (70) > 4-1 (79)
+   H: 10-24 H Wigan 2-1 (HT 1-0): 1-0 (34) > 2-0 (80) > 2-1 (90+2 opp)
+   H: 10-31 A Bradford 0-3 (HT 1-0): 1-0 (4) > 2-0 (48) > 3-0 (51)
+   A: 10-17 A Milton Keynes Dons 2-1 (HT 0-1): 0-1 (25 opp) > 1-1 (70) > 1-2 (79 opp)
+   A: 10-20 H Barnsley 2-1 (HT 2-0): 1-0 (2) > 2-0 (41) > 2-1 (58 opp)
+   A: 10-24 H Leicester 2-1 (HT 1-0): 1-0 (39) > 1-1 (90 opp) > 2-1 (90+4)
+   A: 10-27 H Doncaster 3-1 (HT 1-0): 1-0 (44) > 2-0 (51) > 3-0 (72) > 3-1 (84 opp)
+   A: 10-31 A Peterborough 0-2 (HT 1-0): 1-0 (3) > 2-0 (46)
+
+=== League One | Oxford United v Reading | Wed 04 Nov 19:45 | V4.1 rejected 0.504 | CAT C pts 2.5+3.0 shut False/False pers False/False shots5 H [5, 78, 20] A [5, 62, 21]
+ H5  sc 4/5 sc2 1 conc 3 conc2 0 cs 2 | 2H gf 2 ga 2 | 60+ 1/2 75+ 1/1 | opps 3/4 | behind: sc 1 conc 0 2down conc 0 | aftereq 0 afterlead 0 | 3+ 1 | streak 2
+ H10 sc 9/10 sc2 4 conc 6 conc2 1 cs 4 | 2H gf 10 ga 7 | 60+ 7/5 75+ 6/3 | opps 8/9 | behind: sc 2 conc 1 2down conc 0 | aftereq 0 afterlead 6 | 3+ 5 | streak 4
+ Hv  sc 4/5 sc2 2 conc 2 conc2 0 cs 3 | 2H gf 4 ga 2 | 60+ 4/1 75+ 4/0 | opps 2/3 | behind: sc 0 conc 0 2down conc 0 | aftereq 0 afterlead 2 | 3+ 2 | streak 2
+ A5  sc 3/5 sc2 2 conc 3 conc2 0 cs 2 | 2H gf 7 ga 2 | 60+ 4/2 75+ 2/1 | opps 3/5 | behind: sc 1 conc 0 2down conc 0 | aftereq 1 afterlead 4 | 3+ 2 | streak 2
+ A10 sc 8/10 sc2 5 conc 7 conc2 2 cs 3 | 2H gf 14 ga 7 | 60+ 8/6 75+ 4/3 | opps 9/12 | behind: sc 2 conc 0 2down conc 0 | aftereq 1 afterlead 7 | 3+ 5 | streak 4
+ Av  sc 3/5 sc2 2 conc 4 conc2 2 cs 1 | 2H gf 6 ga 6 | 60+ 4/5 75+ 3/2 | opps 4/5 | behind: sc 0 conc 0 2down conc 0 | aftereq 0 afterlead 4 | 3+ 3 | streak 4
+ Hflags ['scored in 4+ of 5', '4 second-half goals in its games', "1-0/2-0 before 75' followed by another goal in 3 of 4"]
+ Aflags ['scored in 3 of 5', '9 second-half goals in its games', "goal after 60' in 3 of 5", "1-0/2-0 before 75' followed by another goal in 3 of 5"]
+   H: 10-15 A Mansfield Town 1-1 (HT 1-0): 1-0 (34) > 1-1 (82 opp)
+   H: 10-20 H Wigan 2-1 (HT 1-0): 1-0 (44) > 1-1 (69 opp) > 2-1 (76)
+   H: 10-24 H Bradford 0-0 (HT 0-0): 0-0
+   H: 10-27 H Stockport County 1-0 (HT 1-0): 1-0 (35)
+   H: 10-31 A Barnsley 1-1 (HT 0-1): 0-1 (32 opp) > 1-1 (60)
+   A: 10-10 A Milton Keynes Dons 1-5 (HT 1-0): 1-0 (38) > 2-0 (47) > 3-0 (64) > 4-0 (80) > 4-1 (85 opp) > 5-1 (87)
+   A: 10-17 A Wigan 1-0 (HT 0-0): 0-1 (71 opp)
+   A: 10-21 H Leyton Orient 1-0 (HT 0-0): 1-0 (52)
+   A: 10-24 H Barnsley 2-1 (HT 0-1): 0-1 (7 opp) > 1-1 (54) > 2-1 (68)
+   A: 10-31 A Plymouth 0-0 (HT 0-0): 0-0
+
+=== National League South | Chelmsford City v Farnham Town | Mon 02 Nov 19:45 | V4.1 Medium 0.594 | CAT B pts 4+7 shut False/False pers False/True shots5 H [0, 0, 0] A [0, 0, 0]
+ H5  sc 5/5 sc2 3 conc 3 conc2 1 cs 2 | 2H gf 3 ga 5 | 60+ 1/5 75+ 1/3 | opps 7/8 | behind: sc 0 conc 0 2down conc 0 | aftereq 0 afterlead 7 | 3+ 3 | streak 1
+ H10 sc 9/9 sc2 4 conc 6 conc2 2 cs 3 | 2H gf 4 ga 7 | 60+ 2/5 75+ 1/3 | opps 10/12 | behind: sc 4 conc 0 2down conc 0 | aftereq 2 afterlead 7 | 3+ 4 | streak 4
+ Hv  sc 3/3 sc2 1 conc 2 conc2 1 cs 1 | 2H gf 2 ga 3 | 60+ 1/3 75+ 1/2 | opps 3/4 | behind: sc 1 conc 0 2down conc 0 | aftereq 0 afterlead 1 | 3+ 1 | streak 2
+ A5  sc 4/5 sc2 3 conc 4 conc2 3 cs 1 | 2H gf 8 ga 3 | 60+ 5/2 75+ 4/0 | opps 6/7 | behind: sc 3 conc 1 2down conc 0 | aftereq 3 afterlead 7 | 3+ 4 | streak 2
+ A10 sc 9/10 sc2 7 conc 8 conc2 4 cs 2 | 2H gf 11 ga 5 | 60+ 7/4 75+ 6/1 | opps 11/12 | behind: sc 3 conc 1 2down conc 0 | aftereq 3 afterlead 9 | 3+ 7 | streak 5
+ Av  sc 4/5 sc2 3 conc 5 conc2 1 cs 0 | 2H gf 3 ga 2 | 60+ 2/2 75+ 2/0 | opps 4/5 | behind: sc 1 conc 0 2down conc 0 | aftereq 3 afterlead 2 | 3+ 3 | streak 5
+ Hflags ['scored in 4+ of 5', '8 second-half goals in its games', "goal after 60' in 3 of 5", "1-0/2-0 before 75' followed by another goal in 7 of 8"]
+ Aflags ['conceded in 4+ of 5', 'conceded 2+ in 2+ of 5', '1 or 0 clean sheets', 'scored in 4+ of 5', '11 second-half goals in its games', "goal after 60' in 4 of 5", "1-0/2-0 before 75' followed by another goal in 6 of 7"]
+   H: 09-12 A Hampton & Richmond 1-1 (HT 0-0): 1-0 (51) > 1-1 (73 opp)
+   H: 10-10 A Chesham United 0-5 (HT 5-0): 1-0 (1) > 2-0 (14) > 3-0 (17) > 4-0 (21) > 5-0 (37)
+   H: 10-24 H Tonbridge Angels 3-3 (HT 1-0): 1-0 (23) > 2-0 (49) > 2-1 (75 opp) > 2-2 (78 opp) > 3-2 (86) > 3-3 (88 opp)
+   H: 10-27 A Dover 0-1 (HT 1-0): 1-0 (42)
+   H: 10-31 A AFC Totton 1-3 (HT 3-0): 1-0 (17) > 2-0 (26) > 3-0 (42) > 3-1 (90+4 opp)
+   A: 10-06 H Truro City 2-2 (HT 0-2): 0-1 (8 opp) > 0-2 (37 opp) > 1-2 (59) > 2-2 (67)
+   A: 10-10 H Salisbury 1-2 (HT 1-0): 1-0 (7) > 1-1 (52 opp) > 1-2 (63 opp)
+   A: 10-24 H Braintree 6-0 (HT 2-0): 1-0 (4) > 2-0 (6) > 3-0 (59) > 4-0 (79) > 5-0 (81) > 6-0 (88)
+   A: 10-27 A Chesham United 2-4 (HT 2-1): 0-1 (23 opp) > 1-1 (37) > 2-1 (41) > 3-1 (57) > 3-2 (62 opp) > 4-2 (90+2)
+   A: 10-31 A Dover 1-0 (HT 0-1): 0-1 (30 opp)
+
+=== National League South | Dorking Wanderers v Hampton & Richmond | Tue 03 Nov 19:45 | V4.1 Medium 0.594 | CAT A pts 7+5.5 shut False/False pers True/True shots5 H [0, 0, 0] A [0, 0, 0]
+ H5  sc 5/5 sc2 4 conc 4 conc2 2 cs 1 | 2H gf 9 ga 3 | 60+ 6/3 75+ 3/2 | opps 6/7 | behind: sc 4 conc 0 2down conc 0 | aftereq 4 afterlead 3 | 3+ 3 | streak 4
+ H10 sc 10/10 sc2 8 conc 8 conc2 5 cs 2 | 2H gf 15 ga 5 | 60+ 9/5 75+ 4/3 | opps 11/12 | behind: sc 9 conc 1 2down conc 0 | aftereq 9 afterlead 5 | 3+ 7 | streak 7
+ Hv  sc 5/5 sc2 4 conc 3 conc2 3 cs 2 | 2H gf 7 ga 2 | 60+ 6/2 75+ 3/1 | opps 5/6 | behind: sc 4 conc 0 2down conc 0 | aftereq 2 afterlead 2 | 3+ 3 | streak 3
+ A5  sc 2/5 sc2 2 conc 5 conc2 3 cs 0 | 2H gf 2 ga 7 | 60+ 1/6 75+ 0/3 | opps 2/4 | behind: sc 1 conc 1 2down conc 0 | aftereq 0 afterlead 1 | 3+ 2 | streak 5
+ A10 sc 7/10 sc2 3 conc 9 conc2 5 cs 1 | 2H gf 6 ga 12 | 60+ 5/9 75+ 1/4 | opps 9/11 | behind: sc 5 conc 7 2down conc 3 | aftereq 0 afterlead 2 | 3+ 4 | streak 6
+ Av  sc 3/5 sc2 1 conc 5 conc2 2 cs 0 | 2H gf 2 ga 3 | 60+ 2/2 75+ 0/1 | opps 4/6 | behind: sc 3 conc 3 2down conc 2 | aftereq 0 afterlead 0 | 3+ 2 | streak 5
+ Hflags ['conceded in 4+ of 5', 'conceded 2+ in 2+ of 5', '1 or 0 clean sheets', 'scored in 4+ of 5', '12 second-half goals in its games', "goal after 60' in 5 of 5", "1-0/2-0 before 75' followed by another goal in 6 of 7"]
+ Aflags ['conceded in 4+ of 5', 'conceded 2+ in 2+ of 5', '1 or 0 clean sheets', '9 second-half goals in its games', "goal after 60' in 4 of 5", "1-0/2-0 before 75' followed by another goal in 2 of 4"]
+   H: 09-26 H Braintree 4-3 (HT 2-2): 1-0 (16) > 2-0 (35) > 2-1 (45 opp) > 2-2 (45+4 opp) > 2-3 (65 opp) > 3-3 (67) > 4-3 (80)
+   H: 10-10 A Dover 1-1 (HT 0-0): 1-0 (58) > 1-1 (90+2 opp)
+   H: 10-24 A Slough Town 1-3 (HT 0-1): 0-1 (15 opp) > 1-1 (51) > 2-1 (59) > 3-1 (77)
+   H: 10-27 H Hemel Hempstead Town 3-3 (HT 1-2): 1-0 (18) > 1-1 (37 opp) > 1-2 (45+8 opp) > 2-2 (74) > 2-3 (82 opp) > 3-3 (89)
+   H: 10-31 H Weston-super-Mare 2-0 (HT 1-0): 1-0 (45) > 2-0 (61)
+   A: 09-26 A Dagenham & Redbridge 1-0 (HT 0-0): 0-1 (67 opp)
+   A: 10-10 H Ebbsfleet United 0-2 (HT 0-0): 0-1 (79 opp) > 0-2 (84 opp)
+   A: 10-24 H Truro City 3-4 (HT 2-1): 1-0 (26) > 1-1 (35 opp) > 2-1 (41) > 3-1 (52) > 3-2 (66 opp) > 3-3 (69 opp) > 3-4 (77 opp)
+   A: 10-27 A Billericay Town 2-2 (HT 1-1): 1-0 (13) > 1-1 (45+2 opp) > 1-2 (53 opp) > 2-2 (71)
+   A: 10-31 A Braintree 1-0 (HT 0-1): 0-1 (37 opp)
+
+=== National League South | Farnborough v Ebbsfleet United | Tue 03 Nov 19:45 | V4.1 rejected 0.558 | CAT A pts 6+7 shut False/False pers True/False shots5 H [0, 0, 0] A [0, 0, 0]
+ H5  sc 2/5 sc2 2 conc 4 conc2 3 cs 1 | 2H gf 4 ga 6 | 60+ 3/5 75+ 2/4 | opps 7/9 | behind: sc 1 conc 8 2down conc 5 | aftereq 1 afterlead 1 | 3+ 3 | streak 3
+ H10 sc 4/10 sc2 4 conc 8 conc2 6 cs 2 | 2H gf 7 ga 10 | 60+ 5/9 75+ 3/7 | opps 12/16 | behind: sc 2 conc 12 2down conc 7 | aftereq 2 afterlead 2 | 3+ 5 | streak 5
+ Hv  sc 2/5 sc2 2 conc 4 conc2 2 cs 1 | 2H gf 4 ga 5 | 60+ 3/5 75+ 2/3 | opps 6/8 | behind: sc 1 conc 7 2down conc 5 | aftereq 1 afterlead 1 | 3+ 3 | streak 2
+ A5  sc 4/5 sc2 4 conc 4 conc2 2 cs 1 | 2H gf 8 ga 6 | 60+ 7/5 75+ 5/4 | opps 9/9 | behind: sc 2 conc 2 2down conc 1 | aftereq 1 afterlead 10 | 3+ 5 | streak 2
+ A10 sc 9/10 sc2 7 conc 6 conc2 2 cs 4 | 2H gf 16 ga 7 | 60+ 13/6 75+ 9/5 | opps 14/15 | behind: sc 2 conc 2 2down conc 1 | aftereq 1 afterlead 16 | 3+ 7 | streak 2
+ Av  sc 4/5 sc2 3 conc 4 conc2 1 cs 1 | 2H gf 5 ga 5 | 60+ 4/4 75+ 3/3 | opps 7/7 | behind: sc 0 conc 2 2down conc 1 | aftereq 0 afterlead 4 | 3+ 3 | streak 2
+ Hflags ['conceded in 4+ of 5', 'conceded 2+ in 2+ of 5', '1 or 0 clean sheets', '10 second-half goals in its games', "goal after 60' in 4 of 5", "1-0/2-0 before 75' followed by another goal in 7 of 9"]
+ Aflags ['conceded in 4+ of 5', 'conceded 2+ in 2+ of 5', '1 or 0 clean sheets', 'scored in 4+ of 5', '14 second-half goals in its games', "goal after 60' in 5 of 5", "1-0/2-0 before 75' followed by another goal in 9 of 9"]
+   H: 10-10 A Billericay Town 4-0 (HT 0-2): 0-1 (5 opp) > 0-2 (18 opp) > 0-3 (90 opp) > 0-4 (90+4 opp)
+   H: 10-17 H Dagenham & Redbridge 2-0 (HT 0-0): 1-0 (56) > 2-0 (64)
+   H: 10-24 A Folkestone Invicta 2-0 (HT 0-1): 0-1 (26 opp) > 0-2 (57 opp)
+   H: 10-28 H Weston-super-Mare 2-1 (HT 0-1): 0-1 (10 opp) > 1-1 (81) > 2-1 (90+6)
+   H: 10-31 H Horsham 0-5 (HT 0-2): 0-1 (43 opp) > 0-2 (45+1 opp) > 0-3 (74 opp) > 0-4 (78 opp) > 0-5 (90+4 opp)
+   A: 10-17 H Weston-super-Mare 6-1 (HT 4-0): 1-0 (8) > 2-0 (19) > 3-0 (23) > 4-0 (41) > 5-0 (49) > 6-0 (74) > 6-1 (83 opp)
+   A: 10-20 H Horsham 2-2 (HT 0-1): 0-1 (28 opp) > 1-1 (78) > 1-2 (83 opp) > 2-2 (90+2)
+   A: 10-24 H Maidenhead 4-0 (HT 2-0): 1-0 (17) > 2-0 (25) > 3-0 (88) > 4-0 (90+2)
+   A: 10-27 A Maidstone Utd 1-3 (HT 1-0): 1-0 (9) > 2-0 (67) > 2-1 (83 opp) > 3-1 (90+3)
+   A: 10-31 A Truro City 3-0 (HT 0-0): 0-1 (57 opp) > 0-2 (70 opp) > 0-3 (82 opp)
+
+=== Ligue 1 | Lorient v Stade Brestois 29 | Mon 02 Nov 19:45 | V4.1 rejected 0.536 | CAT C pts 5+7 shut True/False pers False/True shots5 H [5, 45, 14] A [5, 64, 25]
+ H5  sc 4/5 sc2 1 conc 2 conc2 2 cs 3 | 2H gf 3 ga 3 | 60+ 3/1 75+ 1/0 | opps 4/6 | behind: sc 1 conc 1 2down conc 0 | aftereq 0 afterlead 1 | 3+ 2 | streak 2
+ H10 sc 6/8 sc2 1 conc 3 conc2 3 cs 5 | 2H gf 5 ga 3 | 60+ 3/1 75+ 1/0 | opps 6/9 | behind: sc 2 conc 2 2down conc 0 | aftereq 0 afterlead 1 | 3+ 3 | streak 2
+ Hv  sc 4/4 sc2 1 conc 2 conc2 2 cs 2 | 2H gf 3 ga 2 | 60+ 2/1 75+ 0/0 | opps 4/6 | behind: sc 1 conc 1 2down conc 0 | aftereq 0 afterlead 1 | 3+ 2 | streak 2
+ A5  sc 4/5 sc2 1 conc 5 conc2 2 cs 0 | 2H gf 1 ga 6 | 60+ 0/4 75+ 0/2 | opps 5/6 | behind: sc 0 conc 0 2down conc 0 | aftereq 0 afterlead 4 | 3+ 3 | streak 5
+ A10 sc 7/8 sc2 4 conc 8 conc2 4 cs 0 | 2H gf 4 ga 9 | 60+ 2/6 75+ 1/3 | opps 9/10 | behind: sc 3 conc 0 2down conc 0 | aftereq 1 afterlead 5 | 3+ 6 | streak 8
+ Av  sc 4/4 sc2 2 conc 4 conc2 2 cs 0 | 2H gf 2 ga 5 | 60+ 1/3 75+ 0/2 | opps 5/5 | behind: sc 1 conc 0 2down conc 0 | aftereq 0 afterlead 1 | 3+ 3 | streak 4
+ Hflags ['conceded 2+ in 2+ of 5', 'scored in 4+ of 5', '6 second-half goals in its games', "goal after 60' in 4 of 5", "1-0/2-0 before 75' followed by another goal in 4 of 6"]
+ Aflags ['conceded in 4+ of 5', 'conceded 2+ in 2+ of 5', '1 or 0 clean sheets', 'scored in 4+ of 5', '7 second-half goals in its games', "goal after 60' in 3 of 5", "1-0/2-0 before 75' followed by another goal in 5 of 6"]
+   H: 09-12 H Toulouse 2-2 (HT 2-0): 1-0 (37) > 2-0 (39) > 2-1 (48 opp) > 2-2 (69 opp)
+   H: 09-19 A Le Mans 2-1 (HT 0-1): 0-1 (3 opp) > 0-2 (57 opp) > 1-2 (78)
+   H: 10-10 H Paris FC 1-0 (HT 0-0): 1-0 (68)
+   H: 10-18 H Monaco 1-0 (HT 0-0): 1-0 (61)
+   H: 10-25 A Angers 0-0 (HT 0-0): 0-0
+   A: 09-13 H Paris Saint Germain 0-1 (HT 0-1): 0-1 (5 opp)
+   A: 09-20 A Auxerre 2-1 (HT 1-0): 1-0 (23) > 1-1 (47 opp) > 1-2 (83 opp)
+   A: 10-10 H Angers 5-1 (HT 4-0): 1-0 (9) > 2-0 (17) > 3-0 (30) > 4-0 (45) > 4-1 (47 opp) > 5-1 (54)
+   A: 10-17 A Lille 1-1 (HT 1-0): 1-0 (6) > 1-1 (64 opp)
+   A: 10-23 H Nice 1-2 (HT 1-0): 1-0 (15) > 1-1 (61 opp) > 1-2 (83 opp)
+
+=== Super Lig | Gençlerbirliği S.K. v Alanyaspor | Mon 02 Nov 17:00 | V4.1 rejected 0.544 | CAT A pts 6+6.5 shut False/False pers True/False shots5 H [5, 59, 17] A [5, 67, 23]
+ H5  sc 2/5 sc2 1 conc 5 conc2 4 cs 0 | 2H gf 2 ga 7 | 60+ 1/5 75+ 1/3 | opps 5/6 | behind: sc 2 conc 4 2down conc 2 | aftereq 1 afterlead 0 | 3+ 3 | streak 5
+ H10 sc 5/9 sc2 2 conc 8 conc2 5 cs 1 | 2H gf 5 ga 10 | 60+ 2/6 75+ 1/4 | opps 9/11 | behind: sc 4 conc 8 2down conc 5 | aftereq 2 afterlead 0 | 3+ 5 | streak 7
+ Hv  sc 4/5 sc2 2 conc 5 conc2 2 cs 0 | 2H gf 4 ga 5 | 60+ 2/4 75+ 1/3 | opps 4/4 | behind: sc 4 conc 0 2down conc 0 | aftereq 2 afterlead 0 | 3+ 3 | streak 5
+ A5  sc 3/5 sc2 2 conc 4 conc2 3 cs 1 | 2H gf 5 ga 4 | 60+ 4/4 75+ 1/2 | opps 6/6 | behind: sc 3 conc 3 2down conc 1 | aftereq 1 afterlead 0 | 3+ 4 | streak 2
+ A10 sc 7/9 sc2 2 conc 6 conc2 4 cs 3 | 2H gf 7 ga 6 | 60+ 6/6 75+ 1/3 | opps 8/10 | behind: sc 3 conc 3 2down conc 1 | aftereq 1 afterlead 0 | 3+ 5 | streak 2
+ Av  sc 4/5 sc2 1 conc 4 conc2 2 cs 1 | 2H gf 3 ga 5 | 60+ 3/5 75+ 1/3 | opps 5/6 | behind: sc 0 conc 2 2down conc 1 | aftereq 0 afterlead 0 | 3+ 3 | streak 2
+ Hflags ['conceded in 4+ of 5', 'conceded 2+ in 2+ of 5', '1 or 0 clean sheets', '9 second-half goals in its games', "goal after 60' in 4 of 5", "1-0/2-0 before 75' followed by another goal in 5 of 6"]
+ Aflags ['conceded in 4+ of 5', 'conceded 2+ in 2+ of 5', '1 or 0 clean sheets', 'scored in 3 of 5', '9 second-half goals in its games', "goal after 60' in 3 of 5", "1-0/2-0 before 75' followed by another goal in 6 of 6"]
+   H: 09-13 H Kasımpaşa 1-2 (HT 1-0): 1-0 (23) > 1-1 (79 opp) > 1-2 (90 opp)
+   H: 09-19 A Başakşehir 4-0 (HT 0-2): 0-1 (9 opp) > 0-2 (33 opp) > 0-3 (53 opp) > 0-4 (65 opp)
+   H: 10-10 H Amed 2-2 (HT 0-1): 0-1 (25 opp) > 1-1 (54) > 1-2 (67 opp) > 2-2 (90)
+   H: 10-17 H Galatasaray 0-1 (HT 0-0): 0-1 (88 opp)
+   H: 10-25 A Konyaspor 2-0 (HT 0-1): 0-1 (43 opp) > 0-2 (56 opp)
+   A: 09-12 H Göztepe 2-2 (HT 0-1): 0-1 (28 opp) > 1-1 (63) > 1-2 (73 opp) > 2-2 (75)
+   A: 09-19 A Çorum FK 1-2 (HT 0-0): 1-0 (67) > 1-1 (76 opp) > 2-1 (78)
+   A: 10-10 H Erzurumspor FK 0-0 (HT 0-0): 0-0
+   A: 10-17 A Fenerbahçe 3-0 (HT 0-1): 0-1 (40 opp) > 0-2 (71 opp) > 0-3 (87 opp)
+   A: 10-23 H Kocaelispor 1-2 (HT 0-2): 0-1 (27 opp) > 0-2 (42 opp) > 1-2 (52)
+
+=== La Liga | Deportivo La Coruna v Osasuna | Mon 02 Nov 20:00 | V4.1 rejected 0.539 | CAT A pts 5.5+6.5 shut False/False pers False/True shots5 H [5, 77, 27] A [5, 54, 18]
+ H5  sc 3/5 sc2 1 conc 5 conc2 1 cs 0 | 2H gf 4 ga 4 | 60+ 4/1 75+ 1/1 | opps 4/6 | behind: sc 3 conc 2 2down conc 1 | aftereq 0 afterlead 0 | 3+ 1 | streak 5
+ H10 sc 8/10 sc2 3 conc 10 conc2 2 cs 0 | 2H gf 8 ga 7 | 60+ 7/4 75+ 4/3 | opps 10/12 | behind: sc 6 conc 2 2down conc 1 | aftereq 2 afterlead 2 | 3+ 3 | streak 10
+ Hv  sc 4/5 sc2 1 conc 5 conc2 0 cs 0 | 2H gf 3 ga 3 | 60+ 2/2 75+ 1/2 | opps 5/6 | behind: sc 1 conc 0 2down conc 0 | aftereq 0 afterlead 2 | 3+ 1 | streak 5
+ A5  sc 3/5 sc2 2 conc 4 conc2 3 cs 1 | 2H gf 3 ga 8 | 60+ 1/5 75+ 1/3 | opps 7/7 | behind: sc 2 conc 8 2down conc 4 | aftereq 0 afterlead 1 | 3+ 2 | streak 3
+ A10 sc 6/10 sc2 4 conc 7 conc2 5 cs 3 | 2H gf 7 ga 11 | 60+ 3/7 75+ 1/4 | opps 11/13 | behind: sc 5 conc 13 2down conc 5 | aftereq 1 afterlead 1 | 3+ 4 | streak 5
+ Av  sc 3/5 sc2 3 conc 5 conc2 4 cs 0 | 2H gf 6 ga 10 | 60+ 2/7 75+ 0/4 | opps 8/8 | behind: sc 5 conc 12 2down conc 5 | aftereq 1 afterlead 0 | 3+ 4 | streak 5
+ Hflags ['conceded in 4+ of 5', '1 or 0 clean sheets', 'scored in 3 of 5', '8 second-half goals in its games', "goal after 60' in 3 of 5", "1-0/2-0 before 75' followed by another goal in 4 of 6"]
+ Aflags ['conceded in 4+ of 5', 'conceded 2+ in 2+ of 5', '1 or 0 clean sheets', 'scored in 3 of 5', '11 second-half goals in its games', "goal after 60' in 4 of 5", "1-0/2-0 before 75' followed by another goal in 7 of 7"]
+   H: 09-16 H Sevilla 0-1 (HT 0-0): 0-1 (52 opp)
+   H: 09-20 H Real Betis 1-1 (HT 0-1): 0-1 (43 opp) > 1-1 (87)
+   H: 10-11 A Real Sociedad 3-2 (HT 0-2): 0-1 (29 opp) > 0-2 (34 opp) > 0-3 (54 opp) > 1-3 (61) > 2-3 (69)
+   H: 10-16 H Levante 1-1 (HT 0-0): 1-0 (63) > 1-1 (82 opp)
+   H: 10-24 A Atletico Madrid 1-0 (HT 0-0): 0-1 (48 opp)
+   A: 09-16 A Atletico Madrid 4-0 (HT 0-1): 0-1 (24 opp) > 0-2 (54 opp) > 0-3 (63 opp) > 0-4 (82 opp)
+   A: 09-19 H Rayo Vallecano 1-1 (HT 1-0): 1-0 (16) > 1-1 (50 opp)
+   A: 10-11 A Real Betis 5-2 (HT 0-2): 0-1 (10 opp) > 0-2 (31 opp) > 0-3 (48 opp) > 1-3 (51) > 2-3 (56) > 2-4 (67 opp) > 2-5 (90 opp)
+   A: 10-18 H Racing Santander 2-0 (HT 1-0): 1-0 (9) > 2-0 (88)
+   A: 10-26 A Sevilla 2-0 (HT 0-1): 0-1 (24 opp) > 0-2 (82 opp)
+
+=== Primeira Liga | Benfica v Alverca | Mon 02 Nov 20:15 | V4.1 rejected 0.58 | CAT B pts 4+5 shut False/False pers False/True shots5 H [5, 89, 25] A [5, 63, 21]
+ H5  sc 5/5 sc2 4 conc 3 conc2 1 cs 2 | 2H gf 9 ga 2 | 60+ 6/0 75+ 2/0 | opps 6/6 | behind: sc 3 conc 1 2down conc 0 | aftereq 3 afterlead 5 | 3+ 4 | streak 2
+ H10 sc 9/9 sc2 8 conc 5 conc2 2 cs 4 | 2H gf 18 ga 5 | 60+ 9/2 75+ 3/1 | opps 13/13 | behind: sc 3 conc 1 2down conc 0 | aftereq 3 afterlead 14 | 3+ 8 | streak 2
+ Hv  sc 4/4 sc2 4 conc 3 conc2 1 cs 1 | 2H gf 5 ga 3 | 60+ 3/2 75+ 2/1 | opps 5/5 | behind: sc 1 conc 0 2down conc 0 | aftereq 2 afterlead 3 | 3+ 3 | streak 3
+ A5  sc 4/5 sc2 2 conc 4 conc2 1 cs 1 | 2H gf 3 ga 3 | 60+ 2/1 75+ 2/1 | opps 4/6 | behind: sc 0 conc 0 2down conc 0 | aftereq 0 afterlead 4 | 3+ 3 | streak 2
+ A10 sc 7/9 sc2 3 conc 8 conc2 4 cs 1 | 2H gf 7 ga 8 | 60+ 5/3 75+ 3/2 | opps 9/12 | behind: sc 2 conc 3 2down conc 1 | aftereq 1 afterlead 4 | 3+ 5 | streak 6
+ Av  sc 3/4 sc2 2 conc 4 conc2 2 cs 0 | 2H gf 4 ga 3 | 60+ 3/1 75+ 3/1 | opps 6/7 | behind: sc 1 conc 3 2down conc 1 | aftereq 0 afterlead 4 | 3+ 3 | streak 4
+ Hflags ['scored in 4+ of 5', '11 second-half goals in its games', "goal after 60' in 4 of 5", "1-0/2-0 before 75' followed by another goal in 6 of 6"]
+ Aflags ['conceded in 4+ of 5', '1 or 0 clean sheets', 'scored in 4+ of 5', '6 second-half goals in its games', "1-0/2-0 before 75' followed by another goal in 4 of 6"]
+   H: 09-09 A Moreirense 0-4 (HT 1-0): 1-0 (45) > 2-0 (55) > 3-0 (59) > 4-0 (72)
+   H: 09-13 H GIL Vicente 3-1 (HT 1-1): 0-1 (7 opp) > 1-1 (29) > 2-1 (87) > 3-1 (90)
+   H: 09-20 A FC Porto 3-1 (HT 0-1): 0-1 (31 opp) > 1-1 (51) > 1-2 (54 opp) > 1-3 (60 opp)
+   H: 10-11 H Vitória SC 2-0 (HT 1-0): 1-0 (24) > 2-0 (75)
+   H: 10-26 A Santa Clara 1-2 (HT 0-1): 0-1 (32 opp) > 1-1 (62) > 2-1 (68)
+   A: 09-05 H SC Braga 1-2 (HT 1-0): 1-0 (27) > 1-1 (50 opp) > 1-2 (57 opp)
+   A: 09-12 A Nacional 1-3 (HT 3-0): 1-0 (34) > 2-0 (36) > 3-0 (42) > 3-1 (81 opp)
+   A: 09-19 H Rio Ave 1-0 (HT 1-0): 1-0 (3)
+   A: 10-12 A Famalicao 1-4 (HT 1-1): 1-0 (14) > 1-1 (39 opp) > 2-1 (56) > 3-1 (77) > 4-1 (85)
+   A: 10-24 H Arouca 0-1 (HT 0-1): 0-1 (24 opp)
+
+=== Primeira Liga | GIL Vicente v Vitória SC | Mon 02 Nov 20:15 | V4.1 rejected 0.495 | CAT B pts 6+4.5 shut False/False pers False/False shots5 H [5, 56, 15] A [5, 91, 28]
+ H5  sc 4/5 sc2 1 conc 4 conc2 1 cs 1 | 2H gf 3 ga 4 | 60+ 2/4 75+ 1/3 | opps 3/4 | behind: sc 1 conc 1 2down conc 0 | aftereq 1 afterlead 0 | 3+ 2 | streak 2
+ H10 sc 6/9 sc2 2 conc 5 conc2 1 cs 4 | 2H gf 4 ga 4 | 60+ 3/4 75+ 2/3 | opps 4/7 | behind: sc 1 conc 1 2down conc 0 | aftereq 1 afterlead 1 | 3+ 2 | streak 3
+ Hv  sc 3/5 sc2 1 conc 3 conc2 0 cs 2 | 2H gf 1 ga 2 | 60+ 1/2 75+ 1/1 | opps 2/5 | behind: sc 0 conc 0 2down conc 0 | aftereq 0 afterlead 1 | 3+ 0 | streak 3
+ A5  sc 3/5 sc2 1 conc 3 conc2 2 cs 2 | 2H gf 6 ga 4 | 60+ 4/2 75+ 3/1 | opps 5/5 | behind: sc 2 conc 1 2down conc 0 | aftereq 0 afterlead 4 | 3+ 2 | streak 3
+ A10 sc 5/8 sc2 2 conc 5 conc2 3 cs 3 | 2H gf 8 ga 5 | 60+ 6/2 75+ 3/1 | opps 7/9 | behind: sc 4 conc 3 2down conc 1 | aftereq 0 afterlead 4 | 3+ 3 | streak 3
+ Av  sc 2/3 sc2 1 conc 3 conc2 3 cs 0 | 2H gf 3 ga 3 | 60+ 3/2 75+ 0/1 | opps 4/4 | behind: sc 3 conc 3 2down conc 1 | aftereq 0 afterlead 0 | 3+ 2 | streak 3
+ Hflags ['conceded in 4+ of 5', '1 or 0 clean sheets', 'scored in 4+ of 5', '7 second-half goals in its games', "goal after 60' in 5 of 5", "1-0/2-0 before 75' followed by another goal in 3 of 4"]
+ Aflags ['conceded 2+ in 2+ of 5', 'scored in 3 of 5', '10 second-half goals in its games', "goal after 60' in 4 of 5", "1-0/2-0 before 75' followed by another goal in 5 of 5"]
+   H: 09-13 A Benfica 3-1 (HT 1-1): 1-0 (7) > 1-1 (29 opp) > 1-2 (87 opp) > 1-3 (90 opp)
+   H: 09-19 H Maritimo 1-1 (HT 1-0): 1-0 (7) > 1-1 (90 opp)
+   H: 10-09 A Moreirense 0-1 (HT 0-0): 1-0 (90)
+   H: 10-19 A SC Braga 1-2 (HT 0-1): 0-1 (33 opp) > 1-1 (49) > 2-1 (72)
+   H: 10-24 H FC Porto 0-1 (HT 0-0): 0-1 (63 opp)
+   A: 09-06 H Casa Pia 0-0 (HT 0-0): 0-0
+   A: 09-12 A Academico Viseu 2-1 (HT 0-0): 0-1 (53 opp) > 1-1 (67) > 1-2 (90 opp)
+   A: 09-20 H Moreirense 1-1 (HT 0-0): 0-1 (52 opp) > 1-1 (90)
+   A: 10-11 A Benfica 2-0 (HT 0-1): 0-1 (24 opp) > 0-2 (75 opp)
+   A: 10-23 H Maritimo 5-0 (HT 1-0): 1-0 (38) > 2-0 (48) > 3-0 (60) > 4-0 (76) > 5-0 (90)
