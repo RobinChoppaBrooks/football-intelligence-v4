@@ -1,6 +1,6 @@
 {
  "version": "v4.1",
- "note": "V4.1 (30 Oct 2026, Rob's decision): the 14 leagues Rob monitors, in his order. No cups, no non-league steps 3 and 4, no other countries. Other leagues stay in the database for form only. API Sports league ids verified by probe (25 Sep 2026) and by the API's own names on download (19 and 27 Oct 2026). Season 2026 = 2026-27 (calendar-year leagues: Norway, Sweden = 2026 season). 3 Nov 2026 (Rob's standing instruction): Champions League, Europa League and Conference League are included in every fixture run when games are due. They are listed below with is_cup true and validated false: cup ties are not part of the 14-league benchmark and are measured separately (config/benchmarks.json, european_cups).",
+ "note": "V4.1 (30 Oct 2026, Rob's decision): the 14 leagues Rob monitors, in his order. No cups, no non-league steps 3 and 4, no other countries. Other leagues stay in the database for form only. API Sports league ids verified by probe (25 Sep 2026) and by the API's own names on download (19 and 27 Oct 2026). Season 2026 = 2026-27 (calendar-year leagues: Norway, Sweden = 2026 season). 3 Nov 2026 (Rob's standing instruction): Champions League, Europa League and Conference League are included in every fixture run when games are due. They are listed below with is_cup true and validated false: cup ties are not part of the 14-league benchmark and are measured separately (config/benchmarks.json, european_cups). Later on 3 Nov 2026 (Rob): the main domestic cups of the countries in the 14 leagues are also included in every run when games are due: FA Cup, EFL Cup, Scottish Cup, Scottish League Cup, DFB Pokal, KNVB Beker, Coupe de France, Turkish Cup, Copa del Rey, Taca de Portugal (is_cup true, validated false). EFL Trophy, FA Trophy and the Scottish Challenge Cup are not included. A side with fewer than 3 league games in the database (for example a lower-division club whose league is not loaded) is rejected.",
  "english": [
   {
    "name": "Premier League",
@@ -43,6 +43,18 @@
    "league_id": 51,
    "is_cup": false,
    "validated": true
+  },
+  {
+   "name": "FA Cup",
+   "league_id": 45,
+   "is_cup": true,
+   "validated": false
+  },
+  {
+   "name": "EFL Cup",
+   "league_id": 48,
+   "is_cup": true,
+   "validated": false
   }
  ],
  "european": [
@@ -89,6 +101,18 @@
    "validated": true
   },
   {
+   "name": "Scottish Cup",
+   "league_id": 181,
+   "is_cup": true,
+   "validated": false
+  },
+  {
+   "name": "Scottish League Cup",
+   "league_id": 185,
+   "is_cup": true,
+   "validated": false
+  },
+  {
    "name": "Champions League",
    "league_id": 2,
    "is_cup": true,
@@ -103,6 +127,42 @@
   {
    "name": "Conference League",
    "league_id": 848,
+   "is_cup": true,
+   "validated": false
+  },
+  {
+   "name": "DFB Pokal",
+   "league_id": 81,
+   "is_cup": true,
+   "validated": false
+  },
+  {
+   "name": "KNVB Beker",
+   "league_id": 90,
+   "is_cup": true,
+   "validated": false
+  },
+  {
+   "name": "Coupe de France",
+   "league_id": 66,
+   "is_cup": true,
+   "validated": false
+  },
+  {
+   "name": "Turkish Cup",
+   "league_id": 206,
+   "is_cup": true,
+   "validated": false
+  },
+  {
+   "name": "Copa del Rey",
+   "league_id": 143,
+   "is_cup": true,
+   "validated": false
+  },
+  {
+   "name": "Taca de Portugal",
+   "league_id": 96,
    "is_cup": true,
    "validated": false
   }

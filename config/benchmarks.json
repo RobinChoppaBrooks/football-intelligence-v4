@@ -1,84 +1,84 @@
 {
- "as_of": "2026-11-01",
+ "as_of": "2026-11-02",
  "season": "2026-27",
- "fixtures": 1700,
+ "fixtures": 1707,
  "scope": "every finished league fixture in Rob's 14 leagues, season 2026-27, classified as production does",
  "why_this_window": "only clean out-of-sample season: model trained on 2023-24 and 2024-25, cut points chosen on 2025-26",
  "over25": {
   "High": {
-   "hits": 74,
-   "n": 105
+   "hits": 72,
+   "n": 104
   },
   "Medium": {
-   "hits": 132,
-   "n": 219
+   "hits": 131,
+   "n": 214
   },
   "Trump card": {
    "hits": 3,
    "n": 3
   },
   "rejected": {
-   "hits": 766,
-   "n": 1373
+   "hits": 771,
+   "n": 1386
   },
   "Selected (High, Medium, Trump card)": {
-   "hits": 209,
-   "n": 327
+   "hits": 206,
+   "n": 321
   }
  },
  "btts": {
   "High band": {
-   "hits": 105,
-   "n": 168
+   "hits": 103,
+   "n": 165
   },
   "Medium band": {
-   "hits": 750,
-   "n": 1334
+   "hits": 756,
+   "n": 1353
   },
   "Low band": {
-   "hits": 119,
-   "n": 198
+   "hits": 116,
+   "n": 189
   }
  },
  "note": "classified with information up to each kick-off; a live run uses information up to the run, so a few fixtures sit either side of a line differently",
  "written_by": "benchmarks.py",
  "european_cups": {
-  "fixtures": 572,
-  "scope": "every finished Champions League, Europa League and Conference League fixture of season 2026-27 (qualifiers included), same rules; a side with fewer than 3 domestic league games is rejected",
+  "fixtures": 1234,
+  "scope": "every finished fixture of season 2026-27 in the cup competitions of config/competitions.json (Champions, Europa and Conference League and the domestic cups; qualifiers and early rounds included), same rules; a side with fewer than 3 domestic league games is rejected",
   "over25": {
    "High": {
-    "hits": 9,
-    "n": 13
+    "hits": 25,
+    "n": 39
    },
    "Medium": {
-    "hits": 31,
-    "n": 53
+    "hits": 89,
+    "n": 146
    },
    "Trump card": {
     "hits": 2,
     "n": 2
    },
    "rejected": {
-    "hits": 280,
-    "n": 504
+    "hits": 615,
+    "n": 1047
    },
    "Selected (High, Medium, Trump card)": {
-    "hits": 42,
-    "n": 68
+    "hits": 116,
+    "n": 187
    }
   },
   "btts": {
    "High band": {
-    "hits": 2,
-    "n": 8
+    "hits": 35,
+    "n": 61
    },
    "Medium band": {
-    "hits": 266,
-    "n": 506
+    "hits": 570,
+    "n": 1097
    },
    "Low band": {
-    "hits": 31,
-    "n": 58
+    "hits": 45,
+    "n": 76
    }
   }
  }

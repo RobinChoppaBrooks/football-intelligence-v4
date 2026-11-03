@@ -13,7 +13,7 @@ fewer than 3 league games, and Rob's trump card (both attacks scored 2+ in 4+ of
 both sides with 5 games) counted on its own, not inside High. 2026-27 is the only clean out-of-sample season: the model was
 trained on 2023-24 and 2024-25 and its cut points were chosen on 2025-26. Counts only. Nothing here changes a prediction.
 
-European cups (Champions League, Europa League, Conference League; added to every run on 3 Nov 2026 at Rob's request) are
+Cup competitions (Champions, Europa and Conference League and the domestic cups of the 14 leagues' countries; added to every run on 3 Nov 2026 at Rob's request) are
 measured separately in "european_cups", same season and same rules, because cup ties are not part of the 14-league benchmark.
 """
 import os, sys, json, pickle
@@ -57,7 +57,7 @@ def compute(db):
     if cups:
         C = X[X.league_id.isin(cups)]
         co, cb, cn = _classify(C, bb, tb)
-        res["european_cups"] = {"fixtures": cn, "scope": "every finished Champions League, Europa League and Conference League fixture of season 2026-27 (qualifiers included), same rules; a side with fewer than 3 domestic league games is rejected",
+        res["european_cups"] = {"fixtures": cn, "scope": "every finished fixture of season 2026-27 in the cup competitions of config/competitions.json (Champions, Europa and Conference League and the domestic cups; qualifiers and early rounds included), same rules; a side with fewer than 3 domestic league games is rejected",
                                 "over25": co, "btts": cb}
     return res
 
@@ -78,7 +78,7 @@ def cups_text():
     b = _load()
     if not b or "european_cups" not in b: return ""
     e = b["european_cups"]; o = e["over25"]
-    return (f"European cups (Champions, Europa and Conference League), measured separately, season {b['season']} ({e['fixtures']} finished ties): "
+    return (f"Cup competitions (European and domestic cups), measured separately, season {b['season']} ({e['fixtures']} finished ties): "
             f"3+ goals in High {_c(o['High'])}, Medium {_c(o['Medium'])}, trump card {_c(o['Trump card'])}, rejected {_c(o['rejected'])}. "
             "Cup ties are outside the 14-league benchmark; treat cup selections with that in mind.")
 

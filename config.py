@@ -19,6 +19,9 @@ CUPS = {      # loaded historically too (decision 25 Sep: train on cups), flagge
     # European club competitions, added 19 Oct 2026 at Rob's request. is_cup=1: form still comes from domestic league games only.
     "Champions League": (2, "World"), "Europa League": (3, "World"), "Conference League": (848, "World"),
     "DFB Pokal": (81, "Germany"), "Copa del Rey": (143, "Spain"),      # added 27 Oct 2026 at Rob's request
+    # 3 Nov 2026 (Rob): the main domestic cup of every country in his 14 leagues. Ids from API-Football's numbering, to be
+    # confirmed by the API's own name printed on the next download (download.py: "API calls it").
+    "Coupe de France": (66, "France"), "KNVB Beker": (90, "Netherlands"), "Taca de Portugal": (96, "Portugal"), "Turkish Cup": (206, "Turkey"),
 }
 FORM_LEAGUES = {  # domestic leagues loaded ONLY so European-tie opponents have last-5 league form. Never presented on their own.
     "Serie A": (135, "Italy"), "Belgian Pro League": (144, "Belgium"), "Swiss Super League": (207, "Switzerland"),
@@ -54,5 +57,7 @@ ORDER += [n for n in FORM_LEAGUES if n not in ORDER]      # remaining form-only 
 # V4.1 (30 Oct 2026): Rob's 14 monitored leagues come first, in his order; everything else keeps its old relative order after them.
 ROB_ORDER = ["Premier League", "Championship", "League One", "League Two", "National League", "National League North", "National League South",
              "Bundesliga", "Eredivisie", "Ligue 1", "Super Lig", "Scottish Premiership", "La Liga", "Primeira Liga",
-             "Champions League", "Europa League", "Conference League"]   # European cups added to every run 3 Nov 2026 (Rob)
+             "Champions League", "Europa League", "Conference League",   # European cups added to every run 3 Nov 2026 (Rob)
+             "FA Cup", "EFL Cup", "Scottish Cup", "Scottish League Cup", "DFB Pokal", "KNVB Beker", "Coupe de France",
+             "Turkish Cup", "Copa del Rey", "Taca de Portugal"]   # domestic cups of the 14 leagues' countries, 3 Nov 2026 (Rob)
 ORDER = ROB_ORDER + [n for n in ORDER if n not in ROB_ORDER]
