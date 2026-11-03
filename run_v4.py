@@ -2,8 +2,8 @@
 run_v4.py  -  Football Intelligence V4 orchestrator (production). The validated model is untouched: this script only builds
 fixture lists, calls analyse_fixtures.py and report_v4.py, and writes the three reports, exports, review package and logs.
 
-    python3 run_v4.py midweek            Monday..Thursday of the current week (fixtures not yet kicked off)
-    python3 run_v4.py weekend            Friday..Sunday of the coming weekend
+    python3 run_v4.py midweek            Monday..Friday of the current week (fixtures not yet kicked off; Rob, 3 Nov 2026)
+    python3 run_v4.py weekend            Saturday..Sunday of the coming weekend (Rob, 3 Nov 2026)
     python3 run_v4.py range 2026-11-03 2026-11-05 [--sets english|european|both]
     python3 run_v4.py review             fill results for played predictions, write the performance report
     python3 run_v4.py status             list schedules and last executions
@@ -31,9 +31,9 @@ def log_exec(run_id, mode, status, start, msg=""):
 def window_for(mode, today=None):
     t = (today or now_l()).normalize()
     if mode == "midweek":
-        mon = t - pd.Timedelta(days=t.weekday()); return max(now_l(), mon), mon + pd.Timedelta(days=4)            # Mon..Thu (end exclusive = Fri 00:00)
+        mon = t - pd.Timedelta(days=t.weekday()); return max(now_l(), mon), mon + pd.Timedelta(days=5)            # Mon..Fri (end exclusive = Sat 00:00), Rob 3 Nov 2026
     if mode == "weekend":
-        fri = t + pd.Timedelta(days=(4 - t.weekday()) % 7); return fri, fri + pd.Timedelta(days=3)                 # Fri..Sun
+        sat = t + pd.Timedelta(days=(5 - t.weekday()) % 7); return sat, sat + pd.Timedelta(days=2)                 # Sat..Sun, Rob 3 Nov 2026
     raise ValueError(mode)
 
 def build_lists(start, end, sets, run_id):
