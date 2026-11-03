@@ -23,7 +23,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, Flowable, KeepTogether, PageBreak
 from reportlab.lib.styles import ParagraphStyle
 from config import LEAGUES, CUPS, NONLEAGUE, ORDER
-from benchmarks import text as bench_text, btts_text as bench_btts_text   # the one benchmark source (config/benchmarks.json)
+from benchmarks import text as bench_text, btts_text as bench_btts_text, cups_text as bench_cups_text   # the one benchmark source (config/benchmarks.json)
 ALL = {**LEAGUES, **CUPS, **NONLEAGUE}
 
 ap = argparse.ArgumentParser(); ap.add_argument("pkl"); ap.add_argument("db"); ap.add_argument("out"); ap.add_argument("csv"); ap.add_argument("window")
@@ -259,6 +259,7 @@ for ln in cov: S += [P("• " + ln, "mut"), Spacer(1, 1 * mm)]
 S += [Spacer(1, 3 * mm), P("Methodology (V4 lock)", "h2"), Spacer(1, 1.5 * mm)]
 meth = ["Selection: gradient-boosted model on each side's last-5 league counts (goals, 3+, 2+ scored, 2+ conceded, clean sheets, failed to score, BTTS), last-3 venue counts and the division's 3+ share. Trained on 2023-24 and 2024-25, validated on 2025-26; cut points from validation deciles. High = top decile; Medium = next two; Weak = bottom quarter of Medium; rejected below.",
         bench_text(),
+        bench_cups_text(),
         "Scored 2+ and Let in 2+ are shown for both sides as evidence. Both attacks 3 of 5+ is highlighted (Selected with it 66%, High 71%) but never required: High fixtures failing a 2-of-5 attacking rule hit 73% on 222 fixtures.",
         "BTTS (V4.1): YES when the BTTS model is in its High band or the fixture is a trump card; lean YES for the Medium band; no lean for the Low band. " + bench_btts_text() + " A lean, not a pick, and never a veto on Over 2.5.",
         "V2 and V3 alignment scores were tested (62 to 66% at comparable sizes) and are not used for selection. Full tables in docs/backtest_baseline.md.",

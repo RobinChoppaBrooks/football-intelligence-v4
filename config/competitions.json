@@ -1,6 +1,6 @@
 {
  "version": "v4.1",
- "note": "V4.1 (30 Oct 2026, Rob's decision): the 14 leagues Rob monitors, in his order. No cups, no non-league steps 3 and 4, no other countries. Other leagues stay in the database for form only. API Sports league ids verified by probe (25 Sep 2026) and by the API's own names on download (19 and 27 Oct 2026). Season 2026 = 2026-27 (calendar-year leagues: Norway, Sweden = 2026 season).",
+ "note": "V4.1 (30 Oct 2026, Rob's decision): the 14 leagues Rob monitors, in his order. No cups, no non-league steps 3 and 4, no other countries. Other leagues stay in the database for form only. API Sports league ids verified by probe (25 Sep 2026) and by the API's own names on download (19 and 27 Oct 2026). Season 2026 = 2026-27 (calendar-year leagues: Norway, Sweden = 2026 season). 3 Nov 2026 (Rob's standing instruction): Champions League, Europa League and Conference League are included in every fixture run when games are due. They are listed below with is_cup true and validated false: cup ties are not part of the 14-league benchmark and are measured separately (config/benchmarks.json, european_cups).",
  "english": [
   {
    "name": "Premier League",
@@ -87,6 +87,24 @@
    "league_id": 94,
    "is_cup": false,
    "validated": true
+  },
+  {
+   "name": "Champions League",
+   "league_id": 2,
+   "is_cup": true,
+   "validated": false
+  },
+  {
+   "name": "Europa League",
+   "league_id": 3,
+   "is_cup": true,
+   "validated": false
+  },
+  {
+   "name": "Conference League",
+   "league_id": 848,
+   "is_cup": true,
+   "validated": false
   }
  ],
  "form_only_not_reported": [

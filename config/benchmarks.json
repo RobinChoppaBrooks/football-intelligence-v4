@@ -6,24 +6,24 @@
  "why_this_window": "only clean out-of-sample season: model trained on 2023-24 and 2024-25, cut points chosen on 2025-26",
  "over25": {
   "High": {
-   "hits": 98,
-   "n": 143
+   "hits": 74,
+   "n": 105
   },
   "Medium": {
-   "hits": 135,
-   "n": 227
+   "hits": 132,
+   "n": 219
   },
   "Trump card": {
    "hits": 3,
    "n": 3
   },
   "rejected": {
-   "hits": 739,
-   "n": 1327
+   "hits": 766,
+   "n": 1373
   },
   "Selected (High, Medium, Trump card)": {
-   "hits": 236,
-   "n": 373
+   "hits": 209,
+   "n": 327
   }
  },
  "btts": {
@@ -41,5 +41,45 @@
   }
  },
  "note": "classified with information up to each kick-off; a live run uses information up to the run, so a few fixtures sit either side of a line differently",
- "written_by": "benchmarks.py"
+ "written_by": "benchmarks.py",
+ "european_cups": {
+  "fixtures": 572,
+  "scope": "every finished Champions League, Europa League and Conference League fixture of season 2026-27 (qualifiers included), same rules; a side with fewer than 3 domestic league games is rejected",
+  "over25": {
+   "High": {
+    "hits": 9,
+    "n": 13
+   },
+   "Medium": {
+    "hits": 31,
+    "n": 53
+   },
+   "Trump card": {
+    "hits": 2,
+    "n": 2
+   },
+   "rejected": {
+    "hits": 280,
+    "n": 504
+   },
+   "Selected (High, Medium, Trump card)": {
+    "hits": 42,
+    "n": 68
+   }
+  },
+  "btts": {
+   "High band": {
+    "hits": 2,
+    "n": 8
+   },
+   "Medium band": {
+    "hits": 266,
+    "n": 506
+   },
+   "Low band": {
+    "hits": 31,
+    "n": 58
+   }
+  }
+ }
 }
