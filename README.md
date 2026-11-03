@@ -5,9 +5,9 @@ Rob's Over 2.5 (3+ goals) and BTTS fixture analysis, running unattended on GitHu
 ## What runs, and when (Europe/London)
 | When | Mode | Output |
 |---|---|---|
-| Monday morning | review | results for last week's predictions, `reports/performance/` |
-| Monday lunchtime | midweek | Mon to Thu fixtures, `reports/midweek/<date>/` |
-| Thursday morning | weekend | Fri to Sun fixtures, `reports/weekend/<date>/` |
+| Monday 08:30 | review | results for last week's predictions, `reports/performance/` |
+| Monday 12:30 | midweek | Monday to Friday fixtures not yet kicked off, `reports/midweek/<date>/` |
+| Friday 07:00 | weekend | Saturday and Sunday fixtures, `reports/weekend/<date>/` |
 
 Each run pulls fixtures and results from API-Football (about 65 calls), runs `run_v4.py`, commits the reports,
 `data/predictions/predictions_log.csv`, `data/results/results_log.csv` and `logs/execution/executions.csv` to `main`,

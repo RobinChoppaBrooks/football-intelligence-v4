@@ -6,7 +6,7 @@
    "name": "Weekend results and performance review",
    "when": "Monday 08:30 Europe/London (GitHub Actions cron, UTC entries for GMT and BST; can queue up to an hour). Email delivery task Monday 10:09 Europe/London.",
    "command": "review results",
-   "window": "previous Friday to Sunday predictions",
+   "window": "predictions whose fixtures were played since the previous review",
    "outputs": "reports/performance/performance_YYYY-MM-DD.md, data/results/results_log.csv"
   },
   {
@@ -14,7 +14,7 @@
    "name": "Midweek fixture analysis",
    "when": "Monday 12:30 Europe/London (GitHub Actions). Email delivery task Monday 14:09 Europe/London.",
    "command": "run midweek",
-   "window": "Monday to Thursday of the current week, fixtures not yet kicked off",
+   "window": "Monday to Friday of the current week, fixtures not yet kicked off (Friday included from 3 Nov 2026, Rob)",
    "outputs": "reports/midweek/YYYY-MM-DD/ (english, european, combined PDFs + CSV + JSON), reports/chatgpt_review/chatgpt_review_YYYY-MM-DD_midweek.md"
   },
   {
@@ -22,7 +22,7 @@
    "name": "Weekend fixture analysis",
    "when": "Friday 07:00 Europe/London (GitHub Actions; UTC cron entries for GMT and BST; can queue up to an hour). Email delivery task Friday 08:39 Europe/London. Rob decides Friday morning; there is no Saturday run.",
    "command": "run weekend",
-   "window": "Friday to Sunday of this weekend (fixtures not yet kicked off)",
+   "window": "Saturday and Sunday of this weekend (from 3 Nov 2026, Rob; Friday fixtures are in the Monday midweek run)",
    "outputs": "reports/weekend/YYYY-MM-DD/ ..., reports/chatgpt_review/chatgpt_review_YYYY-MM-DD_weekend.md"
   }
  ],
