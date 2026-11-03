@@ -53,5 +53,6 @@ ORDER = ["Premier League", "Championship", "League One", "League Two", "National
 ORDER += [n for n in FORM_LEAGUES if n not in ORDER]      # remaining form-only leagues last
 # V4.1 (30 Oct 2026): Rob's 14 monitored leagues come first, in his order; everything else keeps its old relative order after them.
 ROB_ORDER = ["Premier League", "Championship", "League One", "League Two", "National League", "National League North", "National League South",
-             "Bundesliga", "Eredivisie", "Ligue 1", "Super Lig", "Scottish Premiership", "La Liga", "Primeira Liga"]
+             "Bundesliga", "Eredivisie", "Ligue 1", "Super Lig", "Scottish Premiership", "La Liga", "Primeira Liga",
+             "Champions League", "Europa League", "Conference League"]   # European cups added to every run 3 Nov 2026 (Rob)
 ORDER = ROB_ORDER + [n for n in ORDER if n not in ROB_ORDER]
