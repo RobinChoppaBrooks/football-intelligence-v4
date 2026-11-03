@@ -1,13 +1,21 @@
-# BTTS audit review: midweek_20261103_1204
+# BTTS audit review: midweek_20261103_1331
 
-Audit version btts_audit_v1, created 2026-11-03 12:06 UTC. Production outputs for this run are unchanged; this file is a second, independent reading of the same evidence.
-Fixtures: 72. Flags: none 57, moderate 6, mild 5, note 4.
+Audit version btts_audit_v1, created 2026-11-03 13:35 UTC. Production outputs for this run are unchanged; this file is a second, independent reading of the same evidence.
+Fixtures: 93. Flags: none 76, moderate 8, mild 5, note 4.
 
 How to read: the production BTTS verdict is a hand rule (YES exactly when the goal pattern is 'Both teams contribute', which needs an Over 2.5 route for each side).
 The audit assessment uses the trained BTTS model band plus the card counts. Neither is overridden; both are listed so each can be scored against the result.
 Model bands: High p >= 0.575, Medium p >= 0.514. Evidence score 0 to 30 = each side's scored-in + conceded-in + BTTS counts of 5, with venue adjustments.
 
-## Moderate (6)
+## Moderate (8)
+
+### Derby v Bolton  (Championship, Fri 06 Nov 20:00 UK)  fixture_id 1563256
+- Over 2.5: rejected (model score 0.533). Production BTTS: NO (Medium, p 0.556). Pattern: One side dominates.
+- Audit assessment: LEAN YES. BTTS model Medium band (p 0.556) with supporting evidence (score 25, both sides BTTS at least 4 of 5); 55% to 59% historically.
+- Derby: scored in 4/5, 2+ in 0/5, conceded in 5/5, 2+ against in 2/5, BTTS 4/5, clean sheets 0/5, failed to score 1/5. Last five: 1-1; 1-4; 0-1; 1-1; 1-4. Home last 3: 1-2; 1-1; 0-1 (BTTS 2/3).
+- Bolton: scored in 4/5, 2+ in 2/5, conceded in 4/5, 2+ against in 3/5, BTTS 4/5, clean sheets 1/5, failed to score 1/5. Last five: 1-2; 3-1; 0-0; 1-5; 2-3. Away last 3: 4-3; 3-1; 0-0 (BTTS 2/3).
+- Evidence score: 25. Flag: moderate. Review status: needs review.
+- Why flagged: Verdict NO from pattern 'One side dominates' while the card shows both sides scoring and conceding regularly (evidence score 25). Model Medium (p 0.556). Derby scored in 4 of 5, conceded in 5 of 5, BTTS 4 of 5; Bolton scored in 4 of 5, conceded in 4 of 5, BTTS 4 of 5.
 
 ### Derby v Norwich  (Championship, Tue 03 Nov 19:45 UK)  fixture_id 1563241
 - Over 2.5: rejected (model score 0.534). Production BTTS: NO (Medium, p 0.554). Pattern: Low scoring.
@@ -56,6 +64,14 @@ Model bands: High p >= 0.575, Medium p >= 0.514. Evidence score 0 to 30 = each s
 - Lech Poznan: scored in 5/5, 2+ in 5/5, conceded in 5/5, 2+ against in 0/5, BTTS 5/5, clean sheets 0/5, failed to score 0/5. Last five: 5-1; 4-1; 6-1; 2-1; 3-1. Away last 3: 1-2; 4-1; 2-1 (BTTS 3/3).
 - Evidence score: 26. Flag: moderate. Review status: needs review.
 - Why flagged: Verdict NO from pattern 'Both teams contribute' while the card shows both sides scoring and conceding regularly (evidence score 26). Model Medium (p 0.553). Benfica scored in 5 of 5, conceded in 3 of 5, BTTS 3 of 5; Lech Poznan scored in 5 of 5, conceded in 5 of 5, BTTS 5 of 5.
+
+### Sevilla v Alaves  (La Liga, Fri 06 Nov 20:00 UK)  fixture_id 1570450
+- Over 2.5: rejected (model score 0.553). Production BTTS: NO (Medium, p 0.564). Pattern: Both teams contribute.
+- Audit assessment: LEAN YES. BTTS model Medium band (p 0.564) with supporting evidence (score 24, both sides BTTS at least 4 of 5); 55% to 59% historically.
+- Sevilla: scored in 5/5, 2+ in 2/5, conceded in 4/5, 2+ against in 4/5, BTTS 4/5, clean sheets 1/5, failed to score 0/5. Last five: 1-3; 3-3; 1-4; 2-0; 1-3. Home last 3: 1-0; 1-3; 2-0 (BTTS 1/3).
+- Alaves: scored in 4/5, 2+ in 0/5, conceded in 4/5, 2+ against in 3/5, BTTS 4/5, clean sheets 1/5, failed to score 1/5. Last five: 0-0; 1-2; 1-2; 1-1; 1-6. Away last 3: 0-0; 1-2; 1-6 (BTTS 2/3).
+- Evidence score: 24. Flag: moderate. Review status: needs review.
+- Why flagged: Verdict NO from pattern 'Both teams contribute' while the card shows both sides scoring and conceding regularly (evidence score 24). Model Medium (p 0.564). Sevilla scored in 5 of 5, conceded in 4 of 5, BTTS 4 of 5; Alaves scored in 4 of 5, conceded in 4 of 5, BTTS 4 of 5.
 
 ## Mild (5)
 
@@ -137,6 +153,7 @@ Model bands: High p >= 0.575, Medium p >= 0.514. Evidence score 0 to 30 = each s
 
 | fixture_id | kickoff UK | competition | fixture | Over 2.5 | BTTS (prod) | p | audit | evidence | flag | status |
 |---|---|---|---|---|---|---|---|---|---|---|
+| 1575218 | Fri 06 Nov 19:30 | Bundesliga | Hamburger SV v Borussia Monchengladbach | High | YES (High) | 0.585 | YES | 23 | - | ok |
 | 1635669 | Tue 03 Nov 17:45 | Champions League | Galatasaray v VfB Stuttgart | Medium | YES (High) | 0.576 | YES | 18 | note | note |
 | 1635723 | Tue 03 Nov 17:45 | Champions League | Shakhtar Donetsk v Sporting CP | Medium | NO (Medium) | 0.557 | NO LEAN | 18 | - | ok |
 | 1635622 | Tue 03 Nov 20:00 | Champions League | Atletico Madrid v Bayern Munich | High | NO (Medium) | 0.560 | NO LEAN | 22 | - | ok |
@@ -155,6 +172,7 @@ Model bands: High p >= 0.575, Medium p >= 0.514. Evidence score 0 to 30 = each s
 | 1635710 | Wed 04 Nov 20:00 | Champions League | RB Leipzig v Manchester City | High | YES (High) | 0.591 | YES | 16 | note | note |
 | 1635726 | Wed 04 Nov 20:00 | Champions League | Slavia Praha v Arsenal | rejected | NO (Medium) | 0.548 | NO LEAN | 14 | - | ok |
 | 1635745 | Wed 04 Nov 20:00 | Champions League | Viking v Sabah FA | High | NO (Medium) | 0.571 | NO LEAN | 17 | - | ok |
+| 1563256 | Fri 06 Nov 20:00 | Championship | Derby v Bolton | rejected | NO (Medium) | 0.556 | LEAN YES | 25 | moderate | needs review |
 | 1563240 | Tue 03 Nov 19:45 | Championship | Blackburn v Stoke City | rejected | NO (Medium) | 0.549 | NO LEAN | 17 | - | ok |
 | 1563249 | Tue 03 Nov 19:45 | Championship | Charlton v Bolton | rejected | NO (Medium) | 0.542 | LEAN YES | 23 | mild | note |
 | 1563241 | Tue 03 Nov 19:45 | Championship | Derby v Norwich | rejected | NO (Medium) | 0.554 | LEAN YES | 25 | moderate | needs review |
@@ -185,6 +203,18 @@ Model bands: High p >= 0.575, Medium p >= 0.514. Evidence score 0 to 30 = each s
 | 1636469 | Thu 05 Nov 20:00 | Conference League | St. Truiden v Brann | rejected | NO (Medium) | 0.565 | LEAN YES | 24 | mild | note |
 | 1636478 | Thu 05 Nov 20:00 | Conference League | Twente v Pafos | Medium | NO (Medium) | 0.547 | NO LEAN | 18 | - | ok |
 | 1636483 | Thu 05 Nov 20:00 | Conference League | Universitatea Craiova v Egnatia Rrogozhinë | rejected | NO (Low) | 0.509 | NO LEAN | 6 | - | ok |
+| 1644379 | Thu 05 Nov 18:00 | Copa del Rey | Tarancón v Levante | rejected | NO (Medium) | 0.550 | NO LEAN | 14 | - | ok |
+| 1644334 | Thu 05 Nov 20:00 | Copa del Rey | Alcoyano v Mallorca | rejected | NO (Medium) | 0.544 | NO LEAN | 0 | - | ok |
+| 1644369 | Wed 04 Nov 18:00 | Copa del Rey | Portugalete v Real Unión | rejected | NO (Medium) | 0.544 | NO LEAN | 0 | - | ok |
+| 1644335 | Wed 04 Nov 19:00 | Copa del Rey | Amorebieta v UD Logroñés | rejected | NO (Medium) | 0.544 | NO LEAN | 0 | - | ok |
+| 1644353 | Wed 04 Nov 19:30 | Copa del Rey | Deportiva Minera v FC Cartagena | rejected | NO (Medium) | 0.544 | NO LEAN | 0 | - | ok |
+| 1644373 | Wed 04 Nov 19:30 | Copa del Rey | Reddis v Barakaldo | rejected | NO (Medium) | 0.544 | NO LEAN | 0 | - | ok |
+| 1644384 | Wed 04 Nov 19:30 | Copa del Rey | Utebo v Sabadell | rejected | NO (Medium) | 0.544 | NO LEAN | 0 | - | ok |
+| 1644370 | Wed 04 Nov 19:45 | Copa del Rey | Calvo Sotelo v Albacete | rejected | NO (Medium) | 0.544 | NO LEAN | 0 | - | ok |
+| 1644346 | Wed 04 Nov 20:00 | Copa del Rey | Badajoz v Tenerife | rejected | NO (Medium) | 0.544 | NO LEAN | 0 | - | ok |
+| 1648409 | Fri 06 Nov 23:00 | Coupe de France | Olympique Cayenne v Etoile Matoury | rejected | NO (Medium) | 0.547 | NO LEAN | 0 | - | ok |
+| 1648408 | Wed 04 Nov 22:00 | Coupe de France | Sporting Baie-Mahault v Siroco Les Abymes | rejected | NO (Medium) | 0.547 | NO LEAN | 0 | - | ok |
+| 1552216 | Fri 06 Nov 19:00 | Eredivisie | Willem II v PEC Zwolle | High | NO (Medium) | 0.568 | NO LEAN | 19 | - | ok |
 | 1636208 | Thu 05 Nov 17:45 | Europa League | AC Milan v Ferencvarosi TC | rejected | NO (Medium) | 0.561 | LEAN YES | 25 | moderate | needs review |
 | 1636211 | Thu 05 Nov 17:45 | Europa League | Anderlecht v Red Bull Salzburg | rejected | NO (Medium) | 0.567 | NO LEAN | 16 | - | ok |
 | 1636254 | Thu 05 Nov 17:45 | Europa League | Crystal Palace v 1899 Hoffenheim | rejected | NO (Medium) | 0.563 | NO LEAN | 17 | - | ok |
@@ -203,9 +233,16 @@ Model bands: High p >= 0.575, Medium p >= 0.514. Evidence score 0 to 30 = each s
 | 1636345 | Thu 05 Nov 20:00 | Europa League | Sunderland v Dinamo Zagreb | rejected | NO (Medium) | 0.551 | NO LEAN | 20 | - | ok |
 | 1636347 | Thu 05 Nov 20:00 | Europa League | Torreense v Ararat-Armenia | rejected | NO (Medium) | 0.542 | NO LEAN | 0 | - | ok |
 | 1636324 | Wed 04 Nov 15:30 | Europa League | Rennes v Olympiakos Piraeus | Medium | NO (Medium) | 0.566 | NO LEAN | 16 | - | ok |
+| 1646811 | Fri 06 Nov 19:45 | FA Cup | Oxford City v Leicester | Medium | NO (Medium) | 0.570 | NO LEAN | 22 | - | ok |
+| 1570450 | Fri 06 Nov 20:00 | La Liga | Sevilla v Alaves | rejected | NO (Medium) | 0.564 | LEAN YES | 24 | moderate | needs review |
 | 1564322 | Tue 03 Nov 19:45 | League One | Huddersfield v Luton | High | YES (Medium) | 0.561 | LEAN YES | 25 | - | ok |
 | 1564342 | Tue 03 Nov 19:45 | League One | Wigan v Mansfield Town | rejected | NO (Medium) | 0.561 | NO LEAN | 22 | - | ok |
 | 1564266 | Wed 04 Nov 19:45 | League One | Oxford United v Reading | rejected | NO (Medium) | 0.534 | NO LEAN | 16 | - | ok |
 | 1563787 | Tue 03 Nov 19:45 | League Two | Northampton v Oldham | rejected | NO (Low) | 0.503 | NO LEAN | 15 | - | ok |
+| 1552817 | Fri 06 Nov 19:45 | Ligue 1 | Toulouse v Strasbourg | rejected | NO (Medium) | 0.554 | NO LEAN | 20 | - | ok |
 | 1588390 | Tue 03 Nov 19:45 | National League South | Dorking Wanderers v Hampton & Richmond | Medium | NO (Medium) | 0.560 | NO LEAN | 21 | - | ok |
 | 1588309 | Tue 03 Nov 19:45 | National League South | Farnborough v Ebbsfleet United | rejected | NO (Medium) | 0.564 | NO LEAN | 18 | - | ok |
+| 1557460 | Fri 06 Nov 20:00 | Premier League | Everton v Coventry | rejected | NO (Medium) | 0.523 | NO LEAN | 18 | - | ok |
+| 1575539 | Fri 06 Nov 20:45 | Primeira Liga | Famalicao v Arouca | rejected | NO (Medium) | 0.525 | NO LEAN | 17 | - | ok |
+| 1584462 | Fri 06 Nov 17:00 | Super Lig | Gaziantep FK v Kasımpaşa | rejected | NO (Medium) | 0.541 | NO LEAN | 18 | - | ok |
+| 1645429 | Wed 04 Nov 10:00 | Turkish Cup | Fethiyespor v Eyüpspor | rejected | NO (Medium) | 0.552 | NO LEAN | 6 | - | ok |
