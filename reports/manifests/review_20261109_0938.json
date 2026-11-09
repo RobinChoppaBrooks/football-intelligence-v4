@@ -1,0 +1,49 @@
+{
+ "manifest_version": 1,
+ "run_id": "review_20261109_0938",
+ "mode": "review",
+ "model_version": "v4",
+ "created_at_utc": "2026-11-09 09:38:59",
+ "created_at_london": "2026-11-09 09:38:59 GMT",
+ "git_commit": "c58e3bafca201a29e72ca7c64e7687713e5d04b3",
+ "fixture_window": {},
+ "completion": {
+  "status": "ok",
+  "start_london": "2026-11-09 09:38:58",
+  "finish_london": "2026-11-09 09:38:58",
+  "message": "489 results added"
+ },
+ "model_files": {
+  "bands_model_pkl": "f48986cb2d94008a",
+  "btts_model_pkl": "56cb8dcb47618aca"
+ },
+ "database": {
+  "max_finished_kickoff_utc": "2026-11-08T20:30:00+00:00",
+  "finished_matches": 68749,
+  "scheduled_matches": 8197,
+  "scored_but_not_finished": 16
+ },
+ "counts": {},
+ "report_files": [
+  {
+   "path": "reports/performance/performance_2026-11-09.md",
+   "bytes": 7134,
+   "sha256_16": "c099ec02cfbf2dc6"
+  },
+  {
+   "path": "data/results/results_log.csv",
+   "bytes": 93626,
+   "sha256_16": "ab446b8fb5bbe7e3"
+  },
+  {
+   "path": "data/predictions/predictions_log.csv",
+   "bytes": 958923,
+   "sha256_16": "20fdb6d8e8d957e1"
+  }
+ ],
+ "missing_files": [],
+ "data_quality_warnings": [
+  "16 matches in the database carry a score but are not FT/AET/PEN (abandoned, awarded or cancelled); neither the card nor the model counts them as results since 29 Oct"
+ ],
+ "complete": true
+}

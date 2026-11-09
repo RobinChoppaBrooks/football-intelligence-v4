@@ -1,84 +1,84 @@
 {
- "as_of": "2026-11-02",
+ "as_of": "2026-11-08",
  "season": "2026-27",
- "fixtures": 1707,
+ "fixtures": 1824,
  "scope": "every finished league fixture in Rob's 14 leagues, season 2026-27, classified as production does",
  "why_this_window": "only clean out-of-sample season: model trained on 2023-24 and 2024-25, cut points chosen on 2025-26",
  "over25": {
   "High": {
-   "hits": 72,
-   "n": 104
+   "hits": 84,
+   "n": 119
   },
   "Medium": {
-   "hits": 131,
-   "n": 214
+   "hits": 145,
+   "n": 235
   },
   "Trump card": {
    "hits": 3,
-   "n": 3
+   "n": 4
   },
   "rejected": {
-   "hits": 771,
-   "n": 1386
+   "hits": 812,
+   "n": 1466
   },
   "Selected (High, Medium, Trump card)": {
-   "hits": 206,
-   "n": 321
+   "hits": 232,
+   "n": 358
   }
  },
  "btts": {
   "High band": {
-   "hits": 103,
-   "n": 165
+   "hits": 118,
+   "n": 183
   },
   "Medium band": {
-   "hits": 756,
-   "n": 1353
+   "hits": 805,
+   "n": 1440
   },
   "Low band": {
-   "hits": 116,
-   "n": 189
+   "hits": 121,
+   "n": 201
   }
  },
  "note": "classified with information up to each kick-off; a live run uses information up to the run, so a few fixtures sit either side of a line differently",
  "written_by": "benchmarks.py",
  "european_cups": {
-  "fixtures": 1234,
+  "fixtures": 1606,
   "scope": "every finished fixture of season 2026-27 in the cup competitions of config/competitions.json (Champions, Europa and Conference League and the domestic cups; qualifiers and early rounds included), same rules; a side with fewer than 3 domestic league games is rejected",
   "over25": {
    "High": {
-    "hits": 25,
-    "n": 39
+    "hits": 31,
+    "n": 47
    },
    "Medium": {
-    "hits": 89,
-    "n": 146
+    "hits": 119,
+    "n": 197
    },
    "Trump card": {
     "hits": 2,
-    "n": 2
+    "n": 3
    },
    "rejected": {
-    "hits": 615,
-    "n": 1047
+    "hits": 794,
+    "n": 1359
    },
    "Selected (High, Medium, Trump card)": {
-    "hits": 116,
-    "n": 187
+    "hits": 152,
+    "n": 247
    }
   },
   "btts": {
    "High band": {
-    "hits": 35,
-    "n": 61
+    "hits": 58,
+    "n": 101
    },
    "Medium band": {
-    "hits": 570,
-    "n": 1097
+    "hits": 721,
+    "n": 1426
    },
    "Low band": {
-    "hits": 45,
-    "n": 76
+    "hits": 44,
+    "n": 79
    }
   }
  }
