@@ -14,7 +14,7 @@ build: one row per fixture of the run (the run's rows in data/predictions/predic
        The file is written once per run and never regenerated (pass --force only to rebuild a run that has not kicked off).
 
 review: for every run that has a groups file, scores five groups on completed fixtures only (results_log.csv, which holds
-        FT / AET / PEN results only, so postponed, abandoned and void games are excluded exactly as in the main review):
+        FT results only (V4.2), so postponed, abandoned and void games are excluded exactly as in the main review):
           A official High   B official Medium (includes the report's Weak)   C top 10 rejected   D open-game category A
           E all eligible fixtures (baseline)
         with overlaps, so nothing is double-counted, and for group D whether the 3+ goals came from both sides or one.
@@ -23,7 +23,8 @@ import os, sys, json, math, datetime as dt
 import pandas as pd
 
 LOGP, RESP, GDIR = "data/predictions/predictions_log.csv", "data/results/results_log.csv", "reports/research_groups"
-MEDIUM_CUT = 0.58084   # from config/model_config.json (cut_medium), for display only ('how far below the line')
+import pickle as _pk, os as _os
+MEDIUM_CUT = _pk.load(open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "bands_model.pkl"), "rb"))["amber"]   # the selection line, display only
 
 def _paths(run_id):
     mode, st = run_id.split("_")[0], run_id.split("_")[1]; date = f"{st[:4]}-{st[4:6]}-{st[6:8]}"
@@ -83,14 +84,14 @@ def review():
     if not frames: print("no research groups yet"); return
     G = pd.concat(frames).merge(res[["run_id", "fixture_id", "score", "over25_result"]], on=["run_id", "fixture_id"], how="left")
     G["done"] = G.over25_result.isin(["Y", "N"]); G["over"] = G.over25_result == "Y"
-    groups = [("A", "Official High", G.classification == "High"), ("B", "Official Medium (incl. report Weak)", G.classification == "Medium"),
+    groups = [("A", "Official High", G.classification == "High"), ("B", "Official Medium (incl. Weak)", G.classification.isin(["Medium", "Weak"])),
               ("C", "Top 10 rejected by model score", G.top10_rejected.fillna("") != ""), ("D", "EXPERIMENTAL open-game category A", G.open_game == "A"),
               ("E", "All eligible fixtures (baseline)", pd.Series(True, index=G.index))]
     today = dt.date.today()
     L = [f"# Research groups review {today:%Y-%m-%d}", "", "Groups are fixed before kick-off in reports/research_groups/<run_id>.csv and never regenerated. Only completed fixtures with a stored "
-         "FT / AET / PEN result count; postponed, abandoned and void games are left out as in the main review. A fixture can sit in more than one group: "
+         "FT result count (V4.2); postponed, abandoned and void games are left out as in the main review. A fixture can sit in more than one group: "
          "the overlap table shows how many, so groups are compared side by side, never added together. Group B includes the fixtures the report labels Weak "
-         "(the bottom quarter of Medium); the prediction log stores them as Medium.", ""]
+         "(the bottom quarter of Medium); since V4.2 the prediction log stores them as Weak.", ""]
     def table(g):
         out = ["| group | fixtures evaluated | over 2.5 | under 2.5 | hit rate | 95% range | not yet played |", "|---|---|---|---|---|---|---|"]
         for code, name, mask in groups:
@@ -98,7 +99,7 @@ def review():
             out.append(f"| {code}. {name} | {n} | {k} | {n - k} | {f'{k / n * 100:.0f}%' if n else '-'} | {_wilson(k, n)} | {int((~s.done).sum())} |")
         return out
     L += ["## All runs with groups", ""] + table(G)
-    sel = G[G.classification.isin(["High", "Medium"]) & G.done]; ks, ns = int(sel.over.sum()), len(sel)
+    sel = G[G.classification.isin(["High", "Medium", "Weak"]) & G.done]; ks, ns = int(sel.over.sum()), len(sel)
     L += ["", f"Official selections combined (A + B): {ks} of {ns} completed fixtures over 2.5. Groups C and D are research candidates, never selections; compare them with this line."]
     # overlaps on completed fixtures
     D = G[G.done]; codes = [c for c, _, _ in groups[:4]]; masks = {c: m.loc[D.index] for c, _, m in groups[:4]}

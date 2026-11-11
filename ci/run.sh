@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# ci/run.sh  -  the whole GitHub Actions job for Football Intelligence V4.1. The workflow file only calls this script,
+# ci/run.sh  -  the whole GitHub Actions job for Football Intelligence V4.2 (the BTTS audit step was removed with the BTTS model, 11 Nov 2026). The workflow file only calls this script,
 # so every change to the pipeline is an ordinary file upload; .github/workflows/football.yml never needs editing again.
 #
 # Inputs (environment, set by the workflow):
@@ -51,7 +51,6 @@ if [ "$MODE" != "download-only" ]; then
   echo "run id $RUN_ID, model exit $MODEL_STATUS"
   case "$MODE" in
     midweek|weekend|range)
-      python btts_audit.py "$RUN_ID" || echo "audit skipped: $?"
       python research_groups.py build "$RUN_ID" || echo "research groups skipped: $?"
       ;;
     review)
@@ -73,7 +72,7 @@ python export_slim.py football.db football_slim.db
 git config user.name "football-v4-bot"
 git config user.email "football-v4-bot@users.noreply.github.com"
 git add -A reports data logs runs config
-git commit -m "V4.1 $MODE run $(date -u +'%Y-%m-%d %H:%M') UTC" || echo "nothing to commit"
+git commit -m "V4.2 $MODE run $(date -u +'%Y-%m-%d %H:%M') UTC" || echo "nothing to commit"
 git push
 
 # 6. slim database to branch data (single commit, replaced each run)

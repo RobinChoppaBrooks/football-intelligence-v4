@@ -1,7 +1,7 @@
 """
-report_v4.py  -  PRODUCTION V4 report (locked 28 Oct 2026): the validated model is the unchanged selection engine.
+report_v4.py  -  PRODUCTION report. V4.2 (11 Nov 2026): counts-only model, whale trump card, no BTTS model.
 Cards keep Scored 2+ and Let in 2+ as the prominent rows, with the model confidence (High / Medium / Weak / rejected),
-division count, BTTS counts, clean sheets and failed-to-score counts, support and risk. No V2 / V3 alignment scores.
+division count, each side's scoring counts, clean sheets and failed-to-score counts, support and risk. No V2 / V3 alignment scores.
 
     python3 report_v4.py over25_analysis_YYYYMMDD.pkl football.db out.pdf out.csv "window" [--flagged f.csv] [--nofix "A,B"]
 
@@ -23,7 +23,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, Flowable, KeepTogether, PageBreak
 from reportlab.lib.styles import ParagraphStyle
 from config import LEAGUES, CUPS, NONLEAGUE, ORDER
-from benchmarks import text as bench_text, btts_text as bench_btts_text, cups_text as bench_cups_text   # the one benchmark source (config/benchmarks.json)
+from benchmarks import text as bench_text, cups_text as bench_cups_text   # the one benchmark source (config/benchmarks.json)
 ALL = {**LEAGUES, **CUPS, **NONLEAGUE}
 
 ap = argparse.ArgumentParser(); ap.add_argument("pkl"); ap.add_argument("db"); ap.add_argument("out"); ap.add_argument("csv"); ap.add_argument("window")
@@ -63,22 +63,20 @@ def align(d):
                 score=round(score), cls=cls, strA=st(sa, supA), strB=st(sb, supB), reason=reason)
 
 import pickle as _pk
-_b = _pk.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "bands_model.pkl"), "rb"))
-WEAK = _b["amber"] + (_b["green"] - _b["amber"]) / 4
+_b = _pk.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "bands_model.pkl"), "rb"))   # cut points for the methodology line
 def div_count(comp):
     lid = ALL[comp][0]
-    g = pd.read_sql(f"select ft_home,ft_away from fixtures where league_id={lid} and season=2026 and status in ('FT','AET','PEN')", c)
+    g = pd.read_sql(f"select ft_home,ft_away from fixtures where league_id={lid} and season=2026 and status='FT'", c)
     if len(g) < 10: return None
     tot = g.ft_home + g.ft_away; share = float((tot >= 3).mean())
     return f"{'hot' if share >= 0.65 else 'warm' if share >= 0.55 else 'cold'}, {int((tot >= 3).sum())} of {len(tot)} games had 3+"
 for d in rows:
     d["al"] = align(d)
-    d["conf"] = "High" if d["light"] == "GREEN" else ("Weak" if (d["light"] == "AMBER" and d["p"] < WEAK) else ("Medium" if d["light"] == "AMBER" else "rejected"))
+    d["conf"] = d["band"]                     # V4.2: the band comes from analyse_fixtures (3-decimal cut points, whale trump card)
     d["al"]["cls"] = {"High": "High", "Medium": "Medium", "Weak": "Weak", "rejected": "Rejected"}[d["conf"]]
     d["al"]["score"] = None if d["al"]["nh"] < 3 or d["al"]["na"] < 3 else d["al"]["score"]
     d["both3"] = d["al"]["hs2"] >= 3 and d["al"]["as2"] >= 3
     d["div"] = div_count(d["comp"])
-    d["btts_v2"] = "YES" if (d["al"]["cls"] in ("Primary",) or (d["al"]["cls"] == "Secondary" and d["pattern"] == "Both teams contribute")) else ("NO" if d["al"]["cls"] in ("Rejected", "Watchlist", "Insufficient data") else d["btts"])
     d["risk_v2"] = d["risk"]
     if d["al"]["cls"] != "Insufficient data":
         hr, ar = d["hr"], d["ar"]
@@ -97,12 +95,12 @@ def flat(d):
                 home_scored2=al["hs2"], home_letin2=al["hc2"], away_scored2=al["as2"], away_letin2=al["ac2"], home_games=al["nh"], away_games=al["na"],
                 route_home_attack=al["rA"], route_away_attack=al["rB"], venue_component=al.get("ven"), other_component=al.get("oth"), penalty=al.get("pen"),
                 alignment_score=al["score"], classification=al["cls"], route_home_strength=al["strA"], route_away_strength=al["strB"],
-                over25_v2=("Yes" if al["cls"] in ("Primary", "Secondary", "Watchlist") else "No"), btts_v2=d["btts_v2"],
-                model_confidence=d["conf"], model_over25=("Yes" if d["light"] != "RED" else "No"), model_btts=d["btts"], model_btts_likelihood=d["btts_lik"], btts_lean=d.get("btts_lean"), btts_note=d.get("btts_note", ""), trump=int(bool(d.get("trump", False))), drivers20=d.get("drivers20"), model_score=d["p"],
+                over25_v2=("Yes" if al["cls"] in ("Primary", "Secondary", "Watchlist") else "No"),
+                model_confidence=d["conf"], model_over25=("Yes" if d["light"] != "RED" else "No"), scoring=d["count_line"], trump=int(bool(d.get("trump", False))), whale_side=d.get("whale_side", ""), drivers20=d.get("drivers20"), model_score=d["p"],
                 home_scores="; ".join(f"{x['gf']}-{x['ga']}" for x in d["hr"]), away_scores="; ".join(f"{x['gf']}-{x['ga']}" for x in d["ar"]),
                 home_venue_scores="; ".join(f"{x['gf']}-{x['ga']}" for x in d.get("hv5", d["hv"])), away_venue_scores="; ".join(f"{x['gf']}-{x['ga']}" for x in d.get("av5", d["av"])),
                 why=d["why"], risk=d["risk_v2"], rejection_reason=al["reason"] if al["cls"] in ("Rejected", "Insufficient data") else "")
-pd.DataFrame([flat(d) for d in rows]).drop(columns=["alignment_score", "classification", "route_home_strength", "route_away_strength", "over25_v2", "btts_v2", "route_home_attack", "route_away_attack", "venue_component", "other_component", "penalty"]).to_csv(a.csv, index=False)
+pd.DataFrame([flat(d) for d in rows]).drop(columns=["alignment_score", "classification", "route_home_strength", "route_away_strength", "over25_v2", "route_home_attack", "route_away_attack", "venue_component", "other_component", "penalty"]).to_csv(a.csv, index=False)
 
 # ---------- PDF ----------
 _fd = [os.path.join(os.path.dirname(os.path.abspath(__file__)), "fonts"), "/usr/share/fonts/truetype/dejavu"]
@@ -139,7 +137,7 @@ class Card(Flowable):
         cv.setFillColor(MUTED); cv.setFont("DV", 8); cv.drawRightString(s.width - 6 * mm, top - 9 * mm, f"{d['comp']} · {d['kickoff']} UK")
         y = top - 16 * mm
         cv.setFillColor(CC[al["cls"]]); cv.setFont("DVB", 9); cv.drawString(6 * mm, y, f"OVER 2.5 {'YES' if d['light'] != 'RED' else 'NO'}  ·  confidence {d['conf'].upper()}")
-        cv.setFillColor(MUTED); cv.setFont("DV", 8); cv.drawString(84 * mm, y, f"BTTS {d.get('btts_lean', d['btts'])} (model {d['btts_lik']}) · drivers {d.get('drivers20', '-')} of 20{' · TRUMP CARD' if d.get('trump') else ''}")
+        cv.setFillColor(MUTED); cv.setFont("DV", 8); cv.drawString(84 * mm, y, f"score {d['p']:.3f} · drivers {d.get('drivers20', '-')} of 20{' · TRUMP CARD (' + d.get('whale_side', '') + ')' if d.get('trump') else ''}")
         cv.setFillColor(GREEN if d["both3"] else MUTED); cv.setFont("DVB" if d["both3"] else "DV", 8); cv.drawRightString(s.width - 6 * mm, y - 4.5 * mm, "both attacks 3 of 5+" if d["both3"] else "")
         y -= 4.5 * mm; cv.setFillColor(MUTED); cv.setFont("DV", 7.5); cv.drawString(6 * mm, y, f"Division: {d['div'] or 'too few games yet'}")
         y -= 5 * mm; cv.setStrokeColor(LINE); cv.setLineWidth(0.6); cv.line(6 * mm, y, s.width - 6 * mm, y)
@@ -173,9 +171,12 @@ class Card(Flowable):
             hc, ac = cs(d["hr"]), cs(d["ar"])
             cv.setFillColor(RED if (hc[0] >= 2 or hc[1] >= 2 or ac[0] >= 2 or ac[1] >= 2) else MUTED); cv.setFont("DV", 7.5)
             cv.setFont("DV", 7)
-            cv.drawString(6 * mm, yw, f"{d['home'][:22]}: clean sheets {hc[0]}/{al['nh']}, failed to score {hc[1]}/{al['nh']}, both scored {hc[2]}/{al['nh']}")
-            cv.drawString(s.width / 2 + 4 * mm, yw, f"{d['away'][:22]}: clean sheets {ac[0]}/{al['na']}, failed to score {ac[1]}/{al['na']}, both scored {ac[2]}/{al['na']}")
-            yw -= 4.5 * mm
+            # V4.2 scoring line (replaces the BTTS verdict): two short lines per side, each in its own column so nothing overlaps
+            for k, (nm, cc, nn) in enumerate(((d["home"], hc, al["nh"]), (d["away"], ac, al["na"]))):
+                px = 6 * mm + k * (s.width / 2)
+                cv.drawString(px, yw, f"{nm[:24]}: scored in {nn - cc[1]}/{nn}, failed to score {cc[1]}/{nn}")
+                cv.drawString(px, yw - 3.4 * mm, f"both scored {cc[2]}/{nn}, clean sheets {cc[0]}/{nn}")
+            yw -= 7.9 * mm
             cv.setFillColor(MUTED); cv.setFont("DVB", 7.5); cv.drawString(6 * mm, yw, "Why:"); cv.setFont("DV", 7.5)
             for ln in wrap(d["why"], "DV", 7.5, s.width - 24 * mm)[:2]: cv.drawString(17 * mm, yw, ln); yw -= 3.6 * mm
             cv.setFillColor(RED); cv.setFont("DVB", 7.5); cv.drawString(6 * mm, yw, "Risk:"); cv.setFont("DV", 7.5)
@@ -185,7 +186,7 @@ class Card(Flowable):
 
 def on_page(cv, doc):
     cv.setFillColor(BG); cv.rect(0, 0, W, H, fill=1, stroke=0); cv.setFillColor(MUTED); cv.setFont("DV", 7)
-    cv.drawString(12 * mm, 8 * mm, f"Over 2.5 model V4  |  {a.window}  |  generated {dt.date.today():%d %b %Y}"); cv.drawRightString(W - 12 * mm, 8 * mm, f"Page {doc.page}")
+    cv.drawString(12 * mm, 8 * mm, f"Over 2.5 model V4.2  |  {a.window}  |  generated {dt.date.today():%d %b %Y}"); cv.drawRightString(W - 12 * mm, 8 * mm, f"Page {doc.page}")
 
 def tstyle(extra=()):
     return TableStyle([("FONT", (0, 0), (-1, 0), "DVB", 7), ("FONT", (0, 1), (-1, -1), "DV", 6.8), ("TEXTCOLOR", (0, 0), (-1, -1), TXT), ("BACKGROUND", (0, 0), (-1, 0), CARD),
@@ -193,20 +194,20 @@ def tstyle(extra=()):
 
 ncls = {k: sum(1 for d in rows if d["conf"] == k) for k in ("High", "Medium", "Weak", "rejected")}
 nboth = sum(1 for d in rows if d["conf"] != "rejected" and d["both3"])
-S = [P("Over 2.5 goals: V4 report", "h1"), Spacer(1, 2 * mm), P(a.window + ". All times UK.", "body"), Spacer(1, 3 * mm),
+S = [P("Over 2.5 goals: V4.2 report", "h1"), Spacer(1, 2 * mm), P(a.window + ". All times UK.", "body"), Spacer(1, 3 * mm),
      P("Executive summary", "h2"), Spacer(1, 1.5 * mm),
      P(f"{len(rows)} fixtures analysed: High {ncls['High']}, Medium {ncls['Medium']}, Weak {ncls['Weak']}, rejected {ncls['rejected']}. Selected fixtures with both attacks scoring 2+ in 3 of 5 or better: {nboth}."),
      Spacer(1, 1.5 * mm),
-     P("Selection engine: the validated model (V4 lock; V4.1 changes in config/model_config.json). " + bench_text() + " "
-       "Scored 2+ and Let in 2+ counts are shown on every card as supporting evidence; both attacks at 3 of 5+ adds about three points inside the bands and is highlighted, not required.", "mut"), Spacer(1, 4 * mm)]
+     P("Selection engine: the V4.2 counts-only model (every input a count, no averages). " + bench_text() + " "
+       "Scored 2+ and Let in 2+ counts are shown on every card as supporting evidence; both attacks at 3 of 5+ is highlighted, never required.", "mut"), Spacer(1, 4 * mm)]
 # Top 20
 S += [P("Selected fixtures ranked by model score (up to 20)", "h2"), Spacer(1, 1.5 * mm)]
-hdr = [P(h, "smb") for h in ["#", "Kick-off (UK)", "Competition", "Fixture", "Home sc2+ / let2+", "Away sc2+ / let2+", "Both 3/5+", "BTTS", "Confidence", "Division", "Main risk (Over 2.5 = Yes for every row)"]]
+hdr = [P(h, "smb") for h in ["#", "Kick-off (UK)", "Competition", "Fixture", "Home sc2+ / let2+", "Away sc2+ / let2+", "Both 3/5+", "Score", "Confidence", "Division", "Main risk (Over 2.5 = Yes for every row)"]]
 data = [hdr]
 for i, d in enumerate(top20, 1):
     al = d["al"]
     data.append([P(str(i), "sm"), P(d["kickoff"], "sm"), P(d["comp"], "sm"), P(d["fixture"], "sm"), P(f"{al['hs2']}/{al['nh']}  ·  {al['hc2']}/{al['nh']}", "sm"), P(f"{al['as2']}/{al['na']}  ·  {al['ac2']}/{al['na']}", "sm"),
-                 P("<font color='#3DDC97'><b>yes</b></font>" if d["both3"] else "", "sm"), P(f"{d['btts']} ({d['btts_lik'][:3]})", "sm"),
+                 P("<font color='#3DDC97'><b>yes</b></font>" if d["both3"] else "", "sm"), P(f"{d['p']:.3f}", "sm"),
                  P(f"<font color='{ {'High':'#3DDC97','Medium':'#F5B942','Weak':'#F5B942'}[d['conf']] }'><b>{d['conf']}</b></font>", "sm"), P((d["div"] or "").split(",")[0], "sm"), P(d["risk_v2"], "smm")])
 cwid = [5 * mm, 17 * mm, 18 * mm, 34 * mm, 15 * mm, 15 * mm, 10 * mm, 14 * mm, 14 * mm, 11 * mm]
 t = Table(data, colWidths=cwid + [CW - sum(cwid)], repeatRows=1)
@@ -224,7 +225,7 @@ for d in short:
     al = d["al"]
     S.append(Table([[P(f"<font color='{ {'High':'#3DDC97','Medium':'#F5B942','Weak':'#F5B942'}[d['conf']] }'><b>{d['conf']}</b></font>", "sm"), P(f"<b>{d['fixture']}</b> {d['kickoff'][-5:]}", "sm"),
                      P(f"H scored 2+ {al['hs2']}/{al['nh']} · H let in 2+ {al['hc2']}/{al['nh']} · A scored 2+ {al['as2']}/{al['na']} · A let in 2+ {al['ac2']}/{al['na']}" + (" · <font color='#3DDC97'>both 3/5+</font>" if d["both3"] else ""), "sm"),
-                     P(f"BTTS {d['btts']} ({d['btts_lik']})", "smm")]], colWidths=[18 * mm, 52 * mm, 86 * mm, 30 * mm], style=tstyle([("BACKGROUND", (0, 0), (-1, -1), CARD)])))
+                     P(f"score {d['p']:.3f}" + (" · trump card" if d.get("trump") else ""), "smm")]], colWidths=[18 * mm, 52 * mm, 86 * mm, 30 * mm], style=tstyle([("BACKGROUND", (0, 0), (-1, -1), CARD)])))
 S.append(PageBreak())
 # cards
 S += [P("Fixture cards", "h2"), Spacer(1, 2 * mm)]
@@ -256,13 +257,15 @@ if a.flagged and os.path.exists(a.flagged):
     fl = pd.read_csv(a.flagged)
     if len(fl): cov.append(f"Flagged, not analysed ({len(fl)}): " + "; ".join(f"{r.home} v {r.away} ({r.comp}, {r.status})" for r in fl.itertuples()))
 for ln in cov: S += [P("• " + ln, "mut"), Spacer(1, 1 * mm)]
-S += [Spacer(1, 3 * mm), P("Methodology (V4 lock)", "h2"), Spacer(1, 1.5 * mm)]
-meth = ["Selection: gradient-boosted model on each side's last-5 league counts (goals, 3+, 2+ scored, 2+ conceded, clean sheets, failed to score, BTTS), last-3 venue counts and the division's 3+ share. Trained on 2023-24 and 2024-25, validated on 2025-26; cut points from validation deciles. High = top decile; Medium = next two; Weak = bottom quarter of Medium; rejected below.",
+S += [Spacer(1, 3 * mm), P("Methodology (V4.2)", "h2"), Spacer(1, 1.5 * mm)]
+meth = ["Selection: gradient-boosted model on 38 counts, no averages: each side's last-5 league games (goals scored, conceded and in total, games with 3+, 4+, BTTS, scored 2+, let in 2+, clean sheets, failed to score, biggest total, games played), last-3 venue games (goals, games with 3+, games played), and the competition (games played, games with 3+ in its last 50). FT results only. Trained on 2023-24 and 2024-25, validated on 2025-26; cut points from validation groups, stored at 3 decimals: "
+        f"High {_b['green']:.3f}+, Medium {_b['weak']:.3f} to {_b['green'] - 0.001:.3f}, Weak {_b['amber']:.3f} to {_b['weak'] - 0.001:.3f}, rejected {_b['amber'] - 0.001:.3f} and below.",
+        "Trump card (Rob's rule, scored on its own): a side that scored 16+ goals in its last 5 league games carries the fixture to High, unless the opponent kept 2+ clean sheets in its last 5. BTTS is never assumed.",
         bench_text(),
         bench_cups_text(),
-        "Scored 2+ and Let in 2+ are shown for both sides as evidence. Both attacks 3 of 5+ is highlighted (Selected with it 66%, High 71%) but never required: High fixtures failing a 2-of-5 attacking rule hit 73% on 222 fixtures.",
-        "BTTS (V4.1): YES when the BTTS model is in its High band or the fixture is a trump card; lean YES for the Medium band; no lean for the Low band. " + bench_btts_text() + " A lean, not a pick, and never a veto on Over 2.5.",
-        "V2 and V3 alignment scores were tested (62 to 66% at comparable sizes) and are not used for selection. Full tables in docs/backtest_baseline.md.",
+        "Scored 2+ and Let in 2+ are shown for both sides as evidence. Both attacks 3 of 5+ is highlighted, never required.",
+        "BTTS: no model and no verdict (V4.2). Each card shows how often each side scored, failed to score and saw both teams score in its last 5. Never a veto on Over 2.5.",
+        "V2 and V3 alignment scores were tested and are not used for selection (docs/backtest_baseline.md).",
         "No averages anywhere. Nothing inferred for missing data. Every count comes from stored final scores; the five scorelines are printed on each card."]
 for ln in meth: S += [P("• " + ln, "mut"), Spacer(1, 1 * mm)]
 SimpleDocTemplate(a.out, pagesize=A4, leftMargin=12 * mm, rightMargin=12 * mm, topMargin=12 * mm, bottomMargin=14 * mm).build(S, onFirstPage=on_page, onLaterPages=on_page)

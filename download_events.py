@@ -19,7 +19,7 @@ import sys, sqlite3, json, argparse
 from datetime import datetime, timezone
 
 PRIORITY_14 = [39, 40, 41, 42, 43, 50, 51, 78, 88, 61, 203, 179, 140, 94]   # Rob's 14 leagues (config/competitions.json)
-FINISHED = ("FT", "AET", "PEN")
+from config import FINISHED   # V4.2: FT only
 SEASON = 2026
 
 def fixture_set(db, leagues, last_n):
