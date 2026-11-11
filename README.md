@@ -1,6 +1,6 @@
-# Football Intelligence V4
+# Football Intelligence V4.2
 
-Rob's Over 2.5 (3+ goals) and BTTS fixture analysis, running unattended on GitHub Actions with the locked V4 model.
+Rob's Over 2.5 (3+ goals) fixture analysis, running unattended on GitHub Actions. V4.2 (11 Nov 2026): counts-only model, whale trump card, FT-only results, no BTTS model.
 
 ## What runs, and when (Europe/London)
 | When | Mode | Output |
@@ -22,11 +22,11 @@ Actions tab -> Run workflow -> mode `midweek`, `weekend` or `review`.
 
 ## Files
 - `run_v4.py` orchestrator (midweek, weekend, range, review); `analyse_fixtures.py`, `report_v4.py` the production analysis and report.
-- `bands_model.pkl`, `btts_model.pkl` the locked models (scikit-learn 1.8.0).
-- `config/model_config.json` the exact current model (V4.1); `config/competitions.json` Rob's 14 leagues; `config/schedules.json` the schedule.
+- `bands_model.pkl` the selection model (scikit-learn 1.8.0), fitted by `bands.py` from `features.py`.
+- `config/model_config.json` the exact current model (V4.2); `config/competitions.json` Rob's 14 leagues; `config/schedules.json` the schedule.
 - `config/benchmarks.json` the one benchmark every report quotes, written by `benchmarks.py` each Monday review.
 - `docs/methodology.md` the method, `docs/backtest_baseline.md` the backtest tables, `docs/changelog.md` the history, `docs/research/` research records, `docs/research_policy.md` the rules for any change.
 - `data/predictions/predictions_log.csv` the only pre-match prediction record; `data/results/results_log.csv` the scored results.
 - `seed/football.db` a starting database, used only if branch `data` is ever missing.
 
-Bookmaker odds are never used for selection. The API key is never stored in this repository.
+Bookmaker odds are never used for selection or shown. The API key is never stored in this repository.

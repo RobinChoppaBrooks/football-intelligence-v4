@@ -8,8 +8,7 @@ Outputs: <out>.md (main table, green cards, shortlist), <out>.csv (every number)
 """
 import sys, os, re, pickle, sqlite3, argparse, numpy as np, pandas as pd
 from features import build
-from bands import predict as band_predict
-from btts import predict as btts_predict, label as btts_label
+from bands import predict as band_predict, band_of
 from config import LEAGUES, CUPS, NONLEAGUE, ORDER
 
 ALL = {**LEAGUES, **CUPS, **NONLEAGUE}
@@ -40,7 +39,8 @@ def parse_list(path):
         else: print(f"  could not read line: {s!r}")
     return out
 
-FINISHED = ("FT", "AET", "PEN")   # same rule as features.py: a score on an abandoned, awarded or cancelled match is not a result
+WHALE_GOALS = 16              # V4.2 trump card: goals across the whale side's last 5 league games (Rob, 11 Nov 2026)
+from config import FINISHED   # V4.2: FT only. A score on an abandoned, awarded, cancelled, extra-time or penalties match is not a result
 
 def last_n(fx, tid, season, before, n, venue=None, league_only=True):
     g = fx[(fx.season == season) & (fx.kickoff_utc < before) & fx.ft_home.notna() & fx.status.isin(FINISHED)]
@@ -91,8 +91,8 @@ def rate(x, y, strong_a, strong_b):
     if len(x) < 3 or len(y) < 3: return "NEUTRAL", "sample under 3 games"
     a2 = cnt(x, lambda r: r["gf"] >= 2); d2 = cnt(y, lambda r: r["ga"] >= 2)
     a1 = cnt(x, lambda r: r["gf"] >= 1); d1 = cnt(y, lambda r: r["ga"] >= 1)
-    agf = np.mean([r["gf"] for r in x]); dga = np.mean([r["ga"] for r in y])
-    txt = f"scored in {a1}/{len(x)}, 2+ in {a2}/{len(x)} ({agf:.1f}/g) v conceded in {d1}/{len(y)}, 2+ in {d2}/{len(y)} ({dga:.1f}/g)"
+    agf = sum(r["gf"] for r in x); dga = sum(r["ga"] for r in y)      # V4.2: goal totals, never per-game averages
+    txt = f"scored in {a1}/{len(x)}, 2+ in {a2}/{len(x)} ({agf} goals) v conceded in {d1}/{len(y)}, 2+ in {d2}/{len(y)} ({dga} goals)"
     score = a2 + d2                      # 0 to 10: how often the attack scores twice plus how often the defence lets in two
     if score >= 6 and a1 >= 4 and d1 >= 4: return "STRONG", txt
     if score <= 3 or a1 <= 2 or d1 <= 2: return "WEAK", txt
@@ -141,15 +141,14 @@ def for_(hrows, arows, hv, av):
         if len(rows) >= 3 and cnt(rows, lambda r: r["tot"] >= 3) == 3: out.append(f"{lab} side's last 3 {v} games all over 2.5 ({sum(r['gf'] for r in rows)}-{sum(r['ga'] for r in rows)})")
     return out
 
-def opp_quality(rows, fx, season, before, lg_ga):
-    """average goals-against per game (season, league) of the five opponents, versus the league average."""
-    vals = []
+def opp_quality(rows, fx, season, before, lg_ga=None):
+    """V4.2, counts only: of the five opponents' league games this season before this kick-off, how many they let in 2+."""
+    k = n = 0
     for r in rows:
-        g = fx[(fx.season == season) & (fx.kickoff_utc < before) & (fx.is_cup == 0) & fx.ft_home.notna() & ((fx.home_id == r["opp"]) | (fx.away_id == r["opp"]))]
+        g = fx[(fx.season == season) & (fx.kickoff_utc < before) & (fx.is_cup == 0) & fx.ft_home.notna() & fx.status.isin(FINISHED) & ((fx.home_id == r["opp"]) | (fx.away_id == r["opp"]))]
         if len(g) == 0: continue
-        ga = np.where(g.home_id == r["opp"], g.ft_away, g.ft_home).mean(); vals.append(ga)
-    if not vals: return None
-    return float(np.mean(vals)), float(lg_ga)
+        ga = np.where(g.home_id == r["opp"], g.ft_away, g.ft_home); k += int((ga >= 2).sum()); n += len(ga)
+    return (k, n) if n else None
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("db"); ap.add_argument("list"); ap.add_argument("--out", default=None); ap.add_argument("--allow-played", action="store_true", help="reproduction tests: analyse fixtures already played, as of their kick-off")
@@ -169,16 +168,13 @@ def main():
     horizon = fx[fx.fixture_id.isin([i for _, i in ids])].kickoff_utc.max()
     X = build(a.db, upcoming_to=str(horizon)); X = X[X.fixture_id.isin([i for _, i in ids])].copy()
     bundle = pickle.load(open(os.path.join(HERE, "bands_model.pkl"), "rb"))
-    X["p"] = band_predict(bundle, X); G, Amb = bundle["green"], bundle["amber"]
-    bb = pickle.load(open(os.path.join(HERE, "btts_model.pkl"), "rb")); X["p_btts"] = btts_predict(bb, X)
-    X["light"] = np.where(X.p >= G, "GREEN", np.where(X.p >= Amb, "AMBER", "RED"))
+    X["p"] = band_predict(bundle, X).round(3)                    # V4.2: scores and cut points both at 3 decimals
+    X["band"] = [band_of(p, bundle) for p in X.p]
+    X["light"] = X.band.map({"High": "GREEN", "Medium": "AMBER", "Weak": "AMBER", "rejected": "RED"})
     compof = {i: cpt for cpt, i in ids}; X["comp"] = X.fixture_id.map(compof)
     X["order"] = X.comp.map({n: i for i, n in enumerate(ORDER)})
     X["home"] = X.home_id.map(teams); X["away"] = X.away_id.map(teams)
     X = X.sort_values(["order", "home"])
-    lg_ga = {}
-    for lid in X.league_id.unique():
-        g = fx[(fx.league_id == lid) & (fx.season == 2026) & fx.ft_home.notna()]; lg_ga[lid] = float((g.ft_home + g.ft_away).mean() / 2) if len(g) else np.nan
     rows, cards, short = [], [], []
     for r in X.itertuples():
         hr = last_n(fx, r.home_id, r.season, r.kickoff_utc, 5); ar = last_n(fx, r.away_id, r.season, r.kickoff_utc, 5)
@@ -191,36 +187,33 @@ def main():
         # V4.1: the 'Mixed profile' demotion is gone. On Rob's 14 leagues the demoted fixtures hit 3+ in 14 of 18 (2025-26) and 12 of 18 (2026-27).
         if light == "GREEN" and prof == "Mixed": ev_against.append("Match-up profile Mixed (neither attack-v-defence route strong); kept High")
         if prof == "Chaos": ev_against.append("Goals rely on poor defending rather than proven attacks")
-        oq_h = opp_quality(hr, fx, r.season, r.kickoff_utc, lg_ga[r.league_id]); oq_a = opp_quality(ar, fx, r.season, r.kickoff_utc, lg_ga[r.league_id])
-        xg = "Unavailable"
-        if not np.isnan(r.h_l5_xg_f) and not np.isnan(r.a_l5_xg_f):
-            xg = (f"Home xG {r.h_l5_xg_f:.2f} for / {r.h_l5_xg_a:.2f} against per game, SOT {r.h_l5_shots_on_target_f:.1f}; "
-                  f"Away xG {r.a_l5_xg_f:.2f} for / {r.a_l5_xg_a:.2f} against, SOT {r.a_l5_shots_on_target_f:.1f} (last 5, all competitions)")
-        elif not np.isnan(r.h_l5_shots_on_target_f) and not np.isnan(r.a_l5_shots_on_target_f):
-            xg = f"Shots on target per game: home {r.h_l5_shots_on_target_f:.1f} for / {r.h_l5_shots_on_target_a:.1f} faced; away {r.a_l5_shots_on_target_f:.1f} for / {r.a_l5_shots_on_target_a:.1f} faced. xG not covered"
-        btts_lab = btts_label(bb, float(r.p_btts))
+        oq_h = opp_quality(hr, fx, r.season, r.kickoff_utc); oq_a = opp_quality(ar, fx, r.season, r.kickoff_utc)
+        xg = "Not used in V4.2 (counts only)"
         pattern, why, risk, route = pattern_text(r.home, r.away, hr, ar, hv5, av5, ev_against)
-        # V4.1 (30 Oct 2026): the BTTS verdict follows the BTTS model's own band, as btts.py intended. The goal pattern told us
-        # nothing about BTTS ('One side dominates' went BTTS 55% on 2025-26 and 57% on 2026-27, the base rate); model High 61% / 67%.
         hs2_, as2_ = cnt(hr, lambda x: x["gf"] >= 2), cnt(ar, lambda x: x["gf"] >= 2); hc2_, ac2_ = cnt(hr, lambda x: x["ga"] >= 2), cnt(ar, lambda x: x["ga"] >= 2)
-        # Rob's trump card: both attacks scored 2+ in 4 or more of 5 and both defences let in 2+ in 1 or fewer. Goes in as Over 2.5 and BTTS
-        # automatically, marked and scored separately (12 of 21 on 2025-26, 4 of 5 on 2026-27, Rob's 14 leagues).
-        trump = len(hr) >= 5 and len(ar) >= 5 and hs2_ >= 4 and as2_ >= 4 and hc2_ <= 1 and ac2_ <= 1
+        # V4.2 trump card (11 Nov 2026, Rob): a whale side that scored 16+ goals across its last 5 league games carries the fixture.
+        # Ignored only when the opponent kept 2+ clean sheets in its last 5. Goes straight to High, scored on its own record.
+        # BTTS is never assumed: the card shows the opponent's own scoring counts. Tested: 96 of 147 went 3+ on 2023-25 and 68 of 87 on
+        # 2025-26 (Rob's 14 leagues); the old both-teams version went 17 of 30 and 12 of 21 and is retired.
+        hgf, agf = sum(x["gf"] for x in hr), sum(x["gf"] for x in ar)
+        hcs, acs = cnt(hr, lambda x: x["ga"] == 0), cnt(ar, lambda x: x["ga"] == 0)
+        full5 = len(hr) >= 5 and len(ar) >= 5
+        whale_home = full5 and hgf >= WHALE_GOALS and acs < 2
+        whale_away = full5 and agf >= WHALE_GOALS and hcs < 2
+        trump = whale_home or whale_away
+        whale_side = r.home if whale_home else (r.away if whale_away else "")
         if trump:
-            light = "GREEN"; ev_for.insert(0, f"Rob's trump card: both attacks scored 2+ in {hs2_} and {as2_} of 5, both defences let in 2+ in only {hc2_} and {ac2_} of 5")
-        btts_yes = btts_lab == "HIGH" or trump
-        btts_lean = "YES" if btts_yes else ("lean YES" if btts_lab == "MEDIUM" else "no lean")
-        # V4.1 (30 Oct 2026): BTTS caution, display only. When either side kept 3+ clean sheets or failed to score in 3+ of its
-        # last five, a model-High BTTS YES is shown as "lean YES" with the reason (model High with a 3+ clean-sheet side: 13 of 25
-        # went BTTS, against 64% for the High band). The YES/NO verdict, the trump card and every Over 2.5 call are unchanged.
-        cs_h, cs_a = cnt(hr, lambda x: x["ga"] == 0), cnt(ar, lambda x: x["ga"] == 0); fts_h, fts_a = cnt(hr, lambda x: x["gf"] == 0), cnt(ar, lambda x: x["gf"] == 0)
-        notes_ = [f"{r.home} kept {cs_h} clean sheets in {len(hr)}" if cs_h >= 3 else "", f"{r.away} kept {cs_a} clean sheets in {len(ar)}" if cs_a >= 3 else "",
-                  f"{r.home} failed to score in {fts_h} of {len(hr)}" if fts_h >= 3 else "", f"{r.away} failed to score in {fts_a} of {len(ar)}" if fts_a >= 3 else ""]
-        btts_note = "; ".join(n for n in notes_ if n)
-        if btts_note and btts_lean == "YES" and not trump: btts_lean = "lean YES"
+            light = "GREEN"
+            w, wg, o, ocs = (r.home, hgf, r.away, acs) if whale_home else (r.away, agf, r.home, hcs)
+            ev_for.insert(0, f"Rob's trump card: {w} scored {wg} goals in their last 5 league games; {o} kept {ocs} clean sheets in their last 5")
+        # V4.2: the BTTS model is gone. Each side's scoring line, counts only, for Rob to judge.
+        def scoring_line(name, rs):
+            s1 = cnt(rs, lambda x: x["gf"] >= 1); fts = cnt(rs, lambda x: x["gf"] == 0); b = cnt(rs, lambda x: x["gf"] > 0 and x["ga"] > 0)
+            return f"{name}: scored in {s1} of {len(rs)}, failed to score in {fts}, both teams scored in {b}"
+        count_line = scoring_line(r.home, hr) + "; " + scoring_line(r.away, ar)
         drivers20 = hs2_ + as2_ + hc2_ + ac2_      # the two drivers across both sides, out of 20
-        d = dict(comp=r.comp, hv5=hv5, av5=av5, p_btts=round(float(r.p_btts), 3), btts=("YES" if btts_yes else "NO"), btts_lik=btts_lab.title(),
-                 btts_lean=btts_lean, btts_note=btts_note, trump=trump, drivers20=drivers20,
+        band = "High" if light == "GREEN" else ("rejected" if light == "RED" else r.band)
+        d = dict(comp=r.comp, hv5=hv5, av5=av5, band=band, count_line=count_line, trump=trump, whale_side=whale_side, drivers20=drivers20,
                  pattern=pattern, why=why, risk=risk, route=route, kickoff=r.kickoff_utc.tz_convert("Europe/London").strftime("%a %d %b %H:%M"), fixture=f"{r.home} v {r.away}",
                  h_l5=f"{sum(x['gf'] for x in hr)}-{sum(x['ga'] for x in hr)}", h_seq=seq(hr), h_over=f"{cnt(hr, lambda x: x['tot']>=3)}/{len(hr)}",
                  a_l5=f"{sum(x['gf'] for x in ar)}-{sum(x['ga'] for x in ar)}", a_seq=seq(ar), a_over=f"{cnt(ar, lambda x: x['tot']>=3)}/{len(ar)}",
@@ -254,14 +247,15 @@ def write_md(rows, path, teams):
     for d in greens:
         hr, ar = d["hr"], d["ar"]
         L += [f"## {d['fixture']}  ({d['comp']}, {d['kickoff']})", "",
-              f"**{d['home']}, last 5:** {d['h_seq']}  ·  GF {sum(x['gf'] for x in hr)} GA {sum(x['ga'] for x in hr)}  ·  {sum(x['gf'] for x in hr)/max(len(hr),1):.1f} / {sum(x['ga'] for x in hr)/max(len(hr),1):.1f} per game  ·  3+ in {d['h_over']}  ·  BTTS in {cnt(hr, lambda x: x['gf']>0 and x['ga']>0)}/{len(hr)}",
+              f"**{d['home']}, last 5:** {d['h_seq']}  ·  GF {sum(x['gf'] for x in hr)} GA {sum(x['ga'] for x in hr)}  ·  3+ in {d['h_over']}  ·  BTTS in {cnt(hr, lambda x: x['gf']>0 and x['ga']>0)}/{len(hr)}",
               f"Opponents: " + ", ".join(f"{teams[x['opp']]} ({x['ven']})" for x in hr), "",
-              f"**{d['away']}, last 5:** {d['a_seq']}  ·  GF {sum(x['gf'] for x in ar)} GA {sum(x['ga'] for x in ar)}  ·  {sum(x['gf'] for x in ar)/max(len(ar),1):.1f} / {sum(x['ga'] for x in ar)/max(len(ar),1):.1f} per game  ·  3+ in {d['a_over']}  ·  BTTS in {cnt(ar, lambda x: x['gf']>0 and x['ga']>0)}/{len(ar)}",
+              f"**{d['away']}, last 5:** {d['a_seq']}  ·  GF {sum(x['gf'] for x in ar)} GA {sum(x['ga'] for x in ar)}  ·  3+ in {d['a_over']}  ·  BTTS in {cnt(ar, lambda x: x['gf']>0 and x['ga']>0)}/{len(ar)}",
               f"Opponents: " + ", ".join(f"{teams[x['opp']]} ({x['ven']})" for x in ar), "",
               f"**Venue:** {d['home']} last 3 home {d['h_ven']}, 3+ in {cnt(d['hv'], lambda x: x['tot']>=3)}/{len(d['hv'])}  ·  {d['away']} last 3 away {d['a_ven']}, 3+ in {cnt(d['av'], lambda x: x['tot']>=3)}/{len(d['av'])}", "",
               f"**Home attack v away defence: {d['m1']}.** {d['m1txt']}", f"**Away attack v home defence: {d['m2']}.** {d['m2txt']}", "",
-              f"**Opposition quality:** " + (f"{d['home']}'s opponents concede {d['oq_h'][0]:.2f}/g (division average {d['oq_h'][1]:.2f}); " if d['oq_h'] else "") + (f"{d['away']}'s opponents concede {d['oq_a'][0]:.2f}/g (division average {d['oq_a'][1]:.2f})" if d['oq_a'] else ""), "",
-              f"**Underlying performance:** {d['xg']}", "", f"**Profile:** {d['profile']}", "",
+              f"**Opposition:** " + (f"{d['home']}'s last 5 opponents let in 2+ in {d['oq_h'][0]} of their {d['oq_h'][1]} league games; " if d['oq_h'] else "") + (f"{d['away']}'s last 5 opponents let in 2+ in {d['oq_a'][0]} of their {d['oq_a'][1]} league games" if d['oq_a'] else ""), "",
+              f"**Scoring:** {d['count_line']}", "",
+              f"**Profile:** {d['profile']}", "",
               "**Evidence for 3+:** " + ("; ".join(d["ev_for"]) if d["ev_for"] else "none beyond the division rate"), "",
               "**Evidence against 3+:** " + ("; ".join(d["ev_against"]) if d["ev_against"] else "no specific counter-evidence in the last 5 or venue games"), ""]
     L += ["", "# Strongest 3+ goal candidates", "", "| League | Fixture | Profile | Key supporting evidence | Main risk |", "|---|---|---|---|---|"]

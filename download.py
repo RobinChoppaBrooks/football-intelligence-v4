@@ -153,7 +153,7 @@ def step_extras(c, days):
 
 def summary(c):
     print("== Store ==")
-    for r in c.db.execute("""SELECT cp.name, f.season, COUNT(*), SUM(f.status IN ('FT','AET','PEN')), SUM(f.stats_fetched=1), SUM(f.odds_fetched=1)
+    for r in c.db.execute("""SELECT cp.name, f.season, COUNT(*), SUM(f.status='FT'), SUM(f.stats_fetched=1), SUM(f.odds_fetched=1)
                              FROM fixtures f JOIN competitions cp ON cp.league_id=f.league_id GROUP BY cp.name, f.season ORDER BY cp.name, f.season"""):
         print(f"  {r[0]:24s} {r[1]}  fixtures {r[2]:4d}  finished {r[3]:4d}  stats {r[4]:4d}  odds {r[5]:3d}")
     xg = c.db.execute("SELECT COUNT(*) FROM fixture_stats WHERE xg IS NOT NULL").fetchone()[0]

@@ -1,3 +1,5 @@
+> Retired 11 Nov 2026 (V4.2): the BTTS model was removed at Rob's request, so btts.py, btts_model.pkl, btts_rules.py, btts_audit.py and backtest_btts.py were deleted from the repository (they remain in git history). The audit reports below are kept as the record.
+
 # BTTS audit tooling (btts_audit_v1)
 
 New files, all additive. The production model, thresholds, verdict rule and published predictions are unchanged.

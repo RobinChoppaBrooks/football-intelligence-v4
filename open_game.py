@@ -21,7 +21,7 @@ import pandas as pd
 LEAGUE_IDS = {39: "Premier League", 40: "Championship", 41: "League One", 42: "League Two", 43: "National League", 50: "National League North",
               51: "National League South", 78: "Bundesliga", 88: "Eredivisie", 61: "Ligue 1", 203: "Super Lig", 179: "Scottish Premiership",
               140: "La Liga", 94: "Primeira Liga"}
-FINISHED = ("FT", "AET", "PEN"); SEASON = 2026
+from config import FINISHED; SEASON = 2026   # V4.2: FT only
 
 # ---------------------------------------------------------------- scoreline rebuild from goal events
 def rebuild(f, events):

@@ -1,20 +1,22 @@
 """
-render_email.py  -  V4.1 email body for a finished run, built from the run's own CSV so the email can never drift from the report.
+render_email.py  -  V4.2 email body for a finished run, built from the run's own CSV so the email can never drift from the report.
 
     python3 render_email.py <run_id>        ->  reports/<mode>/<date>/email_<date>_<mode>.html  (and prints the subject line)
 
 Layout (Rob's rules: counts only, no averages, no percentages, green = positive, amber = middle, red = danger, no em dashes, no sign-off):
     1. one line per monitored league in Rob's order, always, even when a league has nothing above the line
     2. the shortlist: every High, Medium and Weak fixture ranked by model score, with the two drivers for both sides, the 20-count,
-       BTTS lean, trump card mark, and the why / risk note
+       each side's scoring counts (V4.2: no BTTS model), trump card mark, and the why / risk note
     3. research sections (added 2 Nov 2026; never selections, classifications unchanged), from reports/research_groups/<run_id>.csv:
        top 10 rejected fixtures to watch, the EXPERIMENTAL open-game watchlist (category A), and the complete ranking of every
        eligible fixture by model score
     4. postponed and flagged fixtures, competitions with no fixtures, data warnings from the manifest
     5. links to the files on GitHub
 """
-import sys, os, json, html, pandas as pd
+import sys, os, json, html, pickle, pandas as pd
 from config import ROB_ORDER
+CUTS = pickle.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "bands_model.pkl"), "rb"))   # the stored 3-decimal cut points
+VER = CUTS.get("model_version", "v4.1").upper()
 
 GH = "https://github.com/RobinChoppaBrooks/football-intelligence-v4/blob/main/"
 GREEN, AMBER, RED, MUTED = "#1a7f37", "#b26a00", "#b42318", "#374151"
@@ -42,8 +44,8 @@ def research_sections(run_id, C):
     T = G[G.top10_rejected != ""].copy(); T["k"] = T.top10_rejected.astype(int); T = T.sort_values("k")
     rows = []
     for r in T.itertuples():
-        gap = 0.58084 - r.model_score
-        why = f"Score {r.model_score:.3f}, {gap:.3f} below the Medium line; rank {r.rank_all} of {len(G)} fixtures overall."
+        gap = CUTS["amber"] - r.model_score
+        why = f"Score {r.model_score:.3f}, {gap:.3f} below the selection line; rank {r.rank_all} of {len(G)} fixtures overall."
         if r.rejection_reason: why += f" Rejected because: {esc(r.rejection_reason)}."
         rows.append(f'<tr><td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;font-size:13px;color:{MUTED}"><div style="font-size:14px;color:#111"><b>{r.k}.</b> <b>{esc(r.home)} v {esc(r.away)}</b> '
                     f'&nbsp;<span style="color:{MUTED}">{esc(r.competition)}, {esc(r.kickoff_uk)} UK</span> &nbsp;<b style="color:{RED}">REJECTED</b> {r.model_score:.3f}'
@@ -51,7 +53,7 @@ def research_sections(run_id, C):
                     f'<div>{esc(r.home)}: Scored 2+ <b>{_i(r.h_s2)} of 5</b>, Let in 2+ <b>{_i(r.h_c2)} of 5</b>, clean sheets {_i(r.h_cs)}, failed to score {_i(r.h_fts)} &nbsp;|&nbsp; '
                     f'{esc(r.away)}: Scored 2+ <b>{_i(r.a_s2)} of 5</b>, Let in 2+ <b>{_i(r.a_c2)} of 5</b>, clean sheets {_i(r.a_cs)}, failed to score {_i(r.a_fts)}</div>'
                     f'<div>Last five: {esc(r.home)} {esc(r.home_scores)} &nbsp;|&nbsp; {esc(r.away)} {esc(r.away_scores)}</div><div>{why}</div></td></tr>')
-    out.append(H2 + f"Top 10 rejected fixtures to watch</h2>" + NOTE + "The highest V4.1 model scores among fixtures V4.1 rejected, nothing else applied. Research candidates, not selections; "
+    out.append(H2 + f"Top 10 rejected fixtures to watch</h2>" + NOTE + f"The highest {VER} model scores among fixtures {VER} rejected, nothing else applied. Research candidates, not selections; "
                "their classification stays rejected.</p>" + ('<table width="100%" cellpadding="0" cellspacing="0">' + "".join(rows) + "</table>" if rows else NOTE + "No rejected fixtures in this run.</p>"))
     # open-game watchlist
     A = G[G.open_game == "A"].sort_values("model_score", ascending=False); rows = []
@@ -69,7 +71,7 @@ def research_sections(run_id, C):
             if s.get("scored2", 0) == 0: gaps.append(f"{name} scored 2+ in none of 5")
             if s.get("conceded2", 0) <= 1: gaps.append(f"{name} conceded 2+ only {s.get('conceded2')} time(s)")
         rows.append(f'<tr><td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;font-size:13px;color:{MUTED}"><div style="font-size:14px;color:#111"><b>{esc(r.home)} v {esc(r.away)}</b> '
-                    f'&nbsp;<span style="color:{MUTED}">{esc(r.competition)}, {esc(r.kickoff_uk)} UK</span> &nbsp;V4.1 <b style="color:{col.get(lab.get(r.fixture_id), MUTED)}">{esc(lab.get(r.fixture_id, "").upper())}</b> {r.model_score:.3f} &nbsp;open-game <b>A</b></div>'
+                    f'&nbsp;<span style="color:{MUTED}">{esc(r.competition)}, {esc(r.kickoff_uk)} UK</span> &nbsp;{VER} <b style="color:{col.get(lab.get(r.fixture_id), MUTED)}">{esc(lab.get(r.fixture_id, "").upper())}</b> {r.model_score:.3f} &nbsp;open-game <b>A</b></div>'
                     f'<div>{side(r.home, h5, d.get("flags_home"), d.get("shuts_home"), d.get("persistent_home"))}</div>'
                     f'<div>{side(r.away, a5, d.get("flags_away"), d.get("shuts_away"), d.get("persistent_away"))}</div>'
                     f'<div style="color:{RED}">Weaknesses: {esc("; ".join(gaps) if gaps else "none flagged by the counts")}</div></td></tr>')
@@ -84,9 +86,9 @@ def research_sections(run_id, C):
         tags = " ".join(x for x in (f"top-10 rejected #{r.top10_rejected}" if r.top10_rejected else "", f"open-game {r.open_game}" if r.open_game else "") if x)
         rows.append(f'<tr><td style="padding:2px 6px">{r.rank_all}</td><td style="padding:2px 6px">{r.model_score:.3f}</td><td style="padding:2px 6px;color:{col.get(l, MUTED)}"><b>{esc(l)}</b></td>'
                     f'<td style="padding:2px 6px">{esc(r.home)} v {esc(r.away)}</td><td style="padding:2px 6px;color:{MUTED}">{esc(r.competition)}, {esc(r.kickoff_uk)}</td><td style="padding:2px 6px;color:{MUTED}">{esc(tags)}</td></tr>')
-    out.append(H2 + f"Complete eligible fixture rankings ({len(G)})</h2>" + NOTE + "Every fixture the run analysed, by V4.1 model score, with its official label. Same run, same scores as above.</p>"
+    out.append(H2 + f"Complete eligible fixture rankings ({len(G)})</h2>" + NOTE + f"Every fixture the run analysed, by {VER} model score, with its official label. Same run, same scores as above.</p>"
                '<table cellpadding="0" cellspacing="0" style="border-collapse:collapse;font-size:12px"><tr style="color:#111"><td style="padding:2px 6px"><b>#</b></td><td style="padding:2px 6px"><b>score</b></td>'
-               '<td style="padding:2px 6px"><b>V4.1</b></td><td style="padding:2px 6px"><b>fixture</b></td><td style="padding:2px 6px"><b>league, UK kick-off</b></td><td style="padding:2px 6px"><b>research tags</b></td></tr>' + "".join(rows) + "</table>")
+               f'<td style="padding:2px 6px"><b>{VER}</b></td><td style="padding:2px 6px"><b>fixture</b></td><td style="padding:2px 6px"><b>league, UK kick-off</b></td><td style="padding:2px 6px"><b>research tags</b></td></tr>' + "".join(rows) + "</table>")
     return "\n".join(out)
 
 def main():
@@ -133,18 +135,17 @@ def main():
     for r in sel.itertuples():
         home, away = r.fixture.split(" v ", 1)
         trump = bool(getattr(r, "trump", 0))
-        lean = getattr(r, "btts_lean", None) or r.model_btts
-        lean_col = GREEN if str(lean).startswith("YES") else (AMBER if "lean" in str(lean) else MUTED)
-        note = getattr(r, "btts_note", "")
-        note = "" if note is None or (isinstance(note, float) and pd.isna(note)) else str(note)
+        scoring = getattr(r, "scoring", "")
+        whale = getattr(r, "whale_side", "")
+        whale = "" if whale is None or (isinstance(whale, float) and pd.isna(whale)) else str(whale)
         d20 = getattr(r, "drivers20", None)
         rows.append(
             f'<tr><td style="padding:8px 10px;border-bottom:1px solid #e5e7eb;font-size:13px;color:{MUTED}">'
             f'<div style="font-size:14px;color:#111"><b style="color:{conf_col[r.model_confidence]}">{esc(r.model_confidence.upper())}</b> &nbsp;<b>{esc(r.fixture)}</b>'
-            f'{" &nbsp;<b style=\"color:" + GREEN + "\">TRUMP CARD</b>" if trump else ""} &nbsp;<span style="color:{MUTED}">{esc(r.competition)}, {esc(r.date)} UK, score {r.model_score:.3f}</span></div>'
+            f'{" &nbsp;<b style=\"color:" + GREEN + "\">TRUMP CARD (" + esc(whale) + ")</b>" if trump else ""} &nbsp;<span style="color:{MUTED}">{esc(r.competition)}, {esc(r.date)} UK, score {r.model_score:.3f}</span></div>'
             f'<div>{esc(home)}: Scored 2+ <b>{r.home_scored2} of 5</b>, Let in 2+ <b>{r.home_letin2} of 5</b> &nbsp;|&nbsp; {esc(away)}: Scored 2+ <b>{r.away_scored2} of 5</b>, Let in 2+ <b>{r.away_letin2} of 5</b>'
             f'{" &nbsp;|&nbsp; drivers <b>" + str(int(d20)) + " of 20</b>" if d20 is not None and not pd.isna(d20) else ""}'
-            f' &nbsp;|&nbsp; BTTS <b style="color:{lean_col}">{esc(lean)}</b> (model {esc(r.model_btts_likelihood)}){", caution: " + esc(note) if note else ""}</div>'
+            f'</div><div>Scoring: {esc(scoring)}</div>'
             f'<div>Last five: {esc(home)} {esc(r.home_scores)} &nbsp;|&nbsp; {esc(away)} {esc(r.away_scores)}</div>'
             f'<div>Why: {esc(r.why)}</div><div style="color:{RED}">Risk: {esc(r.risk)}</div></td></tr>')
     shortlist = '<table width="100%" cellpadding="0" cellspacing="0">' + "".join(rows) + "</table>" if rows else f'<p style="color:{MUTED}">Nothing above the line this window.</p>'
@@ -153,17 +154,17 @@ def main():
 
     files = [("Combined PDF", f"{outdir}/combined_{date}.pdf"), ("English PDF", f"{outdir}/english_{date}.pdf"), ("European PDF", f"{outdir}/european_{date}.pdf"),
              ("Combined CSV", f"{outdir}/combined_{date}.csv"), ("Predictions JSON", f"{outdir}/predictions_{date}.json"),
-             ("ChatGPT review", f"reports/chatgpt_review/chatgpt_review_{date}_{mode}.md"), ("BTTS audit review", f"reports/chatgpt_review/btts_audit_review_{date}_{mode}.md"),
+             ("ChatGPT review", f"reports/chatgpt_review/chatgpt_review_{date}_{mode}.md"),
              ("Research groups CSV", f"reports/research_groups/{run_id}.csv"), ("Manifest", f"reports/manifests/{run_id}.json")]
     links = "".join(f'<li><a href="{GH}{p}">{n}</a></li>' for n, p in files if os.path.exists(p))
     body = f"""<div style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#111;max-width:780px">
-<h1 style="font-size:20px;margin:0 0 6px">Football Intelligence V4.1 {esc(mode)} report</h1>
-<p style="margin:0 0 4px">Window: {esc(window)}. Run {esc(run_id)}, model v4.1 (selection model unchanged). {len(C)} fixtures across {C.competition.nunique()} of the 14 leagues.</p>
-<p style="margin:0 0 10px"><b>{len(sel)} above the line</b>: <span style="color:{GREEN}"><b>High {nH}</b></span>, <span style="color:{AMBER}">Medium {nM}</span>, Weak {nW}, <span style="color:{RED}">rejected {nR}</span>. Trump cards: {nT}. BTTS YES: {int((C.model_btts == "YES").sum())}.</p>
+<h1 style="font-size:20px;margin:0 0 6px">Football Intelligence {VER} {esc(mode)} report</h1>
+<p style="margin:0 0 4px">Window: {esc(window)}. Run {esc(run_id)}, model {VER} (counts only, no averages). {len(C)} fixtures across {C.competition.nunique()} competitions.</p>
+<p style="margin:0 0 10px"><b>{len(sel)} above the line</b>: <span style="color:{GREEN}"><b>High {nH}</b></span>, <span style="color:{AMBER}">Medium {nM}</span>, Weak {nW}, <span style="color:{RED}">rejected {nR}</span>. Trump cards: {nT}.</p>
 <h2 style="font-size:16px;margin:16px 0 6px;border-bottom:2px solid #111;padding-bottom:3px">By league, in order</h2>
 {league_table}
 <h2 style="font-size:16px;margin:20px 0 6px;border-bottom:2px solid #111;padding-bottom:3px">Shortlist, ranked by model score</h2>
-<p style="margin:0 0 6px;font-size:13px;color:{MUTED}">High is model score 0.630 or more, Medium 0.581 to 0.630, Weak the bottom quarter of Medium. The two drivers are Scored 2+ and Let in 2+ over each side's last five league games. BTTS is secondary and never affects the Over 2.5 call: YES is the BTTS model's High band, lean YES its Medium band, or its High band with a caution when a side kept 3+ clean sheets or failed to score in 3+ of 5. A trump card (both attacks 2+ in 4 or more of 5, both defences 2+ against in 1 or fewer) is in by Rob's rule.</p>
+<p style="margin:0 0 6px;font-size:13px;color:{MUTED}">High is model score {CUTS["green"]:.3f} or more, Medium {CUTS["weak"]:.3f} to {CUTS["green"] - 0.001:.3f}, Weak {CUTS["amber"]:.3f} to {CUTS["weak"] - 0.001:.3f}. The two drivers are Scored 2+ and Let in 2+ over each side's last five league games. There is no BTTS verdict: the Scoring line shows how often each side scored, failed to score and saw both teams score in its last five. A trump card (a side that scored 16+ goals in its last five league games, against an opponent that kept fewer than 2 clean sheets) is in by Rob's rule.</p>
 {shortlist}
 {research}
 <h2 style="font-size:16px;margin:20px 0 6px;border-bottom:2px solid #111;padding-bottom:3px">Postponed, flagged, warnings</h2>
@@ -175,7 +176,7 @@ def main():
     path = f"{outdir}/email_{date}_{mode}.html"
     open(path, "w", encoding="utf-8").write(body)
     first = sel.date.iloc[0] if len(sel) else ""
-    print(f"Football V4.1 {mode}: {window}")
+    print(f"Football {VER} {mode}: {window}")
     print(path)
 
 if __name__ == "__main__":

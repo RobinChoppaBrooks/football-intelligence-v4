@@ -1,7 +1,8 @@
 """config.py  -  the 17 leagues and the cups. Ids are verified by probe.py against the API's own names."""
 SEASONS = [2023, 2024, 2025, 2026]     # 2023 = 2023-24 season, etc.
 ODDS_DAYS_AHEAD = 8                    # pull pre-match odds for fixtures kicking off within this many days
-FINISHED = ("FT", "AET", "PEN")
+FINISHED = ("FT",)                     # V4.2 (11 Nov 2026, Rob): only a match that finished in normal time counts. AET and PEN are
+                                       # left out because the stored score on an extra-time game is not reliably the 90-minute score
 DEAD = ("CANC", "ABD", "AWD", "WO", "PST", "TBD")   # kept with status, never trained on
 
 LEAGUES = {   # name: (league_id, country)

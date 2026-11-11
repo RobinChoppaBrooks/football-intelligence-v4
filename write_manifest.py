@@ -11,7 +11,7 @@ Runs after run_v4.py and never changes any report. Safe to re-run: it only descr
 """
 import sys, os, json, hashlib, sqlite3, datetime as dt, pandas as pd
 
-MODEL_VERSION = "v4"
+MODEL_VERSION = "v4.2"
 
 def sha(path, n=16):
     h = hashlib.sha256()
@@ -31,10 +31,10 @@ def main():
     db = {}
     if os.path.exists("football.db") and os.path.getsize("football.db") > 0:
         c = sqlite3.connect("football.db")
-        db = dict(max_finished_kickoff_utc=c.execute("select max(kickoff_utc) from fixtures where status in ('FT','AET','PEN')").fetchone()[0],
-                  finished_matches=c.execute("select count(*) from fixtures where status in ('FT','AET','PEN')").fetchone()[0],
+        db = dict(max_finished_kickoff_utc=c.execute("select max(kickoff_utc) from fixtures where status='FT'").fetchone()[0],
+                  finished_matches=c.execute("select count(*) from fixtures where status='FT'").fetchone()[0],
                   scheduled_matches=c.execute("select count(*) from fixtures where status='NS'").fetchone()[0],
-                  scored_but_not_finished=c.execute("select count(*) from fixtures where ft_home is not null and status not in ('FT','AET','PEN')").fetchone()[0])
+                  scored_but_not_finished=c.execute("select count(*) from fixtures where ft_home is not null and status!='FT'").fetchone()[0])
     files, warnings, window, counts = [], [], {}, {}
     if mode in ("midweek", "weekend", "range"):
         outdir = f"reports/{mode}/{date}"
@@ -57,20 +57,18 @@ def main():
         pj = f"{outdir}/predictions_{date}.json"
         if os.path.exists(pj):
             P = pd.DataFrame(json.load(open(pj)))
-            counts = dict(fixtures=len(P), by_classification=P.classification.value_counts().to_dict(), btts_yes=int((P.btts == "YES").sum()),
+            counts = dict(fixtures=len(P), by_classification=P.classification.value_counts().to_dict(), trump_cards=int(P.trump.sum()) if "trump" in P else 0,
                           competitions=int(P.competition.nunique()))
-        for extra in (f"reports/btts_audit/{date}/btts_audit_{date}_{mode}.csv", f"reports/btts_audit/{date}/btts_audit_{date}_{mode}.json", f"reports/chatgpt_review/btts_audit_review_{date}_{mode}.md"):
-            if os.path.exists(extra): files.append(describe(extra) | {"audit": True})
         rg = f"reports/research_groups/{run_id}.csv"      # research watchlists (2 Nov 2026), optional like the audit
         if os.path.exists(rg): files.append(describe(rg) | {"research": True})
     elif mode == "review":
         files += [describe(f"reports/performance/performance_{date}.md"), describe("data/results/results_log.csv"), describe("data/predictions/predictions_log.csv")]
-    if db.get("scored_but_not_finished"): warnings.append(f"{db['scored_but_not_finished']} matches in the database carry a score but are not FT/AET/PEN (abandoned, awarded or cancelled); neither the card nor the model counts them as results since 29 Oct")
+    if db.get("scored_but_not_finished"): warnings.append(f"{db['scored_but_not_finished']} matches in the database carry a score but are not FT (extra time, penalties, abandoned, awarded or cancelled); neither the card nor the model counts them as results (FT only since V4.2)")
     now = dt.datetime.now(dt.timezone.utc)
     man = dict(manifest_version=1, run_id=run_id, mode=mode, model_version=MODEL_VERSION, created_at_utc=now.strftime("%Y-%m-%d %H:%M:%S"),
                created_at_london=pd.Timestamp(now).tz_convert("Europe/London").strftime("%Y-%m-%d %H:%M:%S %Z"), git_commit=commit,
                fixture_window=window, completion=dict(status=status.get("status"), start_london=status.get("start"), finish_london=status.get("finish"), message=status.get("message")),
-               model_files=dict(bands_model_pkl=sha("bands_model.pkl") if os.path.exists("bands_model.pkl") else None, btts_model_pkl=sha("btts_model.pkl") if os.path.exists("btts_model.pkl") else None),
+               model_files=dict(bands_model_pkl=sha("bands_model.pkl") if os.path.exists("bands_model.pkl") else None),
                database=db, counts=counts, report_files=files, missing_files=[f["path"] for f in files if f.get("missing")], data_quality_warnings=warnings,
                complete=bool(status.get("status") == "ok" and not any(f.get("missing") for f in files)))
     os.makedirs("reports/manifests", exist_ok=True)

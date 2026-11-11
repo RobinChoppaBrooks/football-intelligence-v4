@@ -9,7 +9,7 @@ last 5 at venue. Rates are per game. Nothing is imputed: a missing stat stays Na
 """
 import sys, os, sqlite3, numpy as np, pandas as pd
 
-FINISHED = ("FT", "AET", "PEN")
+from config import FINISHED            # V4.2: FT only (config.py)
 STAT_COLS = ["shots", "shots_on_target", "shots_inside_box", "corners", "xg"]
 
 def load(db, upcoming_to=None):
@@ -130,6 +130,20 @@ def league_baselines(fx):
     B = B.merge(prev, on=["league_id", "season"], how="left").drop(columns=["league_id", "season"])
     return B
 
+DIV_WINDOW = 50
+
+def division_window(fx, W=DIV_WINDOW):
+    """V4.2: the competition's last 50 games this season before this kick-off, as counts: how many had 3+ and how many
+    games are in the window (under 50 early in the season). Same-time kick-offs are not 'before', so nothing leaks."""
+    fin = fx[fx.ft_home.notna() & fx.ft_away.notna()].copy(); fin["o25"] = ((fin.ft_home + fin.ft_away) >= 3).astype(int)
+    out = []
+    for (lid, s), g in fx.groupby(["league_id", "season"]):
+        f = fin[(fin.league_id == lid) & (fin.season == s)].sort_values("kickoff_utc")
+        ks = f.kickoff_utc.values; cum = np.concatenate([[0], np.cumsum(f.o25.values)])
+        j = np.searchsorted(ks, g.kickoff_utc.values, side="left"); lo = np.maximum(0, j - W)
+        out.append(pd.DataFrame({"fixture_id": g.fixture_id.values, "lg_l50_o25_cnt": (cum[j] - cum[lo]).astype(float), "lg_l50_n": (j - lo).astype(float)}))
+    return pd.concat(out, ignore_index=True)
+
 def build(db, upcoming_to=None):
     fx, st = load(db, upcoming_to)
     L = long_table(fx, st)
@@ -138,6 +152,7 @@ def build(db, upcoming_to=None):
     A = T[T.venue == "A"].drop(columns=["venue"]).add_prefix("a_").rename(columns={"a_fixture_id": "fixture_id"})
     X = fx[["fixture_id", "league_id", "comp", "season", "is_cup", "kickoff_utc", "home_id", "away_id", "ft_home", "ft_away", "ht_home", "ht_away"]].merge(H, on="fixture_id").merge(A, on="fixture_id")
     X = X.merge(league_baselines(fx), on="fixture_id", how="left")
+    X = X.merge(division_window(fx), on="fixture_id", how="left")
     X["target_over25"] = ((X.ft_home + X.ft_away) >= 3).astype(float).where(X.ft_home.notna())
     X["target_btts"] = ((X.ft_home > 0) & (X.ft_away > 0)).astype(float).where(X.ft_home.notna())
     # matchup features (goals; stats versions where present)
@@ -152,7 +167,24 @@ def build(db, upcoming_to=None):
     X["has_xg"] = X.h_l5_xg_f.notna() & X.a_l5_xg_f.notna() & X.has_shots
     X["tier"] = np.where(X.has_xg, "A", np.where(X.has_shots, "B", "D"))
     X["early"] = (X.h_std_v_n.fillna(0) < 3) | (X.a_std_v_n.fillna(0) < 3)
+    X = add_counts(X)
     return X.sort_values("kickoff_utc").reset_index(drop=True)
+
+COUNT_METRICS = ("gf", "ga", "tot", "over25", "btts", "gf2", "ga2", "cs", "fts", "tot4")
+VENUE_METRICS = ("gf", "ga", "tot", "over25")
+
+def add_counts(X):
+    """V4.2 (11 Nov 2026, Rob: no averages in any prediction). The model's inputs as plain counts over the window:
+    goals scored in the last 5 league games, games with 3+ out of the last 5, clean sheets in the last 5, and so on.
+    A window value above is the mean over the n games in the window, so mean x n is that window's exact count."""
+    for s in ("h", "a"):
+        n5, n3 = X[f"{s}_l5L_n"], X[f"{s}_v3L_n"]
+        for m in COUNT_METRICS: X[f"{s}_l5_{m}_cnt"] = (X[f"{s}_l5L_{m}"] * n5).round()
+        X[f"{s}_l5_maxtot"] = X[f"{s}_l5L_maxtot"]; X[f"{s}_l5_n"] = n5
+        for m in VENUE_METRICS: X[f"{s}_v3_{m}_cnt"] = (X[f"{s}_v3L_{m}"] * n3).round()
+        X[f"{s}_v3_n"] = n3
+    X["lg_games_cnt"] = X["lg_n"]; X["cup_flag"] = X["is_cup"]
+    return X
 
 def leakage_test(db, X, n=300, seed=0):
     """Recompute a few features from the raw fixtures table using only kickoff < this kickoff."""
