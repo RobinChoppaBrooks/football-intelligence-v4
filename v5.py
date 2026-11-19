@@ -84,14 +84,14 @@ def slip(start, end, bank=1000.0, fetch=True, db="football.db"):
     new = not os.path.exists(LOG)
     with open(LOG, "a", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
-        if new: w.writerow(["run_id", "created_at", "bet", "n", "stake", "fixture_id", "kickoff_uk", "competition", "home", "away", "fair", "price"])
+        if new: w.writerow(["run_id", "created_at", "bet", "n", "stake", "fixture_id", "kickoff_uk", "competition", "home", "away", "fair", "price", "window"])
         for name, n, stake, legs in bets:
             odds = float(np.prod(legs.price))
             L += [f"## {name.capitalize()}: £{stake:.2f} at {odds:.2f} (pays £{stake * odds:.2f} before any boost)", "",
                   "| Fixture | Comp | When | Bet365 Over 2.5 |", "|---|---|---|---|"]
             for r in legs.itertuples():
                 L.append(f"| {r.home} v {r.away} | {r.competition} | {r.kickoff_uk} | {r.price:.2f} |")
-                w.writerow([run, datetime.now(timezone.utc).isoformat(timespec="seconds"), name, n, stake, int(r.fixture_id), r.kickoff_uk, r.competition, r.home, r.away, round(float(r.fair), 4), r.price])
+                w.writerow([run, datetime.now(timezone.utc).isoformat(timespec="seconds"), name, n, stake, int(r.fixture_id), r.kickoff_uk, r.competition, r.home, r.away, round(float(r.fair), 4), r.price, start])
             L.append("")
     if not bets: L.append("Pool too small for any bet this window.")
     open(f"{outdir}/v5_slip.md", "w", encoding="utf-8").write("\n".join(L) + "\n")
@@ -101,6 +101,8 @@ def slip(start, end, bank=1000.0, fetch=True, db="football.db"):
 def review(db="football.db"):
     if not os.path.exists(LOG): print("no V5 bets logged"); return
     b = pd.read_csv(LOG); c = sqlite3.connect(db)
+    # one slip per weekend: the latest run logged for each window (a hand run on Thursday is replaced by the Friday 07:00 run)
+    keep = b.groupby("window").run_id.max(); b = b[b.run_id == b.window.map(keep)]
     fx = pd.read_sql("select fixture_id, status, ft_home, ft_away from fixtures", c).set_index("fixture_id")
     b = b.join(fx, on="fixture_id"); b["hit"] = (b.ft_home + b.ft_away) >= 3
     rows = []
@@ -117,7 +119,7 @@ def review(db="football.db"):
          "Pre-registered 19 Nov 2026. Judge after 40 weekends; rules are not changed on what this shows.", "",
          f"Settled bets: {len(s)} (won {int((s.state == 'won').sum())}). Staked £{s.stake.sum():.2f}. Returned £{s.ret.sum():.2f} "
          f"(£{s.boost_ret.sum():.2f} if Bet365's Acca Boost applied). P/L £{s.ret.sum() - s.stake.sum():+.2f} (with boost £{s.boost_ret.sum() - s.stake.sum():+.2f}).",
-         f"Weekends logged: {R.run.nunique()}. Open or void-check bets: {int((~R.state.isin(['won', 'lost'])).sum())}.", "",
+         f"Weekends counted: {R.run.nunique()} (latest slip per weekend). Open or void-check bets: {int((~R.state.isin(['won', 'lost'])).sum())}.", "",
          "| Run | Bet | Legs | Stake | Odds | Result | Return |", "|---|---|---|---|---|---|---|"]
     L += [f"| {r.run} | {r.bet} | {r.n} | £{r.stake:.2f} | {r.odds} | {r.state} | £{r.ret:.2f} |" for r in R.itertuples()]
     os.makedirs(os.path.dirname(TRACK), exist_ok=True); open(TRACK, "w").write("\n".join(L) + "\n"); print("\n".join(L[:6]))
