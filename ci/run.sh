@@ -39,7 +39,7 @@ fi
 ls -la football.db
 
 # 2. fixtures and results from API-Football (the only API step). A "prices RUN_ID" hand run skips it (19 Nov 2026).
-if [ "$MODE" != "prices" ] && [ "$MODE" != "fetch-odds" ]; then
+if [ "$MODE" != "prices" ] && [ "$MODE" != "fetch-odds" ] && [ "$MODE" != "v5" ]; then
 python download.py --results
 # goal events for each team's last 10 league games (research only, 2 Nov 2026). Incremental: after the first back-fill
 # (about 71 calls) only new fixtures are fetched. A failure here never stops the model run.
@@ -52,7 +52,9 @@ MODEL_STATUS=0
 if [ "$MODE" = "prices" ]; then python log_prices.py $MODE_ARGS || echo "prices skipped: $?"; fi
 # historical results-and-odds CSVs for research (19 Nov 2026): "fetch-odds"
 if [ "$MODE" = "fetch-odds" ]; then python fetch_odds_history.py || echo "fetch-odds skipped: $?"; fi
-if [ "$MODE" != "download-only" ] && [ "$MODE" != "prices" ] && [ "$MODE" != "fetch-odds" ]; then
+# V5 short-Overs slip for a window (research model, 19 Nov 2026): "v5 YYYY-MM-DD YYYY-MM-DD"
+if [ "$MODE" = "v5" ]; then python v5.py slip $MODE_ARGS || echo "v5 skipped: $?"; fi
+if [ "$MODE" != "download-only" ] && [ "$MODE" != "prices" ] && [ "$MODE" != "fetch-odds" ] && [ "$MODE" != "v5" ]; then
   # the one benchmark source: refreshed each Monday review from football.db, read by every report (Phase 0, 2 Nov 2026)
   if [ "$MODE" = "review" ]; then python benchmarks.py football.db > /dev/null || echo "benchmarks skipped: $?"; fi
   python run_v4.py "$MODE" $MODE_ARGS || MODEL_STATUS=$?
@@ -64,10 +66,13 @@ if [ "$MODE" != "download-only" ] && [ "$MODE" != "prices" ] && [ "$MODE" != "fe
       python research_groups.py build "$RUN_ID" || echo "research groups skipped: $?"
       # pre-match prices of the selected fixtures, research tracker only, never in the reports (19 Nov 2026)
       python log_prices.py "$RUN_ID" || echo "prices skipped: $?"
+      # V5 short-Overs slip, Friday to Sunday, on the Friday weekend run only (research model, 19 Nov 2026)
+      if [ "$MODE" = "weekend" ]; then python v5.py slip "$(TZ=Europe/London date +%F)" "$(TZ=Europe/London date -d '+2 day' +%F)" || echo "v5 skipped: $?"; fi
       ;;
     review)
       python research_groups.py review || echo "research groups review skipped: $?"
       python value_tracker.py football.db || echo "value tracker skipped: $?"
+      python v5.py review || echo "v5 review skipped: $?"
       ;;
   esac
   python write_manifest.py "$RUN_ID" --commit "$GITHUB_SHA" || echo "manifest skipped: $?"

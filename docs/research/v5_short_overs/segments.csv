@@ -1,0 +1,185 @@
+segment,value,side,price,n 23-26,PL 23,PL 24,PL 25,positive all 3,n 26,PL 26 (hold-out)
+league,D1,Over,max_o,917,1.2,-7.6,7.9,False,81,1.7
+league,D1,Over,b365_o,917,-6.6,-15.0,5.3,False,81,0.7
+league,D1,Under,max_u,917,-19.9,-10.9,-44.4,False,81,-13.6
+league,D1,Under,b365_u,917,-32.5,-22.6,-49.3,False,81,-14.6
+league,E0,Over,max_o,1140,30.0,-24.6,-5.6,False,100,-16.9
+league,E0,Over,b365_o,1140,18.0,-32.4,-9.8,False,100,-21.1
+league,E0,Under,max_u,1140,-52.0,20.3,-14.2,False,100,17.4
+league,E0,Under,b365_u,1140,-67.5,3.4,-21.3,False,100,16.0
+league,E1,Over,max_o,1656,0.7,-45.3,9.0,False,180,24.9
+league,E1,Over,b365_o,1656,-16.4,-59.4,1.1,False,180,24.1
+league,E1,Under,max_u,1656,-22.6,16.4,-41.5,False,180,-40.8
+league,E1,Under,b365_u,1656,-42.9,2.7,-48.8,False,180,-42.2
+league,E2,Over,max_o,1656,-8.8,-10.8,-0.6,False,163,-10.2
+league,E2,Over,b365_o,1656,-22.9,-23.1,-6.9,False,163,-11.2
+league,E2,Under,max_u,1656,-22.6,-29.6,-41.5,False,163,-3.5
+league,E2,Under,b365_u,1656,-36.5,-41.6,-50.9,False,163,-6.7
+league,E3,Over,max_o,1656,18.3,-46.2,-24.3,False,174,-24.3
+league,E3,Over,b365_o,1656,5.7,-55.1,-29.6,False,174,-25.3
+league,E3,Under,max_u,1656,-55.3,10.9,-14.6,False,174,8.5
+league,E3,Under,b365_u,1656,-69.3,0.3,-24.7,False,174,6.2
+league,EC,Over,max_o,1642,-9.3,-33.3,-7.7,False,200,5.8
+league,EC,Over,b365_o,1642,-20.2,-40.1,-13.0,False,200,4.1
+league,EC,Under,max_u,1642,-30.7,-8.9,-46.4,False,200,-34.1
+league,EC,Under,b365_u,1642,-43.9,-18.2,-56.0,False,200,-37.7
+league,F1,Over,max_o,917,3.0,-2.5,-23.4,False,90,-4.2
+league,F1,Over,b365_o,917,-6.2,-10.7,-26.7,False,90,-4.6
+league,F1,Under,max_u,917,-8.1,-11.3,-2.2,False,90,-4.1
+league,F1,Under,b365_u,917,-20.2,-21.1,-6.1,False,90,-4.7
+league,N1,Over,max_o,918,9.1,-17.1,-13.0,False,107,4.7
+league,N1,Over,b365_o,918,-0.1,-24.5,-15.8,False,107,3.4
+league,N1,Under,max_u,918,-30.5,6.9,-15.9,False,107,-15.3
+league,N1,Under,b365_u,918,-45.2,-4.9,-23.6,False,107,-19.7
+league,P1,Over,max_o,912,9.7,-6.5,14.5,False,97,0.3
+league,P1,Over,b365_o,912,-0.5,-15.9,11.0,False,97,-0.2
+league,P1,Under,max_u,912,-26.4,-19.5,-40.8,False,97,-7.6
+league,P1,Under,b365_u,912,-37.0,-29.6,-44.6,False,97,-9.1
+league,SC0,Over,max_o,684,-1.1,22.2,-11.1,False,75,-3.1
+league,SC0,Over,b365_o,684,-7.8,17.7,-13.0,False,75,-3.5
+league,SC0,Under,max_u,684,-16.3,-33.4,-3.1,False,75,0.5
+league,SC0,Under,b365_u,684,-23.3,-38.1,-6.8,False,75,-0.6
+league,SP1,Over,max_o,1140,-30.2,3.9,-8.5,False,119,-3.2
+league,SP1,Over,b365_o,1140,-42.2,-8.4,-12.7,False,119,-3.7
+league,SP1,Under,max_u,1140,3.8,-17.1,-14.0,False,119,-16.0
+league,SP1,Under,b365_u,1140,-10.7,-29.8,-18.1,False,119,-16.9
+league,T1,Over,max_o,1025,-36.2,-9.7,-16.8,False,99,4.2
+league,T1,Over,b365_o,1025,-45.8,-18.4,-19.7,False,99,3.6
+league,T1,Under,max_u,1025,24.5,-14.9,-17.2,False,99,-18.1
+league,T1,Under,b365_u,1025,6.7,-25.0,-22.6,False,99,-19.6
+market band,"(0.0, 0.42]",Over,max_o,1012,-33.0,-33.8,-9.3,False,33,-10.4
+market band,"(0.0, 0.42]",Over,b365_o,1012,-42.4,-49.2,-13.2,False,33,-10.6
+market band,"(0.0, 0.42]",Under,max_u,1012,13.5,1.1,-16.0,False,33,4.5
+market band,"(0.0, 0.42]",Under,b365_u,1012,4.4,-10.6,-20.8,False,33,3.7
+market band,"(0.42, 0.46]",Over,max_o,1861,-43.6,-67.6,0.4,False,93,7.5
+market band,"(0.42, 0.46]",Over,b365_o,1861,-64.0,-87.6,-9.0,False,93,7.0
+market band,"(0.42, 0.46]",Under,max_u,1861,14.8,23.5,-47.0,False,93,-14.1
+market band,"(0.42, 0.46]",Under,b365_u,1861,-5.6,4.7,-57.8,False,93,-15.1
+market band,"(0.46, 0.5]",Over,max_o,2901,19.2,-15.7,-9.3,False,226,-21.9
+market band,"(0.46, 0.5]",Over,b365_o,2901,-0.3,-32.8,-17.6,False,226,-23.2
+market band,"(0.46, 0.5]",Under,max_u,2901,-49.2,-32.4,-54.9,False,226,4.6
+market band,"(0.46, 0.5]",Under,b365_u,2901,-70.1,-50.5,-68.1,False,226,2.7
+market band,"(0.5, 0.54]",Over,max_o,2899,-4.8,-22.7,-60.4,False,297,-11.7
+market band,"(0.5, 0.54]",Over,b365_o,2899,-27.0,-39.9,-71.8,False,297,-13.3
+market band,"(0.5, 0.54]",Under,max_u,2899,-33.5,-20.1,-12.4,False,297,-13.2
+market band,"(0.5, 0.54]",Under,b365_u,2899,-55.0,-38.8,-24.6,False,297,-15.3
+market band,"(0.54, 0.58]",Over,max_o,2320,12.4,-25.3,12.8,False,297,12.1
+market band,"(0.54, 0.58]",Over,b365_o,2320,-15.2,-42.7,5.2,False,297,8.0
+market band,"(0.54, 0.58]",Under,max_u,2320,-56.8,-6.4,-84.8,False,297,-42.7
+market band,"(0.54, 0.58]",Under,b365_u,2320,-96.1,-32.7,-98.5,False,297,-47.2
+market band,"(0.58, 0.62]",Over,max_o,1504,11.5,-11.3,14.1,False,217,2.0
+market band,"(0.58, 0.62]",Over,b365_o,1504,-5.3,-21.8,9.2,False,217,0.1
+market band,"(0.58, 0.62]",Under,max_u,1504,-52.9,-8.5,-67.6,False,217,-26.2
+market band,"(0.58, 0.62]",Under,b365_u,1504,-79.8,-26.3,-76.5,False,217,-29.7
+market band,"(0.62, 0.66]",Over,max_o,882,17.8,11.0,-18.0,False,165,6.4
+market band,"(0.62, 0.66]",Over,b365_o,882,9.3,5.6,-20.3,False,165,3.7
+market band,"(0.62, 0.66]",Under,max_u,882,-55.3,-41.4,1.6,False,165,-28.6
+market band,"(0.62, 0.66]",Under,b365_u,882,-70.5,-50.6,-6.2,False,165,-33.0
+market band,"(0.66, 1.0]",Over,max_o,884,7.0,-12.2,-10.0,False,157,-4.3
+market band,"(0.66, 1.0]",Over,b365_o,884,0.0,-16.8,-12.4,False,157,-5.4
+market band,"(0.66, 1.0]",Under,max_u,884,-36.5,-7.1,-14.4,False,157,-10.9
+market band,"(0.66, 1.0]",Under,b365_u,884,-49.5,-19.6,-20.1,False,157,-15.9
+midweek,False,Over,max_o,12005,-22.4,-151.6,-10.7,False,1298,-8.9
+midweek,False,Over,b365_o,12005,-132.1,-241.0,-53.5,False,1298,-21.2
+midweek,False,Under,max_u,12005,-226.5,-72.2,-322.2,False,1298,-120.5
+midweek,False,Under,b365_u,12005,-365.0,-184.5,-384.9,False,1298,-140.0
+midweek,True,Over,max_o,2258,8.9,-26.0,-69.0,False,187,-11.3
+midweek,True,Over,b365_o,2258,-12.7,-44.3,-76.3,False,187,-12.5
+midweek,True,Under,max_u,2258,-29.4,-19.0,26.6,False,187,-6.1
+midweek,True,Under,b365_u,2258,-57.2,-40.0,12.2,False,187,-9.8
+early season,False,Over,max_o,11513,-38.3,-124.9,-34.2,False,659,-34.5
+early season,False,Over,b365_o,11513,-142.1,-213.0,-74.5,False,659,-38.2
+early season,False,Under,max_u,11513,-177.7,-109.5,-270.3,False,659,-23.0
+early season,False,Under,b365_u,11513,-313.6,-217.8,-332.5,False,659,-34.6
+early season,True,Over,max_o,2750,24.9,-52.7,-45.6,False,826,14.2
+early season,True,Over,b365_o,2750,-2.7,-72.2,-55.3,False,826,4.6
+early season,True,Under,max_u,2750,-78.2,18.4,-25.3,False,826,-103.6
+early season,True,Under,b365_u,2750,-108.6,-6.6,-40.1,False,826,-115.2
+late season,False,Over,max_o,11706,-56.6,-155.3,-77.0,False,1485,-20.2
+late season,False,Over,b365_o,11706,-162.8,-245.0,-118.5,False,1485,-33.6
+late season,False,Under,max_u,11706,-161.2,-58.5,-231.1,False,1485,-126.6
+late season,False,Under,b365_u,11706,-301.2,-169.6,-290.2,False,1485,-149.8
+late season,True,Over,max_o,2557,43.1,-22.4,-2.8,False,0,0.0
+late season,True,Over,b365_o,2557,18.0,-40.3,-11.3,False,0,0.0
+late season,True,Under,max_u,2557,-94.7,-32.6,-64.4,False,0,0.0
+late season,True,Under,b365_u,2557,-121.0,-54.8,-82.5,False,0,0.0
+leaky sum (0-10),0.0,Over,max_o,342,-15.0,4.9,-0.7,False,50,-3.6
+leaky sum (0-10),0.0,Over,b365_o,342,-17.8,1.5,-2.0,False,50,-3.8
+leaky sum (0-10),0.0,Under,max_u,342,9.2,-12.6,-4.8,False,50,-0.1
+leaky sum (0-10),0.0,Under,b365_u,342,5.1,-16.5,-5.9,False,50,-0.7
+leaky sum (0-10),1.0,Over,max_o,726,-11.8,-24.8,7.8,False,48,-0.3
+leaky sum (0-10),1.0,Over,b365_o,726,-17.0,-32.1,5.8,False,48,-0.8
+leaky sum (0-10),1.0,Under,max_u,726,6.5,-2.0,-29.8,False,48,-6.5
+leaky sum (0-10),1.0,Under,b365_u,726,-1.1,-10.2,-33.2,False,48,-7.0
+leaky sum (0-10),2.0,Over,max_o,1832,17.2,-25.2,-19.7,False,161,15.0
+leaky sum (0-10),2.0,Over,b365_o,1832,0.3,-39.3,-26.8,False,161,13.8
+leaky sum (0-10),2.0,Under,max_u,1832,-46.3,-18.6,-24.5,False,161,-34.4
+leaky sum (0-10),2.0,Under,b365_u,1832,-65.7,-37.0,-33.6,False,161,-36.2
+leaky sum (0-10),3.0,Over,max_o,2716,-20.1,-2.8,42.4,False,207,-17.8
+leaky sum (0-10),3.0,Over,b365_o,2716,-43.9,-24.6,30.9,False,207,-19.6
+leaky sum (0-10),3.0,Under,max_u,2716,-36.2,-50.8,-123.9,False,207,-4.6
+leaky sum (0-10),3.0,Under,b365_u,2716,-66.6,-74.3,-138.6,False,207,-7.6
+leaky sum (0-10),4.0,Over,max_o,3071,24.6,-2.7,14.0,False,274,4.6
+leaky sum (0-10),4.0,Over,b365_o,3071,-4.0,-25.9,2.9,False,274,2.6
+leaky sum (0-10),4.0,Under,max_u,3071,-91.2,-54.7,-102.7,False,274,-37.4
+leaky sum (0-10),4.0,Under,b365_u,3071,-125.5,-81.0,-120.5,False,274,-41.7
+leaky sum (0-10),5.0,Over,max_o,2718,7.2,-71.8,-25.7,False,293,-0.1
+leaky sum (0-10),5.0,Over,b365_o,2718,-18.6,-89.3,-34.8,False,293,-3.2
+leaky sum (0-10),5.0,Under,max_u,2718,-58.0,25.6,-49.4,False,293,-26.7
+leaky sum (0-10),5.0,Under,b365_u,2718,-89.7,0.0,-64.2,False,293,-31.7
+leaky sum (0-10),6.0,Over,max_o,1481,-23.4,-14.9,-82.6,False,159,-14.4
+leaky sum (0-10),6.0,Over,b365_o,1481,-36.9,-25.7,-86.2,False,159,-15.5
+leaky sum (0-10),6.0,Under,max_u,1481,-10.4,1.8,52.0,False,159,3.9
+leaky sum (0-10),6.0,Under,b365_u,1481,-30.3,-12.2,42.4,False,159,1.4
+leaky sum (0-10),7.0,Over,max_o,668,-10.4,-18.2,-5.7,False,105,-11.6
+leaky sum (0-10),7.0,Over,b365_o,668,-17.0,-22.1,-7.8,False,105,-13.0
+leaky sum (0-10),7.0,Under,max_u,668,-3.1,-0.2,-5.2,False,105,6.7
+leaky sum (0-10),7.0,Under,b365_u,668,-13.0,-6.7,-8.7,False,105,4.1
+leaky sum (0-10),8.0,Over,max_o,225,-1.3,-1.6,-1.0,False,32,-7.3
+leaky sum (0-10),8.0,Over,b365_o,225,-3.8,-3.7,-2.0,False,32,-7.6
+leaky sum (0-10),8.0,Under,max_u,225,0.6,-4.4,-2.4,False,32,4.2
+leaky sum (0-10),8.0,Under,b365_u,225,-3.1,-6.6,-3.4,False,32,3.7
+attack sum (0-10),0.0,Over,max_o,368,5.9,-12.4,-4.5,False,52,2.3
+attack sum (0-10),0.0,Over,b365_o,368,2.0,-15.7,-5.7,False,52,2.2
+attack sum (0-10),0.0,Under,max_u,368,-3.7,3.9,2.6,False,52,-9.2
+attack sum (0-10),0.0,Under,b365_u,368,-7.8,0.2,0.7,False,52,-9.9
+attack sum (0-10),1.0,Over,max_o,753,-33.7,16.9,-16.9,False,44,-2.7
+attack sum (0-10),1.0,Over,b365_o,753,-39.7,9.4,-19.4,False,44,-2.8
+attack sum (0-10),1.0,Under,max_u,753,18.4,-36.7,4.1,False,44,-2.6
+attack sum (0-10),1.0,Under,b365_u,753,10.3,-42.2,-0.0,False,44,-3.1
+attack sum (0-10),2.0,Over,max_o,1980,6.1,-31.8,-3.9,False,181,-26.5
+attack sum (0-10),2.0,Over,b365_o,1980,-11.8,-49.2,-10.1,False,181,-28.0
+attack sum (0-10),2.0,Under,max_u,1980,-32.4,-11.8,-47.3,False,181,5.4
+attack sum (0-10),2.0,Under,b365_u,1980,-51.6,-30.1,-57.4,False,181,2.9
+attack sum (0-10),3.0,Over,max_o,2696,30.8,-84.9,-14.6,False,198,-14.6
+attack sum (0-10),3.0,Over,b365_o,2696,5.2,-105.9,-24.1,False,198,-16.4
+attack sum (0-10),3.0,Under,max_u,2696,-74.3,23.0,-49.8,False,198,-0.0
+attack sum (0-10),3.0,Under,b365_u,2696,-102.3,-2.2,-63.3,False,198,-3.0
+attack sum (0-10),4.0,Over,max_o,2871,-23.0,-10.5,-41.1,False,259,25.9
+attack sum (0-10),4.0,Over,b365_o,2871,-48.3,-32.7,-51.0,False,259,23.2
+attack sum (0-10),4.0,Under,max_u,2871,-33.7,-40.9,-26.9,False,259,-57.1
+attack sum (0-10),4.0,Under,b365_u,2871,-65.6,-67.1,-44.8,False,259,-60.2
+attack sum (0-10),5.0,Over,max_o,2595,-31.8,-16.7,-16.0,False,303,-27.6
+attack sum (0-10),5.0,Over,b365_o,2595,-55.0,-34.5,-26.4,False,303,-30.2
+attack sum (0-10),5.0,Under,max_u,2595,-23.1,-35.8,-72.4,False,303,5.7
+attack sum (0-10),5.0,Under,b365_u,2595,-56.8,-60.1,-85.8,False,303,0.5
+attack sum (0-10),6.0,Over,max_o,1443,21.0,-33.7,38.8,False,152,0.8
+attack sum (0-10),6.0,Over,b365_o,1443,7.3,-42.3,33.0,False,152,-0.6
+attack sum (0-10),6.0,Under,max_u,1443,-56.0,34.0,-94.0,False,152,-14.5
+attack sum (0-10),6.0,Under,b365_u,1443,-75.8,17.6,-100.9,False,152,-17.0
+attack sum (0-10),7.0,Over,max_o,765,15.8,20.0,-13.7,False,96,7.7
+attack sum (0-10),7.0,Over,b365_o,765,7.5,15.6,-15.9,False,96,7.0
+attack sum (0-10),7.0,Under,max_u,765,-41.3,-60.2,1.7,False,96,-25.5
+attack sum (0-10),7.0,Under,b365_u,765,-50.5,-65.2,-3.2,False,96,-26.8
+attack sum (0-10),8.0,Over,max_o,277,-7.7,-1.6,-2.0,False,33,-2.6
+attack sum (0-10),8.0,Over,b365_o,277,-10.2,-3.2,-3.0,False,33,-2.8
+attack sum (0-10),8.0,Under,max_u,277,-3.0,-0.2,-8.2,False,33,5.2
+attack sum (0-10),8.0,Under,b365_u,277,-7.8,-2.5,-9.9,False,33,3.5
+V4.1 selected,False,Over,max_o,11792,-49.5,-162.0,-57.1,False,1039,-23.0
+V4.1 selected,False,Over,b365_o,11792,-148.9,-257.3,-101.0,False,1039,-31.2
+V4.1 selected,False,Under,max_u,11792,-132.5,-67.2,-257.9,False,1039,-79.9
+V4.1 selected,False,Under,b365_u,11792,-253.5,-179.3,-319.8,False,1039,-92.9
+V4.1 selected,True,Over,max_o,2471,36.0,-15.6,-22.6,False,446,2.8
+V4.1 selected,True,Over,b365_o,2471,4.1,-28.0,-28.8,False,446,-2.5
+V4.1 selected,True,Under,max_u,2471,-123.5,-23.9,-37.6,False,446,-46.7
+V4.1 selected,True,Under,b365_u,2471,-168.7,-45.1,-52.9,False,446,-56.9
