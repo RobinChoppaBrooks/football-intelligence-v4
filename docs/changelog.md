@@ -24,3 +24,9 @@
   >= 1.00, £1 singles at best price) into data/prices/v1_tracker.md; judged after 300 settled V1 bets.
 - Prices never enter selection, ranking or the reports Rob picks from. Model and cut points unchanged.
 - ci/run.sh: hand runs accept arguments after the mode (PR #7), e.g. "range 2026-11-20 2026-11-22".
+
+## 19 Nov 2026 (night): V5 short-Overs research model added (research only, V4.1 unchanged)
+- Overnight research with real historical prices (docs/research/v5_short_overs): the market beats V4.1 and every form model tested;
+  the profit found sits in pricing (short Overs underpriced, same-weekend correlation, Acca Boost).
+- v5.py: pre-registered weekly accumulator portfolio built from bookmaker prices; slip on the Friday weekend run, settled at the
+  Monday review into data/v5/v5_tracker.md. Hand modes "v5 START END" and "fetch-odds" (historical price files).
