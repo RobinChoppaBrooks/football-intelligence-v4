@@ -1,0 +1,67 @@
+model,"top 20 a weekend, 2025-26 + 2026-27",hits 25-26,hits 26-27,hits v V4.1,90% range,share of resamples better
+Ensemble: all-features + logistic + last-10,673 of 1057,502,171,12,-6 to 31,0.85
+Ensemble: all-features + logistic + last-10 + V4.1 refit,671 of 1057,499,172,10,-9 to 29,0.79
+HGB all 300+ features,670 of 1057,501,169,9,-14 to 32,0.73
+"Blend of 4, trained on ALL leagues",670 of 1057,504,166,9,-6 to 25,0.8
+"Blend of 3 (no V4.1 refit), ALL leagues",667 of 1057,496,171,6,-10 to 24,0.7
+HGB V4.1 on last-10 window,667 of 1057,497,170,6,-16 to 29,0.65
+All features trained on ALL leagues,666 of 1057,497,169,5,-17 to 28,0.62
+"Goals-count model (Poisson), all features",664 of 1057,499,165,3,-19 to 26,0.56
+V4.1 locked (as published) (h3),661 of 1057,490,171,0,0 to 0,0.0
+V4.1 locked (as published),661 of 1057,490,171,0,0 to 0,0.0
+V4.1 recipe trained on ALL leagues in database,661 of 1057,492,169,0,-12 to 13,0.49
+Logistic V4.1 features,658 of 1057,487,171,-3,-20 to 15,0.38
+Logistic counts only,658 of 1057,486,172,-3,-23 to 16,0.36
+HGB depth 2,653 of 1057,483,170,-8,-26 to 10,0.22
+V4.1 refit (same recipe) (h2),650 of 1057,480,170,-11,-27 to 6,0.13
+V4.1 refit (same recipe),650 of 1057,480,170,-11,-28 to 4,0.12
+V4.1 refit (same recipe) (h3),650 of 1057,480,170,-11,-28 to 5,0.13
+"V4.1 recipe, last season weighted x2",648 of 1057,475,173,-13,-31 to 4,0.11
+HGB depth 5,646 of 1057,480,166,-15,-32 to 3,0.07
+Random forest counts all windows,646 of 1057,481,165,-15,-39 to 8,0.14
+"Goals-count model (Poisson), V4.1 features",645 of 1057,482,163,-16,-35 to 3,0.08
+HGB V4.1 + xG and shots,644 of 1057,480,164,-17,-37 to 4,0.09
+HGB all 300+ features [max 4 a league],642 of 1009,490,152,-19,-50 to 12,0.16
+HGB slow 800 iters,641 of 1057,475,166,-20,-38 to -3,0.02
+Rule: 3+ games last 10 + division,640 of 1057,477,163,-21,-46 to 4,0.08
+V4.1 recipe + league identity,640 of 1057,472,168,-21,-38 to -3,0.03
+"HGB counts, all windows",639 of 1057,479,160,-22,-44 to -1,0.04
+HGB V4.1 on last-10 window [max 4 a league],638 of 1009,486,152,-23,-54 to 8,0.1
+"Blend of 4, trained on ALL leagues [max 4 a league]",635 of 1009,482,153,-26,-51 to 0,0.05
+"Goals-count model (Poisson), all features [max 4 a league]",635 of 1009,488,147,-26,-58 to 4,0.08
+"Blend of 3 (no V4.1 refit), ALL leagues [max 4 a league]",634 of 1009,481,153,-27,-53 to 0,0.05
+Ensemble: all-features + logistic + last-10 [max 4 a league],633 of 1009,480,153,-28,-55 to 0,0.05
+Ensemble: all-features + logistic + last-10 + V4.1 refit [max 4 a league],633 of 1009,478,155,-28,-55 to -3,0.03
+Logistic counts only [max 4 a league],632 of 1009,475,157,-29,-56 to -3,0.03
+HGB counts only (no averages),631 of 1057,472,159,-30,-50 to -11,0.0
+Random forest counts all windows [max 4 a league],631 of 1009,480,151,-30,-56 to -4,0.03
+Random forest V4.1 features,630 of 1057,466,164,-31,-53 to -11,0.0
+Rule: Scored2+ + Let in2+ (4 counts),627 of 1057,473,154,-34,-58 to -9,0.01
+Logistic V4.1 features [max 4 a league],627 of 1009,473,154,-34,-58 to -9,0.01
+Rule: 4 counts + 3+ games,624 of 1057,467,157,-37,-60 to -13,0.0
+Rule: 3+ games both sides,623 of 1057,462,161,-38,-63 to -13,0.01
+HGB V4.1 + xG and shots [max 4 a league],623 of 1009,471,152,-38,-65 to -10,0.01
+All features trained on ALL leagues [max 4 a league],622 of 1009,473,149,-39,-65 to -13,0.01
+"Goals-count model (Poisson), V4.1 features [max 4 a league]",622 of 1009,475,147,-39,-66 to -12,0.01
+Rule: 3+ games + division rate,621 of 1057,459,162,-40,-63 to -16,0.0
+V4.1 locked (as published) [max 4 a league],619 of 1009,472,147,-42,-70 to -16,0.0
+V4.1 locked (as published) (h3) [max 4 a league],619 of 1009,472,147,-42,-69 to -17,0.0
+V4.1 refit (same recipe) (h3) [max 4 a league],618 of 1009,466,152,-43,-66 to -21,0.0
+V4.1 refit (same recipe) (h2) [max 4 a league],618 of 1009,466,152,-43,-66 to -19,0.0
+V4.1 refit (same recipe) [max 4 a league],618 of 1009,466,152,-43,-66 to -19,0.0
+V4.1 recipe + league identity [max 4 a league],617 of 1009,465,152,-44,-65 to -22,0.0
+Rule: two routes (min attack v defence),616 of 1057,462,154,-45,-64 to -24,0.0
+"V4.1 recipe, last season weighted x2 [max 4 a league]",614 of 1009,463,151,-47,-71 to -25,0.0
+HGB depth 2 [max 4 a league],613 of 1009,459,154,-48,-71 to -27,0.0
+V4.1 recipe trained on ALL leagues in database [max 4 a league],613 of 1009,464,149,-48,-72 to -24,0.0
+HGB counts only (no averages) [max 4 a league],610 of 1009,463,147,-51,-73 to -28,0.0
+Random forest V4.1 features [max 4 a league],610 of 1009,456,154,-51,-78 to -23,0.0
+HGB slow 800 iters [max 4 a league],609 of 1009,460,149,-52,-75 to -30,0.0
+Rule: 3+ games last 10 + division [max 4 a league],608 of 1009,456,152,-53,-84 to -24,0.0
+"HGB counts, all windows [max 4 a league]",608 of 1009,465,143,-53,-80 to -25,0.0
+HGB depth 5 [max 4 a league],602 of 1009,455,147,-59,-81 to -37,0.0
+Rule: 3+ games + division rate [max 4 a league],599 of 1009,457,142,-62,-94 to -31,0.0
+Rule: Scored2+ + Let in2+ (4 counts) [max 4 a league],598 of 1009,464,134,-63,-95 to -31,0.0
+Rule: 4 counts + 3+ games [max 4 a league],597 of 1009,457,140,-64,-95 to -34,0.0
+Rule: 3+ games both sides [max 4 a league],594 of 1009,451,143,-67,-98 to -36,0.0
+Rule: two routes (min attack v defence) [max 4 a league],579 of 1009,443,136,-82,-109 to -56,0.0
