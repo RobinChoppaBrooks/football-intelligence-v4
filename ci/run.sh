@@ -39,7 +39,7 @@ fi
 ls -la football.db
 
 # 2. fixtures and results from API-Football (the only API step). A "prices RUN_ID" hand run skips it (19 Nov 2026).
-if [ "$MODE" != "prices" ]; then
+if [ "$MODE" != "prices" ] && [ "$MODE" != "fetch-odds" ]; then
 python download.py --results
 # goal events for each team's last 10 league games (research only, 2 Nov 2026). Incremental: after the first back-fill
 # (about 71 calls) only new fixtures are fetched. A failure here never stops the model run.
@@ -50,7 +50,9 @@ fi
 MODEL_STATUS=0
 # pre-match prices for an existing run only (research tracker, 19 Nov 2026): "prices RUN_ID"
 if [ "$MODE" = "prices" ]; then python log_prices.py $MODE_ARGS || echo "prices skipped: $?"; fi
-if [ "$MODE" != "download-only" ] && [ "$MODE" != "prices" ]; then
+# historical results-and-odds CSVs for research (19 Nov 2026): "fetch-odds"
+if [ "$MODE" = "fetch-odds" ]; then python fetch_odds_history.py || echo "fetch-odds skipped: $?"; fi
+if [ "$MODE" != "download-only" ] && [ "$MODE" != "prices" ] && [ "$MODE" != "fetch-odds" ]; then
   # the one benchmark source: refreshed each Monday review from football.db, read by every report (Phase 0, 2 Nov 2026)
   if [ "$MODE" = "review" ]; then python benchmarks.py football.db > /dev/null || echo "benchmarks skipped: $?"; fi
   python run_v4.py "$MODE" $MODE_ARGS || MODEL_STATUS=$?
