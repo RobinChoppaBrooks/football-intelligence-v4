@@ -24,6 +24,9 @@ case "${GH_EVENT:-}:${GH_SCHEDULE:-}:$CLOCK" in
   schedule:*) echo "Cron '${GH_SCHEDULE:-}' is the wrong DST variant for a $CLOCK clock; nothing to do."; exit 0 ;;
   *) MODE="${MODE_INPUT:-download-only}" ;;
 esac
+# A hand run may carry arguments after the mode, e.g. "range 2026-11-20 2026-11-22" (19 Nov 2026): first word is the mode.
+read -r MODE MODE_ARGS <<< "$MODE"
+MODE_ARGS="${MODE_ARGS:-}"
 echo "London clock $CLOCK, mode $MODE"
 
 # 1. current database: branch data, else the seed
@@ -46,7 +49,7 @@ MODEL_STATUS=0
 if [ "$MODE" != "download-only" ]; then
   # the one benchmark source: refreshed each Monday review from football.db, read by every report (Phase 0, 2 Nov 2026)
   if [ "$MODE" = "review" ]; then python benchmarks.py football.db > /dev/null || echo "benchmarks skipped: $?"; fi
-  python run_v4.py "$MODE" || MODEL_STATUS=$?
+  python run_v4.py "$MODE" $MODE_ARGS || MODEL_STATUS=$?
   RUN_ID=$(tail -n 1 logs/execution/executions.csv | cut -d, -f1)
   echo "run id $RUN_ID, model exit $MODEL_STATUS"
   case "$MODE" in
