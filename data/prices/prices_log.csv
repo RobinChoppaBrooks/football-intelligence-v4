@@ -1,0 +1,316 @@
+run_id,fetched_at,fixture_id,kickoff_uk,competition,home,away,classification,trump,model_score,bookmaker,over25,under25,best_over25,best_bookmaker,b365_over25,v1
+range_20261119_1331,2026-11-19T17:03:55+00:00,1563266,Sat 21 Nov 15:00,Championship,Middlesbrough,Bristol City,Medium,0,0.586,Bet365,1.53,2.5,1.55,Betano,1.53,0
+range_20261119_1331,2026-11-19T17:03:55+00:00,1563266,Sat 21 Nov 15:00,Championship,Middlesbrough,Bristol City,Medium,0,0.586,Marathonbet,1.44,2.43,1.55,Betano,1.53,0
+range_20261119_1331,2026-11-19T17:03:55+00:00,1563266,Sat 21 Nov 15:00,Championship,Middlesbrough,Bristol City,Medium,0,0.586,Betfair,1.5,2.5,1.55,Betano,1.53,0
+range_20261119_1331,2026-11-19T17:03:55+00:00,1563266,Sat 21 Nov 15:00,Championship,Middlesbrough,Bristol City,Medium,0,0.586,BetVictor,1.49,2.39,1.55,Betano,1.53,0
+range_20261119_1331,2026-11-19T17:03:55+00:00,1563266,Sat 21 Nov 15:00,Championship,Middlesbrough,Bristol City,Medium,0,0.586,Pinnacle,1.53,2.51,1.55,Betano,1.53,0
+range_20261119_1331,2026-11-19T17:03:55+00:00,1563266,Sat 21 Nov 15:00,Championship,Middlesbrough,Bristol City,Medium,0,0.586,1xBet,1.44,2.43,1.55,Betano,1.53,0
+range_20261119_1331,2026-11-19T17:03:55+00:00,1563266,Sat 21 Nov 15:00,Championship,Middlesbrough,Bristol City,Medium,0,0.586,Betano,1.55,2.55,1.55,Betano,1.53,0
+range_20261119_1331,2026-11-19T17:03:56+00:00,1563268,Sat 21 Nov 12:30,Championship,Norwich,Cardiff,Medium,0,0.614,Bet365,1.36,3.2,1.37,Pinnacle,1.36,0
+range_20261119_1331,2026-11-19T17:03:56+00:00,1563268,Sat 21 Nov 12:30,Championship,Norwich,Cardiff,Medium,0,0.614,Marathonbet,1.32,2.88,1.37,Pinnacle,1.36,0
+range_20261119_1331,2026-11-19T17:03:56+00:00,1563268,Sat 21 Nov 12:30,Championship,Norwich,Cardiff,Medium,0,0.614,Betfair,1.33,3.1,1.37,Pinnacle,1.36,0
+range_20261119_1331,2026-11-19T17:03:56+00:00,1563268,Sat 21 Nov 12:30,Championship,Norwich,Cardiff,Medium,0,0.614,BetVictor,1.35,2.88,1.37,Pinnacle,1.36,0
+range_20261119_1331,2026-11-19T17:03:56+00:00,1563268,Sat 21 Nov 12:30,Championship,Norwich,Cardiff,Medium,0,0.614,Pinnacle,1.37,3.09,1.37,Pinnacle,1.36,0
+range_20261119_1331,2026-11-19T17:03:56+00:00,1563268,Sat 21 Nov 12:30,Championship,Norwich,Cardiff,Medium,0,0.614,1xBet,1.32,2.88,1.37,Pinnacle,1.36,0
+range_20261119_1331,2026-11-19T17:03:56+00:00,1563268,Sat 21 Nov 12:30,Championship,Norwich,Cardiff,Medium,0,0.614,Betano,1.36,3.15,1.37,Pinnacle,1.36,0
+range_20261119_1331,2026-11-19T17:03:56+00:00,1564420,Sat 21 Nov 15:00,League One,Huddersfield,Leicester,Medium,0,0.6,Bet365,1.53,2.4,1.55,Betano,1.53,0
+range_20261119_1331,2026-11-19T17:03:56+00:00,1564420,Sat 21 Nov 15:00,League One,Huddersfield,Leicester,Medium,0,0.6,Marathonbet,1.45,2.41,1.55,Betano,1.53,0
+range_20261119_1331,2026-11-19T17:03:56+00:00,1564420,Sat 21 Nov 15:00,League One,Huddersfield,Leicester,Medium,0,0.6,Betfair,1.5,2.55,1.55,Betano,1.53,0
+range_20261119_1331,2026-11-19T17:03:56+00:00,1564420,Sat 21 Nov 15:00,League One,Huddersfield,Leicester,Medium,0,0.6,BetVictor,1.5,2.35,1.55,Betano,1.53,0
+range_20261119_1331,2026-11-19T17:03:56+00:00,1564420,Sat 21 Nov 15:00,League One,Huddersfield,Leicester,Medium,0,0.6,Pinnacle,1.54,2.47,1.55,Betano,1.53,0
+range_20261119_1331,2026-11-19T17:03:56+00:00,1564420,Sat 21 Nov 15:00,League One,Huddersfield,Leicester,Medium,0,0.6,1xBet,1.45,2.41,1.55,Betano,1.53,0
+range_20261119_1331,2026-11-19T17:03:56+00:00,1564420,Sat 21 Nov 15:00,League One,Huddersfield,Leicester,Medium,0,0.6,Betano,1.55,2.4,1.55,Betano,1.53,0
+range_20261119_1331,2026-11-19T17:03:56+00:00,1563869,Sat 21 Nov 15:00,League Two,Grimsby,Rotherham,Medium,0,0.604,Bet365,1.6,2.3,1.6,Bet365,1.6,0
+range_20261119_1331,2026-11-19T17:03:56+00:00,1563869,Sat 21 Nov 15:00,League Two,Grimsby,Rotherham,Medium,0,0.604,Marathonbet,1.49,2.3,1.6,Bet365,1.6,0
+range_20261119_1331,2026-11-19T17:03:56+00:00,1563869,Sat 21 Nov 15:00,League Two,Grimsby,Rotherham,Medium,0,0.604,Betfair,1.53,2.45,1.6,Bet365,1.6,0
+range_20261119_1331,2026-11-19T17:03:56+00:00,1563869,Sat 21 Nov 15:00,League Two,Grimsby,Rotherham,Medium,0,0.604,BetVictor,1.55,2.25,1.6,Bet365,1.6,0
+range_20261119_1331,2026-11-19T17:03:56+00:00,1563869,Sat 21 Nov 15:00,League Two,Grimsby,Rotherham,Medium,0,0.604,Pinnacle,1.55,2.42,1.6,Bet365,1.6,0
+range_20261119_1331,2026-11-19T17:03:56+00:00,1563869,Sat 21 Nov 15:00,League Two,Grimsby,Rotherham,Medium,0,0.604,1xBet,1.49,2.3,1.6,Bet365,1.6,0
+range_20261119_1331,2026-11-19T17:03:56+00:00,1563869,Sat 21 Nov 15:00,League Two,Grimsby,Rotherham,Medium,0,0.604,Betano,1.6,2.32,1.6,Bet365,1.6,0
+range_20261119_1331,2026-11-19T17:03:57+00:00,1585344,Sat 21 Nov 15:00,National League,Aldershot Town,Scunthorpe,Medium,0,0.588,Bet365,1.57,2.35,1.57,Bet365,1.57,0
+range_20261119_1331,2026-11-19T17:03:57+00:00,1585344,Sat 21 Nov 15:00,National League,Aldershot Town,Scunthorpe,Medium,0,0.588,Marathonbet,1.49,2.3,1.57,Bet365,1.57,0
+range_20261119_1331,2026-11-19T17:03:57+00:00,1585344,Sat 21 Nov 15:00,National League,Aldershot Town,Scunthorpe,Medium,0,0.588,Betfair,1.53,2.45,1.57,Bet365,1.57,0
+range_20261119_1331,2026-11-19T17:03:57+00:00,1585344,Sat 21 Nov 15:00,National League,Aldershot Town,Scunthorpe,Medium,0,0.588,BetVictor,1.54,2.27,1.57,Bet365,1.57,0
+range_20261119_1331,2026-11-19T17:03:57+00:00,1585344,Sat 21 Nov 15:00,National League,Aldershot Town,Scunthorpe,Medium,0,0.588,Pinnacle,1.55,2.39,1.57,Bet365,1.57,0
+range_20261119_1331,2026-11-19T17:03:57+00:00,1585344,Sat 21 Nov 15:00,National League,Aldershot Town,Scunthorpe,Medium,0,0.588,1xBet,1.49,2.3,1.57,Bet365,1.57,0
+range_20261119_1331,2026-11-19T17:03:57+00:00,1585344,Sat 21 Nov 15:00,National League,Aldershot Town,Scunthorpe,Medium,0,0.588,Betano,1.57,2.37,1.57,Bet365,1.57,0
+range_20261119_1331,2026-11-19T17:03:57+00:00,1585345,Sat 21 Nov 15:00,National League,Barrow,Carlisle,High,0,0.602,Bet365,1.65,2.2,1.67,Betano,1.65,1
+range_20261119_1331,2026-11-19T17:03:57+00:00,1585345,Sat 21 Nov 15:00,National League,Barrow,Carlisle,High,0,0.602,Marathonbet,1.62,2.12,1.67,Betano,1.65,1
+range_20261119_1331,2026-11-19T17:03:57+00:00,1585345,Sat 21 Nov 15:00,National League,Barrow,Carlisle,High,0,0.602,Betfair,1.65,2.2,1.67,Betano,1.65,1
+range_20261119_1331,2026-11-19T17:03:57+00:00,1585345,Sat 21 Nov 15:00,National League,Barrow,Carlisle,High,0,0.602,BetVictor,1.62,2.12,1.67,Betano,1.65,1
+range_20261119_1331,2026-11-19T17:03:57+00:00,1585345,Sat 21 Nov 15:00,National League,Barrow,Carlisle,High,0,0.602,Pinnacle,1.65,2.2,1.67,Betano,1.65,1
+range_20261119_1331,2026-11-19T17:03:57+00:00,1585345,Sat 21 Nov 15:00,National League,Barrow,Carlisle,High,0,0.602,1xBet,1.62,2.12,1.67,Betano,1.65,1
+range_20261119_1331,2026-11-19T17:03:57+00:00,1585345,Sat 21 Nov 15:00,National League,Barrow,Carlisle,High,0,0.602,Betano,1.67,2.15,1.67,Betano,1.65,1
+range_20261119_1331,2026-11-19T17:03:58+00:00,1585346,Sat 21 Nov 15:00,National League,FC Halifax Town,Woking,Medium,0,0.609,Bet365,1.7,2.1,1.71,Pinnacle,1.7,1
+range_20261119_1331,2026-11-19T17:03:58+00:00,1585346,Sat 21 Nov 15:00,National League,FC Halifax Town,Woking,Medium,0,0.609,Marathonbet,1.67,2.04,1.71,Pinnacle,1.7,1
+range_20261119_1331,2026-11-19T17:03:58+00:00,1585346,Sat 21 Nov 15:00,National League,FC Halifax Town,Woking,Medium,0,0.609,Betfair,1.67,2.15,1.71,Pinnacle,1.7,1
+range_20261119_1331,2026-11-19T17:03:58+00:00,1585346,Sat 21 Nov 15:00,National League,FC Halifax Town,Woking,Medium,0,0.609,BetVictor,1.68,2.02,1.71,Pinnacle,1.7,1
+range_20261119_1331,2026-11-19T17:03:58+00:00,1585346,Sat 21 Nov 15:00,National League,FC Halifax Town,Woking,Medium,0,0.609,Pinnacle,1.71,2.09,1.71,Pinnacle,1.7,1
+range_20261119_1331,2026-11-19T17:03:58+00:00,1585346,Sat 21 Nov 15:00,National League,FC Halifax Town,Woking,Medium,0,0.609,1xBet,1.67,2.04,1.71,Pinnacle,1.7,1
+range_20261119_1331,2026-11-19T17:03:58+00:00,1585346,Sat 21 Nov 15:00,National League,FC Halifax Town,Woking,Medium,0,0.609,Betano,1.67,2.18,1.71,Pinnacle,1.7,1
+range_20261119_1331,2026-11-19T17:03:58+00:00,1585347,Sat 21 Nov 15:00,National League,Gateshead,Hartlepool,Medium,0,0.626,Bet365,1.73,2.08,1.73,Bet365,1.73,1
+range_20261119_1331,2026-11-19T17:03:58+00:00,1585347,Sat 21 Nov 15:00,National League,Gateshead,Hartlepool,Medium,0,0.626,Marathonbet,1.64,2.08,1.73,Bet365,1.73,1
+range_20261119_1331,2026-11-19T17:03:58+00:00,1585347,Sat 21 Nov 15:00,National League,Gateshead,Hartlepool,Medium,0,0.626,Betfair,1.67,2.15,1.73,Bet365,1.73,1
+range_20261119_1331,2026-11-19T17:03:58+00:00,1585347,Sat 21 Nov 15:00,National League,Gateshead,Hartlepool,Medium,0,0.626,BetVictor,1.68,2.02,1.73,Bet365,1.73,1
+range_20261119_1331,2026-11-19T17:03:58+00:00,1585347,Sat 21 Nov 15:00,National League,Gateshead,Hartlepool,Medium,0,0.626,Pinnacle,1.72,2.09,1.73,Bet365,1.73,1
+range_20261119_1331,2026-11-19T17:03:58+00:00,1585347,Sat 21 Nov 15:00,National League,Gateshead,Hartlepool,Medium,0,0.626,1xBet,1.64,2.08,1.73,Bet365,1.73,1
+range_20261119_1331,2026-11-19T17:03:58+00:00,1585347,Sat 21 Nov 15:00,National League,Gateshead,Hartlepool,Medium,0,0.626,Betano,1.7,2.1,1.73,Bet365,1.73,1
+range_20261119_1331,2026-11-19T17:03:58+00:00,1585348,Sat 21 Nov 15:00,National League,Kidderminster Harriers,AFC Fylde,Medium,0,0.588,Bet365,1.62,2.25,1.62,Bet365,1.62,0
+range_20261119_1331,2026-11-19T17:03:58+00:00,1585348,Sat 21 Nov 15:00,National League,Kidderminster Harriers,AFC Fylde,Medium,0,0.588,Marathonbet,1.59,2.17,1.62,Bet365,1.62,0
+range_20261119_1331,2026-11-19T17:03:58+00:00,1585348,Sat 21 Nov 15:00,National League,Kidderminster Harriers,AFC Fylde,Medium,0,0.588,Betfair,1.6,2.3,1.62,Bet365,1.62,0
+range_20261119_1331,2026-11-19T17:03:58+00:00,1585348,Sat 21 Nov 15:00,National League,Kidderminster Harriers,AFC Fylde,Medium,0,0.588,BetVictor,1.6,2.14,1.62,Bet365,1.62,0
+range_20261119_1331,2026-11-19T17:03:58+00:00,1585348,Sat 21 Nov 15:00,National League,Kidderminster Harriers,AFC Fylde,Medium,0,0.588,Pinnacle,1.62,2.23,1.62,Bet365,1.62,0
+range_20261119_1331,2026-11-19T17:03:58+00:00,1585348,Sat 21 Nov 15:00,National League,Kidderminster Harriers,AFC Fylde,Medium,0,0.588,1xBet,1.59,2.17,1.62,Bet365,1.62,0
+range_20261119_1331,2026-11-19T17:03:58+00:00,1585348,Sat 21 Nov 15:00,National League,Kidderminster Harriers,AFC Fylde,Medium,0,0.588,Betano,1.62,2.25,1.62,Bet365,1.62,0
+range_20261119_1331,2026-11-19T17:03:59+00:00,1585342,Sat 21 Nov 12:30,National League,Solihull Moors,Altrincham,Medium,0,0.611,Bet365,1.57,2.35,1.6,Betano,1.57,0
+range_20261119_1331,2026-11-19T17:03:59+00:00,1585342,Sat 21 Nov 12:30,National League,Solihull Moors,Altrincham,Medium,0,0.611,Marathonbet,1.55,2.24,1.6,Betano,1.57,0
+range_20261119_1331,2026-11-19T17:03:59+00:00,1585342,Sat 21 Nov 12:30,National League,Solihull Moors,Altrincham,Medium,0,0.611,Betfair,1.53,2.45,1.6,Betano,1.57,0
+range_20261119_1331,2026-11-19T17:03:59+00:00,1585342,Sat 21 Nov 12:30,National League,Solihull Moors,Altrincham,Medium,0,0.611,BetVictor,1.56,2.22,1.6,Betano,1.57,0
+range_20261119_1331,2026-11-19T17:03:59+00:00,1585342,Sat 21 Nov 12:30,National League,Solihull Moors,Altrincham,Medium,0,0.611,Pinnacle,1.58,2.31,1.6,Betano,1.57,0
+range_20261119_1331,2026-11-19T17:03:59+00:00,1585342,Sat 21 Nov 12:30,National League,Solihull Moors,Altrincham,Medium,0,0.611,1xBet,1.55,2.24,1.6,Betano,1.57,0
+range_20261119_1331,2026-11-19T17:03:59+00:00,1585342,Sat 21 Nov 12:30,National League,Solihull Moors,Altrincham,Medium,0,0.611,Betano,1.6,2.32,1.6,Betano,1.57,0
+range_20261119_1331,2026-11-19T17:03:59+00:00,1585341,Fri 20 Nov 19:45,National League,Southend,Boreham Wood,Medium,0,0.604,Bet365,1.36,3.1,1.36,Bet365,1.36,0
+range_20261119_1331,2026-11-19T17:03:59+00:00,1585341,Fri 20 Nov 19:45,National League,Southend,Boreham Wood,Medium,0,0.604,Marathonbet,1.31,2.92,1.36,Bet365,1.36,0
+range_20261119_1331,2026-11-19T17:03:59+00:00,1585341,Fri 20 Nov 19:45,National League,Southend,Boreham Wood,Medium,0,0.604,Betfair,1.36,3.1,1.36,Bet365,1.36,0
+range_20261119_1331,2026-11-19T17:03:59+00:00,1585341,Fri 20 Nov 19:45,National League,Southend,Boreham Wood,Medium,0,0.604,BetVictor,1.33,3.1,1.36,Bet365,1.36,0
+range_20261119_1331,2026-11-19T17:03:59+00:00,1585341,Fri 20 Nov 19:45,National League,Southend,Boreham Wood,Medium,0,0.604,Pinnacle,1.35,3.1,1.36,Bet365,1.36,0
+range_20261119_1331,2026-11-19T17:03:59+00:00,1585341,Fri 20 Nov 19:45,National League,Southend,Boreham Wood,Medium,0,0.604,1xBet,1.31,2.92,1.36,Bet365,1.36,0
+range_20261119_1331,2026-11-19T17:03:59+00:00,1585341,Fri 20 Nov 19:45,National League,Southend,Boreham Wood,Medium,0,0.604,Betano,1.36,3.0,1.36,Bet365,1.36,0
+range_20261119_1331,2026-11-19T17:04:00+00:00,1585349,Sat 21 Nov 15:00,National League,Sutton Utd,Boston United,Medium,0,0.618,Bet365,1.8,2.0,1.8,Bet365,1.8,1
+range_20261119_1331,2026-11-19T17:04:00+00:00,1585349,Sat 21 Nov 15:00,National League,Sutton Utd,Boston United,Medium,0,0.618,Marathonbet,1.74,1.94,1.8,Bet365,1.8,1
+range_20261119_1331,2026-11-19T17:04:00+00:00,1585349,Sat 21 Nov 15:00,National League,Sutton Utd,Boston United,Medium,0,0.618,Betfair,1.8,2.0,1.8,Bet365,1.8,1
+range_20261119_1331,2026-11-19T17:04:00+00:00,1585349,Sat 21 Nov 15:00,National League,Sutton Utd,Boston United,Medium,0,0.618,BetVictor,1.74,1.94,1.8,Bet365,1.8,1
+range_20261119_1331,2026-11-19T17:04:00+00:00,1585349,Sat 21 Nov 15:00,National League,Sutton Utd,Boston United,Medium,0,0.618,Pinnacle,1.79,2.0,1.8,Bet365,1.8,1
+range_20261119_1331,2026-11-19T17:04:00+00:00,1585349,Sat 21 Nov 15:00,National League,Sutton Utd,Boston United,Medium,0,0.618,1xBet,1.74,1.94,1.8,Bet365,1.8,1
+range_20261119_1331,2026-11-19T17:04:00+00:00,1585349,Sat 21 Nov 15:00,National League,Sutton Utd,Boston United,Medium,0,0.618,Betano,1.8,2.0,1.8,Bet365,1.8,1
+range_20261119_1331,2026-11-19T17:04:00+00:00,1585350,Sat 21 Nov 15:00,National League,Wealdstone,AFC Hornchurch,Medium,0,0.62,Bet365,1.7,2.1,1.7,Bet365,1.7,1
+range_20261119_1331,2026-11-19T17:04:00+00:00,1585350,Sat 21 Nov 15:00,National League,Wealdstone,AFC Hornchurch,Medium,0,0.62,Marathonbet,1.65,2.06,1.7,Bet365,1.7,1
+range_20261119_1331,2026-11-19T17:04:00+00:00,1585350,Sat 21 Nov 15:00,National League,Wealdstone,AFC Hornchurch,Medium,0,0.62,Betfair,1.67,2.15,1.7,Bet365,1.7,1
+range_20261119_1331,2026-11-19T17:04:00+00:00,1585350,Sat 21 Nov 15:00,National League,Wealdstone,AFC Hornchurch,Medium,0,0.62,BetVictor,1.65,2.06,1.7,Bet365,1.7,1
+range_20261119_1331,2026-11-19T17:04:00+00:00,1585350,Sat 21 Nov 15:00,National League,Wealdstone,AFC Hornchurch,Medium,0,0.62,Pinnacle,1.69,2.13,1.7,Bet365,1.7,1
+range_20261119_1331,2026-11-19T17:04:00+00:00,1585350,Sat 21 Nov 15:00,National League,Wealdstone,AFC Hornchurch,Medium,0,0.62,1xBet,1.65,2.06,1.7,Bet365,1.7,1
+range_20261119_1331,2026-11-19T17:04:00+00:00,1585350,Sat 21 Nov 15:00,National League,Wealdstone,AFC Hornchurch,Medium,0,0.62,Betano,1.7,2.12,1.7,Bet365,1.7,1
+range_20261119_1331,2026-11-19T17:04:00+00:00,1585351,Sat 21 Nov 15:00,National League,Worthing,Harrogate Town,Medium,0,0.592,Bet365,1.53,2.4,1.55,Betano,1.53,0
+range_20261119_1331,2026-11-19T17:04:00+00:00,1585351,Sat 21 Nov 15:00,National League,Worthing,Harrogate Town,Medium,0,0.592,Marathonbet,1.52,2.31,1.55,Betano,1.53,0
+range_20261119_1331,2026-11-19T17:04:00+00:00,1585351,Sat 21 Nov 15:00,National League,Worthing,Harrogate Town,Medium,0,0.592,Betfair,1.53,2.45,1.55,Betano,1.53,0
+range_20261119_1331,2026-11-19T17:04:00+00:00,1585351,Sat 21 Nov 15:00,National League,Worthing,Harrogate Town,Medium,0,0.592,BetVictor,1.52,2.31,1.55,Betano,1.53,0
+range_20261119_1331,2026-11-19T17:04:00+00:00,1585351,Sat 21 Nov 15:00,National League,Worthing,Harrogate Town,Medium,0,0.592,Pinnacle,1.52,2.47,1.55,Betano,1.53,0
+range_20261119_1331,2026-11-19T17:04:00+00:00,1585351,Sat 21 Nov 15:00,National League,Worthing,Harrogate Town,Medium,0,0.592,1xBet,1.52,2.31,1.55,Betano,1.53,0
+range_20261119_1331,2026-11-19T17:04:00+00:00,1585351,Sat 21 Nov 15:00,National League,Worthing,Harrogate Town,Medium,0,0.592,Betano,1.55,2.4,1.55,Betano,1.53,0
+range_20261119_1331,2026-11-19T17:04:01+00:00,1585352,Sat 21 Nov 17:30,National League,Yeovil Town,Forest Green,Medium,0,0.621,Bet365,1.57,2.35,1.57,Bet365,1.57,0
+range_20261119_1331,2026-11-19T17:04:01+00:00,1585352,Sat 21 Nov 17:30,National League,Yeovil Town,Forest Green,Medium,0,0.621,Marathonbet,1.48,2.33,1.57,Bet365,1.57,0
+range_20261119_1331,2026-11-19T17:04:01+00:00,1585352,Sat 21 Nov 17:30,National League,Yeovil Town,Forest Green,Medium,0,0.621,Betfair,1.53,2.45,1.57,Bet365,1.57,0
+range_20261119_1331,2026-11-19T17:04:01+00:00,1585352,Sat 21 Nov 17:30,National League,Yeovil Town,Forest Green,Medium,0,0.621,BetVictor,1.53,2.29,1.57,Bet365,1.57,0
+range_20261119_1331,2026-11-19T17:04:01+00:00,1585352,Sat 21 Nov 17:30,National League,Yeovil Town,Forest Green,Medium,0,0.621,Pinnacle,1.52,2.46,1.57,Bet365,1.57,0
+range_20261119_1331,2026-11-19T17:04:01+00:00,1585352,Sat 21 Nov 17:30,National League,Yeovil Town,Forest Green,Medium,0,0.621,1xBet,1.48,2.33,1.57,Bet365,1.57,0
+range_20261119_1331,2026-11-19T17:04:01+00:00,1585352,Sat 21 Nov 17:30,National League,Yeovil Town,Forest Green,Medium,0,0.621,Betano,1.55,2.4,1.57,Bet365,1.57,0
+range_20261119_1331,2026-11-19T17:04:01+00:00,1587904,Sat 21 Nov 15:00,National League North,Radcliffe,AFC Telford United,Medium,0,0.587,Bet365,1.53,2.38,1.53,Bet365,1.53,0
+range_20261119_1331,2026-11-19T17:04:01+00:00,1587904,Sat 21 Nov 15:00,National League North,Radcliffe,AFC Telford United,Medium,0,0.587,Marathonbet,1.4,2.56,1.53,Bet365,1.53,0
+range_20261119_1331,2026-11-19T17:04:01+00:00,1587904,Sat 21 Nov 15:00,National League North,Radcliffe,AFC Telford United,Medium,0,0.587,Betfair,1.47,2.63,1.53,Bet365,1.53,0
+range_20261119_1331,2026-11-19T17:04:01+00:00,1587904,Sat 21 Nov 15:00,National League North,Radcliffe,AFC Telford United,Medium,0,0.587,BetVictor,1.45,2.5,1.53,Bet365,1.53,0
+range_20261119_1331,2026-11-19T17:04:01+00:00,1587904,Sat 21 Nov 15:00,National League North,Radcliffe,AFC Telford United,Medium,0,0.587,Pinnacle,1.46,2.59,1.53,Bet365,1.53,0
+range_20261119_1331,2026-11-19T17:04:01+00:00,1587904,Sat 21 Nov 15:00,National League North,Radcliffe,AFC Telford United,Medium,0,0.587,1xBet,1.4,2.56,1.53,Bet365,1.53,0
+range_20261119_1331,2026-11-19T17:04:01+00:00,1587904,Sat 21 Nov 15:00,National League North,Radcliffe,AFC Telford United,Medium,0,0.587,Betano,1.47,2.42,1.53,Bet365,1.53,0
+range_20261119_1331,2026-11-19T17:04:02+00:00,1587908,Sat 21 Nov 15:00,National League North,Worksop Town,Chorley,Medium,0,0.587,Bet365,1.7,2.1,1.7,Bet365,1.7,0
+range_20261119_1331,2026-11-19T17:04:02+00:00,1587908,Sat 21 Nov 15:00,National League North,Worksop Town,Chorley,Medium,0,0.587,Marathonbet,1.68,2.02,1.7,Bet365,1.7,0
+range_20261119_1331,2026-11-19T17:04:02+00:00,1587908,Sat 21 Nov 15:00,National League North,Worksop Town,Chorley,Medium,0,0.587,Betfair,1.67,2.15,1.7,Bet365,1.7,0
+range_20261119_1331,2026-11-19T17:04:02+00:00,1587908,Sat 21 Nov 15:00,National League North,Worksop Town,Chorley,Medium,0,0.587,BetVictor,1.68,2.02,1.7,Bet365,1.7,0
+range_20261119_1331,2026-11-19T17:04:02+00:00,1587908,Sat 21 Nov 15:00,National League North,Worksop Town,Chorley,Medium,0,0.587,Pinnacle,1.67,2.17,1.7,Bet365,1.7,0
+range_20261119_1331,2026-11-19T17:04:02+00:00,1587908,Sat 21 Nov 15:00,National League North,Worksop Town,Chorley,Medium,0,0.587,1xBet,1.68,2.02,1.7,Bet365,1.7,0
+range_20261119_1331,2026-11-19T17:04:02+00:00,1587908,Sat 21 Nov 15:00,National League North,Worksop Town,Chorley,Medium,0,0.587,Betano,1.7,2.05,1.7,Bet365,1.7,0
+range_20261119_1331,2026-11-19T17:04:02+00:00,1588450,Sat 21 Nov 15:00,National League South,Billericay Town,Slough Town,Medium,0,0.594,Bet365,1.33,3.25,1.33,Bet365,1.33,0
+range_20261119_1331,2026-11-19T17:04:02+00:00,1588450,Sat 21 Nov 15:00,National League South,Billericay Town,Slough Town,Medium,0,0.594,Marathonbet,1.24,3.34,1.33,Bet365,1.33,0
+range_20261119_1331,2026-11-19T17:04:02+00:00,1588450,Sat 21 Nov 15:00,National League South,Billericay Town,Slough Town,Medium,0,0.594,1xBet,1.24,3.34,1.33,Bet365,1.33,0
+range_20261119_1331,2026-11-19T17:04:02+00:00,1588450,Sat 21 Nov 15:00,National League South,Billericay Town,Slough Town,Medium,0,0.594,Betano,1.29,3.15,1.33,Bet365,1.33,0
+range_20261119_1331,2026-11-19T17:04:02+00:00,1588453,Sat 21 Nov 15:00,National League South,Dorking Wanderers,Ebbsfleet United,Medium,0,0.592,Bet365,1.44,2.62,1.45,Betano,1.44,0
+range_20261119_1331,2026-11-19T17:04:02+00:00,1588453,Sat 21 Nov 15:00,National League South,Dorking Wanderers,Ebbsfleet United,Medium,0,0.592,Marathonbet,1.41,2.52,1.45,Betano,1.44,0
+range_20261119_1331,2026-11-19T17:04:02+00:00,1588453,Sat 21 Nov 15:00,National League South,Dorking Wanderers,Ebbsfleet United,Medium,0,0.592,Betfair,1.44,2.7,1.45,Betano,1.44,0
+range_20261119_1331,2026-11-19T17:04:02+00:00,1588453,Sat 21 Nov 15:00,National League South,Dorking Wanderers,Ebbsfleet United,Medium,0,0.592,BetVictor,1.44,2.53,1.45,Betano,1.44,0
+range_20261119_1331,2026-11-19T17:04:02+00:00,1588453,Sat 21 Nov 15:00,National League South,Dorking Wanderers,Ebbsfleet United,Medium,0,0.592,Pinnacle,1.42,2.72,1.45,Betano,1.44,0
+range_20261119_1331,2026-11-19T17:04:02+00:00,1588453,Sat 21 Nov 15:00,National League South,Dorking Wanderers,Ebbsfleet United,Medium,0,0.592,1xBet,1.41,2.52,1.45,Betano,1.44,0
+range_20261119_1331,2026-11-19T17:04:02+00:00,1588453,Sat 21 Nov 15:00,National League South,Dorking Wanderers,Ebbsfleet United,Medium,0,0.592,Betano,1.45,2.5,1.45,Betano,1.44,0
+range_20261119_1331,2026-11-19T17:04:03+00:00,1588458,Sat 21 Nov 15:00,National League South,Tonbridge Angels,Weston-super-Mare,Medium,0,0.583,Bet365,1.75,2.05,1.75,Bet365,1.75,1
+range_20261119_1331,2026-11-19T17:04:03+00:00,1588458,Sat 21 Nov 15:00,National League South,Tonbridge Angels,Weston-super-Mare,Medium,0,0.583,Marathonbet,1.72,1.96,1.75,Bet365,1.75,1
+range_20261119_1331,2026-11-19T17:04:03+00:00,1588458,Sat 21 Nov 15:00,National League South,Tonbridge Angels,Weston-super-Mare,Medium,0,0.583,Betfair,1.73,2.1,1.75,Bet365,1.75,1
+range_20261119_1331,2026-11-19T17:04:03+00:00,1588458,Sat 21 Nov 15:00,National League South,Tonbridge Angels,Weston-super-Mare,Medium,0,0.583,BetVictor,1.7,1.99,1.75,Bet365,1.75,1
+range_20261119_1331,2026-11-19T17:04:03+00:00,1588458,Sat 21 Nov 15:00,National League South,Tonbridge Angels,Weston-super-Mare,Medium,0,0.583,Pinnacle,1.71,2.1,1.75,Bet365,1.75,1
+range_20261119_1331,2026-11-19T17:04:03+00:00,1588458,Sat 21 Nov 15:00,National League South,Tonbridge Angels,Weston-super-Mare,Medium,0,0.583,1xBet,1.72,1.96,1.75,Bet365,1.75,1
+range_20261119_1331,2026-11-19T17:04:03+00:00,1588458,Sat 21 Nov 15:00,National League South,Tonbridge Angels,Weston-super-Mare,Medium,0,0.583,Betano,1.75,1.98,1.75,Bet365,1.75,1
+range_20261119_1331,2026-11-19T17:04:03+00:00,1588459,Sat 21 Nov 15:00,National League South,Truro City,Hemel Hempstead Town,Medium,0,0.601,Bet365,1.62,2.25,1.62,Bet365,1.62,0
+range_20261119_1331,2026-11-19T17:04:03+00:00,1588459,Sat 21 Nov 15:00,National League South,Truro City,Hemel Hempstead Town,Medium,0,0.601,Marathonbet,1.6,2.15,1.62,Bet365,1.62,0
+range_20261119_1331,2026-11-19T17:04:03+00:00,1588459,Sat 21 Nov 15:00,National League South,Truro City,Hemel Hempstead Town,Medium,0,0.601,Betfair,1.62,2.25,1.62,Bet365,1.62,0
+range_20261119_1331,2026-11-19T17:04:03+00:00,1588459,Sat 21 Nov 15:00,National League South,Truro City,Hemel Hempstead Town,Medium,0,0.601,BetVictor,1.61,2.13,1.62,Bet365,1.62,0
+range_20261119_1331,2026-11-19T17:04:03+00:00,1588459,Sat 21 Nov 15:00,National League South,Truro City,Hemel Hempstead Town,Medium,0,0.601,Pinnacle,1.62,2.24,1.62,Bet365,1.62,0
+range_20261119_1331,2026-11-19T17:04:03+00:00,1588459,Sat 21 Nov 15:00,National League South,Truro City,Hemel Hempstead Town,Medium,0,0.601,1xBet,1.6,2.15,1.62,Bet365,1.62,0
+range_20261119_1331,2026-11-19T17:04:03+00:00,1588459,Sat 21 Nov 15:00,National League South,Truro City,Hemel Hempstead Town,Medium,0,0.601,Betano,1.6,2.15,1.62,Bet365,1.62,0
+range_20261119_1331,2026-11-19T17:04:04+00:00,1575222,Sat 21 Nov 14:30,Bundesliga,Bayer Leverkusen,SC Paderborn 07,Medium,0,0.618,Bet365,1.36,3.2,1.36,Bet365,1.36,0
+range_20261119_1331,2026-11-19T17:04:04+00:00,1575222,Sat 21 Nov 14:30,Bundesliga,Bayer Leverkusen,SC Paderborn 07,Medium,0,0.618,Marathonbet,1.31,3.08,1.36,Bet365,1.36,0
+range_20261119_1331,2026-11-19T17:04:04+00:00,1575222,Sat 21 Nov 14:30,Bundesliga,Bayer Leverkusen,SC Paderborn 07,Medium,0,0.618,Betfair,1.33,3.25,1.36,Bet365,1.36,0
+range_20261119_1331,2026-11-19T17:04:04+00:00,1575222,Sat 21 Nov 14:30,Bundesliga,Bayer Leverkusen,SC Paderborn 07,Medium,0,0.618,BetVictor,1.34,2.89,1.36,Bet365,1.36,0
+range_20261119_1331,2026-11-19T17:04:04+00:00,1575222,Sat 21 Nov 14:30,Bundesliga,Bayer Leverkusen,SC Paderborn 07,Medium,0,0.618,Pinnacle,1.33,3.3,1.36,Bet365,1.36,0
+range_20261119_1331,2026-11-19T17:04:04+00:00,1575222,Sat 21 Nov 14:30,Bundesliga,Bayer Leverkusen,SC Paderborn 07,Medium,0,0.618,1xBet,1.35,3.18,1.36,Bet365,1.36,0
+range_20261119_1331,2026-11-19T17:04:04+00:00,1575222,Sat 21 Nov 14:30,Bundesliga,Bayer Leverkusen,SC Paderborn 07,Medium,0,0.618,Betano,1.36,3.15,1.36,Bet365,1.36,0
+range_20261119_1331,2026-11-19T17:04:04+00:00,1575221,Fri 20 Nov 19:30,Bundesliga,Bayern Munich,1. FC Köln,High,0,0.697,Bet365,1.14,5.5,1.17,Betano,1.14,0
+range_20261119_1331,2026-11-19T17:04:04+00:00,1575221,Fri 20 Nov 19:30,Bundesliga,Bayern Munich,1. FC Köln,High,0,0.697,Marathonbet,1.12,4.75,1.17,Betano,1.14,0
+range_20261119_1331,2026-11-19T17:04:04+00:00,1575221,Fri 20 Nov 19:30,Bundesliga,Bayern Munich,1. FC Köln,High,0,0.697,Betfair,1.13,6.0,1.17,Betano,1.14,0
+range_20261119_1331,2026-11-19T17:04:04+00:00,1575221,Fri 20 Nov 19:30,Bundesliga,Bayern Munich,1. FC Köln,High,0,0.697,BetVictor,1.13,5.75,1.17,Betano,1.14,0
+range_20261119_1331,2026-11-19T17:04:04+00:00,1575221,Fri 20 Nov 19:30,Bundesliga,Bayern Munich,1. FC Köln,High,0,0.697,1xBet,1.16,4.91,1.17,Betano,1.14,0
+range_20261119_1331,2026-11-19T17:04:04+00:00,1575221,Fri 20 Nov 19:30,Bundesliga,Bayern Munich,1. FC Köln,High,0,0.697,Betano,1.17,5.2,1.17,Betano,1.14,0
+range_20261119_1331,2026-11-19T17:04:04+00:00,1575226,Sat 21 Nov 14:30,Bundesliga,Borussia Monchengladbach,Borussia Dortmund,Medium,0,0.621,Bet365,1.44,2.75,1.5,Betano,1.44,0
+range_20261119_1331,2026-11-19T17:04:04+00:00,1575226,Sat 21 Nov 14:30,Bundesliga,Borussia Monchengladbach,Borussia Dortmund,Medium,0,0.621,Marathonbet,1.43,2.58,1.5,Betano,1.44,0
+range_20261119_1331,2026-11-19T17:04:04+00:00,1575226,Sat 21 Nov 14:30,Bundesliga,Borussia Monchengladbach,Borussia Dortmund,Medium,0,0.621,Betfair,1.47,2.63,1.5,Betano,1.44,0
+range_20261119_1331,2026-11-19T17:04:04+00:00,1575226,Sat 21 Nov 14:30,Bundesliga,Borussia Monchengladbach,Borussia Dortmund,Medium,0,0.621,BetVictor,1.46,2.47,1.5,Betano,1.44,0
+range_20261119_1331,2026-11-19T17:04:04+00:00,1575226,Sat 21 Nov 14:30,Bundesliga,Borussia Monchengladbach,Borussia Dortmund,Medium,0,0.621,Pinnacle,1.49,2.67,1.5,Betano,1.44,0
+range_20261119_1331,2026-11-19T17:04:04+00:00,1575226,Sat 21 Nov 14:30,Bundesliga,Borussia Monchengladbach,Borussia Dortmund,Medium,0,0.621,1xBet,1.47,2.66,1.5,Betano,1.44,0
+range_20261119_1331,2026-11-19T17:04:04+00:00,1575226,Sat 21 Nov 14:30,Bundesliga,Borussia Monchengladbach,Borussia Dortmund,Medium,0,0.621,Betano,1.5,2.65,1.5,Betano,1.44,0
+range_20261119_1331,2026-11-19T17:04:05+00:00,1575223,Sat 21 Nov 14:30,Bundesliga,Eintracht Frankfurt,1899 Hoffenheim,High,0,0.63,Bet365,1.36,3.2,1.37,1xBet,1.36,0
+range_20261119_1331,2026-11-19T17:04:05+00:00,1575223,Sat 21 Nov 14:30,Bundesliga,Eintracht Frankfurt,1899 Hoffenheim,High,0,0.63,Marathonbet,1.33,2.98,1.37,1xBet,1.36,0
+range_20261119_1331,2026-11-19T17:04:05+00:00,1575223,Sat 21 Nov 14:30,Bundesliga,Eintracht Frankfurt,1899 Hoffenheim,High,0,0.63,Betfair,1.33,3.25,1.37,1xBet,1.36,0
+range_20261119_1331,2026-11-19T17:04:05+00:00,1575223,Sat 21 Nov 14:30,Bundesliga,Eintracht Frankfurt,1899 Hoffenheim,High,0,0.63,BetVictor,1.34,2.91,1.37,1xBet,1.36,0
+range_20261119_1331,2026-11-19T17:04:05+00:00,1575223,Sat 21 Nov 14:30,Bundesliga,Eintracht Frankfurt,1899 Hoffenheim,High,0,0.63,Pinnacle,1.35,3.23,1.37,1xBet,1.36,0
+range_20261119_1331,2026-11-19T17:04:05+00:00,1575223,Sat 21 Nov 14:30,Bundesliga,Eintracht Frankfurt,1899 Hoffenheim,High,0,0.63,1xBet,1.37,3.07,1.37,1xBet,1.36,0
+range_20261119_1331,2026-11-19T17:04:05+00:00,1575223,Sat 21 Nov 14:30,Bundesliga,Eintracht Frankfurt,1899 Hoffenheim,High,0,0.63,Betano,1.36,3.15,1.37,1xBet,1.36,0
+range_20261119_1331,2026-11-19T17:04:05+00:00,1575224,Sun 22 Nov 14:30,Bundesliga,FC Augsburg,FSV Mainz 05,High,0,0.66,Bet365,1.4,3.0,1.47,Betano,1.4,0
+range_20261119_1331,2026-11-19T17:04:05+00:00,1575224,Sun 22 Nov 14:30,Bundesliga,FC Augsburg,FSV Mainz 05,High,0,0.66,Marathonbet,1.36,2.84,1.47,Betano,1.4,0
+range_20261119_1331,2026-11-19T17:04:05+00:00,1575224,Sun 22 Nov 14:30,Bundesliga,FC Augsburg,FSV Mainz 05,High,0,0.66,Betfair,1.4,2.75,1.47,Betano,1.4,0
+range_20261119_1331,2026-11-19T17:04:05+00:00,1575224,Sun 22 Nov 14:30,Bundesliga,FC Augsburg,FSV Mainz 05,High,0,0.66,BetVictor,1.4,2.66,1.47,Betano,1.4,0
+range_20261119_1331,2026-11-19T17:04:05+00:00,1575224,Sun 22 Nov 14:30,Bundesliga,FC Augsburg,FSV Mainz 05,High,0,0.66,Pinnacle,1.41,2.93,1.47,Betano,1.4,0
+range_20261119_1331,2026-11-19T17:04:05+00:00,1575224,Sun 22 Nov 14:30,Bundesliga,FC Augsburg,FSV Mainz 05,High,0,0.66,1xBet,1.4,2.93,1.47,Betano,1.4,0
+range_20261119_1331,2026-11-19T17:04:05+00:00,1575224,Sun 22 Nov 14:30,Bundesliga,FC Augsburg,FSV Mainz 05,High,0,0.66,Betano,1.47,2.8,1.47,Betano,1.4,0
+range_20261119_1331,2026-11-19T17:04:06+00:00,1575229,Sat 21 Nov 14:30,Bundesliga,SV Elversberg,SC Freiburg,High,0,0.63,Bet365,1.57,2.38,1.6,Pinnacle,1.57,1
+range_20261119_1331,2026-11-19T17:04:06+00:00,1575229,Sat 21 Nov 14:30,Bundesliga,SV Elversberg,SC Freiburg,High,0,0.63,Marathonbet,1.49,2.4,1.6,Pinnacle,1.57,1
+range_20261119_1331,2026-11-19T17:04:06+00:00,1575229,Sat 21 Nov 14:30,Bundesliga,SV Elversberg,SC Freiburg,High,0,0.63,Betfair,1.53,2.45,1.6,Pinnacle,1.57,1
+range_20261119_1331,2026-11-19T17:04:06+00:00,1575229,Sat 21 Nov 14:30,Bundesliga,SV Elversberg,SC Freiburg,High,0,0.63,BetVictor,1.53,2.29,1.6,Pinnacle,1.57,1
+range_20261119_1331,2026-11-19T17:04:06+00:00,1575229,Sat 21 Nov 14:30,Bundesliga,SV Elversberg,SC Freiburg,High,0,0.63,Pinnacle,1.6,2.45,1.6,Pinnacle,1.57,1
+range_20261119_1331,2026-11-19T17:04:06+00:00,1575229,Sat 21 Nov 14:30,Bundesliga,SV Elversberg,SC Freiburg,High,0,0.63,1xBet,1.54,2.48,1.6,Pinnacle,1.57,1
+range_20261119_1331,2026-11-19T17:04:06+00:00,1575229,Sat 21 Nov 14:30,Bundesliga,SV Elversberg,SC Freiburg,High,0,0.63,Betano,1.57,2.5,1.6,Pinnacle,1.57,1
+range_20261119_1331,2026-11-19T17:04:06+00:00,1575227,Sun 22 Nov 16:30,Bundesliga,Werder Bremen,Hamburger SV,High,0,0.638,Bet365,1.53,2.5,1.57,Betano,1.53,1
+range_20261119_1331,2026-11-19T17:04:06+00:00,1575227,Sun 22 Nov 16:30,Bundesliga,Werder Bremen,Hamburger SV,High,0,0.638,Marathonbet,1.46,2.49,1.57,Betano,1.53,1
+range_20261119_1331,2026-11-19T17:04:06+00:00,1575227,Sun 22 Nov 16:30,Bundesliga,Werder Bremen,Hamburger SV,High,0,0.638,Betfair,1.5,2.4,1.57,Betano,1.53,1
+range_20261119_1331,2026-11-19T17:04:06+00:00,1575227,Sun 22 Nov 16:30,Bundesliga,Werder Bremen,Hamburger SV,High,0,0.638,BetVictor,1.49,2.38,1.57,Betano,1.53,1
+range_20261119_1331,2026-11-19T17:04:06+00:00,1575227,Sun 22 Nov 16:30,Bundesliga,Werder Bremen,Hamburger SV,High,0,0.638,Pinnacle,1.55,2.57,1.57,Betano,1.53,1
+range_20261119_1331,2026-11-19T17:04:06+00:00,1575227,Sun 22 Nov 16:30,Bundesliga,Werder Bremen,Hamburger SV,High,0,0.638,1xBet,1.5,2.57,1.57,Betano,1.53,1
+range_20261119_1331,2026-11-19T17:04:06+00:00,1575227,Sun 22 Nov 16:30,Bundesliga,Werder Bremen,Hamburger SV,High,0,0.638,Betano,1.57,2.47,1.57,Betano,1.53,1
+range_20261119_1331,2026-11-19T17:04:07+00:00,1552225,Sun 22 Nov 13:30,Eredivisie,Ajax,ADO Den Haag,High,0,0.67,Bet365,1.28,3.6,1.3,Betano,1.28,0
+range_20261119_1331,2026-11-19T17:04:07+00:00,1552225,Sun 22 Nov 13:30,Eredivisie,Ajax,ADO Den Haag,High,0,0.67,Marathonbet,1.23,3.42,1.3,Betano,1.28,0
+range_20261119_1331,2026-11-19T17:04:07+00:00,1552225,Sun 22 Nov 13:30,Eredivisie,Ajax,ADO Den Haag,High,0,0.67,BetVictor,1.28,3.25,1.3,Betano,1.28,0
+range_20261119_1331,2026-11-19T17:04:07+00:00,1552225,Sun 22 Nov 13:30,Eredivisie,Ajax,ADO Den Haag,High,0,0.67,Pinnacle,1.26,3.69,1.3,Betano,1.28,0
+range_20261119_1331,2026-11-19T17:04:07+00:00,1552225,Sun 22 Nov 13:30,Eredivisie,Ajax,ADO Den Haag,High,0,0.67,1xBet,1.27,3.54,1.3,Betano,1.28,0
+range_20261119_1331,2026-11-19T17:04:07+00:00,1552225,Sun 22 Nov 13:30,Eredivisie,Ajax,ADO Den Haag,High,0,0.67,Betano,1.3,3.6,1.3,Betano,1.28,0
+range_20261119_1331,2026-11-19T17:04:07+00:00,1552226,Sat 21 Nov 17:45,Eredivisie,Feyenoord,Excelsior,High,0,0.645,Bet365,1.33,3.4,1.35,Betano,1.33,0
+range_20261119_1331,2026-11-19T17:04:07+00:00,1552226,Sat 21 Nov 17:45,Eredivisie,Feyenoord,Excelsior,High,0,0.645,Marathonbet,1.27,3.14,1.35,Betano,1.33,0
+range_20261119_1331,2026-11-19T17:04:07+00:00,1552226,Sat 21 Nov 17:45,Eredivisie,Feyenoord,Excelsior,High,0,0.645,Betfair,1.3,3.4,1.35,Betano,1.33,0
+range_20261119_1331,2026-11-19T17:04:07+00:00,1552226,Sat 21 Nov 17:45,Eredivisie,Feyenoord,Excelsior,High,0,0.645,BetVictor,1.33,2.95,1.35,Betano,1.33,0
+range_20261119_1331,2026-11-19T17:04:07+00:00,1552226,Sat 21 Nov 17:45,Eredivisie,Feyenoord,Excelsior,High,0,0.645,Pinnacle,1.3,3.41,1.35,Betano,1.33,0
+range_20261119_1331,2026-11-19T17:04:07+00:00,1552226,Sat 21 Nov 17:45,Eredivisie,Feyenoord,Excelsior,High,0,0.645,1xBet,1.32,3.26,1.35,Betano,1.33,0
+range_20261119_1331,2026-11-19T17:04:07+00:00,1552226,Sat 21 Nov 17:45,Eredivisie,Feyenoord,Excelsior,High,0,0.645,Betano,1.35,3.25,1.35,Betano,1.33,0
+range_20261119_1331,2026-11-19T17:04:07+00:00,1552227,Sun 22 Nov 15:45,Eredivisie,GO Ahead Eagles,Fortuna Sittard,High,0,0.631,Bet365,1.48,2.6,1.5,Betano,1.48,0
+range_20261119_1331,2026-11-19T17:04:07+00:00,1552227,Sun 22 Nov 15:45,Eredivisie,GO Ahead Eagles,Fortuna Sittard,High,0,0.631,Marathonbet,1.4,2.56,1.5,Betano,1.48,0
+range_20261119_1331,2026-11-19T17:04:07+00:00,1552227,Sun 22 Nov 15:45,Eredivisie,GO Ahead Eagles,Fortuna Sittard,High,0,0.631,BetVictor,1.46,2.48,1.5,Betano,1.48,0
+range_20261119_1331,2026-11-19T17:04:07+00:00,1552227,Sun 22 Nov 15:45,Eredivisie,GO Ahead Eagles,Fortuna Sittard,High,0,0.631,Pinnacle,1.49,2.62,1.5,Betano,1.48,0
+range_20261119_1331,2026-11-19T17:04:07+00:00,1552227,Sun 22 Nov 15:45,Eredivisie,GO Ahead Eagles,Fortuna Sittard,High,0,0.631,1xBet,1.45,2.66,1.5,Betano,1.48,0
+range_20261119_1331,2026-11-19T17:04:07+00:00,1552227,Sun 22 Nov 15:45,Eredivisie,GO Ahead Eagles,Fortuna Sittard,High,0,0.631,Betano,1.5,2.67,1.5,Betano,1.48,0
+range_20261119_1331,2026-11-19T17:04:08+00:00,1552228,Sat 21 Nov 20:00,Eredivisie,Groningen,Heerenveen,High,0,0.678,Bet365,1.4,2.88,1.47,Betano,1.4,0
+range_20261119_1331,2026-11-19T17:04:08+00:00,1552228,Sat 21 Nov 20:00,Eredivisie,Groningen,Heerenveen,High,0,0.678,Marathonbet,1.35,2.74,1.47,Betano,1.4,0
+range_20261119_1331,2026-11-19T17:04:08+00:00,1552228,Sat 21 Nov 20:00,Eredivisie,Groningen,Heerenveen,High,0,0.678,Betfair,1.4,2.88,1.47,Betano,1.4,0
+range_20261119_1331,2026-11-19T17:04:08+00:00,1552228,Sat 21 Nov 20:00,Eredivisie,Groningen,Heerenveen,High,0,0.678,BetVictor,1.38,2.73,1.47,Betano,1.4,0
+range_20261119_1331,2026-11-19T17:04:08+00:00,1552228,Sat 21 Nov 20:00,Eredivisie,Groningen,Heerenveen,High,0,0.678,Pinnacle,1.41,2.89,1.47,Betano,1.4,0
+range_20261119_1331,2026-11-19T17:04:08+00:00,1552228,Sat 21 Nov 20:00,Eredivisie,Groningen,Heerenveen,High,0,0.678,1xBet,1.4,2.84,1.47,Betano,1.4,0
+range_20261119_1331,2026-11-19T17:04:08+00:00,1552228,Sat 21 Nov 20:00,Eredivisie,Groningen,Heerenveen,High,0,0.678,Betano,1.47,2.8,1.47,Betano,1.4,0
+range_20261119_1331,2026-11-19T17:04:08+00:00,1552229,Sat 21 Nov 15:30,Eredivisie,NEC Nijmegen,PSV Eindhoven,High,0,0.647,Bet365,1.28,3.6,1.32,Betano,1.28,0
+range_20261119_1331,2026-11-19T17:04:08+00:00,1552229,Sat 21 Nov 15:30,Eredivisie,NEC Nijmegen,PSV Eindhoven,High,0,0.647,Marathonbet,1.24,3.34,1.32,Betano,1.28,0
+range_20261119_1331,2026-11-19T17:04:08+00:00,1552229,Sat 21 Nov 15:30,Eredivisie,NEC Nijmegen,PSV Eindhoven,High,0,0.647,Betfair,1.29,3.5,1.32,Betano,1.28,0
+range_20261119_1331,2026-11-19T17:04:08+00:00,1552229,Sat 21 Nov 15:30,Eredivisie,NEC Nijmegen,PSV Eindhoven,High,0,0.647,BetVictor,1.29,3.2,1.32,Betano,1.28,0
+range_20261119_1331,2026-11-19T17:04:08+00:00,1552229,Sat 21 Nov 15:30,Eredivisie,NEC Nijmegen,PSV Eindhoven,High,0,0.647,Pinnacle,1.31,3.43,1.32,Betano,1.28,0
+range_20261119_1331,2026-11-19T17:04:08+00:00,1552229,Sat 21 Nov 15:30,Eredivisie,NEC Nijmegen,PSV Eindhoven,High,0,0.647,1xBet,1.29,3.46,1.32,Betano,1.28,0
+range_20261119_1331,2026-11-19T17:04:08+00:00,1552229,Sat 21 Nov 15:30,Eredivisie,NEC Nijmegen,PSV Eindhoven,High,0,0.647,Betano,1.32,3.45,1.32,Betano,1.28,0
+range_20261119_1331,2026-11-19T17:04:09+00:00,1552230,Sun 22 Nov 13:30,Eredivisie,Sparta Rotterdam,AZ Alkmaar,High,0,0.667,Bet365,1.44,2.7,1.47,Betano,1.44,0
+range_20261119_1331,2026-11-19T17:04:09+00:00,1552230,Sun 22 Nov 13:30,Eredivisie,Sparta Rotterdam,AZ Alkmaar,High,0,0.667,Marathonbet,1.38,2.62,1.47,Betano,1.44,0
+range_20261119_1331,2026-11-19T17:04:09+00:00,1552230,Sun 22 Nov 13:30,Eredivisie,Sparta Rotterdam,AZ Alkmaar,High,0,0.667,BetVictor,1.43,2.56,1.47,Betano,1.44,0
+range_20261119_1331,2026-11-19T17:04:09+00:00,1552230,Sun 22 Nov 13:30,Eredivisie,Sparta Rotterdam,AZ Alkmaar,High,0,0.667,Pinnacle,1.45,2.76,1.47,Betano,1.44,0
+range_20261119_1331,2026-11-19T17:04:09+00:00,1552230,Sun 22 Nov 13:30,Eredivisie,Sparta Rotterdam,AZ Alkmaar,High,0,0.667,1xBet,1.43,2.72,1.47,Betano,1.44,0
+range_20261119_1331,2026-11-19T17:04:09+00:00,1552230,Sun 22 Nov 13:30,Eredivisie,Sparta Rotterdam,AZ Alkmaar,High,0,0.667,Betano,1.47,2.8,1.47,Betano,1.44,0
+range_20261119_1331,2026-11-19T17:04:09+00:00,1552231,Sat 21 Nov 20:00,Eredivisie,Telstar,PEC Zwolle,High,0,0.646,Bet365,1.67,2.15,1.7,1xBet,1.67,1
+range_20261119_1331,2026-11-19T17:04:09+00:00,1552231,Sat 21 Nov 20:00,Eredivisie,Telstar,PEC Zwolle,High,0,0.646,Marathonbet,1.65,2.15,1.7,1xBet,1.67,1
+range_20261119_1331,2026-11-19T17:04:09+00:00,1552231,Sat 21 Nov 20:00,Eredivisie,Telstar,PEC Zwolle,High,0,0.646,Betfair,1.65,2.2,1.7,1xBet,1.67,1
+range_20261119_1331,2026-11-19T17:04:09+00:00,1552231,Sat 21 Nov 20:00,Eredivisie,Telstar,PEC Zwolle,High,0,0.646,BetVictor,1.63,2.1,1.7,1xBet,1.67,1
+range_20261119_1331,2026-11-19T17:04:09+00:00,1552231,Sat 21 Nov 20:00,Eredivisie,Telstar,PEC Zwolle,High,0,0.646,Pinnacle,1.66,2.24,1.7,1xBet,1.67,1
+range_20261119_1331,2026-11-19T17:04:09+00:00,1552231,Sat 21 Nov 20:00,Eredivisie,Telstar,PEC Zwolle,High,0,0.646,1xBet,1.7,2.21,1.7,1xBet,1.67,1
+range_20261119_1331,2026-11-19T17:04:09+00:00,1552231,Sat 21 Nov 20:00,Eredivisie,Telstar,PEC Zwolle,High,0,0.646,Betano,1.7,2.22,1.7,1xBet,1.67,1
+range_20261119_1331,2026-11-19T17:04:09+00:00,1552232,Sun 22 Nov 11:15,Eredivisie,Twente,Willem II,High,0,0.665,Bet365,1.22,4.2,1.24,Betano,1.22,0
+range_20261119_1331,2026-11-19T17:04:09+00:00,1552232,Sun 22 Nov 11:15,Eredivisie,Twente,Willem II,High,0,0.665,Marathonbet,1.16,4.1,1.24,Betano,1.22,0
+range_20261119_1331,2026-11-19T17:04:09+00:00,1552232,Sun 22 Nov 11:15,Eredivisie,Twente,Willem II,High,0,0.665,BetVictor,1.22,3.7,1.24,Betano,1.22,0
+range_20261119_1331,2026-11-19T17:04:09+00:00,1552232,Sun 22 Nov 11:15,Eredivisie,Twente,Willem II,High,0,0.665,Pinnacle,1.18,4.42,1.24,Betano,1.22,0
+range_20261119_1331,2026-11-19T17:04:09+00:00,1552232,Sun 22 Nov 11:15,Eredivisie,Twente,Willem II,High,0,0.665,1xBet,1.2,4.24,1.24,Betano,1.22,0
+range_20261119_1331,2026-11-19T17:04:09+00:00,1552232,Sun 22 Nov 11:15,Eredivisie,Twente,Willem II,High,0,0.665,Betano,1.24,4.05,1.24,Betano,1.22,0
+range_20261119_1331,2026-11-19T17:04:10+00:00,1552233,Sat 21 Nov 17:45,Eredivisie,Utrecht,Cambuur,High,0,0.666,Bet365,1.4,2.88,1.45,Betano,1.4,0
+range_20261119_1331,2026-11-19T17:04:10+00:00,1552233,Sat 21 Nov 17:45,Eredivisie,Utrecht,Cambuur,High,0,0.666,Marathonbet,1.38,2.62,1.45,Betano,1.4,0
+range_20261119_1331,2026-11-19T17:04:10+00:00,1552233,Sat 21 Nov 17:45,Eredivisie,Utrecht,Cambuur,High,0,0.666,Betfair,1.4,2.88,1.45,Betano,1.4,0
+range_20261119_1331,2026-11-19T17:04:10+00:00,1552233,Sat 21 Nov 17:45,Eredivisie,Utrecht,Cambuur,High,0,0.666,BetVictor,1.41,2.63,1.45,Betano,1.4,0
+range_20261119_1331,2026-11-19T17:04:10+00:00,1552233,Sat 21 Nov 17:45,Eredivisie,Utrecht,Cambuur,High,0,0.666,Pinnacle,1.43,2.82,1.45,Betano,1.4,0
+range_20261119_1331,2026-11-19T17:04:10+00:00,1552233,Sat 21 Nov 17:45,Eredivisie,Utrecht,Cambuur,High,0,0.666,1xBet,1.43,2.72,1.45,Betano,1.4,0
+range_20261119_1331,2026-11-19T17:04:10+00:00,1552233,Sat 21 Nov 17:45,Eredivisie,Utrecht,Cambuur,High,0,0.666,Betano,1.45,2.87,1.45,Betano,1.4,0
+range_20261119_1331,2026-11-19T17:04:10+00:00,1552822,Sun 22 Nov 19:45,Ligue 1,Marseille,Le Mans,Medium,0,0.62,Bet365,1.5,2.62,1.55,Betano,1.5,0
+range_20261119_1331,2026-11-19T17:04:10+00:00,1552822,Sun 22 Nov 19:45,Ligue 1,Marseille,Le Mans,Medium,0,0.62,Marathonbet,1.46,2.49,1.55,Betano,1.5,0
+range_20261119_1331,2026-11-19T17:04:10+00:00,1552822,Sun 22 Nov 19:45,Ligue 1,Marseille,Le Mans,Medium,0,0.62,Betfair,1.5,2.4,1.55,Betano,1.5,0
+range_20261119_1331,2026-11-19T17:04:10+00:00,1552822,Sun 22 Nov 19:45,Ligue 1,Marseille,Le Mans,Medium,0,0.62,BetVictor,1.49,2.39,1.55,Betano,1.5,0
+range_20261119_1331,2026-11-19T17:04:10+00:00,1552822,Sun 22 Nov 19:45,Ligue 1,Marseille,Le Mans,Medium,0,0.62,Pinnacle,1.53,2.62,1.55,Betano,1.5,0
+range_20261119_1331,2026-11-19T17:04:10+00:00,1552822,Sun 22 Nov 19:45,Ligue 1,Marseille,Le Mans,Medium,0,0.62,1xBet,1.5,2.57,1.55,Betano,1.5,0
+range_20261119_1331,2026-11-19T17:04:10+00:00,1552822,Sun 22 Nov 19:45,Ligue 1,Marseille,Le Mans,Medium,0,0.62,Betano,1.55,2.55,1.55,Betano,1.5,0
+range_20261119_1331,2026-11-19T17:04:11+00:00,1552824,Sat 21 Nov 16:15,Ligue 1,Nice,Paris Saint Germain,Medium,0,0.589,Bet365,1.4,3.0,1.4,Bet365,1.4,0
+range_20261119_1331,2026-11-19T17:04:11+00:00,1552824,Sat 21 Nov 16:15,Ligue 1,Nice,Paris Saint Germain,Medium,0,0.589,Marathonbet,1.35,2.88,1.4,Bet365,1.4,0
+range_20261119_1331,2026-11-19T17:04:11+00:00,1552824,Sat 21 Nov 16:15,Ligue 1,Nice,Paris Saint Germain,Medium,0,0.589,Betfair,1.36,3.1,1.4,Bet365,1.4,0
+range_20261119_1331,2026-11-19T17:04:11+00:00,1552824,Sat 21 Nov 16:15,Ligue 1,Nice,Paris Saint Germain,Medium,0,0.589,BetVictor,1.38,2.73,1.4,Bet365,1.4,0
+range_20261119_1331,2026-11-19T17:04:11+00:00,1552824,Sat 21 Nov 16:15,Ligue 1,Nice,Paris Saint Germain,Medium,0,0.589,Pinnacle,1.4,2.98,1.4,Bet365,1.4,0
+range_20261119_1331,2026-11-19T17:04:11+00:00,1552824,Sat 21 Nov 16:15,Ligue 1,Nice,Paris Saint Germain,Medium,0,0.589,1xBet,1.39,2.97,1.4,Bet365,1.4,0
+range_20261119_1331,2026-11-19T17:04:11+00:00,1552824,Sat 21 Nov 16:15,Ligue 1,Nice,Paris Saint Germain,Medium,0,0.589,Betano,1.4,2.95,1.4,Bet365,1.4,0
+range_20261119_1331,2026-11-19T17:04:11+00:00,1584466,Sat 21 Nov 13:00,Super Lig,Amed,Rizespor,Medium,0,0.604,Bet365,1.62,2.25,1.65,1xBet,1.62,0
+range_20261119_1331,2026-11-19T17:04:11+00:00,1584466,Sat 21 Nov 13:00,Super Lig,Amed,Rizespor,Medium,0,0.604,Marathonbet,1.59,2.27,1.65,1xBet,1.62,0
+range_20261119_1331,2026-11-19T17:04:11+00:00,1584466,Sat 21 Nov 13:00,Super Lig,Amed,Rizespor,Medium,0,0.604,Betfair,1.57,2.38,1.65,1xBet,1.62,0
+range_20261119_1331,2026-11-19T17:04:11+00:00,1584466,Sat 21 Nov 13:00,Super Lig,Amed,Rizespor,Medium,0,0.604,BetVictor,1.58,2.19,1.65,1xBet,1.62,0
+range_20261119_1331,2026-11-19T17:04:11+00:00,1584466,Sat 21 Nov 13:00,Super Lig,Amed,Rizespor,Medium,0,0.604,Pinnacle,1.61,2.33,1.65,1xBet,1.62,0
+range_20261119_1331,2026-11-19T17:04:11+00:00,1584466,Sat 21 Nov 13:00,Super Lig,Amed,Rizespor,Medium,0,0.604,1xBet,1.65,2.36,1.65,1xBet,1.62,0
+range_20261119_1331,2026-11-19T17:04:11+00:00,1584466,Sat 21 Nov 13:00,Super Lig,Amed,Rizespor,Medium,0,0.604,Betano,1.65,2.32,1.65,1xBet,1.62,0
+range_20261119_1331,2026-11-19T17:04:11+00:00,1584469,Sat 21 Nov 13:00,Super Lig,Galatasaray,Samsunspor,Medium,0,0.604,Bet365,1.36,3.1,1.36,Bet365,1.36,0
+range_20261119_1331,2026-11-19T17:04:11+00:00,1584469,Sat 21 Nov 13:00,Super Lig,Galatasaray,Samsunspor,Medium,0,0.604,Marathonbet,1.28,3.05,1.36,Bet365,1.36,0
+range_20261119_1331,2026-11-19T17:04:11+00:00,1584469,Sat 21 Nov 13:00,Super Lig,Galatasaray,Samsunspor,Medium,0,0.604,Betfair,1.33,3.25,1.36,Bet365,1.36,0
+range_20261119_1331,2026-11-19T17:04:11+00:00,1584469,Sat 21 Nov 13:00,Super Lig,Galatasaray,Samsunspor,Medium,0,0.604,BetVictor,1.34,2.91,1.36,Bet365,1.36,0
+range_20261119_1331,2026-11-19T17:04:11+00:00,1584469,Sat 21 Nov 13:00,Super Lig,Galatasaray,Samsunspor,Medium,0,0.604,Pinnacle,1.34,3.19,1.36,Bet365,1.36,0
+range_20261119_1331,2026-11-19T17:04:11+00:00,1584469,Sat 21 Nov 13:00,Super Lig,Galatasaray,Samsunspor,Medium,0,0.604,1xBet,1.34,3.17,1.36,Bet365,1.36,0
+range_20261119_1331,2026-11-19T17:04:11+00:00,1584469,Sat 21 Nov 13:00,Super Lig,Galatasaray,Samsunspor,Medium,0,0.604,Betano,1.36,3.15,1.36,Bet365,1.36,0
+range_20261119_1331,2026-11-19T17:04:12+00:00,1584471,Sun 22 Nov 13:00,Super Lig,Kasımpaşa,Alanyaspor,Medium,0,0.59,Bet365,1.9,1.9,1.96,1xBet,1.9,1
+range_20261119_1331,2026-11-19T17:04:12+00:00,1584471,Sun 22 Nov 13:00,Super Lig,Kasımpaşa,Alanyaspor,Medium,0,0.59,Marathonbet,1.89,1.85,1.96,1xBet,1.9,1
+range_20261119_1331,2026-11-19T17:04:12+00:00,1584471,Sun 22 Nov 13:00,Super Lig,Kasımpaşa,Alanyaspor,Medium,0,0.59,BetVictor,1.84,1.83,1.96,1xBet,1.9,1
+range_20261119_1331,2026-11-19T17:04:12+00:00,1584471,Sun 22 Nov 13:00,Super Lig,Kasımpaşa,Alanyaspor,Medium,0,0.59,Pinnacle,1.9,1.93,1.96,1xBet,1.9,1
+range_20261119_1331,2026-11-19T17:04:12+00:00,1584471,Sun 22 Nov 13:00,Super Lig,Kasımpaşa,Alanyaspor,Medium,0,0.59,SBO,1.9,1.92,1.96,1xBet,1.9,1
+range_20261119_1331,2026-11-19T17:04:12+00:00,1584471,Sun 22 Nov 13:00,Super Lig,Kasımpaşa,Alanyaspor,Medium,0,0.59,1xBet,1.96,1.92,1.96,1xBet,1.9,1
+range_20261119_1331,2026-11-19T17:04:12+00:00,1584471,Sun 22 Nov 13:00,Super Lig,Kasımpaşa,Alanyaspor,Medium,0,0.59,Betano,1.93,1.91,1.96,1xBet,1.9,1
+range_20261119_1331,2026-11-19T17:04:12+00:00,1584474,Sun 22 Nov 16:00,Super Lig,Trabzonspor,Eyüpspor,High,0,0.633,Bet365,1.33,3.4,1.36,Betano,1.33,0
+range_20261119_1331,2026-11-19T17:04:12+00:00,1584474,Sun 22 Nov 16:00,Super Lig,Trabzonspor,Eyüpspor,High,0,0.633,Marathonbet,1.28,3.05,1.36,Betano,1.33,0
+range_20261119_1331,2026-11-19T17:04:12+00:00,1584474,Sun 22 Nov 16:00,Super Lig,Trabzonspor,Eyüpspor,High,0,0.633,Betfair,1.29,3.3,1.36,Betano,1.33,0
+range_20261119_1331,2026-11-19T17:04:12+00:00,1584474,Sun 22 Nov 16:00,Super Lig,Trabzonspor,Eyüpspor,High,0,0.633,BetVictor,1.33,2.98,1.36,Betano,1.33,0
+range_20261119_1331,2026-11-19T17:04:12+00:00,1584474,Sun 22 Nov 16:00,Super Lig,Trabzonspor,Eyüpspor,High,0,0.633,Pinnacle,1.3,3.41,1.36,Betano,1.33,0
+range_20261119_1331,2026-11-19T17:04:12+00:00,1584474,Sun 22 Nov 16:00,Super Lig,Trabzonspor,Eyüpspor,High,0,0.633,1xBet,1.34,3.17,1.36,Betano,1.33,0
+range_20261119_1331,2026-11-19T17:04:12+00:00,1584474,Sun 22 Nov 16:00,Super Lig,Trabzonspor,Eyüpspor,High,0,0.633,Betano,1.36,3.15,1.36,Betano,1.33,0
+range_20261119_1331,2026-11-19T17:04:13+00:00,1556706,Sat 21 Nov 15:00,Scottish Premiership,Celtic,ST Mirren,Medium,0,0.588,Bet365,1.28,3.75,1.3,Betano,1.28,0
+range_20261119_1331,2026-11-19T17:04:13+00:00,1556706,Sat 21 Nov 15:00,Scottish Premiership,Celtic,ST Mirren,Medium,0,0.588,Marathonbet,1.22,3.5,1.3,Betano,1.28,0
+range_20261119_1331,2026-11-19T17:04:13+00:00,1556706,Sat 21 Nov 15:00,Scottish Premiership,Celtic,ST Mirren,Medium,0,0.588,Betfair,1.25,3.8,1.3,Betano,1.28,0
+range_20261119_1331,2026-11-19T17:04:13+00:00,1556706,Sat 21 Nov 15:00,Scottish Premiership,Celtic,ST Mirren,Medium,0,0.588,BetVictor,1.25,3.75,1.3,Betano,1.28,0
+range_20261119_1331,2026-11-19T17:04:13+00:00,1556706,Sat 21 Nov 15:00,Scottish Premiership,Celtic,ST Mirren,Medium,0,0.588,Pinnacle,1.25,3.74,1.3,Betano,1.28,0
+range_20261119_1331,2026-11-19T17:04:13+00:00,1556706,Sat 21 Nov 15:00,Scottish Premiership,Celtic,ST Mirren,Medium,0,0.588,1xBet,1.22,3.5,1.3,Betano,1.28,0
+range_20261119_1331,2026-11-19T17:04:13+00:00,1556706,Sat 21 Nov 15:00,Scottish Premiership,Celtic,ST Mirren,Medium,0,0.588,Betano,1.3,3.6,1.3,Betano,1.28,0
+range_20261119_1331,2026-11-19T17:04:13+00:00,1556707,Sat 21 Nov 17:45,Scottish Premiership,Dundee,Heart Of Midlothian,Medium,0,0.591,Bet365,1.62,2.3,1.65,Betano,1.62,0
+range_20261119_1331,2026-11-19T17:04:13+00:00,1556707,Sat 21 Nov 17:45,Scottish Premiership,Dundee,Heart Of Midlothian,Medium,0,0.591,Marathonbet,1.54,2.19,1.65,Betano,1.62,0
+range_20261119_1331,2026-11-19T17:04:13+00:00,1556707,Sat 21 Nov 17:45,Scottish Premiership,Dundee,Heart Of Midlothian,Medium,0,0.591,Betfair,1.57,2.38,1.65,Betano,1.62,0
+range_20261119_1331,2026-11-19T17:04:13+00:00,1556707,Sat 21 Nov 17:45,Scottish Premiership,Dundee,Heart Of Midlothian,Medium,0,0.591,BetVictor,1.58,2.19,1.65,Betano,1.62,0
+range_20261119_1331,2026-11-19T17:04:13+00:00,1556707,Sat 21 Nov 17:45,Scottish Premiership,Dundee,Heart Of Midlothian,Medium,0,0.591,Pinnacle,1.63,2.3,1.65,Betano,1.62,0
+range_20261119_1331,2026-11-19T17:04:13+00:00,1556707,Sat 21 Nov 17:45,Scottish Premiership,Dundee,Heart Of Midlothian,Medium,0,0.591,1xBet,1.54,2.19,1.65,Betano,1.62,0
+range_20261119_1331,2026-11-19T17:04:13+00:00,1556707,Sat 21 Nov 17:45,Scottish Premiership,Dundee,Heart Of Midlothian,Medium,0,0.591,Betano,1.65,2.32,1.65,Betano,1.62,0
+range_20261119_1331,2026-11-19T17:04:13+00:00,1556708,Sat 21 Nov 15:00,Scottish Premiership,Falkirk,ST Johnstone,Medium,0,0.605,Bet365,1.73,2.1,1.78,Betano,1.73,1
+range_20261119_1331,2026-11-19T17:04:13+00:00,1556708,Sat 21 Nov 15:00,Scottish Premiership,Falkirk,ST Johnstone,Medium,0,0.605,Marathonbet,1.72,2.05,1.78,Betano,1.73,1
+range_20261119_1331,2026-11-19T17:04:13+00:00,1556708,Sat 21 Nov 15:00,Scottish Premiership,Falkirk,ST Johnstone,Medium,0,0.605,Betfair,1.73,2.1,1.78,Betano,1.73,1
+range_20261119_1331,2026-11-19T17:04:13+00:00,1556708,Sat 21 Nov 15:00,Scottish Premiership,Falkirk,ST Johnstone,Medium,0,0.605,BetVictor,1.69,2.01,1.78,Betano,1.73,1
+range_20261119_1331,2026-11-19T17:04:13+00:00,1556708,Sat 21 Nov 15:00,Scottish Premiership,Falkirk,ST Johnstone,Medium,0,0.605,Pinnacle,1.75,2.11,1.78,Betano,1.73,1
+range_20261119_1331,2026-11-19T17:04:13+00:00,1556708,Sat 21 Nov 15:00,Scottish Premiership,Falkirk,ST Johnstone,Medium,0,0.605,SBO,1.71,2.12,1.78,Betano,1.73,1
+range_20261119_1331,2026-11-19T17:04:13+00:00,1556708,Sat 21 Nov 15:00,Scottish Premiership,Falkirk,ST Johnstone,Medium,0,0.605,1xBet,1.72,2.05,1.78,Betano,1.73,1
+range_20261119_1331,2026-11-19T17:04:13+00:00,1556708,Sat 21 Nov 15:00,Scottish Premiership,Falkirk,ST Johnstone,Medium,0,0.605,Betano,1.78,2.1,1.78,Betano,1.73,1
