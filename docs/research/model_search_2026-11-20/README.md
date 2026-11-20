@@ -48,3 +48,17 @@ played in Europe within 4.5 days, first game after a break (both sides 11+ days)
   games it is 694 v 717.6 expected: it described which clubs play in Europe, not the effect of playing midweek. Rejected.
 - First game after a break: 671 of 1,184 v 647.7 expected at the same V4.1 score, within normal variation. Not established.
 - Shorter or longer rest and games in the last 14 days: flat (no band of rest stands out).
+
+## 5. Rob's last-N counts and clean sheets (last5.py, last5_eval.py, last5_grid.csv)
+Counts only, built fresh from results: goals scored, goals conceded, clean sheets, failed to score, 3+ games, over the last
+3, 4, 5, 6, 8 and 10 league games (this season), all games or home-at-home / away-at-away. 180 ranking formulas plus 5
+clean-sheet gates. Chosen on 2023-25, judged on 2025-27 (1,057 picks). V4.1 661.
+- Both sides' goals scored, last 5 league games: 662 (490 + 172). Equal to V4.1 (+1, range -27 to +30) with only 553 of
+  1,057 picks in common. Last 8: also 662 (best on training).
+- Goals in both sides' games (scored + conceded): 608 at last 5; best window 629 (last 10).
+- Goals conceded only: 548, below a random pick (584). Adding conceded or clean sheets to scoring made every formula worse.
+- Clean-sheet gates, against V4.1 picking the same number each weekend: neither side kept a clean sheet 217 of 386 v 246;
+  each side 1 or fewer 1,213 of 2,180 v 1,302; 1 or fewer between them 787 of 1,402 v 865; 2 or fewer between them 1,596 of
+  2,864 v 1,677. Every gate lost to V4.1.
+- Note: V4.1's own last-5 inputs are stored as per-game figures (count divided by games); with 5 games played they rank the
+  same as counts.
