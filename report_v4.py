@@ -36,6 +36,7 @@ teams = dict(c.execute("select team_id,name from teams"))
 _fx = pd.read_sql("select fixture_id, home_id, away_id, kickoff_utc from fixtures", c)
 _fid = {(r.home_id, r.away_id, r.kickoff_utc): r.fixture_id for r in _fx.itertuples()}
 _ids = {r.fixture_id: (r.home_id, r.away_id) for r in _fx.itertuples()}
+_ko = {r.fixture_id: r.kickoff_utc for r in _fx.itertuples()}          # true kick-off time for ordering
 try:
     _ev = pd.read_sql("select fixture_id, seq, minute, extra, team_id from fixture_events where type='Goal' and detail != 'Missed Penalty'", c)
 except Exception:
@@ -117,6 +118,8 @@ CLS_ORDER = {"High": 0, "Medium": 1, "Weak": 2, "Rejected": 3, "Insufficient dat
 def kodate(d): return d["kickoff"][:10]
 ranked = sorted([d for d in rows if d["conf"] != "rejected"], key=lambda d: (-d["p"], d["fixture"]))     # model score ranks within the selected set
 top20 = ranked[:20]
+for _i, _d in enumerate(ranked, 1): _d["rank"] = _i        # 1 = V4.1's strongest selectable fixture (display only)
+NRANK = len(ranked)
 
 # ---------- CSV ----------
 def flat(d):
@@ -182,8 +185,14 @@ class Card(Flowable):
         cv, d, al = s.canv, s.d, s.d["al"]
         cv.setFillColor(CARD); cv.setStrokeColor(CC[al["cls"]]); cv.setLineWidth(1.2); cv.roundRect(0, 0, s.width, s.height, 3 * mm, fill=1, stroke=1)
         top = s.height
-        cv.setFillColor(TXT); cv.setFont("DVB", 12.5); cv.drawString(6 * mm, top - 9 * mm, d["fixture"])
-        cv.setFillColor(MUTED); cv.setFont("DV", 8); cv.drawRightString(s.width - 6 * mm, top - 9 * mm, f"{d['comp']} · {d['kickoff']} UK")
+        nx = 6 * mm
+        if d.get("rank"):
+            rk = f"#{d['rank']}"; rw = pdfmetrics.stringWidth(rk, "DVB", 9.5) + 4 * mm
+            cv.setFillColor(GREEN if d["rank"] <= 20 else LINE); cv.roundRect(nx, top - 10.6 * mm, rw, 5.6 * mm, 1.4 * mm, fill=1, stroke=0)
+            cv.setFillColor(BG if d["rank"] <= 20 else TXT); cv.setFont("DVB", 9.5); cv.drawCentredString(nx + rw / 2, top - 9 * mm, rk); nx += rw + 2.5 * mm
+        cv.setFillColor(TXT); cv.setFont("DVB", 12.5); cv.drawString(nx, top - 9 * mm, d["fixture"])
+        cv.setFillColor(TXT); cv.setFont("DVB", 8.5); cv.drawRightString(s.width - 6 * mm, top - 9 * mm, f"{d['kickoff']} UK")
+        cv.setFillColor(MUTED); cv.setFont("DV", 7.5); cv.drawRightString(s.width - 6 * mm, top - 13 * mm, d["comp"])
         y = top - 16 * mm
         cv.setFillColor(CC[al["cls"]]); cv.setFont("DVB", 9); cv.drawString(6 * mm, y, f"OVER 2.5 {'YES' if d['light'] != 'RED' else 'NO'}  ·  confidence {d['conf'].upper()}")
         cv.setFillColor(MUTED); cv.setFont("DV", 8); cv.drawString(84 * mm, y, f"BTTS {d.get('btts_lean', d['btts'])} (model {d['btts_lik']}) · drivers {d.get('drivers20', '-')} of 20{' · TRUMP CARD' if d.get('trump') else ''}")
@@ -258,18 +267,24 @@ S = [P("Over 2.5 goals: V4 report", "h1"), Spacer(1, 2 * mm), P(a.window + ". Al
      Spacer(1, 1.5 * mm),
      P("Selection engine: the validated model (V4 lock; V4.1 changes in config/model_config.json). " + bench_text() + " "
        "Scored 2+ and Let in 2+ counts are shown on every card as supporting evidence; both attacks at 3 of 5+ adds about three points inside the bands and is highlighted, not required.", "mut"), Spacer(1, 4 * mm)]
-# Top 20
-S += [P("Selected fixtures ranked by model score (up to 20)", "h2"), Spacer(1, 1.5 * mm)]
-hdr = [P(h, "smb") for h in ["#", "Kick-off (UK)", "Competition", "Fixture", "Home sc2+ / let2+", "Away sc2+ / let2+", "Both<br/>3 of 5+", "BTTS", "Confidence", "Division", "Main risk (Over 2.5 = Yes for every row)"]]
-data = [hdr]
-for i, d in enumerate(top20, 1):
+# All selectable fixtures, grouped by league in Rob's order (Rob, 20 Nov 2026); rank = V4.1 model order
+S += [P(f"All {NRANK} fixtures you can pick, by league", "h2"), Spacer(1, 1 * mm),
+      P("Rank: 1 is V4.1's strongest. Ranks 1 to 20 (green) are V4.1's own top 20. Leagues in your order, then by kick-off.", "mut"), Spacer(1, 1.5 * mm)]
+hdr = [P(h, "smb") for h in ["Rank", "Kick-off (UK)", "Fixture", "Home scored 2+ / let in 2+", "Away scored 2+ / let in 2+", "Both<br/>3 of 5+", "BTTS", "Confidence", "Division", "Main risk"]]
+data = [hdr]; ts = []
+lord = {n: i for i, n in enumerate(ORDER)}
+cur = None
+for d in sorted(ranked, key=lambda d: (lord.get(d["comp"], 99), _ko.get(d.get("fixture_id"), ""), d["home"])):
+    if d["comp"] != cur:
+        cur = d["comp"]; data.append([P(f"<b>{cur}</b>", "sm")] + [""] * 9); r = len(data) - 1
+        ts += [("SPAN", (0, r), (-1, r)), ("BACKGROUND", (0, r), (-1, r), LINE)]
     al = d["al"]
-    data.append([P(str(i), "sm"), P(d["kickoff"], "sm"), P(d["comp"], "sm"), P(d["fixture"], "sm"), P(f"{al['hs2']} of {al['nh']}  ·  {al['hc2']} of {al['nh']}", "sm"), P(f"{al['as2']} of {al['na']}  ·  {al['ac2']} of {al['na']}", "sm"),
+    rk = f"<font color='#3DDC97'><b>{d['rank']}</b></font>" if d["rank"] <= 20 else f"<b>{d['rank']}</b>"
+    data.append([P(rk, "sm"), P(d["kickoff"], "sm"), P(d["fixture"], "sm"), P(f"{al['hs2']} of {al['nh']}<br/>{al['hc2']} of {al['nh']}", "sm"), P(f"{al['as2']} of {al['na']}<br/>{al['ac2']} of {al['na']}", "sm"),
                  P("<font color='#3DDC97'><b>yes</b></font>" if d["both3"] else "", "sm"), P(f"{d['btts']} ({d['btts_lik'][:3]})", "sm"),
                  P(f"<font color='{ {'High':'#3DDC97','Medium':'#F5B942','Weak':'#F5B942'}[d['conf']] }'><b>{d['conf']}</b></font>", "sm"), P((d["div"] or "").split(",")[0], "sm"), P(d["risk_v2"], "smm")])
-cwid = [5 * mm, 17 * mm, 18 * mm, 34 * mm, 15 * mm, 15 * mm, 12 * mm, 14 * mm, 14 * mm, 11 * mm]
+cwid = [12 * mm, 18 * mm, 33 * mm, 17 * mm, 17 * mm, 12 * mm, 13 * mm, 20 * mm, 16 * mm]
 t = Table(data, colWidths=cwid + [CW - sum(cwid)], repeatRows=1)
-ts = []
 t.setStyle(tstyle(ts)); S += [t, PageBreak()]
 # grouped shortlist
 S += [P("Grouped shortlist (date, competition, confidence, model score)", "h2"), Spacer(1, 1.5 * mm)]
@@ -291,7 +306,7 @@ S += [P("Fixture cards", "h2"), Spacer(1, 1.5 * mm),
         "Shield: clean sheets in the last 5 (grey 0 or 1, amber 2, red 3 or more). KEEPS SCORING: went 2 goals up and then scored again in at least 2 of the last 5 (stored goal times). "
         "TIGHT AND SCORING: both sides scored 2+ in 3 or more of 5 and let in 2+ in 1 or fewer. All display only: none of these changes selection.", "mut"), Spacer(1, 2.5 * mm)]
 order = {n: i for i, n in enumerate(ORDER)}
-cards = sorted([d for d in rows if d["conf"] != "rejected"], key=lambda d: (order.get(d["comp"], 99), d["kickoff"], d["home"]))
+cards = sorted([d for d in rows if d["conf"] != "rejected"], key=lambda d: (order.get(d["comp"], 99), _ko.get(d.get("fixture_id"), ""), d["home"]))
 cur = None
 for d in cards:
     if d["comp"] != cur: cur = d["comp"]; S += [KeepTogether([P(cur, "h3"), Spacer(1, 1.5 * mm), Card(d)]), Spacer(1, 3 * mm)]
