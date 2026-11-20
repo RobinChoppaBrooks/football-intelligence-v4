@@ -163,7 +163,11 @@ FAMILY_OF = {"f1": "1 Attack v Defence collision", "f2": "2 Two powerful attacks
              "f_": "5 Combined counts (single scores)", "f6": "6 Momentum", "f7": "7 Home/away specialists", "f8": "8 Opponent-adjusted",
              "f9": "9 Historical match DNA (kNN)", "f10": "10 Poisson / Dixon-Coles", "f11": "11 Machine learning", "f12": "12 Consensus", "v4": "V4.1 (locked)"}
 
+OVERRIDE = {"f6_base_logit": "6 Momentum (baseline, no momentum terms)", "f3b_drivers20": "5 Combined counts (drivers20)", "f_o25_counts": "5 Combined counts (Over 2.5 counts)", "f_goals10": "5 Combined counts (goals, last 10)"}
+
 def family(name):
+    if name in OVERRIDE:
+        return OVERRIDE[name]
     for k in sorted(FAMILY_OF, key=len, reverse=True):
         if name.startswith(k):
             return FAMILY_OF[k]

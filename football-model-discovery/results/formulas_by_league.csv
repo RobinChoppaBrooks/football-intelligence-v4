@@ -1,0 +1,281 @@
+id,league,split,selected,won
+F01,Premier League,DEV+VAL,73,50
+F01,Premier League,TEST,2,1
+F01,Championship,DEV+VAL,42,26
+F01,Championship,TEST,6,3
+F01,League One,DEV+VAL,40,22
+F01,League One,TEST,3,1
+F01,League Two,DEV+VAL,54,29
+F01,League Two,TEST,3,2
+F01,National League,DEV+VAL,85,54
+F01,National League,TEST,17,11
+F01,National League North,DEV+VAL,84,51
+F01,National League North,TEST,7,5
+F01,National League South,DEV+VAL,72,39
+F01,National League South,TEST,14,8
+F01,Ligue 1,DEV+VAL,43,29
+F01,Ligue 1,TEST,3,2
+F01,Bundesliga,DEV+VAL,97,70
+F01,Bundesliga,TEST,6,6
+F01,Eredivisie,DEV+VAL,95,70
+F01,Eredivisie,TEST,16,6
+F01,Primeira Liga,DEV+VAL,47,34
+F01,Primeira Liga,TEST,6,2
+F01,La Liga,DEV+VAL,44,29
+F01,La Liga,TEST,8,7
+F01,Scottish Premiership,DEV+VAL,42,31
+F01,Scottish Premiership,TEST,0,0
+F01,Super Lig,DEV+VAL,70,48
+F01,Super Lig,TEST,9,6
+F02,Premier League,DEV+VAL,71,46
+F02,Premier League,TEST,1,1
+F02,Championship,DEV+VAL,40,20
+F02,Championship,TEST,5,2
+F02,League One,DEV+VAL,51,25
+F02,League One,TEST,4,3
+F02,League Two,DEV+VAL,41,19
+F02,League Two,TEST,2,1
+F02,National League,DEV+VAL,68,37
+F02,National League,TEST,7,5
+F02,National League North,DEV+VAL,64,34
+F02,National League North,TEST,4,3
+F02,National League South,DEV+VAL,76,47
+F02,National League South,TEST,13,9
+F02,Ligue 1,DEV+VAL,32,20
+F02,Ligue 1,TEST,1,1
+F02,Bundesliga,DEV+VAL,80,54
+F02,Bundesliga,TEST,7,3
+F02,Eredivisie,DEV+VAL,74,49
+F02,Eredivisie,TEST,16,10
+F02,Primeira Liga,DEV+VAL,33,21
+F02,Primeira Liga,TEST,3,1
+F02,La Liga,DEV+VAL,24,13
+F02,La Liga,TEST,7,6
+F02,Scottish Premiership,DEV+VAL,24,16
+F02,Scottish Premiership,TEST,2,1
+F02,Super Lig,DEV+VAL,38,22
+F02,Super Lig,TEST,3,1
+F03,Premier League,DEV+VAL,220,143
+F03,Premier League,TEST,6,3
+F03,Championship,DEV+VAL,64,33
+F03,Championship,TEST,15,8
+F03,League One,DEV+VAL,68,31
+F03,League One,TEST,5,2
+F03,League Two,DEV+VAL,112,62
+F03,League Two,TEST,2,1
+F03,National League,DEV+VAL,196,121
+F03,National League,TEST,31,22
+F03,National League North,DEV+VAL,166,96
+F03,National League North,TEST,4,2
+F03,National League South,DEV+VAL,135,85
+F03,National League South,TEST,13,9
+F03,Ligue 1,DEV+VAL,77,42
+F03,Ligue 1,TEST,6,3
+F03,Bundesliga,DEV+VAL,224,157
+F03,Bundesliga,TEST,20,15
+F03,Eredivisie,DEV+VAL,248,164
+F03,Eredivisie,TEST,56,38
+F03,Primeira Liga,DEV+VAL,91,65
+F03,Primeira Liga,TEST,10,6
+F03,La Liga,DEV+VAL,58,38
+F03,La Liga,TEST,10,7
+F03,Scottish Premiership,DEV+VAL,95,60
+F03,Scottish Premiership,TEST,4,2
+F03,Super Lig,DEV+VAL,80,47
+F03,Super Lig,TEST,10,6
+F04,Premier League,DEV+VAL,98,63
+F04,Premier League,TEST,3,2
+F04,Championship,DEV+VAL,48,26
+F04,Championship,TEST,11,7
+F04,League One,DEV+VAL,50,28
+F04,League One,TEST,5,1
+F04,League Two,DEV+VAL,58,27
+F04,League Two,TEST,2,2
+F04,National League,DEV+VAL,96,60
+F04,National League,TEST,10,6
+F04,National League North,DEV+VAL,78,47
+F04,National League North,TEST,4,2
+F04,National League South,DEV+VAL,91,53
+F04,National League South,TEST,15,9
+F04,Ligue 1,DEV+VAL,53,37
+F04,Ligue 1,TEST,3,2
+F04,Bundesliga,DEV+VAL,117,89
+F04,Bundesliga,TEST,3,3
+F04,Eredivisie,DEV+VAL,88,67
+F04,Eredivisie,TEST,16,7
+F04,Primeira Liga,DEV+VAL,77,56
+F04,Primeira Liga,TEST,5,3
+F04,La Liga,DEV+VAL,51,31
+F04,La Liga,TEST,8,6
+F04,Scottish Premiership,DEV+VAL,55,43
+F04,Scottish Premiership,TEST,0,0
+F04,Super Lig,DEV+VAL,78,50
+F04,Super Lig,TEST,9,5
+F05,Premier League,DEV+VAL,189,124
+F05,Premier League,TEST,5,3
+F05,Championship,DEV+VAL,96,54
+F05,Championship,TEST,25,12
+F05,League One,DEV+VAL,106,61
+F05,League One,TEST,10,4
+F05,League Two,DEV+VAL,128,78
+F05,League Two,TEST,11,6
+F05,National League,DEV+VAL,196,112
+F05,National League,TEST,32,25
+F05,National League North,DEV+VAL,156,93
+F05,National League North,TEST,9,4
+F05,National League South,DEV+VAL,155,86
+F05,National League South,TEST,12,9
+F05,Ligue 1,DEV+VAL,103,61
+F05,Ligue 1,TEST,7,4
+F05,Bundesliga,DEV+VAL,183,126
+F05,Bundesliga,TEST,18,14
+F05,Eredivisie,DEV+VAL,207,144
+F05,Eredivisie,TEST,37,28
+F05,Primeira Liga,DEV+VAL,77,52
+F05,Primeira Liga,TEST,10,5
+F05,La Liga,DEV+VAL,77,40
+F05,La Liga,TEST,12,7
+F05,Scottish Premiership,DEV+VAL,73,46
+F05,Scottish Premiership,TEST,8,5
+F05,Super Lig,DEV+VAL,95,59
+F05,Super Lig,TEST,14,10
+F06,Premier League,DEV+VAL,144,89
+F06,Premier League,TEST,0,0
+F06,Championship,DEV+VAL,35,23
+F06,Championship,TEST,7,4
+F06,League One,DEV+VAL,55,27
+F06,League One,TEST,1,0
+F06,League Two,DEV+VAL,42,27
+F06,League Two,TEST,0,0
+F06,National League,DEV+VAL,140,93
+F06,National League,TEST,18,14
+F06,National League North,DEV+VAL,117,71
+F06,National League North,TEST,4,3
+F06,National League South,DEV+VAL,107,65
+F06,National League South,TEST,4,1
+F06,Ligue 1,DEV+VAL,32,17
+F06,Ligue 1,TEST,0,0
+F06,Bundesliga,DEV+VAL,139,87
+F06,Bundesliga,TEST,0,0
+F06,Eredivisie,DEV+VAL,125,85
+F06,Eredivisie,TEST,13,10
+F06,Primeira Liga,DEV+VAL,51,37
+F06,Primeira Liga,TEST,2,1
+F06,La Liga,DEV+VAL,36,20
+F06,La Liga,TEST,4,3
+F06,Scottish Premiership,DEV+VAL,55,37
+F06,Scottish Premiership,TEST,1,1
+F06,Super Lig,DEV+VAL,53,36
+F06,Super Lig,TEST,5,4
+F07,Premier League,DEV+VAL,260,162
+F07,Premier League,TEST,2,2
+F07,Championship,DEV+VAL,31,12
+F07,Championship,TEST,31,20
+F07,League One,DEV+VAL,3,2
+F07,League One,TEST,13,6
+F07,League Two,DEV+VAL,106,61
+F07,League Two,TEST,0,0
+F07,National League,DEV+VAL,191,106
+F07,National League,TEST,51,32
+F07,National League North,DEV+VAL,158,106
+F07,National League North,TEST,10,5
+F07,National League South,DEV+VAL,108,57
+F07,National League South,TEST,0,0
+F07,Ligue 1,DEV+VAL,60,33
+F07,Ligue 1,TEST,13,9
+F07,Bundesliga,DEV+VAL,327,221
+F07,Bundesliga,TEST,33,21
+F07,Eredivisie,DEV+VAL,239,159
+F07,Eredivisie,TEST,39,26
+F07,Primeira Liga,DEV+VAL,42,26
+F07,Primeira Liga,TEST,8,4
+F07,La Liga,DEV+VAL,0,0
+F07,La Liga,TEST,22,14
+F07,Scottish Premiership,DEV+VAL,71,47
+F07,Scottish Premiership,TEST,5,3
+F07,Super Lig,DEV+VAL,30,12
+F07,Super Lig,TEST,15,10
+F08,Premier League,DEV+VAL,115,72
+F08,Premier League,TEST,1,0
+F08,Championship,DEV+VAL,46,30
+F08,Championship,TEST,11,6
+F08,League One,DEV+VAL,55,33
+F08,League One,TEST,1,0
+F08,League Two,DEV+VAL,67,39
+F08,League Two,TEST,0,0
+F08,National League,DEV+VAL,116,78
+F08,National League,TEST,16,11
+F08,National League North,DEV+VAL,97,55
+F08,National League North,TEST,4,2
+F08,National League South,DEV+VAL,112,65
+F08,National League South,TEST,14,10
+F08,Ligue 1,DEV+VAL,56,35
+F08,Ligue 1,TEST,0,0
+F08,Bundesliga,DEV+VAL,151,108
+F08,Bundesliga,TEST,4,3
+F08,Eredivisie,DEV+VAL,106,79
+F08,Eredivisie,TEST,17,10
+F08,Primeira Liga,DEV+VAL,68,52
+F08,Primeira Liga,TEST,0,0
+F08,La Liga,DEV+VAL,36,17
+F08,La Liga,TEST,7,5
+F08,Scottish Premiership,DEV+VAL,58,44
+F08,Scottish Premiership,TEST,1,0
+F08,Super Lig,DEV+VAL,77,43
+F08,Super Lig,TEST,5,1
+F09,Premier League,DEV+VAL,143,85
+F09,Premier League,TEST,4,0
+F09,Championship,DEV+VAL,131,83
+F09,Championship,TEST,15,9
+F09,League One,DEV+VAL,121,66
+F09,League One,TEST,7,3
+F09,League Two,DEV+VAL,112,58
+F09,League Two,TEST,11,5
+F09,National League,DEV+VAL,162,91
+F09,National League,TEST,20,17
+F09,National League North,DEV+VAL,129,69
+F09,National League North,TEST,18,11
+F09,National League South,DEV+VAL,142,81
+F09,National League South,TEST,14,9
+F09,Ligue 1,DEV+VAL,90,55
+F09,Ligue 1,TEST,3,1
+F09,Bundesliga,DEV+VAL,118,79
+F09,Bundesliga,TEST,10,7
+F09,Eredivisie,DEV+VAL,128,85
+F09,Eredivisie,TEST,9,5
+F09,Primeira Liga,DEV+VAL,89,57
+F09,Primeira Liga,TEST,7,4
+F09,La Liga,DEV+VAL,92,54
+F09,La Liga,TEST,10,7
+F09,Scottish Premiership,DEV+VAL,76,53
+F09,Scottish Premiership,TEST,3,3
+F09,Super Lig,DEV+VAL,102,60
+F09,Super Lig,TEST,8,4
+F10,Premier League,DEV+VAL,178,115
+F10,Premier League,TEST,6,2
+F10,Championship,DEV+VAL,73,38
+F10,Championship,TEST,24,13
+F10,League One,DEV+VAL,84,46
+F10,League One,TEST,15,5
+F10,League Two,DEV+VAL,119,62
+F10,League Two,TEST,12,3
+F10,National League,DEV+VAL,200,128
+F10,National League,TEST,27,17
+F10,National League North,DEV+VAL,166,96
+F10,National League North,TEST,12,5
+F10,National League South,DEV+VAL,158,88
+F10,National League South,TEST,26,19
+F10,Ligue 1,DEV+VAL,89,59
+F10,Ligue 1,TEST,7,4
+F10,Bundesliga,DEV+VAL,214,148
+F10,Bundesliga,TEST,21,14
+F10,Eredivisie,DEV+VAL,195,121
+F10,Eredivisie,TEST,50,33
+F10,Primeira Liga,DEV+VAL,89,56
+F10,Primeira Liga,TEST,6,2
+F10,La Liga,DEV+VAL,72,43
+F10,La Liga,TEST,18,12
+F10,Scottish Premiership,DEV+VAL,64,41
+F10,Scottish Premiership,TEST,4,2
+F10,Super Lig,DEV+VAL,101,60
+F10,Super Lig,TEST,7,6
