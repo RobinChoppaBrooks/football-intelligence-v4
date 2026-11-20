@@ -1,0 +1,85 @@
+id,variant,threshold,delta,split,selected,won,v4_matched_won
+F01,h.one3 >= 2 AND h.c2 <= 3 AND max.s2 >= 4,1,-1,VAL,640,402,397
+F01,h.one3 >= 2 AND h.c2 <= 3 AND max.s2 >= 4,1,-1,TEST,177,108,117
+F01,h.one3 >= 4 AND h.c2 <= 3 AND max.s2 >= 4,1,1,VAL,89,66,64
+F01,h.one3 >= 4 AND h.c2 <= 3 AND max.s2 >= 4,1,1,TEST,28,16,21
+F01,h.one3 >= 3 AND h.c2 <= 2 AND max.s2 >= 4,2,-1,VAL,196,137,130
+F01,h.one3 >= 3 AND h.c2 <= 2 AND max.s2 >= 4,2,-1,TEST,66,40,44
+F01,h.one3 >= 3 AND h.c2 <= 4 AND max.s2 >= 4,2,1,VAL,319,212,209
+F01,h.one3 >= 3 AND h.c2 <= 4 AND max.s2 >= 4,2,1,TEST,114,69,73
+F01,h.one3 >= 3 AND h.c2 <= 3 AND max.s2 >= 3,3,-1,VAL,531,339,335
+F01,h.one3 >= 3 AND h.c2 <= 3 AND max.s2 >= 3,3,-1,TEST,177,103,118
+F01,h.one3 >= 3 AND h.c2 <= 3 AND max.s2 >= 5,3,1,VAL,77,60,57
+F01,h.one3 >= 3 AND h.c2 <= 3 AND max.s2 >= 5,3,1,TEST,32,20,20
+F02,h.o25 >= 4,1,-1,VAL,1235,742,744
+F02,h.o25 >= 4,1,-1,TEST,356,207,226
+F02,h.o25 >= 6,1,1,VAL,0,0,0
+F02,h.o25 >= 6,1,1,TEST,0,0,0
+F03,[sum.s2 - sum.o25 + sum.cs - sum.fts + 2*route.s2c2 + v3sum.o25 + 2*lg.o25x10] >= 28,1,-1,VAL,816,512,499
+F03,[sum.s2 - sum.o25 + sum.cs - sum.fts + 2*route.s2c2 + v3sum.o25 + 2*lg.o25x10] >= 28,1,-1,TEST,255,164,168
+F03,[sum.s2 - sum.o25 + sum.cs - sum.fts + 2*route.s2c2 + v3sum.o25 + 2*lg.o25x10] >= 30,1,1,VAL,407,269,253
+F03,[sum.s2 - sum.o25 + sum.cs - sum.fts + 2*route.s2c2 + v3sum.o25 + 2*lg.o25x10] >= 30,1,1,TEST,144,94,96
+F04,max.s3 >= 2 AND hv3.s2 >= 2,1,-1,VAL,1066,651,654
+F04,max.s3 >= 2 AND hv3.s2 >= 2,1,-1,TEST,289,176,194
+F04,max.s3 >= 4 AND hv3.s2 >= 2,1,1,VAL,71,53,52
+F04,max.s3 >= 4 AND hv3.s2 >= 2,1,1,TEST,17,12,11
+F04,max.s3 >= 3 AND hv3.s2 >= 1,2,-1,VAL,459,301,291
+F04,max.s3 >= 3 AND hv3.s2 >= 1,2,-1,TEST,139,87,93
+F04,max.s3 >= 3 AND hv3.s2 >= 3,2,1,VAL,138,96,94
+F04,max.s3 >= 3 AND hv3.s2 >= 3,2,1,TEST,33,18,21
+F05,[2*sum.s2 - sum.fts - route.s2c2 + lg.o25x10] >= 10,1,-1,VAL,941,566,566
+F05,[2*sum.s2 - sum.fts - route.s2c2 + lg.o25x10] >= 10,1,-1,TEST,305,190,199
+F05,[2*sum.s2 - sum.fts - route.s2c2 + lg.o25x10] >= 12,1,1,VAL,399,245,247
+F05,[2*sum.s2 - sum.fts - route.s2c2 + lg.o25x10] >= 12,1,1,TEST,135,93,88
+F06,sum.fts <= 3 AND v3sum.s2 >= 3 AND l10sum.o25 >= 14,1,-1,VAL,423,267,265
+F06,sum.fts <= 3 AND v3sum.s2 >= 3 AND l10sum.o25 >= 14,1,-1,TEST,56,40,33
+F06,sum.fts <= 5 AND v3sum.s2 >= 3 AND l10sum.o25 >= 14,1,1,VAL,439,278,274
+F06,sum.fts <= 5 AND v3sum.s2 >= 3 AND l10sum.o25 >= 14,1,1,TEST,59,41,35
+F06,sum.fts <= 4 AND v3sum.s2 >= 2 AND l10sum.o25 >= 14,2,-1,VAL,537,334,327
+F06,sum.fts <= 4 AND v3sum.s2 >= 2 AND l10sum.o25 >= 14,2,-1,TEST,78,50,47
+F06,sum.fts <= 4 AND v3sum.s2 >= 4 AND l10sum.o25 >= 14,2,1,VAL,254,167,164
+F06,sum.fts <= 4 AND v3sum.s2 >= 4 AND l10sum.o25 >= 14,2,1,TEST,40,28,23
+F06,sum.fts <= 4 AND v3sum.s2 >= 3 AND l10sum.o25 >= 13,3,-1,VAL,725,445,441
+F06,sum.fts <= 4 AND v3sum.s2 >= 3 AND l10sum.o25 >= 13,3,-1,TEST,97,62,61
+F06,sum.fts <= 4 AND v3sum.s2 >= 3 AND l10sum.o25 >= 15,3,1,VAL,221,145,140
+F06,sum.fts <= 4 AND v3sum.s2 >= 3 AND l10sum.o25 >= 15,3,1,TEST,32,26,19
+F07,sum.s3 >= 2 AND lg.o25x10 >= 6,1,-1,VAL,923,559,558
+F07,sum.s3 >= 2 AND lg.o25x10 >= 6,1,-1,TEST,446,282,281
+F07,sum.s3 >= 4 AND lg.o25x10 >= 6,1,1,VAL,224,152,150
+F07,sum.s3 >= 4 AND lg.o25x10 >= 6,1,1,TEST,105,73,65
+F07,sum.s3 >= 3 AND lg.o25x10 >= 5,2,-1,VAL,1227,727,738
+F07,sum.s3 >= 3 AND lg.o25x10 >= 5,2,-1,TEST,359,222,227
+F07,sum.s3 >= 3 AND lg.o25x10 >= 7,2,1,VAL,39,21,24
+F07,sum.s3 >= 3 AND lg.o25x10 >= 7,2,1,TEST,68,44,45
+F08,sum.s3 >= 1 AND v3sum.s2 >= 3 AND l10sum.o25 >= 11 AND route.s3c3 >= 4,1,-1,VAL,404,256,253
+F08,sum.s3 >= 1 AND v3sum.s2 >= 3 AND l10sum.o25 >= 11 AND route.s3c3 >= 4,1,-1,TEST,83,49,50
+F08,sum.s3 >= 3 AND v3sum.s2 >= 3 AND l10sum.o25 >= 11 AND route.s3c3 >= 4,1,1,VAL,315,209,203
+F08,sum.s3 >= 3 AND v3sum.s2 >= 3 AND l10sum.o25 >= 11 AND route.s3c3 >= 4,1,1,TEST,67,36,43
+F08,sum.s3 >= 2 AND v3sum.s2 >= 2 AND l10sum.o25 >= 11 AND route.s3c3 >= 4,2,-1,VAL,492,304,310
+F08,sum.s3 >= 2 AND v3sum.s2 >= 2 AND l10sum.o25 >= 11 AND route.s3c3 >= 4,2,-1,TEST,108,66,72
+F08,sum.s3 >= 2 AND v3sum.s2 >= 4 AND l10sum.o25 >= 11 AND route.s3c3 >= 4,2,1,VAL,205,131,135
+F08,sum.s3 >= 2 AND v3sum.s2 >= 4 AND l10sum.o25 >= 11 AND route.s3c3 >= 4,2,1,TEST,56,32,36
+F08,sum.s3 >= 2 AND v3sum.s2 >= 3 AND l10sum.o25 >= 10 AND route.s3c3 >= 4,3,-1,VAL,416,261,263
+F08,sum.s3 >= 2 AND v3sum.s2 >= 3 AND l10sum.o25 >= 10 AND route.s3c3 >= 4,3,-1,TEST,99,59,59
+F08,sum.s3 >= 2 AND v3sum.s2 >= 3 AND l10sum.o25 >= 12 AND route.s3c3 >= 4,3,1,VAL,338,210,214
+F08,sum.s3 >= 2 AND v3sum.s2 >= 3 AND l10sum.o25 >= 12 AND route.s3c3 >= 4,3,1,TEST,64,39,38
+F08,sum.s3 >= 2 AND v3sum.s2 >= 3 AND l10sum.o25 >= 11 AND route.s3c3 >= 3,4,-1,VAL,768,480,469
+F08,sum.s3 >= 2 AND v3sum.s2 >= 3 AND l10sum.o25 >= 11 AND route.s3c3 >= 3,4,-1,TEST,140,87,88
+F08,sum.s3 >= 2 AND v3sum.s2 >= 3 AND l10sum.o25 >= 11 AND route.s3c3 >= 5,4,1,VAL,141,98,95
+F08,sum.s3 >= 2 AND v3sum.s2 >= 3 AND l10sum.o25 >= 11 AND route.s3c3 >= 5,4,1,TEST,28,16,17
+F09,hv3.s2 >= 2,1,-1,VAL,2157,1261,1265
+F09,hv3.s2 >= 2,1,-1,TEST,510,302,325
+F09,hv3.s2 >= 4,1,1,VAL,0,0,0
+F09,hv3.s2 >= 4,1,1,TEST,0,0,0
+F10,drivers20 >= 7 AND sum.s2 >= 5 AND sum.o35 >= 5,1,-1,VAL,594,367,365
+F10,drivers20 >= 7 AND sum.s2 >= 5 AND sum.o35 >= 5,1,-1,TEST,239,141,157
+F10,drivers20 >= 9 AND sum.s2 >= 5 AND sum.o35 >= 5,1,1,VAL,568,350,345
+F10,drivers20 >= 9 AND sum.s2 >= 5 AND sum.o35 >= 5,1,1,TEST,226,134,151
+F10,drivers20 >= 8 AND sum.s2 >= 4 AND sum.o35 >= 5,2,-1,VAL,712,418,437
+F10,drivers20 >= 8 AND sum.s2 >= 4 AND sum.o35 >= 5,2,-1,TEST,290,172,186
+F10,drivers20 >= 8 AND sum.s2 >= 6 AND sum.o35 >= 5,2,1,VAL,392,247,248
+F10,drivers20 >= 8 AND sum.s2 >= 6 AND sum.o35 >= 5,2,1,TEST,148,97,101
+F10,drivers20 >= 8 AND sum.s2 >= 5 AND sum.o35 >= 4,3,-1,VAL,1097,670,664
+F10,drivers20 >= 8 AND sum.s2 >= 5 AND sum.o35 >= 4,3,-1,TEST,349,209,222
+F10,drivers20 >= 8 AND sum.s2 >= 5 AND sum.o35 >= 6,3,1,VAL,230,140,156
+F10,drivers20 >= 8 AND sum.s2 >= 5 AND sum.o35 >= 6,3,1,TEST,123,72,80

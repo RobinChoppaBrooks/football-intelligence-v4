@@ -1,0 +1,157 @@
+{
+ "dev_fixtures": 10944,
+ "dev_won": 5775,
+ "atoms": 712,
+ "seed": 20261120,
+ "pairs_tested": 253116,
+ "null_search": [
+  {
+   "shuffle": 0,
+   "band": "2-5%",
+   "best_won": 174,
+   "best_sel": 266,
+   "best_rate": 0.6541353464126587
+  },
+  {
+   "shuffle": 0,
+   "band": "5-10%",
+   "best_won": 399,
+   "best_sel": 643,
+   "best_rate": 0.6205287575721741
+  },
+  {
+   "shuffle": 0,
+   "band": "10-20%",
+   "best_won": 1096,
+   "best_sel": 1815,
+   "best_rate": 0.6038567423820496
+  },
+  {
+   "shuffle": 0,
+   "band": "20-35%",
+   "best_won": 1581,
+   "best_sel": 2657,
+   "best_rate": 0.5950319766998291
+  },
+  {
+   "shuffle": 0,
+   "band": "35-60%",
+   "best_won": 2199,
+   "best_sel": 3955,
+   "best_rate": 0.55600506067276
+  },
+  {
+   "shuffle": 1,
+   "band": "2-5%",
+   "best_won": 173,
+   "best_sel": 244,
+   "best_rate": 0.7090163826942444
+  },
+  {
+   "shuffle": 1,
+   "band": "5-10%",
+   "best_won": 407,
+   "best_sel": 651,
+   "best_rate": 0.6251919865608215
+  },
+  {
+   "shuffle": 1,
+   "band": "10-20%",
+   "best_won": 784,
+   "best_sel": 1274,
+   "best_rate": 0.6153846383094788
+  },
+  {
+   "shuffle": 1,
+   "band": "20-35%",
+   "best_won": 1377,
+   "best_sel": 2319,
+   "best_rate": 0.5937904119491577
+  },
+  {
+   "shuffle": 1,
+   "band": "35-60%",
+   "best_won": 2183,
+   "best_sel": 3908,
+   "best_rate": 0.5585977435112
+  },
+  {
+   "shuffle": 2,
+   "band": "2-5%",
+   "best_won": 184,
+   "best_sel": 263,
+   "best_rate": 0.6996197700500488
+  },
+  {
+   "shuffle": 2,
+   "band": "5-10%",
+   "best_won": 405,
+   "best_sel": 667,
+   "best_rate": 0.6071963906288147
+  },
+  {
+   "shuffle": 2,
+   "band": "10-20%",
+   "best_won": 662,
+   "best_sel": 1101,
+   "best_rate": 0.6012715697288513
+  },
+  {
+   "shuffle": 2,
+   "band": "20-35%",
+   "best_won": 1494,
+   "best_sel": 2552,
+   "best_rate": 0.5854231715202332
+  },
+  {
+   "shuffle": 2,
+   "band": "35-60%",
+   "best_won": 2365,
+   "best_sel": 4280,
+   "best_rate": 0.552570104598999
+  }
+ ],
+ "real_best_by_band": [
+  {
+   "band": "2-5%",
+   "best_formula": "v3sum.o25 >= 5 AND goals5.sum >= 37",
+   "best_won": 223,
+   "best_sel": 324,
+   "best_rate": 0.6882715821266174
+  },
+  {
+   "band": "5-10%",
+   "best_formula": "max.s3 >= 3 AND hv3.s2 >= 2",
+   "best_won": 464,
+   "best_sel": 717,
+   "best_rate": 0.6471408605575562
+  },
+  {
+   "band": "10-20%",
+   "best_formula": "h.s3 >= 2 AND av3.o25 >= 2",
+   "best_won": 722,
+   "best_sel": 1157,
+   "best_rate": 0.624027669429779
+  },
+  {
+   "band": "20-35%",
+   "best_formula": "v3sum.s2 >= 3 AND l10sum.o25 >= 11",
+   "best_won": 1550,
+   "best_sel": 2568,
+   "best_rate": 0.6035825610160828
+  },
+  {
+   "band": "35-60%",
+   "best_formula": "sum.s3 >= 2 AND min.o25 >= 2",
+   "best_won": 2442,
+   "best_sel": 4222,
+   "best_rate": 0.5783988833427429
+  }
+ ],
+ "triples_tested": 59747,
+ "linear_formulas_tested": 65535,
+ "linear_evaluations": 196605,
+ "trees_fitted": 9,
+ "total_formulas_evaluated": 510223,
+ "shortlist": 1375
+}

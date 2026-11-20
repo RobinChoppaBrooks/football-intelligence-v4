@@ -1,0 +1,28 @@
+{
+ "frozen_at": "2026-11-20T12:20:02.872814+00:00",
+ "test_season": "2026-27 (to 17 Nov 2026)",
+ "finalist_formulas": [
+  "h.one3 >= 3 AND h.c2 <= 3 AND max.s2 >= 4",
+  "h.o25 >= 5",
+  "[sum.s2 - sum.o25 + sum.cs - sum.fts + 2*route.s2c2 + v3sum.o25 + 2*lg.o25x10] >= 29",
+  "max.s3 >= 3 AND hv3.s2 >= 2",
+  "[2*sum.s2 - sum.fts - route.s2c2 + lg.o25x10] >= 11",
+  "sum.fts <= 4 AND v3sum.s2 >= 3 AND l10sum.o25 >= 14",
+  "sum.s3 >= 3 AND lg.o25x10 >= 6",
+  "sum.s3 >= 2 AND v3sum.s2 >= 3 AND l10sum.o25 >= 11 AND route.s3c3 >= 4",
+  "hv3.s2 >= 3",
+  "drivers20 >= 8 AND sum.s2 >= 5 AND sum.o35 >= 5"
+ ],
+ "ranking_models": [
+  "f11_rf",
+  "f6_base_logit",
+  "v4",
+  "f6_momentum_logit",
+  "f11_hgb",
+  "f11_hgb_shallow"
+ ],
+ "consensus": "f12 = mean percentile rank of the top 5 non-V4 ranking models",
+ "acca_qualify_rule": "a fixture may fill an accumulator only if its score is at or above that model's VAL 67th percentile (top third), fixed on VAL",
+ "primary_metric": "TEST top-20-per-window wins against V4.1 on identical fixtures; secondary top 5/10/15 and formula hits v V4.1 at matched volume",
+ "note": "Nothing below this line may be changed after the test season is opened."
+}
