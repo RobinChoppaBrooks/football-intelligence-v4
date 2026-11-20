@@ -1,0 +1,17 @@
+{
+ "run_id": "weekend_20261120_1037",
+ "mode": "weekend",
+ "kind": "report",
+ "subject": "Football V4.1 weekend: Sat 21 Nov to Sun 22 Nov",
+ "to": "robin@facestagram.co.uk",
+ "sent_utc": "2026-11-20 10:41:22",
+ "body": "reports/weekend/2026-11-20/email_2026-11-20_weekend.html",
+ "body_bytes": 145412,
+ "attachments": [
+  "reports/weekend/2026-11-20/combined_2026-11-20.pdf",
+  "reports/chatgpt_review/chatgpt_review_2026-11-20_weekend.md"
+ ],
+ "message_id": "<179517128029.2526.15593216385322688326@football-intelligence-v4>",
+ "dry_run": false,
+ "error": null
+}
