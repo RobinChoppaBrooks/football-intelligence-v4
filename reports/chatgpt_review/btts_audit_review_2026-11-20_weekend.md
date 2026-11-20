@@ -1,6 +1,6 @@
-# BTTS audit review: weekend_20261120_1037
+# BTTS audit review: weekend_20261120_1553
 
-Audit version btts_audit_v1, created 2026-11-20 10:40 UTC. Production outputs for this run are unchanged; this file is a second, independent reading of the same evidence.
+Audit version btts_audit_v1, created 2026-11-20 15:55 UTC. Production outputs for this run are unchanged; this file is a second, independent reading of the same evidence.
 Fixtures: 141. Flags: none 102, moderate 17, mild 16, note 6.
 
 How to read: the production BTTS verdict is a hand rule (YES exactly when the goal pattern is 'Both teams contribute', which needs an Over 2.5 route for each side).
