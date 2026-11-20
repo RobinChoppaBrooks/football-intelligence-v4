@@ -92,7 +92,7 @@ def rate(x, y, strong_a, strong_b):
     a2 = cnt(x, lambda r: r["gf"] >= 2); d2 = cnt(y, lambda r: r["ga"] >= 2)
     a1 = cnt(x, lambda r: r["gf"] >= 1); d1 = cnt(y, lambda r: r["ga"] >= 1)
     agf = np.mean([r["gf"] for r in x]); dga = np.mean([r["ga"] for r in y])
-    txt = f"scored in {a1}/{len(x)}, 2+ in {a2}/{len(x)} ({agf:.1f}/g) v conceded in {d1}/{len(y)}, 2+ in {d2}/{len(y)} ({dga:.1f}/g)"
+    txt = f"scored in {a1} of {len(x)}, 2+ in {a2} of {len(x)} ({agf:.1f}/g) v conceded in {d1} of {len(y)}, 2+ in {d2} of {len(y)} ({dga:.1f}/g)"
     score = a2 + d2                      # 0 to 10: how often the attack scores twice plus how often the defence lets in two
     if score >= 6 and a1 >= 4 and d1 >= 4: return "STRONG", txt
     if score <= 3 or a1 <= 2 or d1 <= 2: return "WEAK", txt
@@ -114,15 +114,15 @@ def against(hrows, arows, hv, av, names):
     for lab, rows in (("Home", hrows), ("Away", arows)):
         if len(rows) < 5: out.append(f"{lab} side has only {len(rows)} league games this season"); continue
         cs = cnt(rows, lambda r: r["ga"] == 0); fts = cnt(rows, lambda r: r["gf"] == 0)
-        if cs >= 2: out.append(f"{lab} side kept {cs}/5 clean sheets")
-        if fts >= 2: out.append(f"{lab} side failed to score in {fts}/5")
+        if cs >= 2: out.append(f"{lab} side kept {cs} of 5 clean sheets")
+        if fts >= 2: out.append(f"{lab} side failed to score in {fts} of 5")
         # 19 Oct 2026: the "average leans on one big game" catch was removed. Tested on 51,551 historical fixtures it
         # pointed the wrong way (flagged sides went over slightly MORE often), and the dots already show each game.
         und = cnt(rows, lambda r: r["tot"] <= 2)
-        if und >= 3: out.append(f"{lab} side's last 5: {und}/5 finished under 2.5")
+        if und >= 3: out.append(f"{lab} side's last 5: {und} of 5 finished under 2.5")
     for lab, rows, v in (("Home", hv, "home"), ("Away", av, "away")):
         if len(rows) < 3: out.append(f"{lab} side has only {len(rows)} {v} league games this season")
-        elif cnt(rows, lambda r: r["tot"] >= 3) <= 1: out.append(f"{lab} side's last 3 {v} games: only {cnt(rows, lambda r: r['tot'] >= 3)}/3 went over")
+        elif cnt(rows, lambda r: r["tot"] >= 3) <= 1: out.append(f"{lab} side's last 3 {v} games: only {cnt(rows, lambda r: r['tot'] >= 3)} of 3 went over")
     return out
 
 def for_(hrows, arows, hv, av):
@@ -132,10 +132,10 @@ def for_(hrows, arows, hv, av):
         o = cnt(rows, lambda r: r["tot"] >= 3); b = cnt(rows, lambda r: r["gf"] > 0 and r["ga"] > 0)
         gf2 = cnt(rows, lambda r: r["gf"] >= 2); ga2 = cnt(rows, lambda r: r["ga"] >= 2)
         bits = []
-        if o >= 4: bits.append(f"{o}/{len(rows)} games over 2.5")
-        if gf2 >= 3: bits.append(f"scored 2+ in {gf2}/{len(rows)}")
-        if ga2 >= 3: bits.append(f"conceded 2+ in {ga2}/{len(rows)}")
-        if b >= 4: bits.append(f"BTTS in {b}/{len(rows)}")
+        if o >= 4: bits.append(f"{o} of {len(rows)} games over 2.5")
+        if gf2 >= 3: bits.append(f"scored 2+ in {gf2} of {len(rows)}")
+        if ga2 >= 3: bits.append(f"conceded 2+ in {ga2} of {len(rows)}")
+        if b >= 4: bits.append(f"BTTS in {b} of {len(rows)}")
         if bits: out.append(f"{lab} side: " + ", ".join(bits))
     for lab, rows, v in (("Home", hv, "home"), ("Away", av, "away")):
         if len(rows) >= 3 and cnt(rows, lambda r: r["tot"] >= 3) == 3: out.append(f"{lab} side's last 3 {v} games all over 2.5 ({sum(r['gf'] for r in rows)}-{sum(r['ga'] for r in rows)})")
@@ -222,8 +222,8 @@ def main():
         d = dict(comp=r.comp, hv5=hv5, av5=av5, p_btts=round(float(r.p_btts), 3), btts=("YES" if btts_yes else "NO"), btts_lik=btts_lab.title(),
                  btts_lean=btts_lean, btts_note=btts_note, trump=trump, drivers20=drivers20,
                  pattern=pattern, why=why, risk=risk, route=route, kickoff=r.kickoff_utc.tz_convert("Europe/London").strftime("%a %d %b %H:%M"), fixture=f"{r.home} v {r.away}",
-                 h_l5=f"{sum(x['gf'] for x in hr)}-{sum(x['ga'] for x in hr)}", h_seq=seq(hr), h_over=f"{cnt(hr, lambda x: x['tot']>=3)}/{len(hr)}",
-                 a_l5=f"{sum(x['gf'] for x in ar)}-{sum(x['ga'] for x in ar)}", a_seq=seq(ar), a_over=f"{cnt(ar, lambda x: x['tot']>=3)}/{len(ar)}",
+                 h_l5=f"{sum(x['gf'] for x in hr)}-{sum(x['ga'] for x in hr)}", h_seq=seq(hr), h_over=f"{cnt(hr, lambda x: x['tot']>=3)} of {len(hr)}",
+                 a_l5=f"{sum(x['gf'] for x in ar)}-{sum(x['ga'] for x in ar)}", a_seq=seq(ar), a_over=f"{cnt(ar, lambda x: x['tot']>=3)} of {len(ar)}",
                  h_ven=f"{sum(x['gf'] for x in hv)}-{sum(x['ga'] for x in hv)} ({len(hv)})", a_ven=f"{sum(x['gf'] for x in av)}-{sum(x['ga'] for x in av)} ({len(av)})",
                  profile=prof, light=light, m1=m1, m1txt=t1, m2=m2, m2txt=t2, xg=xg, ev_for=ev_for, ev_against=ev_against, p=round(float(r.p), 3),
                  oq_h=oq_h, oq_a=oq_a, hr=hr, ar=ar, hv=hv, av=av, home=r.home, away=r.away, fixture_id=int(r.fixture_id))
@@ -254,11 +254,11 @@ def write_md(rows, path, teams):
     for d in greens:
         hr, ar = d["hr"], d["ar"]
         L += [f"## {d['fixture']}  ({d['comp']}, {d['kickoff']})", "",
-              f"**{d['home']}, last 5:** {d['h_seq']}  ·  GF {sum(x['gf'] for x in hr)} GA {sum(x['ga'] for x in hr)}  ·  {sum(x['gf'] for x in hr)/max(len(hr),1):.1f} / {sum(x['ga'] for x in hr)/max(len(hr),1):.1f} per game  ·  3+ in {d['h_over']}  ·  BTTS in {cnt(hr, lambda x: x['gf']>0 and x['ga']>0)}/{len(hr)}",
+              f"**{d['home']}, last 5:** {d['h_seq']}  ·  GF {sum(x['gf'] for x in hr)} GA {sum(x['ga'] for x in hr)}  ·  {sum(x['gf'] for x in hr)/max(len(hr),1):.1f} / {sum(x['ga'] for x in hr)/max(len(hr),1):.1f} per game  ·  3+ in {d['h_over']}  ·  BTTS in {cnt(hr, lambda x: x['gf']>0 and x['ga']>0)} of {len(hr)}",
               f"Opponents: " + ", ".join(f"{teams[x['opp']]} ({x['ven']})" for x in hr), "",
-              f"**{d['away']}, last 5:** {d['a_seq']}  ·  GF {sum(x['gf'] for x in ar)} GA {sum(x['ga'] for x in ar)}  ·  {sum(x['gf'] for x in ar)/max(len(ar),1):.1f} / {sum(x['ga'] for x in ar)/max(len(ar),1):.1f} per game  ·  3+ in {d['a_over']}  ·  BTTS in {cnt(ar, lambda x: x['gf']>0 and x['ga']>0)}/{len(ar)}",
+              f"**{d['away']}, last 5:** {d['a_seq']}  ·  GF {sum(x['gf'] for x in ar)} GA {sum(x['ga'] for x in ar)}  ·  {sum(x['gf'] for x in ar)/max(len(ar),1):.1f} / {sum(x['ga'] for x in ar)/max(len(ar),1):.1f} per game  ·  3+ in {d['a_over']}  ·  BTTS in {cnt(ar, lambda x: x['gf']>0 and x['ga']>0)} of {len(ar)}",
               f"Opponents: " + ", ".join(f"{teams[x['opp']]} ({x['ven']})" for x in ar), "",
-              f"**Venue:** {d['home']} last 3 home {d['h_ven']}, 3+ in {cnt(d['hv'], lambda x: x['tot']>=3)}/{len(d['hv'])}  ·  {d['away']} last 3 away {d['a_ven']}, 3+ in {cnt(d['av'], lambda x: x['tot']>=3)}/{len(d['av'])}", "",
+              f"**Venue:** {d['home']} last 3 home {d['h_ven']}, 3+ in {cnt(d['hv'], lambda x: x['tot']>=3)} of {len(d['hv'])}  ·  {d['away']} last 3 away {d['a_ven']}, 3+ in {cnt(d['av'], lambda x: x['tot']>=3)} of {len(d['av'])}", "",
               f"**Home attack v away defence: {d['m1']}.** {d['m1txt']}", f"**Away attack v home defence: {d['m2']}.** {d['m2txt']}", "",
               f"**Opposition quality:** " + (f"{d['home']}'s opponents concede {d['oq_h'][0]:.2f}/g (division average {d['oq_h'][1]:.2f}); " if d['oq_h'] else "") + (f"{d['away']}'s opponents concede {d['oq_a'][0]:.2f}/g (division average {d['oq_a'][1]:.2f})" if d['oq_a'] else ""), "",
               f"**Underlying performance:** {d['xg']}", "", f"**Profile:** {d['profile']}", "",

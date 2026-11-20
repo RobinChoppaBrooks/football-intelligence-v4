@@ -55,7 +55,7 @@ def align(d):
     elif sa or sb: cls = "Watchlist"
     else: cls = "Rejected"
     st = lambda s, sup: "Strong" if s else ("Some support" if sup else "Weak")
-    if cls == "Rejected": reason = f"neither route reaches 3 of 5 both ways (home {hs2}/{nh} v away let in {ac2}/{na}; away {as2}/{na} v home let in {hc2}/{nh})"
+    if cls == "Rejected": reason = f"neither route reaches 3 of 5 both ways (home {hs2} of {nh} v away let in {ac2} of {na}; away {as2} of {na} v home let in {hc2} of {nh})"
     elif cls == "Watchlist": reason = "one credible route only"
     elif cls == "Secondary": reason = "one strong route with support on the other"
     else: reason = "both routes strong"
@@ -155,14 +155,14 @@ class Card(Flowable):
                                     ("Game had 3+", lambda r: r["tot"] >= 3, rs, False), ("Both scored", lambda r: r["gf"] > 0 and r["ga"] > 0, rs, False), (vlab, lambda r: r["tot"] >= 3, vs, False)):
                 cv.setFillColor(TXT if big else MUTED); cv.setFont("DVB" if big else "DV", 9 if big else 8); cv.drawString(px, yy - 1 * mm, lab)
                 s.dots(px + 34 * mm, yy, rr, f, big)
-                cnt = n_(rr, f); cv.setFillColor(TXT if big else MUTED); cv.setFont("DVB" if big else "DV", 9 if big else 8); cv.drawString(px + 72 * mm, yy - 1 * mm, f"{cnt}/{len(rr)}")
+                cnt = n_(rr, f); cv.setFillColor(TXT if big else MUTED); cv.setFont("DVB" if big else "DV", 9 if big else 8); cv.drawString(px + 72 * mm, yy - 1 * mm, f"{cnt} of {len(rr)}")
                 yy -= 7.5 * mm if big else 6 * mm
             if k == 0: cv.setStrokeColor(LINE); cv.line(s.width / 2 - 2 * mm, y + 3 * mm, s.width / 2 - 2 * mm, yy + 2 * mm)
         # match-up section
         ym = yy - 3 * mm; cv.setStrokeColor(LINE); cv.line(6 * mm, ym + 2 * mm, s.width - 6 * mm, ym + 2 * mm)
         if al["score"] is not None:
-            for k, (ttl, a1, b1, stv, rt) in enumerate(((f"HOME ATTACK → AWAY DEFENCE", f"{d['home']} scored 2+: {al['hs2']}/{al['nh']}", f"{d['away']} let in 2+: {al['ac2']}/{al['na']}", al["strA"], al["rA"]),
-                                                       (f"AWAY ATTACK → HOME DEFENCE", f"{d['away']} scored 2+: {al['as2']}/{al['na']}", f"{d['home']} let in 2+: {al['hc2']}/{al['nh']}", al["strB"], al["rB"]))):
+            for k, (ttl, a1, b1, stv, rt) in enumerate(((f"HOME ATTACK → AWAY DEFENCE", f"{d['home']} scored 2+: {al['hs2']} of {al['nh']}", f"{d['away']} let in 2+: {al['ac2']} of {al['na']}", al["strA"], al["rA"]),
+                                                       (f"AWAY ATTACK → HOME DEFENCE", f"{d['away']} scored 2+: {al['as2']} of {al['na']}", f"{d['home']} let in 2+: {al['hc2']} of {al['nh']}", al["strB"], al["rB"]))):
                 px = 6 * mm + k * (s.width / 2)
                 cv.setFillColor(MUTED); cv.setFont("DVB", 7.5); cv.drawString(px, ym - 3 * mm, ttl)
                 cv.setFillColor(TXT); cv.setFont("DV", 8); cv.drawString(px, ym - 7.5 * mm, a1); cv.drawString(px, ym - 11.5 * mm, b1)
@@ -173,8 +173,8 @@ class Card(Flowable):
             hc, ac = cs(d["hr"]), cs(d["ar"])
             cv.setFillColor(RED if (hc[0] >= 2 or hc[1] >= 2 or ac[0] >= 2 or ac[1] >= 2) else MUTED); cv.setFont("DV", 7.5)
             cv.setFont("DV", 7)
-            cv.drawString(6 * mm, yw, f"{d['home'][:22]}: clean sheets {hc[0]}/{al['nh']}, failed to score {hc[1]}/{al['nh']}, both scored {hc[2]}/{al['nh']}")
-            cv.drawString(s.width / 2 + 4 * mm, yw, f"{d['away'][:22]}: clean sheets {ac[0]}/{al['na']}, failed to score {ac[1]}/{al['na']}, both scored {ac[2]}/{al['na']}")
+            cv.drawString(6 * mm, yw, f"{d['home'][:22]}: clean sheets {hc[0]} of {al['nh']}, failed to score {hc[1]} of {al['nh']}, both scored {hc[2]} of {al['nh']}")
+            cv.drawString(s.width / 2 + 4 * mm, yw, f"{d['away'][:22]}: clean sheets {ac[0]} of {al['na']}, failed to score {ac[1]} of {al['na']}, both scored {ac[2]} of {al['na']}")
             yw -= 4.5 * mm
             cv.setFillColor(MUTED); cv.setFont("DVB", 7.5); cv.drawString(6 * mm, yw, "Why:"); cv.setFont("DV", 7.5)
             for ln in wrap(d["why"], "DV", 7.5, s.width - 24 * mm)[:2]: cv.drawString(17 * mm, yw, ln); yw -= 3.6 * mm
@@ -201,14 +201,14 @@ S = [P("Over 2.5 goals: V4 report", "h1"), Spacer(1, 2 * mm), P(a.window + ". Al
        "Scored 2+ and Let in 2+ counts are shown on every card as supporting evidence; both attacks at 3 of 5+ adds about three points inside the bands and is highlighted, not required.", "mut"), Spacer(1, 4 * mm)]
 # Top 20
 S += [P("Selected fixtures ranked by model score (up to 20)", "h2"), Spacer(1, 1.5 * mm)]
-hdr = [P(h, "smb") for h in ["#", "Kick-off (UK)", "Competition", "Fixture", "Home sc2+ / let2+", "Away sc2+ / let2+", "Both 3/5+", "BTTS", "Confidence", "Division", "Main risk (Over 2.5 = Yes for every row)"]]
+hdr = [P(h, "smb") for h in ["#", "Kick-off (UK)", "Competition", "Fixture", "Home sc2+ / let2+", "Away sc2+ / let2+", "Both<br/>3 of 5+", "BTTS", "Confidence", "Division", "Main risk (Over 2.5 = Yes for every row)"]]
 data = [hdr]
 for i, d in enumerate(top20, 1):
     al = d["al"]
-    data.append([P(str(i), "sm"), P(d["kickoff"], "sm"), P(d["comp"], "sm"), P(d["fixture"], "sm"), P(f"{al['hs2']}/{al['nh']}  ·  {al['hc2']}/{al['nh']}", "sm"), P(f"{al['as2']}/{al['na']}  ·  {al['ac2']}/{al['na']}", "sm"),
+    data.append([P(str(i), "sm"), P(d["kickoff"], "sm"), P(d["comp"], "sm"), P(d["fixture"], "sm"), P(f"{al['hs2']} of {al['nh']}  ·  {al['hc2']} of {al['nh']}", "sm"), P(f"{al['as2']} of {al['na']}  ·  {al['ac2']} of {al['na']}", "sm"),
                  P("<font color='#3DDC97'><b>yes</b></font>" if d["both3"] else "", "sm"), P(f"{d['btts']} ({d['btts_lik'][:3]})", "sm"),
                  P(f"<font color='{ {'High':'#3DDC97','Medium':'#F5B942','Weak':'#F5B942'}[d['conf']] }'><b>{d['conf']}</b></font>", "sm"), P((d["div"] or "").split(",")[0], "sm"), P(d["risk_v2"], "smm")])
-cwid = [5 * mm, 17 * mm, 18 * mm, 34 * mm, 15 * mm, 15 * mm, 10 * mm, 14 * mm, 14 * mm, 11 * mm]
+cwid = [5 * mm, 17 * mm, 18 * mm, 34 * mm, 15 * mm, 15 * mm, 12 * mm, 14 * mm, 14 * mm, 11 * mm]
 t = Table(data, colWidths=cwid + [CW - sum(cwid)], repeatRows=1)
 ts = []
 t.setStyle(tstyle(ts)); S += [t, PageBreak()]
@@ -223,7 +223,7 @@ for d in short:
         cur = key; S += [Spacer(1, 2 * mm), P(f"{d['kickoff'][:10]}  ·  {d['comp']}", "h3"), Spacer(1, 1 * mm)]
     al = d["al"]
     S.append(Table([[P(f"<font color='{ {'High':'#3DDC97','Medium':'#F5B942','Weak':'#F5B942'}[d['conf']] }'><b>{d['conf']}</b></font>", "sm"), P(f"<b>{d['fixture']}</b> {d['kickoff'][-5:]}", "sm"),
-                     P(f"H scored 2+ {al['hs2']}/{al['nh']} · H let in 2+ {al['hc2']}/{al['nh']} · A scored 2+ {al['as2']}/{al['na']} · A let in 2+ {al['ac2']}/{al['na']}" + (" · <font color='#3DDC97'>both 3/5+</font>" if d["both3"] else ""), "sm"),
+                     P(f"H scored 2+ {al['hs2']} of {al['nh']} · H let in 2+ {al['hc2']} of {al['nh']} · A scored 2+ {al['as2']} of {al['na']} · A let in 2+ {al['ac2']} of {al['na']}" + (" · <font color='#3DDC97'>both 3 of 5+</font>" if d["both3"] else ""), "sm"),
                      P(f"BTTS {d['btts']} ({d['btts_lik']})", "smm")]], colWidths=[18 * mm, 52 * mm, 86 * mm, 30 * mm], style=tstyle([("BACKGROUND", (0, 0), (-1, -1), CARD)])))
 S.append(PageBreak())
 # cards
@@ -238,10 +238,10 @@ S.append(PageBreak())
 # rejected
 S += [P("Rejected fixtures, with the model's reason", "h2"), Spacer(1, 1.5 * mm)]
 rej = sorted([d for d in rows if d["conf"] == "rejected"], key=lambda d: (order.get(d["comp"], 99), d["kickoff"]))
-for d in rej: d["al"]["reason"] = ("fewer than 3 league games for one side" if (d["al"]["nh"] < 3 or d["al"]["na"] < 3) else ("match-up contradicts the headline numbers" if any("contradicts" in e for e in d["ev_against"]) else "model score below the selection line") + (f"; attacks {d['al']['hs2']}/{d['al']['nh']} and {d['al']['as2']}/{d['al']['na']}" if d["al"]["nh"] >= 3 and d["al"]["na"] >= 3 else ""))
+for d in rej: d["al"]["reason"] = ("fewer than 3 league games for one side" if (d["al"]["nh"] < 3 or d["al"]["na"] < 3) else ("match-up contradicts the headline numbers" if any("contradicts" in e for e in d["ev_against"]) else "model score below the selection line") + (f"; attacks {d['al']['hs2']} of {d['al']['nh']} and {d['al']['as2']} of {d['al']['na']}" if d["al"]["nh"] >= 3 and d["al"]["na"] >= 3 else ""))
 data = [["Kick-off (UK)", "Competition", "Fixture", "H sc2+", "H let2+", "A sc2+", "A let2+", "Model", "Reason"]]
 for d in rej:
-    al = d["al"]; data.append([d["kickoff"], d["comp"], d["fixture"], f"{al['hs2']}/{al['nh']}", f"{al['hc2']}/{al['nh']}", f"{al['as2']}/{al['na']}", f"{al['ac2']}/{al['na']}", "rejected", P(al["reason"], "smm")])
+    al = d["al"]; data.append([d["kickoff"], d["comp"], d["fixture"], f"{al['hs2']} of {al['nh']}", f"{al['hc2']} of {al['nh']}", f"{al['as2']} of {al['na']}", f"{al['ac2']} of {al['na']}", "rejected", P(al["reason"], "smm")])
 S += [Table(data, colWidths=[20 * mm, 24 * mm, 46 * mm, 9 * mm, 9 * mm, 9 * mm, 9 * mm, 13 * mm, 47 * mm], repeatRows=1, style=tstyle()), Spacer(1, 4 * mm)]
 # coverage
 S += [P("Data coverage and limitations", "h2"), Spacer(1, 1.5 * mm)]
@@ -266,4 +266,4 @@ meth = ["Selection: gradient-boosted model on each side's last-5 league counts (
         "No averages anywhere. Nothing inferred for missing data. Every count comes from stored final scores; the five scorelines are printed on each card."]
 for ln in meth: S += [P("• " + ln, "mut"), Spacer(1, 1 * mm)]
 SimpleDocTemplate(a.out, pagesize=A4, leftMargin=12 * mm, rightMargin=12 * mm, topMargin=12 * mm, bottomMargin=14 * mm).build(S, onFirstPage=on_page, onLaterPages=on_page)
-print(f"wrote {a.out}: {len(rows)} fixtures; {ncls}; both attacks 3/5+ among selected: {nboth}")
+print(f"wrote {a.out}: {len(rows)} fixtures; {ncls}; both attacks 3 of 5+ among selected: {nboth}")
