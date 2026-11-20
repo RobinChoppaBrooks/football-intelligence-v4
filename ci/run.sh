@@ -79,6 +79,9 @@ if [ "$MODE" != "download-only" ] && [ "$MODE" != "prices" ] && [ "$MODE" != "fe
   case "$MODE" in
     midweek|weekend|range)
       python render_email.py "$RUN_ID" || echo "email render skipped: $?"
+      # the job emails the rendered body itself (20 Nov 2026): a 145 KB weekend body was too large for the Claude session to
+      # carry inline. Sends a failure notice instead when the model step failed. Needs the GMAIL_* secrets; never fails the job.
+      python send_email.py "$RUN_ID" || echo "email send failed: $? (see reports/email_log/$RUN_ID.json)"
       ;;
   esac
 fi
