@@ -32,6 +32,34 @@ a = ap.parse_args()
 rows = pickle.load(open(a.pkl, "rb")); c = sqlite3.connect(a.db)
 teams = dict(c.execute("select team_id,name from teams"))
 
+# ---------- card badges from stored goal times (display only, never selection; Rob, 20 Nov 2026) ----------
+_fx = pd.read_sql("select fixture_id, home_id, away_id, kickoff_utc from fixtures", c)
+_fid = {(r.home_id, r.away_id, r.kickoff_utc): r.fixture_id for r in _fx.itertuples()}
+_ids = {r.fixture_id: (r.home_id, r.away_id) for r in _fx.itertuples()}
+try:
+    _ev = pd.read_sql("select fixture_id, seq, minute, extra, team_id from fixture_events where type='Goal' and detail != 'Missed Penalty'", c)
+except Exception:
+    _ev = pd.DataFrame(columns=["fixture_id", "seq", "minute", "extra", "team_id"])
+_ev["extra"] = _ev.extra.fillna(0)
+_goals = {f: list(g.sort_values(["minute", "extra", "seq"]).team_id) for f, g in _ev.groupby("fixture_id")}
+
+def keeps_scoring(team, rs):
+    """games in the last 5 where the team went 2 goals up and then scored again; games without stored goal times count as no."""
+    n = 0
+    for x in rs:
+        ko = pd.Timestamp(x["kickoff"]).isoformat()
+        f = _fid.get((team, x["opp"], ko) if x["ven"] == "H" else (x["opp"], team, ko))
+        seq = _goals.get(f)
+        if not seq: continue
+        lead, up2 = 0, False
+        for t in seq:
+            if t == team:
+                if up2: n += 1; break
+                lead += 1
+            else: lead -= 1
+            if lead >= 2: up2 = True
+    return n
+
 # ---------- alignment score (the brief's formula) ----------
 n_ = lambda rs, f: sum(1 for x in rs if f(x))
 def align(d):
@@ -123,6 +151,25 @@ def wrap(txt, font, size, width):
     return lines + [line]
 CW = W - 24 * mm; CH = 124 * mm
 
+ORANGE, YELLOW = colors.HexColor("#FF8A3D"), colors.HexColor("#FFD166")
+def flame(cv, cx, cy, h=4.2 * mm):
+    """form icon: drawn flame (the PDF font has no emoji)."""
+    for col, sc in ((ORANGE, 1.0), (YELLOW, 0.55)):
+        hh, w = h * sc, h * 0.42 * sc; top, bot = cy + hh / 2 - (h - hh) / 2, cy - h / 2
+        p = cv.beginPath(); p.moveTo(cx, top)
+        p.curveTo(cx + w * 0.4, top - hh * 0.3, cx + w, top - hh * 0.45, cx + w * 0.8, bot + hh * 0.25)
+        p.curveTo(cx + w * 0.6, bot, cx - w * 0.6, bot, cx - w * 0.8, bot + hh * 0.25)
+        p.curveTo(cx - w, top - hh * 0.5, cx - w * 0.2, top - hh * 0.35, cx, top); p.close()
+        cv.setFillColor(col); cv.setStrokeColor(col); cv.drawPath(p, fill=1, stroke=0)
+def shield(cv, cx, cy, col, num, h=4.4 * mm):
+    """clean-sheet icon: drawn shield with the clean-sheet count inside."""
+    w = h * 0.86; top, bot = cy + h / 2, cy - h / 2
+    p = cv.beginPath(); p.moveTo(cx - w / 2, top); p.lineTo(cx + w / 2, top); p.lineTo(cx + w / 2, cy)
+    p.curveTo(cx + w / 2, bot + h * 0.2, cx + w * 0.15, bot + h * 0.05, cx, bot)
+    p.curveTo(cx - w * 0.15, bot + h * 0.05, cx - w / 2, bot + h * 0.2, cx - w / 2, cy); p.close()
+    cv.setFillColor(col); cv.setStrokeColor(col); cv.drawPath(p, fill=1, stroke=0)
+    cv.setFillColor(BG); cv.setFont("DVB", 7); cv.drawCentredString(cx, cy - 1.0 * mm, str(num))
+
 class Card(Flowable):
     def __init__(s, d): super().__init__(); s.d = d; s.width, s.height = CW, CH
     def dots(s, x, y, rs, f, big=False):
@@ -140,17 +187,28 @@ class Card(Flowable):
         y = top - 16 * mm
         cv.setFillColor(CC[al["cls"]]); cv.setFont("DVB", 9); cv.drawString(6 * mm, y, f"OVER 2.5 {'YES' if d['light'] != 'RED' else 'NO'}  ·  confidence {d['conf'].upper()}")
         cv.setFillColor(MUTED); cv.setFont("DV", 8); cv.drawString(84 * mm, y, f"BTTS {d.get('btts_lean', d['btts'])} (model {d['btts_lik']}) · drivers {d.get('drivers20', '-')} of 20{' · TRUMP CARD' if d.get('trump') else ''}")
-        cv.setFillColor(GREEN if d["both3"] else MUTED); cv.setFont("DVB" if d["both3"] else "DV", 8); cv.drawRightString(s.width - 6 * mm, y - 4.5 * mm, "both attacks 3 of 5+" if d["both3"] else "")
+        hs2_, hc2_, as2_, ac2_ = (n_(d["hr"], lambda x: x["gf"] >= 2), n_(d["hr"], lambda x: x["ga"] >= 2), n_(d["ar"], lambda x: x["gf"] >= 2), n_(d["ar"], lambda x: x["ga"] >= 2))
+        tight = hs2_ >= 3 and as2_ >= 3 and hc2_ <= 1 and ac2_ <= 1
+        badges = (["both attacks 3 of 5+"] if d["both3"] else []) + (["TIGHT AND SCORING"] if tight else [])
+        cv.setFillColor(GREEN); cv.setFont("DVB", 8); cv.drawRightString(s.width - 6 * mm, y - 4.5 * mm, "  ·  ".join(badges))
         y -= 4.5 * mm; cv.setFillColor(MUTED); cv.setFont("DV", 7.5); cv.drawString(6 * mm, y, f"Division: {d['div'] or 'too few games yet'}")
         y -= 5 * mm; cv.setStrokeColor(LINE); cv.setLineWidth(0.6); cv.line(6 * mm, y, s.width - 6 * mm, y)
         # team panels
         y -= 6 * mm
         for k, (name, ven, rs, vs, vlab) in enumerate(((d["home"], "home", d["hr"], d.get("hv5", d["hv"]), "At home, 3+"), (d["away"], "away", d["ar"], d.get("av5", d["av"]), "Away, 3+"))):
             px = 6 * mm + k * (s.width / 2)
-            cv.setFillColor(TXT); cv.setFont("DVB", 9); cv.drawString(px, y, f"{name.upper()}  {ven}")
-            cv.setFillColor(MUTED); cv.setFont("DV", 6.5); cv.drawRightString(px + 88 * mm, y, "oldest → newest")
-            cv.setFillColor(MUTED); cv.setFont("DV", 6.8); cv.drawString(px, y - 4 * mm, "scores: " + ", ".join(f"{x['gf']}-{x['ga']}" for x in rs) if rs else "no league games this season")
-            yy = y - 11 * mm
+            label = f"{name.upper()}  {ven}"
+            cv.setFillColor(TXT); cv.setFont("DVB", 9); cv.drawString(px, y, label)
+            ix = px + pdfmetrics.stringWidth(label, "DVB", 9) + 3 * mm
+            if n_(rs, lambda x: x["gf"] >= 2) >= 4: flame(cv, ix + 1.6 * mm, y + 1.2 * mm); ix += 5 * mm
+            ncs = n_(rs, lambda x: x["ga"] == 0)
+            shield(cv, ix + 1.9 * mm, y + 1.2 * mm, RED if ncs >= 3 else (AMBER if ncs == 2 else MUTED), ncs)
+            team_id = _ids.get(d.get("fixture_id"), (None, None))[k]
+            if team_id is not None and keeps_scoring(team_id, rs) >= 2:
+                cv.setFillColor(GREEN); cv.setFont("DVB", 7); cv.drawRightString(px + 88 * mm, y, "KEEPS SCORING")
+            cv.setFillColor(TXT); cv.setFont("DVB", 10.5)
+            cv.drawString(px, y - 5.5 * mm, "   ".join(f"{x['gf']}-{x['ga']}" for x in rs) if rs else "no league games this season")
+            yy = y - 12.5 * mm
             for lab, f, rr, big in (("SCORED 2+", lambda r: r["gf"] >= 2, rs, True), ("LET IN 2+", lambda r: r["ga"] >= 2, rs, True),
                                     ("Game had 3+", lambda r: r["tot"] >= 3, rs, False), ("Both scored", lambda r: r["gf"] > 0 and r["ga"] > 0, rs, False), (vlab, lambda r: r["tot"] >= 3, vs, False)):
                 cv.setFillColor(TXT if big else MUTED); cv.setFont("DVB" if big else "DV", 9 if big else 8); cv.drawString(px, yy - 1 * mm, lab)
@@ -173,8 +231,9 @@ class Card(Flowable):
             hc, ac = cs(d["hr"]), cs(d["ar"])
             cv.setFillColor(RED if (hc[0] >= 2 or hc[1] >= 2 or ac[0] >= 2 or ac[1] >= 2) else MUTED); cv.setFont("DV", 7.5)
             cv.setFont("DV", 7)
-            cv.drawString(6 * mm, yw, f"{d['home'][:22]}: clean sheets {hc[0]} of {al['nh']}, failed to score {hc[1]} of {al['nh']}, both scored {hc[2]} of {al['nh']}")
-            cv.drawString(s.width / 2 + 4 * mm, yw, f"{d['away'][:22]}: clean sheets {ac[0]} of {al['na']}, failed to score {ac[1]} of {al['na']}, both scored {ac[2]} of {al['na']}")
+            cv.drawString(6 * mm, yw, f"{d['home'][:30]}: clean sheets {hc[0]} of {al['nh']}, failed to score {hc[1]} of {al['nh']}, both scored {hc[2]} of {al['nh']}")
+            yw -= 3.6 * mm
+            cv.drawString(6 * mm, yw, f"{d['away'][:30]}: clean sheets {ac[0]} of {al['na']}, failed to score {ac[1]} of {al['na']}, both scored {ac[2]} of {al['na']}")
             yw -= 4.5 * mm
             cv.setFillColor(MUTED); cv.setFont("DVB", 7.5); cv.drawString(6 * mm, yw, "Why:"); cv.setFont("DV", 7.5)
             for ln in wrap(d["why"], "DV", 7.5, s.width - 24 * mm)[:2]: cv.drawString(17 * mm, yw, ln); yw -= 3.6 * mm
@@ -227,7 +286,10 @@ for d in short:
                      P(f"BTTS {d['btts']} ({d['btts_lik']})", "smm")]], colWidths=[18 * mm, 52 * mm, 86 * mm, 30 * mm], style=tstyle([("BACKGROUND", (0, 0), (-1, -1), CARD)])))
 S.append(PageBreak())
 # cards
-S += [P("Fixture cards", "h2"), Spacer(1, 2 * mm)]
+S += [P("Fixture cards", "h2"), Spacer(1, 1.5 * mm),
+      P("How to read a card: each side's last 5 league scores in bold, its own goals first, oldest to newest. Flame: scored 2+ in 4 or 5 of the last 5. "
+        "Shield: clean sheets in the last 5 (grey 0 or 1, amber 2, red 3 or more). KEEPS SCORING: went 2 goals up and then scored again in at least 2 of the last 5 (stored goal times). "
+        "TIGHT AND SCORING: both sides scored 2+ in 3 or more of 5 and let in 2+ in 1 or fewer. All display only: none of these changes selection.", "mut"), Spacer(1, 2.5 * mm)]
 order = {n: i for i, n in enumerate(ORDER)}
 cards = sorted([d for d in rows if d["conf"] != "rejected"], key=lambda d: (order.get(d["comp"], 99), d["kickoff"], d["home"]))
 cur = None
@@ -248,7 +310,7 @@ S += [P("Data coverage and limitations", "h2"), Spacer(1, 1.5 * mm)]
 cov = [f"Fixtures analysed: {len(rows)}. Every count is taken from the stored final score of each match (fixture ID, teams, score); the five scorelines are printed on each card.",
        "Form sample: each side's last five completed league games this season, cup ties excluded; venue rows use the last five league games at that venue, sample size shown when fewer.",
        "Not covered by API Sports for 2026-27: Northern Premier, Isthmian and Southern League Division One. 'England V2' is not an API Sports competition and was not included.",
-       "Scored first / conceded after leading: needs match event timelines, not pulled (one call per match, no history). Not shown. First-half goals: available from half-time scores, not yet on the card.",
+       "KEEPS SCORING uses stored goal times for this season; a game with no stored goal times counts as no, so the badge can be missed but never invented. First-half goals: available from half-time scores, not yet on the card.",
        "Injuries and suspensions: the API returned lists for a minority of fixtures this week; nothing is inferred where it returned none. Squad rotation in cup ties is not assessed.",
        "Opposition strength: each side's opponents' scoring versus the division is held in the analysis file (oq columns) but is not part of the alignment score."]
 if a.nofix: cov.append(f"Competitions in scope with no fixtures in the window: {a.nofix}.")
