@@ -47,5 +47,8 @@ jobs:
           GH_SCHEDULE: ${{ github.event.schedule }}
           MODE_INPUT: ${{ github.event.inputs.mode }}
           APISPORTS_KEY: ${{ secrets.APISPORTS_KEY }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
           GITHUB_TOKEN: ${{ github.token }}
         run: bash ci/run.sh
