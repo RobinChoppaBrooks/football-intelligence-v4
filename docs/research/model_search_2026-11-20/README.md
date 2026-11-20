@@ -39,3 +39,12 @@ failed to score (minus), BTTS games, venue 3+ games (last 3 home / away), divisi
 Nothing beats V4.1 by a margin that can be told apart from luck. Across both rounds (about 59,100 variants) the top 20 lands
 roughly 62 to 63 in 100 against 55 for a random pick from the same leagues. Most of V4.1's edge is the division's scoring
 rate plus each side's Scored 2+ count. Let in 2+ on its own adds nothing at the top of the list.
+
+## 4. Rest days and fixture congestion (rest.py, no API calls)
+Per side, from every competition in the database: days since last match, days to next match, games in last 14 and 21 days,
+played in Europe within 4.5 days, first game after a break (both sides 11+ days).
+- Added to the V4.1 recipe, walk-forward, test top 20: 654 v 650 for the refit without it (+4, range -6 to +14). V4.1 as published 661.
+- After Europe looked positive at the same V4.1 score (694 of 1,174 v 662.5 expected) but against the same clubs' other league
+  games it is 694 v 717.6 expected: it described which clubs play in Europe, not the effect of playing midweek. Rejected.
+- First game after a break: 671 of 1,184 v 647.7 expected at the same V4.1 score, within normal variation. Not established.
+- Shorter or longer rest and games in the last 14 days: flat (no band of rest stands out).
