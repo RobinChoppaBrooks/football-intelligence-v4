@@ -211,7 +211,7 @@ class Card(Flowable):
             ix = px + pdfmetrics.stringWidth(label, "DVB", 9) + 3 * mm
             if n_(rs, lambda x: x["gf"] >= 2) >= 4: flame(cv, ix + 1.6 * mm, y + 1.2 * mm); ix += 5 * mm
             ncs = n_(rs, lambda x: x["ga"] == 0)
-            shield(cv, ix + 1.9 * mm, y + 1.2 * mm, RED if ncs >= 3 else (AMBER if ncs == 2 else MUTED), ncs)
+            if rs: shield(cv, ix + 1.9 * mm, y + 1.2 * mm, RED if ncs >= 3 else (AMBER if ncs == 2 else MUTED), ncs)   # no shield when no league games
             team_id = _ids.get(d.get("fixture_id"), (None, None))[k]
             if team_id is not None and keeps_scoring(team_id, rs) >= 2:
                 cv.setFillColor(GREEN); cv.setFont("DVB", 7); cv.drawRightString(px + 88 * mm, y, "KEEPS SCORING")
