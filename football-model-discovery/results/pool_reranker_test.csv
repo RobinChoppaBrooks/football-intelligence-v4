@@ -1,0 +1,9 @@
+size,picker,TEST_won,V4_order_won,vs_V4
+5,prefer: h.c2 <= 2 AND max.one3 >= 2,40,41,-1
+10,prefer: max.s2 >= 4 AND a.cs <= 0,75,77,-2
+15,prefer: sum.c2 <= 5 AND a.btts >= 3,98,102,-4
+20,prefer: sum.c2 <= 5 AND max.btts >= 3,125,129,-4
+5,second-stage logit,40,41,-1
+10,second-stage logit,68,77,-9
+15,second-stage logit,92,102,-10
+20,second-stage logit,118,129,-11

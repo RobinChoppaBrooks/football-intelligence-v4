@@ -1,0 +1,23 @@
+{
+ "frozen_at": "2026-11-20T14:34:19.583663+00:00",
+ "per_size_rule": {
+  "top5": {
+   "formula": "h.c2 <= 2 AND max.one3 >= 2",
+   "mode": "prefer"
+  },
+  "top10": {
+   "formula": "max.s2 >= 4 AND a.cs <= 0",
+   "mode": "prefer"
+  },
+  "top15": {
+   "formula": "sum.c2 <= 5 AND a.btts >= 3",
+   "mode": "prefer"
+  },
+  "top20": {
+   "formula": "sum.c2 <= 5 AND max.btts >= 3",
+   "mode": "prefer"
+  }
+ },
+ "second_stage_ml": "logit",
+ "rule_pick": "rule-true fixtures first in V4.1 order, then the rest of the pool in V4.1 order"
+}

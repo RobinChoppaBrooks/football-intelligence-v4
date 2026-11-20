@@ -1,0 +1,86 @@
+{
+ "pool_fixtures": {
+  "DEV": 1444,
+  "VAL": 727,
+  "TEST": 308
+ },
+ "weekends": {
+  "DEV": 81,
+  "VAL": 40,
+  "TEST": 12
+ },
+ "picks_per_size": {
+  "DEV": {
+   "top5": 379,
+   "top10": 705,
+   "top15": 996,
+   "top20": 1204
+  },
+  "VAL": {
+   "top5": 187,
+   "top10": 355,
+   "top15": 505,
+   "top20": 636
+  },
+  "TEST": {
+   "top5": 60,
+   "top10": 111,
+   "top15": 151,
+   "top20": 191
+  }
+ },
+ "v4_order_won": {
+  "DEV": [
+   269,
+   484,
+   654,
+   778
+  ],
+  "VAL": [
+   123,
+   226,
+   312,
+   398
+  ],
+  "TEST": [
+   41,
+   77,
+   102,
+   129
+  ]
+ },
+ "rules_tested_dev": 174935,
+ "null_best_dev_gain_by_size": {
+  "top5": 25,
+  "top10": 32,
+  "top15": 37,
+  "top20": 26
+ },
+ "real_best_dev_gain_by_size": {
+  "top5": 15,
+  "top10": 14,
+  "top15": 21,
+  "top20": 15
+ },
+ "shortlist_beating_v4_on_val": {
+  "top5": 34,
+  "top10": 67,
+  "top15": 142,
+  "top20": 86
+ },
+ "shortlist_size": 150,
+ "ml_val_vs_v4": {
+  "logit": [
+   7,
+   6,
+   13,
+   5
+  ],
+  "hgb": [
+   3,
+   4,
+   13,
+   8
+  ]
+ }
+}
