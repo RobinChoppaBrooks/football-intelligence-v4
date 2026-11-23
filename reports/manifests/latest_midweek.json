@@ -1,18 +1,18 @@
 {
  "manifest_version": 1,
- "run_id": "midweek_20261123_1207",
+ "run_id": "midweek_20261123_1231",
  "mode": "midweek",
  "model_version": "v4",
- "created_at_utc": "2026-11-23 12:09:57",
- "created_at_london": "2026-11-23 12:09:57 GMT",
- "git_commit": "3248523fb3b34469c94e8dd62cb202774b419c95",
+ "created_at_utc": "2026-11-23 12:36:19",
+ "created_at_london": "2026-11-23 12:36:19 GMT",
+ "git_commit": "cb79482ec114e291727ca2e59e07046e93b356a2",
  "fixture_window": {
   "text": "Mon 23 Nov 2026 to Fri 27 Nov 2026"
  },
  "completion": {
   "status": "ok",
-  "start_london": "2026-11-23 12:07:21",
-  "finish_london": "2026-11-23 12:09:31",
+  "start_london": "2026-11-23 12:31:45",
+  "finish_london": "2026-11-23 12:35:53",
   "message": "{\"english\": \"56 analysed, 20 selected, 1 flagged\", \"european\": \"69 analysed, 32 selected, 0 flagged\"}"
  },
  "model_files": {
@@ -39,7 +39,7 @@
   {
    "path": "reports/midweek/2026-11-23/english_2026-11-23.pdf",
    "bytes": 137256,
-   "sha256_16": "08bd7297b098995e"
+   "sha256_16": "506d74e8e9ac57f3"
   },
   {
    "path": "reports/midweek/2026-11-23/english_2026-11-23.csv",
@@ -49,7 +49,7 @@
   {
    "path": "reports/midweek/2026-11-23/european_2026-11-23.pdf",
    "bytes": 188461,
-   "sha256_16": "2155408163bebc15"
+   "sha256_16": "328d7e69239ed80b"
   },
   {
    "path": "reports/midweek/2026-11-23/european_2026-11-23.csv",
@@ -59,7 +59,7 @@
   {
    "path": "reports/midweek/2026-11-23/combined_2026-11-23.pdf",
    "bytes": 270367,
-   "sha256_16": "cebe5cb841d40590"
+   "sha256_16": "e18330f79ab8123a"
   },
   {
    "path": "reports/midweek/2026-11-23/combined_2026-11-23.csv",
@@ -69,35 +69,35 @@
   {
    "path": "reports/midweek/2026-11-23/predictions_2026-11-23.json",
    "bytes": 120012,
-   "sha256_16": "bfc68edf4860e8c1"
+   "sha256_16": "20892588131805a0"
   },
   {
    "path": "reports/chatgpt_review/chatgpt_review_2026-11-23_midweek.md",
    "bytes": 56592,
-   "sha256_16": "5c208901413e7cf8"
+   "sha256_16": "0021c2a06baecd5b"
   },
   {
    "path": "reports/btts_audit/2026-11-23/btts_audit_2026-11-23_midweek.csv",
    "bytes": 66961,
-   "sha256_16": "2876ed84a0e29b55",
+   "sha256_16": "540b0f409a068f4e",
    "audit": true
   },
   {
    "path": "reports/btts_audit/2026-11-23/btts_audit_2026-11-23_midweek.json",
    "bytes": 179686,
-   "sha256_16": "14fe783f2315bd5c",
+   "sha256_16": "4ac5045dea0b36bf",
    "audit": true
   },
   {
    "path": "reports/chatgpt_review/btts_audit_review_2026-11-23_midweek.md",
    "bytes": 58978,
-   "sha256_16": "f388e1a621167ecf",
+   "sha256_16": "e5cf96037ce696ac",
    "audit": true
   },
   {
-   "path": "reports/research_groups/midweek_20261123_1207.csv",
+   "path": "reports/research_groups/midweek_20261123_1231.csv",
    "bytes": 272264,
-   "sha256_16": "e47f6772b77f0f50",
+   "sha256_16": "00fdedc213f85075",
    "research": true
   }
  ],

@@ -1,0 +1,17 @@
+{
+ "run_id": "midweek_20261123_1231",
+ "mode": "midweek",
+ "kind": "report",
+ "subject": "Football V4.1 midweek: Mon 23 Nov to Fri 27 Nov",
+ "to": "robin@facestagram.co.uk",
+ "sent_utc": "2026-11-23 12:36:23",
+ "body": "reports/midweek/2026-11-23/email_2026-11-23_midweek.html",
+ "body_bytes": 134057,
+ "attachments": [
+  "reports/midweek/2026-11-23/combined_2026-11-23.pdf",
+  "reports/chatgpt_review/chatgpt_review_2026-11-23_midweek.md"
+ ],
+ "message_id": "<179543738041.2660.9392299428790052868@football-intelligence-v4>",
+ "dry_run": false,
+ "error": null
+}

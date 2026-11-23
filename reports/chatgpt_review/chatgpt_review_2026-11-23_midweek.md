@@ -1,6 +1,6 @@
 # ChatGPT review package: midweek 2026-11-23
 
-Report date: 2026-11-23 12:09 UK. Analysis window: Mon 23 Nov 2026 to Fri 27 Nov 2026. Model version: v4.1 (validated model, unchanged). Run id: midweek_20261123_1207.
+Report date: 2026-11-23 12:35 UK. Analysis window: Mon 23 Nov 2026 to Fri 27 Nov 2026. Model version: v4.1 (validated model, unchanged). Run id: midweek_20261123_1231.
 Fixtures analysed: 125. Selected: 52 (High 9, Medium/Weak 43). Rejected: 73.
 
 Classifications are model bands, not per-fixture probabilities. Benchmark, season 2026-27 to 2026-11-22 (1993 finished fixtures, Rob's 14 leagues, clean out of sample): 3+ goals in High 91 of 134, Medium 175 of 282, trump card 3 of 5, rejected 873 of 1572. Band counts, not the chance of any one fixture. Cup competitions (European and domestic cups), measured separately, season 2026-27 (1728 finished ties): 3+ goals in High 34 of 50, Medium 115 of 192, trump card 2 of 3, rejected 870 of 1483. Cup ties are outside the 14-league benchmark; treat cup selections with that in mind. Counts are from stored final scores; the five results are listed oldest to newest. BTTS YES = BTTS model High band; lean YES = Medium band; no lean = Low band. BTTS model bands, same fixtures: High 123 of 194, Medium 896 of 1591, Low 124 of 208 had both teams score. A trump card fixture (both attacks 2+ in 4+ of 5, both defences 2+ against in 1 or fewer) is High and BTTS YES by Rob's rule and is scored separately.
