@@ -1,112 +1,113 @@
 {
  "manifest_version": 1,
- "run_id": "midweek_20261116_2225",
+ "run_id": "midweek_20261123_1207",
  "mode": "midweek",
  "model_version": "v4",
- "created_at_utc": "2026-11-16 22:27:18",
- "created_at_london": "2026-11-16 22:27:18 GMT",
- "git_commit": "9461375a31a0ab19d688059fcd8c1db36644df6b",
+ "created_at_utc": "2026-11-23 12:09:57",
+ "created_at_london": "2026-11-23 12:09:57 GMT",
+ "git_commit": "3248523fb3b34469c94e8dd62cb202774b419c95",
  "fixture_window": {
-  "text": "Mon 16 Nov 2026 to Fri 20 Nov 2026"
+  "text": "Mon 23 Nov 2026 to Fri 27 Nov 2026"
  },
  "completion": {
   "status": "ok",
-  "start_london": "2026-11-16 22:25:21",
-  "finish_london": "2026-11-16 22:27:16",
-  "message": "{\"english\": \"9 analysed, 3 selected, 0 flagged\", \"european\": \"10 analysed, 1 selected, 0 flagged\"}"
+  "start_london": "2026-11-23 12:07:21",
+  "finish_london": "2026-11-23 12:09:31",
+  "message": "{\"english\": \"56 analysed, 20 selected, 1 flagged\", \"european\": \"69 analysed, 32 selected, 0 flagged\"}"
  },
  "model_files": {
   "bands_model_pkl": "f48986cb2d94008a",
   "btts_model_pkl": "56cb8dcb47618aca"
  },
  "database": {
-  "max_finished_kickoff_utc": "2026-11-15T14:45:00+00:00",
-  "finished_matches": 69005,
-  "scheduled_matches": 8005,
-  "scored_but_not_finished": 14
+  "max_finished_kickoff_utc": "2027-05-22T15:00:00+00:00",
+  "finished_matches": 69366,
+  "scheduled_matches": 7690,
+  "scored_but_not_finished": 15
  },
  "counts": {
-  "fixtures": 19,
+  "fixtures": 125,
   "by_classification": {
-   "rejected": 15,
-   "Medium": 3,
-   "High": 1
+   "rejected": 73,
+   "Medium": 43,
+   "High": 9
   },
-  "btts_yes": 0,
-  "competitions": 9
+  "btts_yes": 12,
+  "competitions": 19
  },
  "report_files": [
   {
-   "path": "reports/midweek/2026-11-16/english_2026-11-16.pdf",
-   "bytes": 63276,
-   "sha256_16": "2164939e32a3ff6f"
+   "path": "reports/midweek/2026-11-23/english_2026-11-23.pdf",
+   "bytes": 137256,
+   "sha256_16": "08bd7297b098995e"
   },
   {
-   "path": "reports/midweek/2026-11-16/english_2026-11-16.csv",
-   "bytes": 5251,
-   "sha256_16": "8e6fdb5efef72fe2"
+   "path": "reports/midweek/2026-11-23/english_2026-11-23.csv",
+   "bytes": 30109,
+   "sha256_16": "c6e30557906f2630"
   },
   {
-   "path": "reports/midweek/2026-11-16/european_2026-11-16.pdf",
-   "bytes": 56863,
-   "sha256_16": "91bf842dd463b1b1"
+   "path": "reports/midweek/2026-11-23/european_2026-11-23.pdf",
+   "bytes": 188461,
+   "sha256_16": "2155408163bebc15"
   },
   {
-   "path": "reports/midweek/2026-11-16/european_2026-11-16.csv",
-   "bytes": 4563,
-   "sha256_16": "b7824c6082f48a92"
+   "path": "reports/midweek/2026-11-23/european_2026-11-23.csv",
+   "bytes": 34720,
+   "sha256_16": "a0e724477c926ebb"
   },
   {
-   "path": "reports/midweek/2026-11-16/combined_2026-11-16.pdf",
-   "bytes": 70260,
-   "sha256_16": "80dd24dc908863fb"
+   "path": "reports/midweek/2026-11-23/combined_2026-11-23.pdf",
+   "bytes": 270367,
+   "sha256_16": "cebe5cb841d40590"
   },
   {
-   "path": "reports/midweek/2026-11-16/combined_2026-11-16.csv",
-   "bytes": 9509,
-   "sha256_16": "33b7514dab66f020"
+   "path": "reports/midweek/2026-11-23/combined_2026-11-23.csv",
+   "bytes": 64524,
+   "sha256_16": "bebdf3bf9e13a5a1"
   },
   {
-   "path": "reports/midweek/2026-11-16/predictions_2026-11-16.json",
-   "bytes": 17517,
-   "sha256_16": "a5fc9ad216724b58"
+   "path": "reports/midweek/2026-11-23/predictions_2026-11-23.json",
+   "bytes": 120012,
+   "sha256_16": "bfc68edf4860e8c1"
   },
   {
-   "path": "reports/chatgpt_review/chatgpt_review_2026-11-16_midweek.md",
-   "bytes": 6675,
-   "sha256_16": "51e64a39debcd6fb"
+   "path": "reports/chatgpt_review/chatgpt_review_2026-11-23_midweek.md",
+   "bytes": 56592,
+   "sha256_16": "5c208901413e7cf8"
   },
   {
-   "path": "reports/btts_audit/2026-11-16/btts_audit_2026-11-16_midweek.csv",
-   "bytes": 9996,
-   "sha256_16": "b3fbf751ad6a4572",
+   "path": "reports/btts_audit/2026-11-23/btts_audit_2026-11-23_midweek.csv",
+   "bytes": 66961,
+   "sha256_16": "2876ed84a0e29b55",
    "audit": true
   },
   {
-   "path": "reports/btts_audit/2026-11-16/btts_audit_2026-11-16_midweek.json",
-   "bytes": 27096,
-   "sha256_16": "bbbce0bbe41bed39",
+   "path": "reports/btts_audit/2026-11-23/btts_audit_2026-11-23_midweek.json",
+   "bytes": 179686,
+   "sha256_16": "14fe783f2315bd5c",
    "audit": true
   },
   {
-   "path": "reports/chatgpt_review/btts_audit_review_2026-11-16_midweek.md",
-   "bytes": 9114,
-   "sha256_16": "8c21a3c13df84eff",
+   "path": "reports/chatgpt_review/btts_audit_review_2026-11-23_midweek.md",
+   "bytes": 58978,
+   "sha256_16": "f388e1a621167ecf",
    "audit": true
   },
   {
-   "path": "reports/research_groups/midweek_20261116_2225.csv",
-   "bytes": 41256,
-   "sha256_16": "e0c95d78b8b86397",
+   "path": "reports/research_groups/midweek_20261123_1207.csv",
+   "bytes": 272264,
+   "sha256_16": "e47f6772b77f0f50",
    "research": true
   }
  ],
  "missing_files": [],
  "data_quality_warnings": [
-  "english competitions with no fixtures: Premier League, Championship, League Two, FA Cup, EFL Cup",
-  "european competitions with no fixtures: Eredivisie, Super Lig, Scottish Premiership, Primeira Liga, Scottish Cup, Scottish League Cup, Champions League, Europa League, Conference League, DFB Pokal, KNVB Beker, Coupe de France, Turkish Cup",
-  "7 fixtures with fewer than five league games for a side",
-  "14 matches in the database carry a score but are not FT/AET/PEN (abandoned, awarded or cancelled); neither the card nor the model counts them as results since 29 Oct"
+  "1 english fixtures postponed/other status, not analysed (see flagged_english.csv)",
+  "english competitions with no fixtures: FA Cup, EFL Cup",
+  "european competitions with no fixtures: Scottish League Cup, DFB Pokal, KNVB Beker, Turkish Cup, Copa del Rey, Taca de Portugal",
+  "11 fixtures with fewer than five league games for a side",
+  "15 matches in the database carry a score but are not FT/AET/PEN (abandoned, awarded or cancelled); neither the card nor the model counts them as results since 29 Oct"
  ],
  "complete": true
 }

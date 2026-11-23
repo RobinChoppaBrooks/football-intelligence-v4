@@ -1,0 +1,113 @@
+{
+ "manifest_version": 1,
+ "run_id": "midweek_20261123_1207",
+ "mode": "midweek",
+ "model_version": "v4",
+ "created_at_utc": "2026-11-23 12:09:57",
+ "created_at_london": "2026-11-23 12:09:57 GMT",
+ "git_commit": "3248523fb3b34469c94e8dd62cb202774b419c95",
+ "fixture_window": {
+  "text": "Mon 23 Nov 2026 to Fri 27 Nov 2026"
+ },
+ "completion": {
+  "status": "ok",
+  "start_london": "2026-11-23 12:07:21",
+  "finish_london": "2026-11-23 12:09:31",
+  "message": "{\"english\": \"56 analysed, 20 selected, 1 flagged\", \"european\": \"69 analysed, 32 selected, 0 flagged\"}"
+ },
+ "model_files": {
+  "bands_model_pkl": "f48986cb2d94008a",
+  "btts_model_pkl": "56cb8dcb47618aca"
+ },
+ "database": {
+  "max_finished_kickoff_utc": "2027-05-22T15:00:00+00:00",
+  "finished_matches": 69366,
+  "scheduled_matches": 7690,
+  "scored_but_not_finished": 15
+ },
+ "counts": {
+  "fixtures": 125,
+  "by_classification": {
+   "rejected": 73,
+   "Medium": 43,
+   "High": 9
+  },
+  "btts_yes": 12,
+  "competitions": 19
+ },
+ "report_files": [
+  {
+   "path": "reports/midweek/2026-11-23/english_2026-11-23.pdf",
+   "bytes": 137256,
+   "sha256_16": "08bd7297b098995e"
+  },
+  {
+   "path": "reports/midweek/2026-11-23/english_2026-11-23.csv",
+   "bytes": 30109,
+   "sha256_16": "c6e30557906f2630"
+  },
+  {
+   "path": "reports/midweek/2026-11-23/european_2026-11-23.pdf",
+   "bytes": 188461,
+   "sha256_16": "2155408163bebc15"
+  },
+  {
+   "path": "reports/midweek/2026-11-23/european_2026-11-23.csv",
+   "bytes": 34720,
+   "sha256_16": "a0e724477c926ebb"
+  },
+  {
+   "path": "reports/midweek/2026-11-23/combined_2026-11-23.pdf",
+   "bytes": 270367,
+   "sha256_16": "cebe5cb841d40590"
+  },
+  {
+   "path": "reports/midweek/2026-11-23/combined_2026-11-23.csv",
+   "bytes": 64524,
+   "sha256_16": "bebdf3bf9e13a5a1"
+  },
+  {
+   "path": "reports/midweek/2026-11-23/predictions_2026-11-23.json",
+   "bytes": 120012,
+   "sha256_16": "bfc68edf4860e8c1"
+  },
+  {
+   "path": "reports/chatgpt_review/chatgpt_review_2026-11-23_midweek.md",
+   "bytes": 56592,
+   "sha256_16": "5c208901413e7cf8"
+  },
+  {
+   "path": "reports/btts_audit/2026-11-23/btts_audit_2026-11-23_midweek.csv",
+   "bytes": 66961,
+   "sha256_16": "2876ed84a0e29b55",
+   "audit": true
+  },
+  {
+   "path": "reports/btts_audit/2026-11-23/btts_audit_2026-11-23_midweek.json",
+   "bytes": 179686,
+   "sha256_16": "14fe783f2315bd5c",
+   "audit": true
+  },
+  {
+   "path": "reports/chatgpt_review/btts_audit_review_2026-11-23_midweek.md",
+   "bytes": 58978,
+   "sha256_16": "f388e1a621167ecf",
+   "audit": true
+  },
+  {
+   "path": "reports/research_groups/midweek_20261123_1207.csv",
+   "bytes": 272264,
+   "sha256_16": "e47f6772b77f0f50",
+   "research": true
+  }
+ ],
+ "missing_files": [],
+ "data_quality_warnings": [
+  "1 english fixtures postponed/other status, not analysed (see flagged_english.csv)",
+  "english competitions with no fixtures: FA Cup, EFL Cup",
+  "european competitions with no fixtures: Scottish League Cup, DFB Pokal, KNVB Beker, Turkish Cup, Copa del Rey, Taca de Portugal",
+  "11 fixtures with fewer than five league games for a side",
+  "15 matches in the database carry a score but are not FT/AET/PEN (abandoned, awarded or cancelled); neither the card nor the model counts them as results since 29 Oct"
+ ],
+ "complete": true
+}
