@@ -6,26 +6,26 @@ Groups are fixed before kick-off in reports/research_groups/<run_id>.csv and nev
 
 | group | fixtures evaluated | over 2.5 | under 2.5 | hit rate | 95% range | not yet played |
 |---|---|---|---|---|---|---|
-| A. Official High | 97 | 64 | 33 | 66% | 56 to 75% | 0 |
-| B. Official Medium (incl. report Weak) | 248 | 165 | 83 | 67% | 60 to 72% | 1 |
-| C. Top 10 rejected by model score | 110 | 61 | 49 | 55% | 46 to 64% | 0 |
-| D. EXPERIMENTAL open-game category A | 232 | 147 | 85 | 63% | 57 to 69% | 4 |
-| E. All eligible fixtures (baseline) | 1046 | 603 | 443 | 58% | 55 to 61% | 6 |
+| A. Official High | 97 | 64 | 33 | 66% | 56 to 75% | 18 |
+| B. Official Medium (incl. report Weak) | 250 | 167 | 83 | 67% | 61 to 72% | 85 |
+| C. Top 10 rejected by model score | 110 | 61 | 49 | 55% | 46 to 64% | 20 |
+| D. EXPERIMENTAL open-game category A | 234 | 149 | 85 | 64% | 57 to 70% | 56 |
+| E. All eligible fixtures (baseline) | 1048 | 605 | 443 | 58% | 55 to 61% | 254 |
 
-Official selections combined (A + B): 229 of 345 completed fixtures over 2.5. Groups C and D are research candidates, never selections; compare them with this line.
+Official selections combined (A + B): 231 of 347 completed fixtures over 2.5. Groups C and D are research candidates, never selections; compare them with this line.
 
 ## Overlap (completed fixtures in both groups)
 
 | | A | B | C | D |
 |---|---|---|---|---|
 | A | 97 | 0 | 0 | 41 |
-| B | 0 | 248 | 0 | 56 |
+| B | 0 | 250 | 0 | 58 |
 | C | 0 | 0 | 110 | 6 |
-| D | 41 | 56 | 6 | 232 |
+| D | 41 | 58 | 6 | 234 |
 
 In both C and D: 6 fixtures, 5 over 2.5. Overlap is not evidence of a higher chance until it is tested out of sample.
 
-Open-game category A games that went over 2.5: 147. Both teams scored in 114; one team scored all the goals in 33.
+Open-game category A games that went over 2.5: 149. Both teams scored in 116; one team scored all the goals in 33.
 
 ## By run
 
@@ -78,6 +78,26 @@ Open-game category A games that went over 2.5: 147. Both teams scored in 114; on
 | C. Top 10 rejected by model score | 10 | 4 | 6 | 40% | 17 to 69% | 0 |
 | D. EXPERIMENTAL open-game category A | 2 | 1 | 1 | 50% | 9 to 91% | 0 |
 | E. All eligible fixtures (baseline) | 18 | 8 | 10 | 44% | 25 to 66% | 1 |
+
+### midweek_20261123_1207
+
+| group | fixtures evaluated | over 2.5 | under 2.5 | hit rate | 95% range | not yet played |
+|---|---|---|---|---|---|---|
+| A. Official High | 0 | 0 | 0 | - | - | 9 |
+| B. Official Medium (incl. report Weak) | 1 | 1 | 0 | 100% | 21 to 100% | 42 |
+| C. Top 10 rejected by model score | 0 | 0 | 0 | - | - | 10 |
+| D. EXPERIMENTAL open-game category A | 1 | 1 | 0 | 100% | 21 to 100% | 26 |
+| E. All eligible fixtures (baseline) | 1 | 1 | 0 | 100% | 21 to 100% | 124 |
+
+### midweek_20261123_1231
+
+| group | fixtures evaluated | over 2.5 | under 2.5 | hit rate | 95% range | not yet played |
+|---|---|---|---|---|---|---|
+| A. Official High | 0 | 0 | 0 | - | - | 9 |
+| B. Official Medium (incl. report Weak) | 1 | 1 | 0 | 100% | 21 to 100% | 42 |
+| C. Top 10 rejected by model score | 0 | 0 | 0 | - | - | 10 |
+| D. EXPERIMENTAL open-game category A | 1 | 1 | 0 | 100% | 21 to 100% | 26 |
+| E. All eligible fixtures (baseline) | 1 | 1 | 0 | 100% | 21 to 100% | 124 |
 
 ### range_20261119_1331
 
@@ -221,6 +241,78 @@ Open-game category A games that went over 2.5: 147. Both teams scored in 114; on
 | midweek_20261116_2225 | C9 + D | Spalding United v Hebburn Town | rejected 0.556 | 0-0 | under | Tue 17 Nov 19:45 |
 | midweek_20261116_2225 | C10 | Estac Troyes v Le Havre | rejected 0.545 | 3-1 | over | Fri 20 Nov 19:45 |
 | midweek_20261116_2225 | D | Barnsley v Sheffield Wednesday | rejected 0.531 | 1-2 | over | Fri 20 Nov 20:00 |
+| midweek_20261123_1207 | D | Groningen v Willem II | High 0.657 | - | not played | Fri 27 Nov 19:00 |
+| midweek_20261123_1207 | C1 | Largs Thistle v Ayr Utd | rejected 0.632 | - | not played | Fri 27 Nov 19:30 |
+| midweek_20261123_1207 | D | Forest Green v Southend | Medium 0.626 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1207 | C2 | Red Bull Salzburg v Ararat-Armenia | rejected 0.619 | - | not played | Thu 26 Nov 17:45 |
+| midweek_20261123_1207 | C3 | Cannes v Le Puy Foot | rejected 0.618 | - | not played | Fri 27 Nov 18:00 |
+| midweek_20261123_1207 | C4 | Saint-Omer v Caen | rejected 0.618 | - | not played | Fri 27 Nov 19:00 |
+| midweek_20261123_1207 | C5 | Le Pays du Valois v Valenciennes | rejected 0.618 | - | not played | Fri 27 Nov 19:00 |
+| midweek_20261123_1207 | D | Eastleigh v Yeovil Town | Medium 0.616 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1207 | D | South Shields v Worksop Town | Medium 0.614 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1207 | D | AFC Telford United v Buxton | Medium 0.611 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1207 | D | Woking v Worthing | Medium 0.610 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1207 | D | Scunthorpe v Gateshead | Medium 0.609 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1207 | D | Boston United v Barrow | Medium 0.604 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1207 | D | Başakşehir v Çorum FK | Medium 0.590 | 4-2 | over | Mon 23 Nov 17:00 |
+| midweek_20261123_1207 | D | Hartlepool v Solihull Moors | Medium 0.587 | - | not played | Wed 25 Nov 19:45 |
+| midweek_20261123_1207 | D | Harrogate Town v Kidderminster Harriers | Medium 0.586 | - | not played | Wed 25 Nov 19:45 |
+| midweek_20261123_1207 | D | NEC Nijmegen v Rennes | Medium 0.583 | - | not played | Thu 26 Nov 20:00 |
+| midweek_20261123_1207 | C6 | Salisbury v AFC Totton | rejected 0.580 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1207 | C7 | Pafos v FC Midtjylland | rejected 0.578 | - | not played | Thu 26 Nov 17:45 |
+| midweek_20261123_1207 | C8 | Kauno Žalgiris v Riga | rejected 0.577 | - | not played | Thu 26 Nov 17:45 |
+| midweek_20261123_1207 | C9 | Egnatia Rrogozhinë v Lincoln Red Imps FC | rejected 0.577 | - | not played | Thu 26 Nov 17:45 |
+| midweek_20261123_1207 | C10 + D | Merthyr Town v Bedford Town | rejected 0.576 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1207 | D | Chelmsford City v Maidstone Utd | rejected 0.573 | - | not played | Mon 23 Nov 19:45 |
+| midweek_20261123_1207 | D | Crystal Palace v Real Sociedad | rejected 0.573 | - | not played | Thu 26 Nov 20:00 |
+| midweek_20261123_1207 | D | Slough Town v Farnborough | rejected 0.562 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1207 | D | Portsmouth v West Ham | rejected 0.559 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1207 | D | Weston-super-Mare v Walton & Hersham | rejected 0.555 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1207 | D | Levante v Racing Santander | rejected 0.555 | - | not played | Fri 27 Nov 20:00 |
+| midweek_20261123_1207 | D | Chorley v Hebburn Town | rejected 0.554 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1207 | D | Hibernian v Dundee | rejected 0.548 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1207 | D | Marine v Spennymoor Town | rejected 0.547 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1207 | D | Bolton v West Brom | rejected 0.547 | - | not played | Wed 25 Nov 19:45 |
+| midweek_20261123_1207 | D | Scarborough Athletic v Spalding United | rejected 0.544 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1207 | D | Darlington 1883 v Southport | rejected 0.543 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1207 | D | Charlton v Lincoln | rejected 0.542 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1207 | D | Port Vale v Northampton | rejected 0.541 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1231 | D | Groningen v Willem II | High 0.657 | - | not played | Fri 27 Nov 19:00 |
+| midweek_20261123_1231 | C1 | Largs Thistle v Ayr Utd | rejected 0.632 | - | not played | Fri 27 Nov 19:30 |
+| midweek_20261123_1231 | D | Forest Green v Southend | Medium 0.626 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1231 | C2 | Red Bull Salzburg v Ararat-Armenia | rejected 0.619 | - | not played | Thu 26 Nov 17:45 |
+| midweek_20261123_1231 | C3 | Cannes v Le Puy Foot | rejected 0.618 | - | not played | Fri 27 Nov 18:00 |
+| midweek_20261123_1231 | C4 | Saint-Omer v Caen | rejected 0.618 | - | not played | Fri 27 Nov 19:00 |
+| midweek_20261123_1231 | C5 | Le Pays du Valois v Valenciennes | rejected 0.618 | - | not played | Fri 27 Nov 19:00 |
+| midweek_20261123_1231 | D | Eastleigh v Yeovil Town | Medium 0.616 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1231 | D | South Shields v Worksop Town | Medium 0.614 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1231 | D | AFC Telford United v Buxton | Medium 0.611 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1231 | D | Woking v Worthing | Medium 0.610 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1231 | D | Scunthorpe v Gateshead | Medium 0.609 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1231 | D | Boston United v Barrow | Medium 0.604 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1231 | D | Başakşehir v Çorum FK | Medium 0.590 | 4-2 | over | Mon 23 Nov 17:00 |
+| midweek_20261123_1231 | D | Hartlepool v Solihull Moors | Medium 0.587 | - | not played | Wed 25 Nov 19:45 |
+| midweek_20261123_1231 | D | Harrogate Town v Kidderminster Harriers | Medium 0.586 | - | not played | Wed 25 Nov 19:45 |
+| midweek_20261123_1231 | D | NEC Nijmegen v Rennes | Medium 0.583 | - | not played | Thu 26 Nov 20:00 |
+| midweek_20261123_1231 | C6 | Salisbury v AFC Totton | rejected 0.580 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1231 | C7 | Pafos v FC Midtjylland | rejected 0.578 | - | not played | Thu 26 Nov 17:45 |
+| midweek_20261123_1231 | C8 | Kauno Žalgiris v Riga | rejected 0.577 | - | not played | Thu 26 Nov 17:45 |
+| midweek_20261123_1231 | C9 | Egnatia Rrogozhinë v Lincoln Red Imps FC | rejected 0.577 | - | not played | Thu 26 Nov 17:45 |
+| midweek_20261123_1231 | C10 + D | Merthyr Town v Bedford Town | rejected 0.576 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1231 | D | Chelmsford City v Maidstone Utd | rejected 0.573 | - | not played | Mon 23 Nov 19:45 |
+| midweek_20261123_1231 | D | Crystal Palace v Real Sociedad | rejected 0.573 | - | not played | Thu 26 Nov 20:00 |
+| midweek_20261123_1231 | D | Slough Town v Farnborough | rejected 0.562 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1231 | D | Portsmouth v West Ham | rejected 0.559 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1231 | D | Weston-super-Mare v Walton & Hersham | rejected 0.555 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1231 | D | Levante v Racing Santander | rejected 0.555 | - | not played | Fri 27 Nov 20:00 |
+| midweek_20261123_1231 | D | Chorley v Hebburn Town | rejected 0.554 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1231 | D | Hibernian v Dundee | rejected 0.548 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1231 | D | Marine v Spennymoor Town | rejected 0.547 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1231 | D | Bolton v West Brom | rejected 0.547 | - | not played | Wed 25 Nov 19:45 |
+| midweek_20261123_1231 | D | Scarborough Athletic v Spalding United | rejected 0.544 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1231 | D | Darlington 1883 v Southport | rejected 0.543 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1231 | D | Charlton v Lincoln | rejected 0.542 | - | not played | Tue 24 Nov 19:45 |
+| midweek_20261123_1231 | D | Port Vale v Northampton | rejected 0.541 | - | not played | Tue 24 Nov 19:45 |
 | range_20261119_1331 | D | Ajax v ADO Den Haag | High 0.670 | 3-0 | over | Sun 22 Nov 13:30 |
 | range_20261119_1331 | D | Sparta Rotterdam v AZ Alkmaar | High 0.667 | 1-5 | over | Sun 22 Nov 13:30 |
 | range_20261119_1331 | D | FC Augsburg v FSV Mainz 05 | High 0.660 | 3-1 | over | Sun 22 Nov 14:30 |

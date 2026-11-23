@@ -1,43 +1,43 @@
 {
- "as_of": "2026-11-22",
+ "as_of": "2026-11-23",
  "season": "2026-27",
- "fixtures": 1993,
+ "fixtures": 1994,
  "scope": "every finished league fixture in Rob's 14 leagues, season 2026-27, classified as production does",
  "why_this_window": "only clean out-of-sample season: model trained on 2023-24 and 2024-25, cut points chosen on 2025-26",
  "over25": {
   "High": {
    "hits": 91,
-   "n": 134
+   "n": 133
   },
   "Medium": {
-   "hits": 175,
-   "n": 282
+   "hits": 181,
+   "n": 283
   },
   "Trump card": {
    "hits": 3,
    "n": 5
   },
   "rejected": {
-   "hits": 873,
-   "n": 1572
+   "hits": 868,
+   "n": 1573
   },
   "Selected (High, Medium, Trump card)": {
-   "hits": 269,
+   "hits": 275,
    "n": 421
   }
  },
  "btts": {
   "High band": {
-   "hits": 123,
-   "n": 194
+   "hits": 128,
+   "n": 199
   },
   "Medium band": {
    "hits": 896,
-   "n": 1591
+   "n": 1595
   },
   "Low band": {
-   "hits": 124,
-   "n": 208
+   "hits": 120,
+   "n": 200
   }
  },
  "note": "classified with information up to each kick-off; a live run uses information up to the run, so a few fixtures sit either side of a line differently",
@@ -48,37 +48,37 @@
   "over25": {
    "High": {
     "hits": 34,
-    "n": 50
+    "n": 48
    },
    "Medium": {
-    "hits": 115,
-    "n": 192
+    "hits": 113,
+    "n": 193
    },
    "Trump card": {
     "hits": 2,
     "n": 3
    },
    "rejected": {
-    "hits": 870,
-    "n": 1483
+    "hits": 872,
+    "n": 1484
    },
    "Selected (High, Medium, Trump card)": {
-    "hits": 151,
-    "n": 245
+    "hits": 149,
+    "n": 244
    }
   },
   "btts": {
    "High band": {
-    "hits": 53,
-    "n": 90
+    "hits": 49,
+    "n": 87
    },
    "Medium band": {
-    "hits": 783,
-    "n": 1555
+    "hits": 787,
+    "n": 1563
    },
    "Low band": {
     "hits": 46,
-    "n": 83
+    "n": 78
    }
   }
  }

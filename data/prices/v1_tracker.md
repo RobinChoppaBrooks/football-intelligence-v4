@@ -6,8 +6,8 @@ Judge only after 300 qualifying bets. Counts and units, no percentages.
 | Group | Bets | Hits | P/L at best price (units) | P/L at Bet365 (units) |
 |---|---|---|---|---|
 | V1 qualifying | 11 | 7 | 1.15 | 0.96 (on 11) |
-| All selected with a price | 46 | 32 | 2.54 | 1.86 (on 46) |
-| Selected, not V1 | 35 | 25 | 1.39 | 0.9 (on 35) |
+| All selected with a price | 47 | 33 | 3.17 | 2.43 (on 47) |
+| Selected, not V1 | 36 | 26 | 2.02 | 1.47 (on 36) |
 
-Fixtures priced: 46; settled: 46; V1 qualifying awaiting results: 0.
+Fixtures priced: 96; settled: 47; V1 qualifying awaiting results: 10.
 Progress to judgement: 11 of 300 V1 bets settled.

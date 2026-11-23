@@ -1,22 +1,22 @@
 # Performance report 2026-11-23
 
-Predictions with results: 1200 of 1219 published. New results added this run: 461.
+Predictions with results: 1201 of 1343 published. New results added this run: 2.
 
-Benchmark, season 2026-27 to 2026-11-22 (1993 finished fixtures, Rob's 14 leagues, clean out of sample): 3+ goals in High 91 of 134, Medium 175 of 282, trump card 3 of 5, rejected 873 of 1572. Band counts, not the chance of any one fixture.
+Benchmark, season 2026-27 to 2026-11-23 (1994 finished fixtures, Rob's 14 leagues, clean out of sample): 3+ goals in High 91 of 133, Medium 181 of 283, trump card 3 of 5, rejected 868 of 1573. Band counts, not the chance of any one fixture.
 
-Cup competitions (European and domestic cups), measured separately, season 2026-27 (1728 finished ties): 3+ goals in High 34 of 50, Medium 115 of 192, trump card 2 of 3, rejected 870 of 1483. Cup ties are outside the 14-league benchmark; treat cup selections with that in mind.
+Cup competitions (European and domestic cups), measured separately, season 2026-27 (1728 finished ties): 3+ goals in High 34 of 48, Medium 113 of 193, trump card 2 of 3, rejected 872 of 1484. Cup ties are outside the 14-league benchmark; treat cup selections with that in mind.
 
-BTTS model bands, same fixtures: High 123 of 194, Medium 896 of 1591, Low 124 of 208 had both teams score.
+BTTS model bands, same fixtures: High 128 of 199, Medium 896 of 1595, Low 120 of 200 had both teams score.
 
 | | hit 3+ | rate | 95% range |
 |---|---|---|---|
-| Selected (all) | 271 of 409 | 66% | 62 to 71% |
+| Selected (all) | 272 of 410 | 66% | 62 to 71% |
 | High (model, excluding trump card) | 55 of 83 | 66% | 56 to 76% |
 | Trump card (Rob's rule, scored on its own) | 0 of 3 | 0% | 0 to 56% |
-| Medium | 216 of 323 | 67% | 62 to 72% |
+| Medium | 217 of 324 | 67% | 62 to 72% |
 | Rejected | 453 of 791 | 57% | 54 to 61% |
 
-BTTS: YES predictions correct 86 of 145; NO predictions correct 474 of 1055.
+BTTS: YES predictions correct 86 of 145; NO predictions correct 474 of 1056.
 
 ## By competition (selected)
 
@@ -56,13 +56,13 @@ BTTS: YES predictions correct 86 of 145; NO predictions correct 474 of 1055.
 | Serie A | 5 | 7 | 71% |
 | Southern Premier Central | 11 | 14 | 79% |
 | Southern Premier South | 15 | 28 | 54% |
-| Super Lig | 8 | 13 | 62% |
+| Super Lig | 9 | 14 | 64% |
 
 ## Patterns (selected)
 
 | | hit 3+ | rate | 95% range |
 |---|---|---|---|
-| both attacks 3 of 5+ | 99 of 138 | 72% | 64 to 79% |
+| both attacks 3 of 5+ | 100 of 139 | 72% | 64 to 79% |
 | one attack 3 of 5+ | 122 of 194 | 63% | 56 to 69% |
 | neither | 50 of 77 | 65% | 54 to 75% |
 
@@ -71,7 +71,7 @@ By home scored 2+:
 |   0 of 5 | 12 of 18 | 67% | 44 to 84% |
 |   1 of 5 | 25 of 43 | 58% | 43 to 72% |
 |   2 of 5 | 50 of 78 | 64% | 53 to 74% |
-|   3 of 5 | 106 of 140 | 76% | 68 to 82% |
+|   3 of 5 | 107 of 141 | 76% | 68 to 82% |
 |   4 of 5 | 58 of 100 | 58% | 48 to 67% |
 |   5 of 5 | 20 of 30 | 67% | 49 to 81% |
 
@@ -80,7 +80,7 @@ By away scored 2+:
 |   0 of 5 | 18 of 24 | 75% | 55 to 88% |
 |   1 of 5 | 40 of 64 | 62% | 50 to 73% |
 |   2 of 5 | 77 of 121 | 64% | 55 to 72% |
-|   3 of 5 | 76 of 107 | 71% | 62 to 79% |
+|   3 of 5 | 77 of 108 | 71% | 62 to 79% |
 |   4 of 5 | 42 of 65 | 65% | 52 to 75% |
 |   5 of 5 | 18 of 28 | 64% | 46 to 79% |
 
@@ -88,7 +88,7 @@ By home let in 2+:
 
 |   0 of 5 | 21 of 34 | 62% | 45 to 76% |
 |   1 of 5 | 58 of 83 | 70% | 59 to 79% |
-|   2 of 5 | 94 of 135 | 70% | 61 to 77% |
+|   2 of 5 | 95 of 136 | 70% | 62 to 77% |
 |   3 of 5 | 70 of 108 | 65% | 55 to 73% |
 |   4 of 5 | 21 of 39 | 54% | 39 to 68% |
 |   5 of 5 | 7 of 10 | 70% | 40 to 89% |
@@ -97,7 +97,7 @@ By away let in 2+:
 
 |   0 of 5 | 14 of 19 | 74% | 51 to 88% |
 |   1 of 5 | 46 of 72 | 64% | 52 to 74% |
-|   2 of 5 | 94 of 132 | 71% | 63 to 78% |
+|   2 of 5 | 95 of 133 | 71% | 63 to 78% |
 |   3 of 5 | 71 of 114 | 62% | 53 to 71% |
 |   4 of 5 | 36 of 55 | 65% | 52 to 77% |
 |   5 of 5 | 10 of 17 | 59% | 36 to 78% |
@@ -116,6 +116,7 @@ By away let in 2+:
 | midweek_20261105_0817 | 0 | 1 |
 | midweek_20261109_1342 | 1 | 3 |
 | midweek_20261116_2225 | 1 | 3 |
+| midweek_20261123_1207 | 1 | 1 |
 | range_20261119_1331 | 31 | 44 |
 | weekend_20261029_0917 | 72 | 113 |
 | weekend_20261105_0822 | 40 | 59 |
@@ -142,3 +143,44 @@ By away let in 2+:
 - Estoril v Maritimo (Primeira Liga, Sun 08 Nov 15:30) fixture_id 1575537
 - Peterborough v Oxford United (League One, Sat 14 Nov 15:00) fixture_id 1564409
 - South Shields v Harborough Town (National League North, Tue 17 Nov 19:45) fixture_id 1587846
+- Brentford v Everton (Premier League, Mon 23 Nov 20:00) fixture_id 1557469
+- Nottingham Forest v Chelsea (Premier League, Fri 27 Nov 20:00) fixture_id 1557485
+- Bolton v West Brom (Championship, Wed 25 Nov 19:45) fixture_id 1563283
+- Bristol City v Wrexham (Championship, Tue 24 Nov 19:45) fixture_id 1563275
+- Burnley v Birmingham (Championship, Wed 25 Nov 19:45) fixture_id 1563284
+- Cardiff v Preston (Championship, Tue 24 Nov 19:45) fixture_id 1563276
+- Charlton v Lincoln (Championship, Tue 24 Nov 19:45) fixture_id 1563277
+- Middlesbrough v Swansea (Championship, Tue 24 Nov 19:45) fixture_id 1563278
+- Norwich v QPR (Championship, Tue 24 Nov 19:45) fixture_id 1563279
+- Portsmouth v West Ham (Championship, Tue 24 Nov 19:45) fixture_id 1563280
+- Sheffield Utd v Southampton (Championship, Tue 24 Nov 19:45) fixture_id 1563281
+- Southampton v Middlesbrough (Championship, Fri 27 Nov 20:00) fixture_id 1563294
+- Stoke City v Millwall (Championship, Wed 25 Nov 20:00) fixture_id 1563285
+- Watford v Blackburn (Championship, Wed 25 Nov 19:45) fixture_id 1563286
+- Wolves v Derby (Championship, Tue 24 Nov 20:00) fixture_id 1563282
+- Blackpool v Leicester (League One, Tue 24 Nov 19:45) fixture_id 1564333
+- Bradford v Barnsley (League One, Tue 24 Nov 19:45) fixture_id 1564319
+- Bromley v Wycombe (League One, Tue 24 Nov 19:45) fixture_id 1564334
+- Doncaster v Huddersfield (League One, Thu 26 Nov 20:00) fixture_id 1564429
+- Stevenage v Sheffield Wednesday (League One, Tue 24 Nov 19:45) fixture_id 1564328
+- Port Vale v Northampton (League Two, Tue 24 Nov 19:45) fixture_id 1563773
+- AFC Fylde v FC Halifax Town (National League, Tue 24 Nov 19:45) fixture_id 1585353
+- AFC Hornchurch v Sutton Utd (National League, Tue 24 Nov 19:45) fixture_id 1585359
+- Altrincham v Wealdstone (National League, Tue 24 Nov 19:45) fixture_id 1585354
+- Boreham Wood v Aldershot Town (National League, Wed 25 Nov 19:00) fixture_id 1585362
+- Boston United v Barrow (National League, Tue 24 Nov 19:45) fixture_id 1585355
+- Carlisle v Tamworth (National League, Tue 24 Nov 19:45) fixture_id 1585356
+- Eastleigh v Yeovil Town (National League, Tue 24 Nov 19:45) fixture_id 1585357
+- Forest Green v Southend (National League, Tue 24 Nov 19:45) fixture_id 1585358
+- Harrogate Town v Kidderminster Harriers (National League, Wed 25 Nov 19:45) fixture_id 1585363
+- Hartlepool v Solihull Moors (National League, Wed 25 Nov 19:45) fixture_id 1585364
+- Scunthorpe v Gateshead (National League, Tue 24 Nov 19:45) fixture_id 1585360
+- Scunthorpe v Wealdstone (National League, Fri 27 Nov 19:45) fixture_id 1585365
+- Woking v Worthing (National League, Tue 24 Nov 19:45) fixture_id 1585361
+- AFC Telford United v Buxton (National League North, Tue 24 Nov 19:45) fixture_id 1587909
+- Brackley Town v Hereford (National League North, Tue 24 Nov 19:45) fixture_id 1587910
+- Chorley v Hebburn Town (National League North, Tue 24 Nov 19:45) fixture_id 1587911
+- Darlington 1883 v Southport (National League North, Tue 24 Nov 19:45) fixture_id 1587912
+- Harborough Town v Chester (National League North, Tue 24 Nov 19:45) fixture_id 1587913
+- Hednesford Town v Oxford City (National League North, Tue 24 Nov 19:45) fixture_id 1587914
+- King's Lynn Town v Radcliffe (National League North, Tue 24 Nov 19:45) fixture_id 1587915
