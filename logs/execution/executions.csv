@@ -23,3 +23,4 @@ review_20261123_1203,review,ok,2026-11-23 12:03:24,2026-11-23 12:03:24,461 resul
 midweek_20261123_1207,midweek,ok,2026-11-23 12:07:21,2026-11-23 12:09:31,"{""english"": ""56 analysed, 20 selected, 1 flagged"", ""european"": ""69 analysed, 32 selected, 0 flagged""}"
 midweek_20261123_1231,midweek,ok,2026-11-23 12:31:45,2026-11-23 12:35:53,"{""english"": ""56 analysed, 20 selected, 1 flagged"", ""european"": ""69 analysed, 32 selected, 0 flagged""}"
 review_20261123_2029,review,ok,2026-11-23 20:29:48,2026-11-23 20:29:48,2 results added
+midweek_20261124_0010,midweek,ok,2026-11-24 00:10:09,2026-11-24 00:14:06,"{""english"": ""54 analysed, 20 selected, 1 flagged"", ""european"": ""67 analysed, 31 selected, 0 flagged""}"
