@@ -214,7 +214,7 @@ class Card(Flowable):
             if rs: shield(cv, ix + 1.9 * mm, y + 1.2 * mm, RED if ncs >= 3 else (AMBER if ncs == 2 else MUTED), ncs)   # no shield when no league games
             team_id = _ids.get(d.get("fixture_id"), (None, None))[k]
             if team_id is not None and keeps_scoring(team_id, rs) >= 2:
-                cv.setFillColor(GREEN); cv.setFont("DVB", 7); cv.drawRightString(px + 88 * mm, y, "KEEPS SCORING")
+                cv.setFillColor(GREEN); cv.setFont("DVB", 7); cv.drawRightString(min(px + 88 * mm, s.width - 6 * mm), y, "KEEPS SCORING")
             cv.setFillColor(TXT); cv.setFont("DVB", 10.5)
             cv.drawString(px, y - 5.5 * mm, "   ".join(f"{x['gf']}-{x['ga']}" for x in rs) if rs else "no league games this season")
             yy = y - 12.5 * mm
