@@ -1,0 +1,17 @@
+{
+ "run_id": "range_20261126_1627",
+ "mode": "range",
+ "kind": "report",
+ "subject": "Football V4.1 range: Thu 26 Nov to Sun 29 Nov",
+ "to": "robin@facestagram.co.uk",
+ "sent_utc": "2026-11-26 16:29:55",
+ "body": "reports/range/2026-11-26/email_2026-11-26_range.html",
+ "body_bytes": 203664,
+ "attachments": [
+  "reports/range/2026-11-26/combined_2026-11-26.pdf",
+  "reports/chatgpt_review/chatgpt_review_2026-11-26_range.md"
+ ],
+ "message_id": "<179571059323.2385.8003584792275996731@football-intelligence-v4>",
+ "dry_run": false,
+ "error": null
+}
