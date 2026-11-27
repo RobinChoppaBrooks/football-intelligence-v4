@@ -1,8 +1,8 @@
 {
  "meta": {
   "audit_version": "btts_audit_v1",
-  "run_id": "weekend_20261127_0701",
-  "created_at": "2026-11-27 07:03 UTC",
+  "run_id": "weekend_20261127_1709",
+  "created_at": "2026-11-27 17:13 UTC",
   "cut_high": 0.5746228456154795,
   "cut_medium": 0.5137527103457439,
   "evidence_cut_lean": 23,
@@ -20,7 +20,7 @@
  "fixtures": [
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1557477,
    "kickoff_uk": "Sun 29 Nov 16:30",
    "competition": "Premier League",
@@ -76,7 +76,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1557478,
    "kickoff_uk": "Sun 29 Nov 14:05",
    "competition": "Premier League",
@@ -132,7 +132,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1557479,
    "kickoff_uk": "Sun 29 Nov 14:05",
    "competition": "Premier League",
@@ -188,7 +188,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1557480,
    "kickoff_uk": "Sun 29 Nov 12:00",
    "competition": "Premier League",
@@ -244,7 +244,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1557481,
    "kickoff_uk": "Sun 29 Nov 14:05",
    "competition": "Premier League",
@@ -300,7 +300,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1557482,
    "kickoff_uk": "Sat 28 Nov 17:30",
    "competition": "Premier League",
@@ -356,7 +356,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1557483,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Premier League",
@@ -412,7 +412,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1557484,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Premier League",
@@ -468,7 +468,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1557486,
    "kickoff_uk": "Sun 29 Nov 14:05",
    "competition": "Premier League",
@@ -524,7 +524,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1563287,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Championship",
@@ -580,7 +580,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1563288,
    "kickoff_uk": "Sat 28 Nov 12:30",
    "competition": "Championship",
@@ -636,7 +636,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1563289,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Championship",
@@ -692,7 +692,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1563290,
    "kickoff_uk": "Sat 28 Nov 12:30",
    "competition": "Championship",
@@ -748,7 +748,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1563291,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Championship",
@@ -804,7 +804,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1563292,
    "kickoff_uk": "Sat 28 Nov 12:30",
    "competition": "Championship",
@@ -860,7 +860,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1563293,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Championship",
@@ -916,7 +916,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1563295,
    "kickoff_uk": "Sun 29 Nov 12:00",
    "competition": "Championship",
@@ -972,7 +972,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1563296,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Championship",
@@ -1028,7 +1028,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1563297,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Championship",
@@ -1084,7 +1084,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1563298,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Championship",
@@ -1140,7 +1140,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1564427,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "League One",
@@ -1196,7 +1196,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1564428,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "League One",
@@ -1252,7 +1252,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1564430,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "League One",
@@ -1308,7 +1308,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1564431,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "League One",
@@ -1364,7 +1364,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1564432,
    "kickoff_uk": "Sat 28 Nov 12:30",
    "competition": "League One",
@@ -1420,7 +1420,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1564433,
    "kickoff_uk": "Sat 28 Nov 12:30",
    "competition": "League One",
@@ -1476,7 +1476,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1564434,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "League One",
@@ -1532,7 +1532,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1564435,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "League One",
@@ -1588,7 +1588,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1564436,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "League One",
@@ -1644,7 +1644,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1564437,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "League One",
@@ -1700,7 +1700,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1564438,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "League One",
@@ -1756,7 +1756,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1563875,
    "kickoff_uk": "Sat 28 Nov 12:30",
    "competition": "League Two",
@@ -1812,7 +1812,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1563876,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "League Two",
@@ -1868,7 +1868,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1563877,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "League Two",
@@ -1924,7 +1924,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1563878,
    "kickoff_uk": "Sat 28 Nov 12:30",
    "competition": "League Two",
@@ -1980,7 +1980,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1563879,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "League Two",
@@ -2036,7 +2036,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1563880,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "League Two",
@@ -2092,7 +2092,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1563881,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "League Two",
@@ -2148,7 +2148,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1563882,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "League Two",
@@ -2204,7 +2204,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1563883,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "League Two",
@@ -2260,7 +2260,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1563884,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "League Two",
@@ -2316,7 +2316,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1563885,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "League Two",
@@ -2372,7 +2372,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1563886,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "League Two",
@@ -2428,7 +2428,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1585366,
    "kickoff_uk": "Sat 28 Nov 12:30",
    "competition": "National League",
@@ -2484,7 +2484,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1585375,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League",
@@ -2540,7 +2540,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1585368,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League",
@@ -2596,7 +2596,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1585369,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League",
@@ -2652,7 +2652,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1585370,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League",
@@ -2708,14 +2708,14 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1585371,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League",
    "fixture": "Carlisle v Sutton Utd",
    "home": "Carlisle",
    "away": "Sutton Utd",
-   "over25_classification": "Medium",
+   "over25_classification": "rejected",
    "over25_model_score": 0.593,
    "btts": "NO",
    "btts_likelihood": "Medium",
@@ -2764,14 +2764,14 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1585372,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League",
    "fixture": "Eastleigh v FC Halifax Town",
    "home": "Eastleigh",
    "away": "FC Halifax Town",
-   "over25_classification": "Medium",
+   "over25_classification": "rejected",
    "over25_model_score": 0.583,
    "btts": "NO",
    "btts_likelihood": "Medium",
@@ -2820,7 +2820,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1585373,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League",
@@ -2876,7 +2876,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1585374,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League",
@@ -2932,7 +2932,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1585376,
    "kickoff_uk": "Sat 28 Nov 17:30",
    "competition": "National League",
@@ -2988,7 +2988,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1585367,
    "kickoff_uk": "Sat 28 Nov 12:30",
    "competition": "National League",
@@ -3044,7 +3044,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1587921,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League North",
@@ -3100,7 +3100,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1587922,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League North",
@@ -3156,7 +3156,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1587923,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League North",
@@ -3212,7 +3212,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1587924,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League North",
@@ -3268,7 +3268,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1587925,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League North",
@@ -3324,7 +3324,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1587926,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League North",
@@ -3380,7 +3380,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1587927,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League North",
@@ -3436,7 +3436,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1587928,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League North",
@@ -3492,7 +3492,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1587929,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League North",
@@ -3548,7 +3548,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1587930,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League North",
@@ -3604,7 +3604,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1587931,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League North",
@@ -3660,7 +3660,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1587932,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League North",
@@ -3716,7 +3716,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1588473,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League South",
@@ -3772,7 +3772,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1588474,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League South",
@@ -3828,7 +3828,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1588475,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League South",
@@ -3884,7 +3884,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1588476,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League South",
@@ -3940,7 +3940,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1588477,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League South",
@@ -3996,7 +3996,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1588478,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League South",
@@ -4052,7 +4052,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1588479,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League South",
@@ -4108,7 +4108,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1588480,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League South",
@@ -4164,7 +4164,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1588481,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League South",
@@ -4220,7 +4220,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1588482,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League South",
@@ -4276,7 +4276,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1588483,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League South",
@@ -4332,7 +4332,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1588484,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "National League South",
@@ -4388,7 +4388,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1575236,
    "kickoff_uk": "Sat 28 Nov 14:30",
    "competition": "Bundesliga",
@@ -4444,7 +4444,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1575232,
    "kickoff_uk": "Sun 29 Nov 16:30",
    "competition": "Bundesliga",
@@ -4500,14 +4500,14 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1575230,
    "kickoff_uk": "Sun 29 Nov 18:30",
    "competition": "Bundesliga",
    "fixture": "Borussia Dortmund v Bayer Leverkusen",
    "home": "Borussia Dortmund",
    "away": "Bayer Leverkusen",
-   "over25_classification": "Medium",
+   "over25_classification": "rejected",
    "over25_model_score": 0.614,
    "btts": "NO",
    "btts_likelihood": "Medium",
@@ -4556,7 +4556,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1575234,
    "kickoff_uk": "Sat 28 Nov 14:30",
    "competition": "Bundesliga",
@@ -4612,7 +4612,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1575235,
    "kickoff_uk": "Sat 28 Nov 14:30",
    "competition": "Bundesliga",
@@ -4668,7 +4668,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1575233,
    "kickoff_uk": "Sun 29 Nov 14:30",
    "competition": "Bundesliga",
@@ -4724,7 +4724,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1575238,
    "kickoff_uk": "Sat 28 Nov 14:30",
    "competition": "Bundesliga",
@@ -4780,7 +4780,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1575231,
    "kickoff_uk": "Sat 28 Nov 17:30",
    "competition": "Bundesliga",
@@ -4836,7 +4836,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1552235,
    "kickoff_uk": "Sun 29 Nov 11:15",
    "competition": "Eredivisie",
@@ -4892,7 +4892,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1552234,
    "kickoff_uk": "Sat 28 Nov 20:00",
    "competition": "Eredivisie",
@@ -4948,7 +4948,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1552236,
    "kickoff_uk": "Sat 28 Nov 15:30",
    "competition": "Eredivisie",
@@ -5004,7 +5004,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1552237,
    "kickoff_uk": "Sun 29 Nov 13:30",
    "competition": "Eredivisie",
@@ -5060,7 +5060,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1552241,
    "kickoff_uk": "Sun 29 Nov 13:30",
    "competition": "Eredivisie",
@@ -5116,7 +5116,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1552239,
    "kickoff_uk": "Sun 29 Nov 19:00",
    "competition": "Eredivisie",
@@ -5172,7 +5172,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1552242,
    "kickoff_uk": "Sun 29 Nov 15:45",
    "competition": "Eredivisie",
@@ -5228,7 +5228,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1552240,
    "kickoff_uk": "Sat 28 Nov 17:45",
    "competition": "Eredivisie",
@@ -5284,7 +5284,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1552828,
    "kickoff_uk": "Sat 28 Nov 16:15",
    "competition": "Ligue 1",
@@ -5340,7 +5340,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1552829,
    "kickoff_uk": "Sun 29 Nov 14:00",
    "competition": "Ligue 1",
@@ -5396,7 +5396,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1552831,
    "kickoff_uk": "Sat 28 Nov 19:45",
    "competition": "Ligue 1",
@@ -5452,7 +5452,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1552832,
    "kickoff_uk": "Sat 28 Nov 19:45",
    "competition": "Ligue 1",
@@ -5508,7 +5508,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1552833,
    "kickoff_uk": "Sun 29 Nov 19:45",
    "competition": "Ligue 1",
@@ -5564,7 +5564,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1552834,
    "kickoff_uk": "Sat 28 Nov 19:45",
    "competition": "Ligue 1",
@@ -5620,7 +5620,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1552835,
    "kickoff_uk": "Sat 28 Nov 19:45",
    "competition": "Ligue 1",
@@ -5676,7 +5676,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1552836,
    "kickoff_uk": "Sun 29 Nov 16:15",
    "competition": "Ligue 1",
@@ -5732,7 +5732,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1584478,
    "kickoff_uk": "Sun 29 Nov 13:00",
    "competition": "Super Lig",
@@ -5788,7 +5788,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1584479,
    "kickoff_uk": "Sun 29 Nov 16:00",
    "competition": "Super Lig",
@@ -5844,7 +5844,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1584480,
    "kickoff_uk": "Sat 28 Nov 16:00",
    "competition": "Super Lig",
@@ -5900,7 +5900,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1584483,
    "kickoff_uk": "Sat 28 Nov 13:00",
    "competition": "Super Lig",
@@ -5956,7 +5956,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1584477,
    "kickoff_uk": "Sun 29 Nov 10:30",
    "competition": "Super Lig",
@@ -6012,7 +6012,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1556712,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Scottish Premiership",
@@ -6068,7 +6068,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1556713,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Scottish Premiership",
@@ -6124,7 +6124,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1556714,
    "kickoff_uk": "Sun 29 Nov 15:00",
    "competition": "Scottish Premiership",
@@ -6180,7 +6180,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1556715,
    "kickoff_uk": "Sat 28 Nov 17:45",
    "competition": "Scottish Premiership",
@@ -6236,14 +6236,14 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1556716,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Scottish Premiership",
    "fixture": "Rangers v Falkirk",
    "home": "Rangers",
    "away": "Falkirk",
-   "over25_classification": "Medium",
+   "over25_classification": "rejected",
    "over25_model_score": 0.6,
    "btts": "NO",
    "btts_likelihood": "Medium",
@@ -6292,7 +6292,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1556717,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Scottish Premiership",
@@ -6348,7 +6348,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1570464,
    "kickoff_uk": "Sun 29 Nov 17:30",
    "competition": "La Liga",
@@ -6404,7 +6404,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1570465,
    "kickoff_uk": "Sun 29 Nov 15:15",
    "competition": "La Liga",
@@ -6460,7 +6460,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1570466,
    "kickoff_uk": "Sat 28 Nov 17:30",
    "competition": "La Liga",
@@ -6516,7 +6516,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1570469,
    "kickoff_uk": "Sat 28 Nov 15:15",
    "competition": "La Liga",
@@ -6572,7 +6572,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1570463,
    "kickoff_uk": "Sat 28 Nov 13:00",
    "competition": "La Liga",
@@ -6628,7 +6628,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1570470,
    "kickoff_uk": "Sat 28 Nov 20:00",
    "competition": "La Liga",
@@ -6684,7 +6684,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1570471,
    "kickoff_uk": "Sun 29 Nov 20:00",
    "competition": "La Liga",
@@ -6740,7 +6740,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1570472,
    "kickoff_uk": "Sun 29 Nov 13:00",
    "competition": "La Liga",
@@ -6796,7 +6796,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1575545,
    "kickoff_uk": "Sat 28 Nov 18:00",
    "competition": "Primeira Liga",
@@ -6852,7 +6852,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1575546,
    "kickoff_uk": "Sat 28 Nov 15:30",
    "competition": "Primeira Liga",
@@ -6908,7 +6908,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1575549,
    "kickoff_uk": "Sun 29 Nov 20:30",
    "competition": "Primeira Liga",
@@ -6964,7 +6964,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1575550,
    "kickoff_uk": "Sun 29 Nov 18:00",
    "competition": "Primeira Liga",
@@ -7020,7 +7020,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1575552,
    "kickoff_uk": "Sat 28 Nov 15:30",
    "competition": "Primeira Liga",
@@ -7076,7 +7076,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1575553,
    "kickoff_uk": "Sat 28 Nov 20:30",
    "competition": "Primeira Liga",
@@ -7132,7 +7132,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1647340,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Scottish Cup",
@@ -7188,7 +7188,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1647341,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Scottish Cup",
@@ -7244,7 +7244,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1647342,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Scottish Cup",
@@ -7300,7 +7300,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1647343,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Scottish Cup",
@@ -7356,7 +7356,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1648249,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Scottish Cup",
@@ -7412,7 +7412,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1647626,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Scottish Cup",
@@ -7468,7 +7468,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1647344,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Scottish Cup",
@@ -7524,14 +7524,14 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1647345,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Scottish Cup",
    "fixture": "Inverness CT v Cove Rangers",
    "home": "Inverness CT",
    "away": "Cove Rangers",
-   "over25_classification": "Medium",
+   "over25_classification": "rejected",
    "over25_model_score": 0.614,
    "btts": "NO",
    "btts_likelihood": "Medium",
@@ -7580,7 +7580,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1647347,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Scottish Cup",
@@ -7636,7 +7636,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1648250,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Scottish Cup",
@@ -7692,7 +7692,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1647348,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Scottish Cup",
@@ -7748,7 +7748,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1647349,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Scottish Cup",
@@ -7804,7 +7804,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1647350,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Scottish Cup",
@@ -7860,7 +7860,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1648251,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Scottish Cup",
@@ -7916,7 +7916,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1647351,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Scottish Cup",
@@ -7972,7 +7972,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1647352,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Scottish Cup",
@@ -8028,7 +8028,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1647353,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Scottish Cup",
@@ -8084,7 +8084,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1648252,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Scottish Cup",
@@ -8140,7 +8140,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1647354,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Scottish Cup",
@@ -8196,7 +8196,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650260,
    "kickoff_uk": "Sat 28 Nov 17:30",
    "competition": "Coupe de France",
@@ -8252,7 +8252,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650261,
    "kickoff_uk": "Sat 28 Nov 15:00",
    "competition": "Coupe de France",
@@ -8308,7 +8308,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650262,
    "kickoff_uk": "Sat 28 Nov 16:00",
    "competition": "Coupe de France",
@@ -8364,7 +8364,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650263,
    "kickoff_uk": "Sat 28 Nov 17:00",
    "competition": "Coupe de France",
@@ -8420,7 +8420,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650264,
    "kickoff_uk": "Sat 28 Nov 18:00",
    "competition": "Coupe de France",
@@ -8476,7 +8476,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650302,
    "kickoff_uk": "Sat 28 Nov 17:30",
    "competition": "Coupe de France",
@@ -8532,7 +8532,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650266,
    "kickoff_uk": "Sat 28 Nov 17:00",
    "competition": "Coupe de France",
@@ -8588,7 +8588,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650268,
    "kickoff_uk": "Sat 28 Nov 14:00",
    "competition": "Coupe de France",
@@ -8644,7 +8644,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650269,
    "kickoff_uk": "Sat 28 Nov 14:30",
    "competition": "Coupe de France",
@@ -8700,7 +8700,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650270,
    "kickoff_uk": "Sat 28 Nov 12:30",
    "competition": "Coupe de France",
@@ -8756,7 +8756,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650271,
    "kickoff_uk": "Sat 28 Nov 16:00",
    "competition": "Coupe de France",
@@ -8812,7 +8812,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650272,
    "kickoff_uk": "Sat 28 Nov 18:00",
    "competition": "Coupe de France",
@@ -8868,7 +8868,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650273,
    "kickoff_uk": "Sun 29 Nov 13:00",
    "competition": "Coupe de France",
@@ -8924,7 +8924,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650275,
    "kickoff_uk": "Sat 28 Nov 16:00",
    "competition": "Coupe de France",
@@ -8980,7 +8980,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650299,
    "kickoff_uk": "Sun 29 Nov 14:45",
    "competition": "Coupe de France",
@@ -9036,7 +9036,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650274,
    "kickoff_uk": "Sat 28 Nov 18:00",
    "competition": "Coupe de France",
@@ -9092,7 +9092,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650276,
    "kickoff_uk": "Sat 28 Nov 17:00",
    "competition": "Coupe de France",
@@ -9148,7 +9148,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650277,
    "kickoff_uk": "Sun 29 Nov 12:30",
    "competition": "Coupe de France",
@@ -9204,7 +9204,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650278,
    "kickoff_uk": "Sun 29 Nov 14:00",
    "competition": "Coupe de France",
@@ -9260,7 +9260,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650279,
    "kickoff_uk": "Sat 28 Nov 16:00",
    "competition": "Coupe de France",
@@ -9316,7 +9316,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650280,
    "kickoff_uk": "Sun 29 Nov 14:00",
    "competition": "Coupe de France",
@@ -9372,7 +9372,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650281,
    "kickoff_uk": "Sat 28 Nov 18:00",
    "competition": "Coupe de France",
@@ -9428,7 +9428,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650283,
    "kickoff_uk": "Sat 28 Nov 18:00",
    "competition": "Coupe de France",
@@ -9484,7 +9484,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650284,
    "kickoff_uk": "Sat 28 Nov 17:00",
    "competition": "Coupe de France",
@@ -9540,7 +9540,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650285,
    "kickoff_uk": "Sun 29 Nov 15:00",
    "competition": "Coupe de France",
@@ -9596,7 +9596,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650286,
    "kickoff_uk": "Sat 28 Nov 12:30",
    "competition": "Coupe de France",
@@ -9652,7 +9652,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650287,
    "kickoff_uk": "Sat 28 Nov 14:00",
    "competition": "Coupe de France",
@@ -9708,7 +9708,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650288,
    "kickoff_uk": "Sat 28 Nov 18:00",
    "competition": "Coupe de France",
@@ -9764,7 +9764,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650289,
    "kickoff_uk": "Sun 29 Nov 12:30",
    "competition": "Coupe de France",
@@ -9820,7 +9820,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650290,
    "kickoff_uk": "Sat 28 Nov 16:00",
    "competition": "Coupe de France",
@@ -9876,7 +9876,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650291,
    "kickoff_uk": "Sun 29 Nov 12:30",
    "competition": "Coupe de France",
@@ -9932,7 +9932,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650296,
    "kickoff_uk": "Sat 28 Nov 18:00",
    "competition": "Coupe de France",
@@ -9988,7 +9988,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650293,
    "kickoff_uk": "Sun 29 Nov 12:30",
    "competition": "Coupe de France",
@@ -10044,7 +10044,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650282,
    "kickoff_uk": "Sat 28 Nov 17:00",
    "competition": "Coupe de France",
@@ -10100,7 +10100,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650295,
    "kickoff_uk": "Sat 28 Nov 17:00",
    "competition": "Coupe de France",
@@ -10156,7 +10156,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650297,
    "kickoff_uk": "Sat 28 Nov 17:00",
    "competition": "Coupe de France",
@@ -10212,7 +10212,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650294,
    "kickoff_uk": "Sat 28 Nov 17:00",
    "competition": "Coupe de France",
@@ -10268,7 +10268,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650300,
    "kickoff_uk": "Sat 28 Nov 18:00",
    "competition": "Coupe de France",
@@ -10324,7 +10324,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650298,
    "kickoff_uk": "Sun 29 Nov 12:30",
    "competition": "Coupe de France",
@@ -10380,7 +10380,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650301,
    "kickoff_uk": "Sat 28 Nov 13:00",
    "competition": "Coupe de France",
@@ -10436,7 +10436,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650304,
    "kickoff_uk": "Sat 28 Nov 17:00",
    "competition": "Coupe de France",
@@ -10492,7 +10492,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650267,
    "kickoff_uk": "Sat 28 Nov 16:00",
    "competition": "Coupe de France",
@@ -10548,7 +10548,7 @@
   },
   {
    "audit_version": "btts_audit_v1",
-   "run_id": "weekend_20261127_0701",
+   "run_id": "weekend_20261127_1709",
    "fixture_id": 1650305,
    "kickoff_uk": "Sat 28 Nov 19:00",
    "competition": "Coupe de France",

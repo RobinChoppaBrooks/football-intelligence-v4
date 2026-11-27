@@ -1,9 +1,9 @@
 # ChatGPT review package: weekend 2026-11-27
 
-Report date: 2026-11-27 07:03 UK. Analysis window: Sat 28 Nov 2026 to Sun 29 Nov 2026. Model version: v4.1 (validated model, unchanged). Run id: weekend_20261127_0701.
-Fixtures analysed: 189. Selected: 44 (High 13, Medium/Weak 31). Rejected: 145.
+Report date: 2026-11-27 17:13 UK. Analysis window: Sat 28 Nov 2026 to Sun 29 Nov 2026. Model version: v4.1 (validated model, unchanged). Run id: weekend_20261127_1709.
+Fixtures analysed: 189. Selected: 39 (High 13, Medium/Weak 26). Rejected: 150.
 
-Classifications are model bands, not per-fixture probabilities. Benchmark, season 2026-27 to 2026-11-23 (1994 finished fixtures, Rob's 14 leagues, clean out of sample): 3+ goals in High 91 of 133, Medium 181 of 283, trump card 3 of 5, rejected 868 of 1573. Band counts, not the chance of any one fixture. Cup competitions (European and domestic cups), measured separately, season 2026-27 (1728 finished ties): 3+ goals in High 34 of 48, Medium 113 of 193, trump card 2 of 3, rejected 872 of 1484. Cup ties are outside the 14-league benchmark; treat cup selections with that in mind. Counts are from stored final scores; the five results are listed oldest to newest. BTTS YES = BTTS model High band; lean YES = Medium band; no lean = Low band. BTTS model bands, same fixtures: High 128 of 199, Medium 896 of 1595, Low 120 of 200 had both teams score. A trump card fixture (both attacks 2+ in 4+ of 5, both defences 2+ against in 1 or fewer) is High and BTTS YES by Rob's rule and is scored separately.
+Classifications are model bands, not per-fixture probabilities. Benchmark, season 2026-27 to 2026-11-23 (1994 finished fixtures, Rob's 14 leagues, clean out of sample): 3+ goals in High 91 of 133, Medium 181 of 283, trump card 3 of 5, rejected 868 of 1573. Band counts, not the chance of any one fixture. Cup competitions (European and domestic cups), measured separately, season 2026-27 (1728 finished ties): 3+ goals in High 34 of 48, Medium 113 of 193, trump card 2 of 3, rejected 872 of 1484. Cup ties are outside the 14-league benchmark; treat cup selections with that in mind. Counts are from stored final scores; the five results are listed oldest to newest. BTTS YES = BTTS model High band; lean YES = Medium band; no lean = Low band. BTTS model bands, same fixtures: High 128 of 199, Medium 896 of 1595, Low 120 of 200 had both teams score. A trump card fixture (both attacks 2+ in 4+ of 5, both defences 2+ against in 1 or fewer) is High and BTTS YES by Rob's rule and is scored separately. Castle rule (Rob, 27 Nov 2026): a fixture where either side kept 3 or more clean sheets in its last 5 is rejected whatever the model says; those are listed with the reason and scored separately.
 
 Data-quality warnings: english competitions with no fixtures: FA Cup, EFL Cup; european competitions with no fixtures: Scottish League Cup, Champions League, Europa League, Conference League, DFB Pokal, KNVB Beker, Turkish Cup, Copa del Rey, Taca de Portugal; 53 fixtures with fewer than five league games for a side
 
@@ -143,14 +143,6 @@ Data-quality warnings: english competitions with no fixtures: FA Cup, EFL Cup; e
 - Concern: Home side kept 2 of 5 clean sheets
 - Notes: Home side kept 2 of 5 clean sheets; Away side kept 2 of 5 clean sheets
 
-## Borussia Dortmund v Bayer Leverkusen  (Bundesliga, Sun 29 Nov 18:30 UK)  fixture_id 1575230
-- Classification: Medium. Over 2.5: YES. BTTS: lean YES (model Medium); caution: Borussia Dortmund kept 3 clean sheets in 5. Drivers: 9 of 20. Pattern: One side dominates.
-- Borussia Dortmund: scored 2+ 2/5, let in 2+ 1/5, 3+ in 2/5, BTTS 2/5, clean sheets 3/5, failed to score 1/5. Last five: 0-0, 1-0, 2-2, 2-1, 1-0. Home last 5: 2-0, 3-0, 2-2, 1-0, 2-1
-- Bayer Leverkusen: scored 2+ 4/5, let in 2+ 2/5, 3+ in 5/5, BTTS 3/5, clean sheets 1/5, failed to score 1/5. Last five: 2-1, 0-3, 2-4, 2-1, 4-0. Away last 5: 2-3, 2-2, 4-3, 0-3, 2-1
-- Supporting: Borussia Dortmund 2 of 5 games with 3+ and Bayer Leverkusen 5 of 5; both scored in 2 of 5 (Borussia Dortmund) and 3 of 5 (Bayer Leverkusen). Venue: Borussia Dortmund 3 of 5 home games with 3+, Bayer Leverkusen 5 of 5 away.
-- Concern: Home side kept 3 of 5 clean sheets
-- Notes: Home side kept 3 of 5 clean sheets; Home side's last 5: 3 of 5 finished under 2.5
-
 ## West Brom v Bristol City  (Championship, Sat 28 Nov 15:00 UK)  fixture_id 1563296
 - Classification: Medium. Over 2.5: YES. BTTS: lean YES (model Medium). Drivers: 10 of 20. Pattern: One side dominates.
 - West Brom: scored 2+ 4/5, let in 2+ 1/5, 3+ in 4/5, BTTS 4/5, clean sheets 1/5, failed to score 0/5. Last five: 3-1, 1-1, 3-0, 2-2, 3-1. Home last 5: 1-1, 0-1, 3-2, 1-1, 3-0
@@ -206,22 +198,6 @@ Data-quality warnings: english competitions with no fixtures: FA Cup, EFL Cup; e
 - Supporting: Altrincham 4 of 5 games with 3+ and Worthing 4 of 5; both scored in 2 of 5 (Altrincham) and 4 of 5 (Worthing). Venue: Altrincham 4 of 5 home games with 3+, Worthing 3 of 5 away.
 - Concern: Home side kept 2 of 5 clean sheets
 - Notes: Home side kept 2 of 5 clean sheets; Home side failed to score in 2 of 5
-
-## Carlisle v Sutton Utd  (National League, Sat 28 Nov 15:00 UK)  fixture_id 1585371
-- Classification: Medium. Over 2.5: YES. BTTS: lean YES (model Medium); caution: Carlisle kept 3 clean sheets in 5; Sutton Utd kept 4 clean sheets in 5. Drivers: 9 of 20. Pattern: One side dominates.
-- Carlisle: scored 2+ 4/5, let in 2+ 2/5, 3+ in 3/5, BTTS 2/5, clean sheets 3/5, failed to score 0/5. Last five: 3-0, 4-2, 2-0, 2-0, 1-2. Home last 5: 2-5, 0-0, 3-0, 2-0, 1-2
-- Sutton Utd: scored 2+ 2/5, let in 2+ 1/5, 3+ in 1/5, BTTS 0/5, clean sheets 4/5, failed to score 2/5. Last five: 2-0, 3-0, 0-2, 1-0, 0-0. Away last 5: 0-2, 1-1, 1-3, 3-0, 0-0
-- Supporting: Carlisle 3 of 5 games with 3+ and Sutton Utd 1 of 5; both scored in 2 of 5 (Carlisle) and 0 of 5 (Sutton Utd). Venue: Carlisle 3 of 5 home games with 3+, Sutton Utd 2 of 5 away.
-- Concern: Home side kept 3 of 5 clean sheets
-- Notes: Home side kept 3 of 5 clean sheets; Away side kept 4 of 5 clean sheets; Away side failed to score in 2 of 5; Away side's last 5: 4 of 5 finished under 2.5
-
-## Eastleigh v FC Halifax Town  (National League, Sat 28 Nov 15:00 UK)  fixture_id 1585372
-- Classification: Medium. Over 2.5: YES. BTTS: lean YES (model Medium); caution: FC Halifax Town kept 3 clean sheets in 5. Drivers: 9 of 20. Pattern: One side dominates.
-- Eastleigh: scored 2+ 1/5, let in 2+ 3/5, 3+ in 3/5, BTTS 4/5, clean sheets 0/5, failed to score 1/5. Last five: 0-2, 1-1, 1-2, 3-1, 1-3. Home last 5: 1-1, 1-3, 4-2, 1-2, 1-3
-- FC Halifax Town: scored 2+ 4/5, let in 2+ 1/5, 3+ in 2/5, BTTS 2/5, clean sheets 3/5, failed to score 0/5. Last five: 2-3, 2-0, 1-1, 5-0, 2-0. Away last 5: 1-2, 2-0, 2-2, 1-1, 2-0
-- Supporting: Eastleigh 3 of 5 games with 3+ and FC Halifax Town 2 of 5; both scored in 4 of 5 (Eastleigh) and 2 of 5 (FC Halifax Town). Venue: Eastleigh 4 of 5 home games with 3+, FC Halifax Town 2 of 5 away.
-- Concern: Away side kept 3 of 5 clean sheets
-- Notes: Away side kept 3 of 5 clean sheets; Away side's last 5: 3 of 5 finished under 2.5; Away side's last 3 away games: only 1 of 3 went over
 
 ## Forest Green v Tamworth  (National League, Sat 28 Nov 15:00 UK)  fixture_id 1585373
 - Classification: Medium. Over 2.5: YES. BTTS: lean YES (model Medium). Drivers: 12 of 20. Pattern: Both teams contribute.
@@ -295,14 +271,6 @@ Data-quality warnings: english competitions with no fixtures: FA Cup, EFL Cup; e
 - Concern: Goals rely on poor defending rather than proven attacks
 - Notes: Goals rely on poor defending rather than proven attacks
 
-## Inverness CT v Cove Rangers  (Scottish Cup, cup tie: outside the 14-league benchmark, Sat 28 Nov 15:00 UK)  fixture_id 1647345
-- Classification: Medium. Over 2.5: YES. BTTS: lean YES (model Medium); caution: Cove Rangers kept 3 clean sheets in 5. Drivers: 8 of 20. Pattern: Low scoring.
-- Inverness CT: scored 2+ 2/5, let in 2+ 2/5, 3+ in 2/5, BTTS 3/5, clean sheets 2/5, failed to score 1/5. Last five: 2-0, 1-5, 1-1, 2-3, 0-0. Home last 5: 2-0, 2-0, 2-0, 1-1, 0-0
-- Cove Rangers: scored 2+ 2/5, let in 2+ 2/5, 3+ in 3/5, BTTS 1/5, clean sheets 3/5, failed to score 1/5. Last five: 0-2, 1-0, 4-0, 3-0, 1-5. Away last 5: 1-2, 3-4, 0-2, 1-0, 1-5
-- Supporting: Inverness CT 2 of 5 games with 3+ and Cove Rangers 3 of 5; both scored in 3 of 5 (Inverness CT) and 1 of 5 (Cove Rangers). Venue: Inverness CT 0 of 5 home games with 3+, Cove Rangers 3 of 5 away.
-- Concern: Home side kept 2 of 5 clean sheets
-- Notes: Home side kept 2 of 5 clean sheets; Home side's last 5: 3 of 5 finished under 2.5; Away side kept 3 of 5 clean sheets; Home side's last 3 home games: only 0 of 3 went over; Away side's last 3 away games: only 1 of 3 went over
-
 ## Montrose v Hamilton Academical  (Scottish Cup, cup tie: outside the 14-league benchmark, Sat 28 Nov 15:00 UK)  fixture_id 1647347
 - Classification: Medium. Over 2.5: YES. BTTS: lean YES (model Medium). Drivers: 6 of 20. Pattern: Low scoring.
 - Montrose: scored 2+ 1/5, let in 2+ 2/5, 3+ in 3/5, BTTS 3/5, clean sheets 1/5, failed to score 1/5. Last five: 3-0, 1-1, 1-2, 0-3, 1-1. Home last 5: 2-1, 0-5, 3-0, 1-2, 1-1
@@ -343,14 +311,6 @@ Data-quality warnings: english competitions with no fixtures: FA Cup, EFL Cup; e
 - Concern: Home side's last 3 home games: only 1 of 3 went over
 - Notes: Home side's last 3 home games: only 1 of 3 went over
 
-## Rangers v Falkirk  (Scottish Premiership, Sat 28 Nov 15:00 UK)  fixture_id 1556716
-- Classification: Medium. Over 2.5: YES. BTTS: lean YES (model Medium); caution: Falkirk kept 3 clean sheets in 5. Drivers: 12 of 20. Pattern: One side dominates.
-- Rangers: scored 2+ 5/5, let in 2+ 2/5, 3+ in 4/5, BTTS 3/5, clean sheets 2/5, failed to score 0/5. Last five: 4-0, 2-2, 2-0, 2-1, 3-2. Home last 5: 1-0, 1-0, 3-1, 4-0, 3-2
-- Falkirk: scored 2+ 4/5, let in 2+ 1/5, 3+ in 3/5, BTTS 2/5, clean sheets 3/5, failed to score 0/5. Last five: 3-0, 1-0, 2-0, 5-2, 2-1. Away last 5: 1-1, 1-1, 2-1, 1-0, 5-2
-- Supporting: Rangers 4 of 5 games with 3+ and Falkirk 3 of 5; both scored in 3 of 5 (Rangers) and 2 of 5 (Falkirk). Venue: Rangers 3 of 5 home games with 3+, Falkirk 2 of 5 away.
-- Concern: Home side kept 2 of 5 clean sheets
-- Notes: Home side kept 2 of 5 clean sheets; Away side kept 3 of 5 clean sheets
-
 ## Fenerbahçe v Erzurumspor FK  (Super Lig, Sun 29 Nov 16:00 UK)  fixture_id 1584479
 - Classification: Medium. Over 2.5: YES. BTTS: lean YES (model Medium). Drivers: 10 of 20. Pattern: Both teams contribute.
 - Fenerbahçe: scored 2+ 3/5, let in 2+ 3/5, 3+ in 5/5, BTTS 3/5, clean sheets 2/5, failed to score 0/5. Last five: 3-0, 1-2, 1-2, 5-0, 2-2. Home last 5: 4-2, 1-2, 8-0, 3-0, 1-2
@@ -359,7 +319,7 @@ Data-quality warnings: english competitions with no fixtures: FA Cup, EFL Cup; e
 - Concern: Home side kept 2 of 5 clean sheets
 - Notes: Home side kept 2 of 5 clean sheets
 
-## Rejected fixtures (model below the line)
+## Rejected fixtures (model below the line, or Rob's castle rule)
 
 - Arsenal v Manchester City (Premier League, Sun 29 Nov 16:30) fixture_id 1557477
 - Brighton v Newcastle (Premier League, Sun 29 Nov 14:05) fixture_id 1557478
@@ -403,6 +363,8 @@ Data-quality warnings: english competitions with no fixtures: FA Cup, EFL Cup; e
 - Walsall v Northampton (League Two, Sat 28 Nov 15:00) fixture_id 1563886
 - AFC Hornchurch v Solihull Moors (National League, Sat 28 Nov 15:00) fixture_id 1585375
 - Boston United v Kidderminster Harriers (National League, Sat 28 Nov 15:00) fixture_id 1585370
+- Carlisle v Sutton Utd (National League, Sat 28 Nov 15:00) fixture_id 1585371 - Rob's castle rule: Carlisle kept 3 clean sheets in 5 and Sutton Utd kept 4 clean sheets in 5
+- Eastleigh v FC Halifax Town (National League, Sat 28 Nov 15:00) fixture_id 1585372 - Rob's castle rule: FC Halifax Town kept 3 clean sheets in 5
 - Buxton v Spennymoor Town (National League North, Sat 28 Nov 15:00) fixture_id 1587922
 - Chorley v Harborough Town (National League North, Sat 28 Nov 15:00) fixture_id 1587923
 - Darlington 1883 v Brackley Town (National League North, Sat 28 Nov 15:00) fixture_id 1587924
@@ -421,6 +383,7 @@ Data-quality warnings: english competitions with no fixtures: FA Cup, EFL Cup; e
 - Torquay v Chelmsford City (National League South, Sat 28 Nov 15:00) fixture_id 1588482
 - Truro City v Dover (National League South, Sat 28 Nov 15:00) fixture_id 1588483
 - Weston-super-Mare v Maidenhead (National League South, Sat 28 Nov 15:00) fixture_id 1588484
+- Borussia Dortmund v Bayer Leverkusen (Bundesliga, Sun 29 Nov 18:30) fixture_id 1575230 - Rob's castle rule: Borussia Dortmund kept 3 clean sheets in 5
 - SC Paderborn 07 v FC Schalke 04 (Bundesliga, Sat 28 Nov 14:30) fixture_id 1575238
 - VfB Stuttgart v Eintracht Frankfurt (Bundesliga, Sat 28 Nov 17:30) fixture_id 1575231
 - Angers v Lens (Ligue 1, Sat 28 Nov 16:15) fixture_id 1552828
@@ -437,6 +400,7 @@ Data-quality warnings: english competitions with no fixtures: FA Cup, EFL Cup; e
 - Çorum FK v Kocaelispor (Super Lig, Sun 29 Nov 10:30) fixture_id 1584477
 - Aberdeen v Dundee (Scottish Premiership, Sat 28 Nov 15:00) fixture_id 1556712
 - Motherwell v Hibernian (Scottish Premiership, Sat 28 Nov 17:45) fixture_id 1556715
+- Rangers v Falkirk (Scottish Premiership, Sat 28 Nov 15:00) fixture_id 1556716 - Rob's castle rule: Falkirk kept 3 clean sheets in 5
 - ST Mirren v Kilmarnock (Scottish Premiership, Sat 28 Nov 15:00) fixture_id 1556717
 - Celta Vigo v Villarreal (La Liga, Sun 29 Nov 17:30) fixture_id 1570464
 - Deportivo La Coruna v Barcelona (La Liga, Sun 29 Nov 15:15) fixture_id 1570465
@@ -456,6 +420,7 @@ Data-quality warnings: english competitions with no fixtures: FA Cup, EFL Cup; e
 - Cumnock Juniors v Arbroath (Scottish Cup, Sat 28 Nov 15:00) fixture_id 1647343
 - Dumbarton v  Johnstone Burgh (Scottish Cup, Sat 28 Nov 15:00) fixture_id 1648249
 - Elgin City v Partick (Scottish Cup, Sat 28 Nov 15:00) fixture_id 1647344
+- Inverness CT v Cove Rangers (Scottish Cup, Sat 28 Nov 15:00) fixture_id 1647345 - Rob's castle rule: Cove Rangers kept 3 clean sheets in 5
 - Musselburgh Athletic v Airdrie United (Scottish Cup, Sat 28 Nov 15:00) fixture_id 1648250
 - Queen of the South v Dunfermline (Scottish Cup, Sat 28 Nov 15:00) fixture_id 1647349
 - Renfrew v Cumbernauld Colts (Scottish Cup, Sat 28 Nov 15:00) fixture_id 1648251

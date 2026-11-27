@@ -1,6 +1,6 @@
-# BTTS audit review: weekend_20261127_0701
+# BTTS audit review: weekend_20261127_1709
 
-Audit version btts_audit_v1, created 2026-11-27 07:03 UTC. Production outputs for this run are unchanged; this file is a second, independent reading of the same evidence.
+Audit version btts_audit_v1, created 2026-11-27 17:13 UTC. Production outputs for this run are unchanged; this file is a second, independent reading of the same evidence.
 Fixtures: 189. Flags: none 145, mild 23, moderate 15, note 6.
 
 How to read: the production BTTS verdict is a hand rule (YES exactly when the goal pattern is 'Both teams contribute', which needs an Over 2.5 route for each side).
@@ -228,7 +228,7 @@ Model bands: High p >= 0.575, Medium p >= 0.514. Evidence score 0 to 30 = each s
 - Why flagged: Verdict NO from pattern 'One side dominates' with evidence score 23 and model Medium (p 0.559); the NO is unsupported rather than contradicted. Le Mans scored in 3 of 5, conceded in 5 of 5, BTTS 3 of 5; Lille scored in 4 of 5, conceded in 4 of 5, BTTS 3 of 5.
 
 ### Eastleigh v FC Halifax Town  (National League, Sat 28 Nov 15:00 UK)  fixture_id 1585372
-- Over 2.5: Medium (model score 0.583). Production BTTS: NO (Medium, p 0.556). Pattern: One side dominates.
+- Over 2.5: rejected (model score 0.583). Production BTTS: NO (Medium, p 0.556). Pattern: One side dominates.
 - Audit assessment: LEAN YES. BTTS model Medium band (p 0.556) with supporting evidence (score 23, both sides BTTS at least 2 of 5); 55% to 59% historically.
 - Eastleigh: scored in 4/5, 2+ in 1/5, conceded in 5/5, 2+ against in 3/5, BTTS 4/5, clean sheets 0/5, failed to score 1/5. Last five: 0-2; 1-1; 1-2; 3-1; 1-3. Home last 3: 4-2; 1-2; 1-3 (BTTS 3/3).
 - FC Halifax Town: scored in 5/5, 2+ in 4/5, conceded in 2/5, 2+ against in 1/5, BTTS 2/5, clean sheets 3/5, failed to score 0/5. Last five: 2-3; 2-0; 1-1; 5-0; 2-0. Away last 3: 2-2; 1-1; 2-0 (BTTS 2/3).
@@ -376,7 +376,7 @@ Model bands: High p >= 0.575, Medium p >= 0.514. Evidence score 0 to 30 = each s
 | 1575231 | Sat 28 Nov 17:30 | Bundesliga | VfB Stuttgart v Eintracht Frankfurt | rejected | YES (High) | 0.578 | YES | 16 | note | note |
 | 1575233 | Sun 29 Nov 14:30 | Bundesliga | SC Freiburg v RB Leipzig | Medium | NO (Medium) | 0.562 | NO LEAN | 22 | - | ok |
 | 1575232 | Sun 29 Nov 16:30 | Bundesliga | 1899 Hoffenheim v FC Augsburg | High | NO (Medium) | 0.573 | LEAN YES | 25 | moderate | needs review |
-| 1575230 | Sun 29 Nov 18:30 | Bundesliga | Borussia Dortmund v Bayer Leverkusen | Medium | NO (Medium) | 0.571 | NO LEAN | 19 | - | ok |
+| 1575230 | Sun 29 Nov 18:30 | Bundesliga | Borussia Dortmund v Bayer Leverkusen | rejected | NO (Medium) | 0.571 | NO LEAN | 19 | - | ok |
 | 1563288 | Sat 28 Nov 12:30 | Championship | Blackburn v Charlton | rejected | NO (Medium) | 0.559 | NO LEAN | 19 | - | ok |
 | 1563290 | Sat 28 Nov 12:30 | Championship | Lincoln v Wolves | rejected | NO (Medium) | 0.551 | NO LEAN | 21 | - | ok |
 | 1563292 | Sat 28 Nov 12:30 | Championship | Preston v Norwich | rejected | NO (Medium) | 0.567 | NO LEAN | 19 | - | ok |
@@ -484,8 +484,8 @@ Model bands: High p >= 0.575, Medium p >= 0.514. Evidence score 0 to 30 = each s
 | 1585368 | Sat 28 Nov 15:00 | National League | Altrincham v Worthing | Medium | NO (Medium) | 0.569 | NO LEAN | 21 | - | ok |
 | 1585369 | Sat 28 Nov 15:00 | National League | Boreham Wood v Gateshead | High | YES (High) | 0.584 | YES | 26 | - | ok |
 | 1585370 | Sat 28 Nov 15:00 | National League | Boston United v Kidderminster Harriers | rejected | NO (Medium) | 0.547 | NO LEAN | 21 | - | ok |
-| 1585371 | Sat 28 Nov 15:00 | National League | Carlisle v Sutton Utd | Medium | NO (Medium) | 0.551 | NO LEAN | 11 | - | ok |
-| 1585372 | Sat 28 Nov 15:00 | National League | Eastleigh v FC Halifax Town | Medium | NO (Medium) | 0.556 | LEAN YES | 23 | mild | note |
+| 1585371 | Sat 28 Nov 15:00 | National League | Carlisle v Sutton Utd | rejected | NO (Medium) | 0.551 | NO LEAN | 11 | - | ok |
+| 1585372 | Sat 28 Nov 15:00 | National League | Eastleigh v FC Halifax Town | rejected | NO (Medium) | 0.556 | LEAN YES | 23 | mild | note |
 | 1585373 | Sat 28 Nov 15:00 | National League | Forest Green v Tamworth | Medium | NO (Medium) | 0.567 | LEAN YES | 24 | mild | note |
 | 1585374 | Sat 28 Nov 15:00 | National League | Harrogate Town v Yeovil Town | Medium | NO (Medium) | 0.558 | LEAN YES | 24 | mild | note |
 | 1585376 | Sat 28 Nov 17:30 | National League | Hartlepool v Southend | Medium | NO (Medium) | 0.572 | LEAN YES | 26 | moderate | needs review |
@@ -535,7 +535,7 @@ Model bands: High p >= 0.575, Medium p >= 0.514. Evidence score 0 to 30 = each s
 | 1648249 | Sat 28 Nov 15:00 | Scottish Cup | Dumbarton v  Johnstone Burgh | rejected | NO (Medium) | 0.543 | NO LEAN | 11 | - | ok |
 | 1647626 | Sat 28 Nov 15:00 | Scottish Cup | East Kilbride v Clyde | High | YES (High) | 0.580 | YES | 26 | - | ok |
 | 1647344 | Sat 28 Nov 15:00 | Scottish Cup | Elgin City v Partick | rejected | NO (Medium) | 0.573 | NO LEAN | 13 | - | ok |
-| 1647345 | Sat 28 Nov 15:00 | Scottish Cup | Inverness CT v Cove Rangers | Medium | NO (Medium) | 0.573 | NO LEAN | 16 | - | ok |
+| 1647345 | Sat 28 Nov 15:00 | Scottish Cup | Inverness CT v Cove Rangers | rejected | NO (Medium) | 0.573 | NO LEAN | 16 | - | ok |
 | 1647347 | Sat 28 Nov 15:00 | Scottish Cup | Montrose v Hamilton Academical | Medium | NO (Medium) | 0.562 | LEAN YES | 24 | mild | note |
 | 1648250 | Sat 28 Nov 15:00 | Scottish Cup | Musselburgh Athletic v Airdrie United | rejected | NO (Medium) | 0.574 | NO LEAN | 7 | - | ok |
 | 1647348 | Sat 28 Nov 15:00 | Scottish Cup | Peterhead v Edinburgh City | Medium | NO (Medium) | 0.571 | NO LEAN | 17 | - | ok |
@@ -549,7 +549,7 @@ Model bands: High p >= 0.575, Medium p >= 0.514. Evidence score 0 to 30 = each s
 | 1647354 | Sat 28 Nov 15:00 | Scottish Cup | Troon FC v Raith Rovers | rejected | NO (Medium) | 0.570 | NO LEAN | 6 | - | ok |
 | 1556712 | Sat 28 Nov 15:00 | Scottish Premiership | Aberdeen v Dundee | rejected | NO (Medium) | 0.564 | LEAN YES | 24 | mild | note |
 | 1556713 | Sat 28 Nov 15:00 | Scottish Premiership | Dundee Utd v ST Johnstone | Medium | NO (Medium) | 0.569 | LEAN YES | 26 | moderate | needs review |
-| 1556716 | Sat 28 Nov 15:00 | Scottish Premiership | Rangers v Falkirk | Medium | NO (Medium) | 0.565 | NO LEAN | 20 | - | ok |
+| 1556716 | Sat 28 Nov 15:00 | Scottish Premiership | Rangers v Falkirk | rejected | NO (Medium) | 0.565 | NO LEAN | 20 | - | ok |
 | 1556717 | Sat 28 Nov 15:00 | Scottish Premiership | ST Mirren v Kilmarnock | rejected | NO (Medium) | 0.564 | NO LEAN | 21 | - | ok |
 | 1556715 | Sat 28 Nov 17:45 | Scottish Premiership | Motherwell v Hibernian | rejected | NO (Medium) | 0.543 | NO LEAN | 22 | - | ok |
 | 1556714 | Sun 29 Nov 15:00 | Scottish Premiership | Heart Of Midlothian v Celtic | High | YES (High) | 0.594 | YES | 22 | - | ok |
