@@ -110,3 +110,40 @@ v5_20261120_1556,2026-11-20T15:56:39+00:00,ten-fold,10,5.0,1552226,Sat 21 Nov 17
 v5_20261120_1556,2026-11-20T15:56:39+00:00,ten-fold,10,5.0,1584474,Sun 22 Nov 16:00,Süper Lig,Trabzonspor,Eyüpspor,0.7092,1.33,2026-11-20
 v5_20261120_1556,2026-11-20T15:56:39+00:00,ten-fold,10,5.0,1575223,Sat 21 Nov 14:30,Bundesliga,Eintracht Frankfurt,1899 Hoffenheim,0.7061,1.33,2026-11-20
 v5_20261120_1556,2026-11-20T15:56:39+00:00,ten-fold,10,5.0,1570459,Sun 22 Nov 15:15,La Liga,Racing Santander,Real Sociedad,0.7021,1.33,2026-11-20
+v5_20261127_0705,2026-11-27T07:05:01+00:00,treble 1,3,15.0,1575236,Sat 28 Nov 14:30,Bundesliga,1. FC Köln,SV Elversberg,0.6026,1.62,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,treble 1,3,15.0,1575237,Fri 27 Nov 19:30,Bundesliga,Werder Bremen,Borussia Monchengladbach,0.629,1.53,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,treble 1,3,15.0,1556714,Sun 29 Nov 15:00,Premiership,Heart Of Midlothian,Celtic,0.6415,1.5,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,treble 2,3,15.0,1575234,Sat 28 Nov 14:30,Bundesliga,FSV Mainz 05,Union Berlin,0.6122,1.57,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,treble 2,3,15.0,1575230,Sun 29 Nov 18:30,Bundesliga,Borussia Dortmund,Bayer Leverkusen,0.6402,1.5,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,treble 2,3,15.0,1563295,Sun 29 Nov 12:00,Championship,Swansea,Cardiff,0.6385,1.5,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,treble 3,3,15.0,1575233,Sun 29 Nov 14:30,Bundesliga,SC Freiburg,RB Leipzig,0.6382,1.5,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,treble 3,3,15.0,1585369,Sat 28 Nov 15:00,National League,Boreham Wood,Gateshead,0.7838,1.22,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,treble 3,3,15.0,1584479,Sun 29 Nov 16:00,Süper Lig,Fenerbahçe,Erzurumspor FK,0.6087,1.57,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,five-fold 1,5,10.0,1575236,Sat 28 Nov 14:30,Bundesliga,1. FC Köln,SV Elversberg,0.6026,1.62,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,five-fold 1,5,10.0,1575237,Fri 27 Nov 19:30,Bundesliga,Werder Bremen,Borussia Monchengladbach,0.629,1.53,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,five-fold 1,5,10.0,1556714,Sun 29 Nov 15:00,Premiership,Heart Of Midlothian,Celtic,0.6415,1.5,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,five-fold 1,5,10.0,1575234,Sat 28 Nov 14:30,Bundesliga,FSV Mainz 05,Union Berlin,0.6122,1.57,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,five-fold 1,5,10.0,1575230,Sun 29 Nov 18:30,Bundesliga,Borussia Dortmund,Bayer Leverkusen,0.6402,1.5,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,five-fold 2,5,10.0,1563295,Sun 29 Nov 12:00,Championship,Swansea,Cardiff,0.6385,1.5,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,five-fold 2,5,10.0,1575233,Sun 29 Nov 14:30,Bundesliga,SC Freiburg,RB Leipzig,0.6382,1.5,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,five-fold 2,5,10.0,1585369,Sat 28 Nov 15:00,National League,Boreham Wood,Gateshead,0.7838,1.22,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,five-fold 2,5,10.0,1584479,Sun 29 Nov 16:00,Süper Lig,Fenerbahçe,Erzurumspor FK,0.6087,1.57,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,five-fold 2,5,10.0,1556713,Sat 28 Nov 15:00,Premiership,Dundee Utd,ST Johnstone,0.6371,1.5,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,eight-fold,8,5.0,1552240,Sat 28 Nov 17:45,Eredivisie,PSV Eindhoven,GO Ahead Eagles,0.786,1.2,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,eight-fold,8,5.0,1585369,Sat 28 Nov 15:00,National League,Boreham Wood,Gateshead,0.7838,1.22,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,eight-fold,8,5.0,1570465,Sun 29 Nov 15:15,La Liga,Deportivo La Coruna,Barcelona,0.7507,1.25,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,eight-fold,8,5.0,1575231,Sat 28 Nov 17:30,Bundesliga,VfB Stuttgart,Eintracht Frankfurt,0.7404,1.28,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,eight-fold,8,5.0,1575232,Sun 29 Nov 16:30,Bundesliga,1899 Hoffenheim,FC Augsburg,0.7251,1.3,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,eight-fold,8,5.0,1575235,Sat 28 Nov 14:30,Bundesliga,Hamburger SV,Bayern Munich,0.7239,1.3,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,eight-fold,8,5.0,1570470,Sat 28 Nov 20:00,La Liga,Real Madrid,Alaves,0.7154,1.3,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,eight-fold,8,5.0,1556716,Sat 28 Nov 15:00,Premiership,Rangers,Falkirk,0.6909,1.36,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,ten-fold,10,5.0,1552240,Sat 28 Nov 17:45,Eredivisie,PSV Eindhoven,GO Ahead Eagles,0.786,1.2,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,ten-fold,10,5.0,1585369,Sat 28 Nov 15:00,National League,Boreham Wood,Gateshead,0.7838,1.22,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,ten-fold,10,5.0,1570465,Sun 29 Nov 15:15,La Liga,Deportivo La Coruna,Barcelona,0.7507,1.25,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,ten-fold,10,5.0,1575231,Sat 28 Nov 17:30,Bundesliga,VfB Stuttgart,Eintracht Frankfurt,0.7404,1.28,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,ten-fold,10,5.0,1575232,Sun 29 Nov 16:30,Bundesliga,1899 Hoffenheim,FC Augsburg,0.7251,1.3,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,ten-fold,10,5.0,1575235,Sat 28 Nov 14:30,Bundesliga,Hamburger SV,Bayern Munich,0.7239,1.3,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,ten-fold,10,5.0,1570470,Sat 28 Nov 20:00,La Liga,Real Madrid,Alaves,0.7154,1.3,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,ten-fold,10,5.0,1556716,Sat 28 Nov 15:00,Premiership,Rangers,Falkirk,0.6909,1.36,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,ten-fold,10,5.0,1585366,Sat 28 Nov 12:30,National League,AFC Fylde,Aldershot Town,0.6897,1.36,2026-11-27
+v5_20261127_0705,2026-11-27T07:05:01+00:00,ten-fold,10,5.0,1552239,Sun 29 Nov 19:00,Eredivisie,NEC Nijmegen,Twente,0.6797,1.4,2026-11-27
