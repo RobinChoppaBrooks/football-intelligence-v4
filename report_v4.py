@@ -104,6 +104,7 @@ for d in rows:
     d["al"] = align(d)
     d["conf"] = "High" if d["light"] == "GREEN" else ("Weak" if (d["light"] == "AMBER" and d["p"] < WEAK) else ("Medium" if d["light"] == "AMBER" else "rejected"))
     d["al"]["cls"] = {"High": "High", "Medium": "Medium", "Weak": "Weak", "rejected": "Rejected"}[d["conf"]]
+    if d.get("castle"): d["al"]["reason"] = d["ev_against"][0]   # Rob's castle rule: 3+ clean sheets; the reason is the first evidence-against line
     d["al"]["score"] = None if d["al"]["nh"] < 3 or d["al"]["na"] < 3 else d["al"]["score"]
     d["both3"] = d["al"]["hs2"] >= 3 and d["al"]["as2"] >= 3
     d["div"] = div_count(d["comp"])
@@ -155,6 +156,7 @@ def wrap(txt, font, size, width):
 CW = W - 24 * mm; CH = 124 * mm
 
 ORANGE, YELLOW = colors.HexColor("#FF8A3D"), colors.HexColor("#FFD166")
+FLAME_GOALS = 15   # on fire: this many goals scored across the last 5 league games (Rob, 27 Nov 2026; was "scored 2+ in 4 of 5"). Display only.
 def flame(cv, cx, cy, h=4.2 * mm):
     """form icon: drawn flame (the PDF font has no emoji)."""
     for col, sc in ((ORANGE, 1.0), (YELLOW, 0.55)):
@@ -209,7 +211,7 @@ class Card(Flowable):
             label = f"{name.upper()}  {ven}"
             cv.setFillColor(TXT); cv.setFont("DVB", 9); cv.drawString(px, y, label)
             ix = px + pdfmetrics.stringWidth(label, "DVB", 9) + 3 * mm
-            if n_(rs, lambda x: x["gf"] >= 2) >= 4: flame(cv, ix + 1.6 * mm, y + 1.2 * mm); ix += 5 * mm
+            if sum(x["gf"] for x in rs) >= FLAME_GOALS: flame(cv, ix + 1.6 * mm, y + 1.2 * mm); ix += 5 * mm
             ncs = n_(rs, lambda x: x["ga"] == 0)
             if rs: shield(cv, ix + 1.9 * mm, y + 1.2 * mm, RED if ncs >= 3 else (AMBER if ncs == 2 else MUTED), ncs)   # no shield when no league games
             team_id = _ids.get(d.get("fixture_id"), (None, None))[k]
@@ -302,7 +304,7 @@ for d in short:
 S.append(PageBreak())
 # cards
 S += [P("Fixture cards", "h2"), Spacer(1, 1.5 * mm),
-      P("How to read a card: each side's last 5 league scores in bold, its own goals first, oldest to newest. Flame: scored 2+ in 4 or 5 of the last 5. "
+      P(f"How to read a card: each side's last 5 league scores in bold, its own goals first, oldest to newest. Flame (on fire): {FLAME_GOALS} or more goals scored across the last 5. "
         "Shield: clean sheets in the last 5 (grey 0 or 1, amber 2, red 3 or more). KEEPS SCORING: went 2 goals up and then scored again in at least 2 of the last 5 (stored goal times). "
         "TIGHT AND SCORING: both sides scored 2+ in 3 or more of 5 and let in 2+ in 1 or fewer. All display only: none of these changes selection.", "mut"), Spacer(1, 2.5 * mm)]
 order = {n: i for i, n in enumerate(ORDER)}
@@ -315,7 +317,7 @@ S.append(PageBreak())
 # rejected
 S += [P("Rejected fixtures, with the model's reason", "h2"), Spacer(1, 1.5 * mm)]
 rej = sorted([d for d in rows if d["conf"] == "rejected"], key=lambda d: (order.get(d["comp"], 99), d["kickoff"]))
-for d in rej: d["al"]["reason"] = ("fewer than 3 league games for one side" if (d["al"]["nh"] < 3 or d["al"]["na"] < 3) else ("match-up contradicts the headline numbers" if any("contradicts" in e for e in d["ev_against"]) else "model score below the selection line") + (f"; attacks {d['al']['hs2']} of {d['al']['nh']} and {d['al']['as2']} of {d['al']['na']}" if d["al"]["nh"] >= 3 and d["al"]["na"] >= 3 else ""))
+for d in rej: d["al"]["reason"] = d["al"]["reason"] if d.get("castle") else ("fewer than 3 league games for one side" if (d["al"]["nh"] < 3 or d["al"]["na"] < 3) else ("match-up contradicts the headline numbers" if any("contradicts" in e for e in d["ev_against"]) else "model score below the selection line") + (f"; attacks {d['al']['hs2']} of {d['al']['nh']} and {d['al']['as2']} of {d['al']['na']}" if d["al"]["nh"] >= 3 and d["al"]["na"] >= 3 else ""))
 data = [["Kick-off (UK)", "Competition", "Fixture", "H sc2+", "H let2+", "A sc2+", "A let2+", "Model", "Reason"]]
 for d in rej:
     al = d["al"]; data.append([d["kickoff"], d["comp"], d["fixture"], f"{al['hs2']} of {al['nh']}", f"{al['hc2']} of {al['nh']}", f"{al['as2']} of {al['na']}", f"{al['ac2']} of {al['na']}", "rejected", P(al["reason"], "smm")])

@@ -41,6 +41,7 @@ def parse_list(path):
     return out
 
 FINISHED = ("FT", "AET", "PEN")   # same rule as features.py: a score on an abandoned, awarded or cancelled match is not a result
+CASTLE_CS = 3   # Rob's castle rule (27 Nov 2026): a side with this many clean sheets in its last 5 league games takes the fixture off the shortlist
 
 def last_n(fx, tid, season, before, n, venue=None, league_only=True):
     g = fx[(fx.season == season) & (fx.kickoff_utc < before) & fx.ft_home.notna() & fx.status.isin(FINISHED)]
@@ -205,9 +206,19 @@ def main():
         hs2_, as2_ = cnt(hr, lambda x: x["gf"] >= 2), cnt(ar, lambda x: x["gf"] >= 2); hc2_, ac2_ = cnt(hr, lambda x: x["ga"] >= 2), cnt(ar, lambda x: x["ga"] >= 2)
         # Rob's trump card: both attacks scored 2+ in 4 or more of 5 and both defences let in 2+ in 1 or fewer. Goes in as Over 2.5 and BTTS
         # automatically, marked and scored separately (12 of 21 on 2025-26, 4 of 5 on 2026-27, Rob's 14 leagues).
-        trump = len(hr) >= 5 and len(ar) >= 5 and hs2_ >= 4 and as2_ >= 4 and hc2_ <= 1 and ac2_ <= 1
+        # Rob's castle rule (27 Nov 2026): when either side kept 3 or more clean sheets in its last five, the fixture is out, whatever the
+        # model says and whoever the opponent is. Selected picks with such a side hit 3+ in 40 of 70 this season (57%, the rejected
+        # rate) against 232 of 340 (68%) without one. Overrides the trump card. Marked castle=1 only when it changed a selection,
+        # so the performance report can score the removed fixtures on their own.
+        castle_h, castle_a = cnt(hr, lambda x: x["ga"] == 0), cnt(ar, lambda x: x["ga"] == 0)
+        castle_side = castle_h >= CASTLE_CS or castle_a >= CASTLE_CS
+        trump = len(hr) >= 5 and len(ar) >= 5 and hs2_ >= 4 and as2_ >= 4 and hc2_ <= 1 and ac2_ <= 1 and not castle_side
         if trump:
             light = "GREEN"; ev_for.insert(0, f"Rob's trump card: both attacks scored 2+ in {hs2_} and {as2_} of 5, both defences let in 2+ in only {hc2_} and {ac2_} of 5")
+        castle = castle_side and light != "RED"
+        if castle:
+            light = "RED"
+            ev_against.insert(0, "Rob's castle rule: " + " and ".join(f"{nm} kept {k} clean sheets in {len(rs)}" for nm, k, rs in ((r.home, castle_h, hr), (r.away, castle_a, ar)) if k >= CASTLE_CS))
         btts_yes = btts_lab == "HIGH" or trump
         btts_lean = "YES" if btts_yes else ("lean YES" if btts_lab == "MEDIUM" else "no lean")
         # V4.1 (30 Oct 2026): BTTS caution, display only. When either side kept 3+ clean sheets or failed to score in 3+ of its
@@ -220,7 +231,7 @@ def main():
         if btts_note and btts_lean == "YES" and not trump: btts_lean = "lean YES"
         drivers20 = hs2_ + as2_ + hc2_ + ac2_      # the two drivers across both sides, out of 20
         d = dict(comp=r.comp, hv5=hv5, av5=av5, p_btts=round(float(r.p_btts), 3), btts=("YES" if btts_yes else "NO"), btts_lik=btts_lab.title(),
-                 btts_lean=btts_lean, btts_note=btts_note, trump=trump, drivers20=drivers20,
+                 btts_lean=btts_lean, btts_note=btts_note, trump=trump, castle=castle, drivers20=drivers20,
                  pattern=pattern, why=why, risk=risk, route=route, kickoff=r.kickoff_utc.tz_convert("Europe/London").strftime("%a %d %b %H:%M"), fixture=f"{r.home} v {r.away}",
                  h_l5=f"{sum(x['gf'] for x in hr)}-{sum(x['ga'] for x in hr)}", h_seq=seq(hr), h_over=f"{cnt(hr, lambda x: x['tot']>=3)} of {len(hr)}",
                  a_l5=f"{sum(x['gf'] for x in ar)}-{sum(x['ga'] for x in ar)}", a_seq=seq(ar), a_over=f"{cnt(ar, lambda x: x['tot']>=3)} of {len(ar)}",
